@@ -5,12 +5,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="Program.cs" />
+        <Compile Remove="Program.cs"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="PresentationCore" />
-      <Reference Include="PresentationFramework" />
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
     </ItemGroup>
 
 </Project>

@@ -1,15 +1,33 @@
-﻿namespace dosymep.SimpleServices
-{
-    public interface IUIThemeService
-    {
+﻿using System;
+
+namespace dosymep.SimpleServices {
+    /// <summary>
+    /// Предоставляет доступ к теме инттерфейса
+    /// </summary>
+    public interface IUIThemeService {
+        /// <summary>
+        /// Событие возникающее при изменении темы.
+        /// </summary>
+        event Action<UIThemes> UIThemeChanged;
+        
+        /// <summary>
+        /// Текущая используемая тема.
+        /// </summary>
         UIThemes HostTheme { get; }
-        UIThemes WindowsUiTheme { get; }
-        UIThemes CurrentUiTheme { get; } 
     }
 
-    public enum UIThemes
-    {
+    /// <summary>
+    /// Используемые темы.
+    /// </summary>
+    public enum UIThemes {
+        /// <summary>
+        /// Темная.
+        /// </summary>
         Dark,
-        Light,
+        
+        /// <summary>
+        /// Светлая тема.
+        /// </summary>
+        Light
     }
 }
