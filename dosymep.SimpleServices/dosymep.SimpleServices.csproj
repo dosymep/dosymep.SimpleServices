@@ -8,4 +8,9 @@
       <Compile Remove="Program.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="PresentationCore" />
+      <Reference Include="PresentationFramework" />
+    </ItemGroup>
+
 </Project>
