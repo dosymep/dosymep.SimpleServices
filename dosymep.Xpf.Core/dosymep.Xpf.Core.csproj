@@ -4,4 +4,31 @@
         <TargetFramework>net48</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="DevExpress.Mvvm" Version="21.2.6" />
+      <PackageReference Include="DevExpress.Wpf.Dialogs" Version="21.2.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Views\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Views\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Views\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="PresentationCore" />
+      <Reference Include="PresentationFramework" />
+      <Reference Include="WindowsBase" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+    </ItemGroup>
+
 </Project>
