@@ -1,5 +1,5 @@
 ﻿namespace dosymep.Xpf.Core {
-    public class BaseViewModel : DevExpress.Mvvm.ViewModelBase {
+    public abstract class BaseViewModel : DevExpress.Mvvm.ViewModelBase {
         
     }
 }

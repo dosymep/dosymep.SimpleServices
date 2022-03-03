@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace dosymep.Xpf.Core.Commands {
-    public class XtraDelegateCommand : DevExpress.Mvvm.DelegateCommand {
+    public abstract class XtraDelegateCommand : DevExpress.Mvvm.DelegateCommand {
         public XtraDelegateCommand(Action executeMethod)
             : base(executeMethod) {
         }
@@ -15,7 +15,7 @@ namespace dosymep.Xpf.Core.Commands {
         }
     }
 
-    public class XtraDelegateCommand<T> : DevExpress.Mvvm.DelegateCommand<T> {
+    public abstract class XtraDelegateCommand<T> : DevExpress.Mvvm.DelegateCommand<T> {
         public XtraDelegateCommand(Action<T> executeMethod)
             : base(executeMethod) {
         }

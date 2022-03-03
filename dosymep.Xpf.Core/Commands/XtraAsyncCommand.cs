@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 namespace dosymep.Xpf.Core.Commands {
-    public class XtraAsyncCommand : DevExpress.Mvvm.AsyncCommand {
+    public abstract class XtraAsyncCommand : DevExpress.Mvvm.AsyncCommand {
         public XtraAsyncCommand(Func<Task> executeMethod)
             : base(executeMethod) {
         }
@@ -21,7 +21,7 @@ namespace dosymep.Xpf.Core.Commands {
         }
     }
 
-    public class XtraAsyncCommand<T> : DevExpress.Mvvm.AsyncCommand<T> {
+    public abstract class XtraAsyncCommand<T> : DevExpress.Mvvm.AsyncCommand<T> {
         public XtraAsyncCommand(Func<T, Task> executeMethod) : base(executeMethod) {
         }
 
