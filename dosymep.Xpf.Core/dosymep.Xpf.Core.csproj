@@ -11,6 +11,7 @@
 
     <ItemGroup>
       <Compile Remove="Views\**" />
+      <Compile Remove="SimpleServices\XtraNotification.cs" />
     </ItemGroup>
 
     <ItemGroup>
