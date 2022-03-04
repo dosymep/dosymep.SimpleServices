@@ -11,7 +11,7 @@ using INotificationService = dosymep.SimpleServices.INotificationService;
 
 namespace dosymep.Xpf.Core.SimpleServices
 {
-    internal class XtraNotificationService : INotificationService
+    public class XtraNotificationService : INotificationService
     {
         private readonly NotificationService _notificationService
             = new NotificationService()
