@@ -91,5 +91,7 @@ namespace dosymep.SimpleServices {
 
         void Fatal(string messageTemplate, params object[] propertyValues);
         void Fatal(Exception exception, string messageTemplate, params object[] propertyValues);
+
+        ILoggerService ForContext(string propertyName, object propertyValue);
     }
 }
