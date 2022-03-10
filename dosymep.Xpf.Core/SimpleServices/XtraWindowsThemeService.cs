@@ -10,7 +10,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public event Action<UIThemes> UIThemeChanged;
         
         public XtraWindowsThemeService() {
-            ApplicationThemeHelper.ApplicationThemeName = "None";
+            ApplicationThemeHelper.ApplicationThemeName = Theme.NoneName;
             SystemEvents.UserPreferenceChanged += OnSystemEventsOnUserPreferenceChanged;
         }
         
