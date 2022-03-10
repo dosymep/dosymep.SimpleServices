@@ -3,32 +3,43 @@ using DevExpress.Xpf.Core;
 
 using dosymep.SimpleServices;
 
-namespace dosymep.Xpf.Core.SimpleServices
-{
-    public class XtraWindowsThemeService : IUIThemeService
-    {
+using Microsoft.Win32;
+
+namespace dosymep.Xpf.Core.SimpleServices {
+    public class XtraWindowsThemeService : IUIThemeService, IDisposable {
         public event Action<UIThemes> UIThemeChanged;
         
-        private UIThemes _hostTheme = UIThemes.Light;
+        public XtraWindowsThemeService() {
+            ApplicationThemeHelper.ApplicationThemeName = "None";
+            SystemEvents.UserPreferenceChanged += OnSystemEventsOnUserPreferenceChanged;
+        }
         
-        public UIThemes HostTheme
-        {
-            get => _hostTheme;
-            private set
-            {
-                _hostTheme = value;
-                switch (_hostTheme)
-                {
-                    case UIThemes.Dark:
-                        ApplicationThemeHelper.ApplicationThemeName = Theme.Win10DarkName;
-                        break;
-                    case UIThemes.Light:
-                        ApplicationThemeHelper.ApplicationThemeName = Theme.Win10LightName;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException(nameof(value));
-                }
+        public UIThemes HostTheme { get; private set; } = UIThemes.Light;
+
+        private void OnSystemEventsOnUserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e) {
+            if(e.Category == UserPreferenceCategory.General) {
+                HostTheme = ThemeIsLight() ? UIThemes.Light : UIThemes.Dark;
+                UIThemeChanged?.Invoke(HostTheme);
             }
+        }
+
+        private static bool ThemeIsLight() {
+            RegistryKey registry =
+                Registry.CurrentUser.OpenSubKey(
+                    @"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize");
+            
+            return (int?) registry?.GetValue("SystemUsesLightTheme") == 1;
+        }
+
+        protected virtual void Dispose(bool disposing) {
+            if(disposing) {
+                SystemEvents.UserPreferenceChanged -= OnSystemEventsOnUserPreferenceChanged;
+            }
+        }
+
+        public void Dispose() {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
