@@ -2,6 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
+        <Authors>dosymep</Authors>
+        <PackageProjectUrl>https://github.com/dosymep/dosymep.SimpleServices</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/dosymep/dosymep.SimpleServices</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageTags>dosymep, WPF, DevExpress</PackageTags>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\dosymep.Xpf.Core.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\dosymep.Xpf.Core.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
