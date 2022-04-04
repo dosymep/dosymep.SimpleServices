@@ -83,6 +83,6 @@ namespace dosymep.SimpleServices {
         /// <summary>
         /// Английский Великобритания.
         /// </summary>
-        English_GB,
+        EnglishGB,
     }
 }
