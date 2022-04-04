@@ -28,7 +28,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
                 Registry.CurrentUser.OpenSubKey(
                     @"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize");
             
-            return (int?) registry?.GetValue("SystemUsesLightTheme") == 1;
+            return (int?) registry?.GetValue("AppsUseLightTheme") == 1;
         }
 
         protected virtual void Dispose(bool disposing) {
