@@ -11,6 +11,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
         
         public XtraWindowsThemeService() {
             ApplicationThemeHelper.ApplicationThemeName = Theme.NoneName;
+            HostTheme = ThemeIsLight() ? UIThemes.Light : UIThemes.Dark;
             SystemEvents.UserPreferenceChanged += OnSystemEventsOnUserPreferenceChanged;
         }
         
