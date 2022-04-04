@@ -1,5 +1,6 @@
 ﻿using System;
 using DevExpress.Xpf.Core;
+using DevExpress.Xpf.Editors.Internal;
 
 using dosymep.SimpleServices;
 
@@ -10,26 +11,29 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public event Action<UIThemes> UIThemeChanged;
         
         public XtraWindowsThemeService() {
-            ApplicationThemeHelper.ApplicationThemeName = Theme.NoneName;
-            HostTheme = ThemeIsLight() ? UIThemes.Light : UIThemes.Dark;
             SystemEvents.UserPreferenceChanged += OnSystemEventsOnUserPreferenceChanged;
         }
-        
-        public UIThemes HostTheme { get; private set; } = UIThemes.Light;
+
+        public UIThemes HostTheme => GetCurrentTheme();
 
         private void OnSystemEventsOnUserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e) {
             if(e.Category == UserPreferenceCategory.General) {
-                HostTheme = ThemeIsLight() ? UIThemes.Light : UIThemes.Dark;
                 UIThemeChanged?.Invoke(HostTheme);
             }
         }
 
-        private static bool ThemeIsLight() {
+        private static UIThemes GetCurrentTheme() {
             RegistryKey registry =
                 Registry.CurrentUser.OpenSubKey(
                     @"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize");
-            
-            return (int?) registry?.GetValue("AppsUseLightTheme") == 1;
+
+            int? isLight = (int?) registry?.GetValue("AppsUseLightTheme");
+            if(isLight == null) {
+                return UIThemes.Light;
+            }
+
+            return isLight == 1 
+                ? UIThemes.Light : UIThemes.Dark;
         }
 
         protected virtual void Dispose(bool disposing) {
