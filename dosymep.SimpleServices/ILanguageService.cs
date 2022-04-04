@@ -21,12 +21,68 @@ namespace dosymep.SimpleServices {
     /// </summary>
     public enum Language {
         /// <summary>
-        /// Английский.
+        /// Английский США.
         /// </summary>
         EnglishUSA,
         /// <summary>
         /// Русский.
         /// </summary>
-        Russian
+        Russian,
+        /// <summary>
+        /// Немецкий.
+        /// </summary>
+        German,
+        /// <summary>
+        /// Испанский.
+        /// </summary>
+        Spanish,
+        /// <summary>
+        /// Французский.
+        /// </summary>
+        French,
+        /// <summary>
+        /// Итальянский.
+        /// </summary>
+        Italian,
+        /// <summary>
+        /// Голландский.
+        /// </summary>
+        Dutch,
+        /// <summary>
+        /// Упрощенный китайский.
+        /// </summary>
+        ChineseSimplified,
+        /// <summary>
+        /// Традиционный китайский.
+        /// </summary>
+        ChineseTraditional,
+        /// <summary>
+        /// Японский.
+        /// </summary>
+        Japanese,
+        /// <summary>
+        /// Корейский.
+        /// </summary>
+        Korean,
+        /// <summary>
+        /// Чешский.
+        /// </summary>
+        Czech,
+        /// <summary>
+        /// Польский.
+        /// </summary>
+        Polish,
+        /// <summary>
+        /// Венгерский.
+        /// </summary>
+        Hungarian,
+        /// <summary>
+        /// Португальский.
+        /// </summary>
+        BrazilianPortuguese,
+        /// <summary>
+        /// Английский Великобритания.
+        /// </summary>
+        English_GB,
     }
 }
