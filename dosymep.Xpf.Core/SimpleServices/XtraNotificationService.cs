@@ -11,16 +11,17 @@ using INotificationService = dosymep.SimpleServices.INotificationService;
 
 namespace dosymep.Xpf.Core.SimpleServices
 {
-    public class XtraNotificationService : INotificationService
-    {
+    public class XtraNotificationService : INotificationService {
         private readonly NotificationService _notificationService
-            = new NotificationService()
-            {
-                ApplicationId = "dosymep", 
-                UseWin8NotificationsIfAvailable=true,
-                PredefinedNotificationTemplate = NotificationTemplate.ShortHeaderAndTwoTextFields,
+            = new NotificationService() {
+                ApplicationId = "dosymep",
+                UseWin8NotificationsIfAvailable = false,
+                Sound = PredefinedSound.Notification_Default,
+                CustomNotificationVisibleMaxCount = 5,
+                CustomNotificationPosition = NotificationPosition.BottomRight,
+                CustomNotificationScreen = NotificationScreen.ApplicationWindow,
                 PredefinedNotificationDuration = PredefinedNotificationDuration.Default,
-                Sound = PredefinedSound.Notification_Default
+                PredefinedNotificationTemplate = NotificationTemplate.ShortHeaderAndLongText
             };
         
         public XtraNotificationService() { }
