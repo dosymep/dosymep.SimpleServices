@@ -1,0 +1,41 @@
+﻿<dx:ThemedWindow
+    x:Class="dosymep.Xpf.Core.Windows.ProgressBarWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:dosymep.Xpf.Core.Windows"
+    xmlns:core="clr-namespace:dosymep.Xpf.Core"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+
+    WindowStyle="None" 
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+
+    mc:Ignorable="d"
+    Title="Пожалуйста подождите ..." Height="50" Width="400"
+    
+    Margin="0"
+    Padding="0"
+   
+    x:Name="_this">
+    <Grid>
+        <dxe:ProgressBarEdit
+            x:Name="_progressEdit"
+            ContentDisplayMode="None"
+            VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        
+        <dxe:TextEdit
+            x:Name="_textEdit"
+            VerticalAlignment="Stretch" HorizontalAlignment="Center"
+            IsReadOnly="True" EditMode="InplaceActive" />
+
+        <dx:SimpleButton
+            x:Name="_cancelButton"
+            Content="Отменить" Height="25" Width="80" Margin="10 0 10 0" HorizontalAlignment="Right"
+            Visibility="Hidden"
+            Click="_cancelButton_OnClick "/>
+    </Grid>
+</dx:ThemedWindow>

@@ -2,6 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+        <UseWPF>true</UseWPF>
         <Authors>dosymep</Authors>
         <PackageProjectUrl>https://github.com/dosymep/dosymep.SimpleServices</PackageProjectUrl>
         <RepositoryUrl>https://github.com/dosymep/dosymep.SimpleServices</RepositoryUrl>
