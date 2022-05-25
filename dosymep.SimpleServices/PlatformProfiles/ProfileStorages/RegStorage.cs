@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security;
 
 using Microsoft.Win32;
 
@@ -22,13 +23,13 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private const string ProfileUriValueName = "ProfileUri";
         private const string ProfileAllowCopyName = "ProfileAllowCopy";
         private const string ProfileStorageValueName = "ProfileStorage";
-        
-        
+
+
 
         private const string ProfileCredentialsValueName = "Credentials";
         private const string ProfileCredentialsUsernameValueName = "Username";
         private const string ProfileCredentialsPasswordValueName = "Password";
-        
+
         private const string GitProfileBranchValueName = "Branch";
 
         private readonly string _regPath;
@@ -49,14 +50,30 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
 
         /// <inheritdoc />
         public string ProfileName {
-            get => GetRegistryValue<string>(_regPath, ProfileNameValueName);
-            set => SetRegistryValue(_regPath, ProfileNameValueName, value);
+            get =>
+                GetRegistryValue<string>(Registry.LocalMachine, ProfileNameValueName)
+                    ?? GetRegistryValue<string>(Registry.CurrentUser, ProfileNameValueName);
+            set {
+                try {
+                    SetRegistryValue(Registry.LocalMachine, ProfileNameValueName, value);
+                } catch(SecurityException) {
+                    SetRegistryValue(Registry.CurrentUser, ProfileNameValueName, value);
+                }
+            }
         }
 
         /// <inheritdoc />
         public string ProfileLocalPath {
-            get => GetRegistryValue<string>(_regPath, ProfileProfileLocalPathName);
-            set => SetRegistryValue(_regPath, ProfileProfileLocalPathName, value);
+            get =>
+                GetRegistryValue<string>(Registry.LocalMachine, ProfileProfileLocalPathName)
+                ?? GetRegistryValue<string>(Registry.CurrentUser, ProfileProfileLocalPathName);
+            set {
+                try {
+                    SetRegistryValue(Registry.LocalMachine, ProfileProfileLocalPathName, value);
+                } catch(SecurityException) {
+                    SetRegistryValue(Registry.CurrentUser, ProfileProfileLocalPathName, value);
+                }
+            }
         }
 
         /// <inheritdoc />
@@ -142,9 +159,19 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private T GetRegistryValue<T>(string keyFullName, string keyName, T defaultValue = default) {
             return (T) Registry.GetValue(keyFullName, keyName, defaultValue);
         }
-        
+
         private void SetRegistryValue<T>(string keyFullName, string keyName, T value) {
             Registry.SetValue(keyFullName, keyName, value);
+        }
+
+        private T GetRegistryValue<T>(RegistryKey registryKey, string keyName, T defaultValue = default) {
+            string keyFullName = Path.Combine(registryKey.Name, _regPath);
+            return GetRegistryValue(keyFullName, keyName, defaultValue);
+        }
+
+        private void SetRegistryValue<T>(RegistryKey registryKey, string keyName, T value) {
+            string keyFullName = Path.Combine(registryKey.Name, _regPath);
+            SetRegistryValue(keyFullName, keyName, value);
         }
     }
 }
