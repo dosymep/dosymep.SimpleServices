@@ -6,11 +6,10 @@ namespace dosymep.SimpleServices.PlatformProfiles {
     /// <summary>
     /// Класс сервиса профилей платформы.
     /// </summary>
-    public class PlatformProfileService : 
-        IPlatformProfileService,
-        IPlatformProfile<UserProfileSpace>,
-        IPlatformProfile<SystemProfileSpace>,
-        IPlatformProfile<OrganizationProfileSpace> {
+    public class PlatformProfileService :
+        IPlatformProfileService<UserProfileSpace>,
+        IPlatformProfileService<SystemProfileSpace>,
+        IPlatformProfileService<OrganizationProfileSpace> {
         /// <summary>
         /// Хранилище профилей.
         /// </summary>
@@ -46,10 +45,10 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         /// <inheritdoc />
         public IProfileInstance Organization { get; }
 
-        #region IPlatformProfile<UserProfileSpace>
+        #region IPlatformProfileService<UserProfileSpace>
 
         /// <inheritdoc />
-        T IPlatformProfile<UserProfileSpace>.GetPluginSettings<T>(string pluginName) {
+        T IPlatformProfileService<UserProfileSpace>.GetPluginSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
             }
@@ -58,7 +57,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        T IPlatformProfile<UserProfileSpace>.GetPluginSettings<T>(string pluginName, string settingsName) {
+        T IPlatformProfileService<UserProfileSpace>.GetPluginSettings<T>(string pluginName, string settingsName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
             }
@@ -71,7 +70,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        void IPlatformProfile<UserProfileSpace>.SavePluginSettings<T>(T settings, string pluginName) {
+        void IPlatformProfileService<UserProfileSpace>.SavePluginSettings<T>(T settings, string pluginName) {
             if(settings == null) {
                 throw new ArgumentNullException(nameof(settings));
             }
@@ -84,7 +83,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        void IPlatformProfile<UserProfileSpace>.SavePluginSettings<T>(T settings, string pluginName, string settingsName) {
+        void IPlatformProfileService<UserProfileSpace>.SavePluginSettings<T>(T settings, string pluginName, string settingsName) {
             if(settings == null) {
                 throw new ArgumentNullException(nameof(settings));
             }
@@ -102,10 +101,10 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         #endregion
 
-        #region IPlatformProfile<SystemProfileSpace>
+        #region IPlatformProfileService<SystemProfileSpace>
 
         /// <inheritdoc />
-        T IPlatformProfile<SystemProfileSpace>.GetPluginSettings<T>(string pluginName) {
+        T IPlatformProfileService<SystemProfileSpace>.GetPluginSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
             }
@@ -114,7 +113,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        T IPlatformProfile<SystemProfileSpace>.GetPluginSettings<T>(string pluginName, string settingsName) {
+        T IPlatformProfileService<SystemProfileSpace>.GetPluginSettings<T>(string pluginName, string settingsName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
             }
@@ -127,7 +126,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        void IPlatformProfile<SystemProfileSpace>.SavePluginSettings<T>(T settings, string pluginName) {
+        void IPlatformProfileService<SystemProfileSpace>.SavePluginSettings<T>(T settings, string pluginName) {
             if(settings == null) {
                 throw new ArgumentNullException(nameof(settings));
             }
@@ -140,7 +139,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        void IPlatformProfile<SystemProfileSpace>.SavePluginSettings<T>(T settings, string pluginName, string settingsName) {
+        void IPlatformProfileService<SystemProfileSpace>.SavePluginSettings<T>(T settings, string pluginName, string settingsName) {
             if(settings == null) {
                 throw new ArgumentNullException(nameof(settings));
             }
@@ -158,10 +157,10 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         #endregion
 
-        #region IPlatformProfile<OrganizationProfileSpace>
+        #region IPlatformProfileService<OrganizationProfileSpace>
 
         /// <inheritdoc />
-        T IPlatformProfile<OrganizationProfileSpace>.GetPluginSettings<T>(string pluginName) {
+        T IPlatformProfileService<OrganizationProfileSpace>.GetPluginSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
             }
@@ -170,7 +169,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        T IPlatformProfile<OrganizationProfileSpace>.GetPluginSettings<T>(string pluginName, string settingsName) {
+        T IPlatformProfileService<OrganizationProfileSpace>.GetPluginSettings<T>(string pluginName, string settingsName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
             }
@@ -183,7 +182,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        void IPlatformProfile<OrganizationProfileSpace>.SavePluginSettings<T>(T settings, string pluginName) {
+        void IPlatformProfileService<OrganizationProfileSpace>.SavePluginSettings<T>(T settings, string pluginName) {
             if(settings == null) {
                 throw new ArgumentNullException(nameof(settings));
             }
@@ -196,7 +195,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         /// <inheritdoc />
-        void IPlatformProfile<OrganizationProfileSpace>.SavePluginSettings<T>(T settings, string pluginName,
+        void IPlatformProfileService<OrganizationProfileSpace>.SavePluginSettings<T>(T settings, string pluginName,
             string settingsName) {
             if(settings == null) {
                 throw new ArgumentNullException(nameof(settings));
