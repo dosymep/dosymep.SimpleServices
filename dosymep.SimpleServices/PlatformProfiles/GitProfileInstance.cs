@@ -10,8 +10,6 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         public string Branch { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
 
         protected override void CopyProfileImp(string directory) {
             using(Repository repository = GitClone(directory)) {
@@ -21,7 +19,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         public Repository GitClone(string directory) {
-            CloneOptions cloneOptions = CreateCloneOptions(Branch, Username, Password);
+            CloneOptions cloneOptions = CreateCloneOptions(Branch, Credentials.Username, Credentials.Password);
             if(Directory.Exists(directory)) {
                 return new Repository(directory);
             }
@@ -31,7 +29,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         public void GitPull(Repository repository) {
-            PullOptions options = CreatePullOptions(Username, Password);
+            PullOptions options = CreatePullOptions(Credentials.Username, Credentials.Password);
             Signature signature = new Signature("dosymep", "dosymep@gmail.com", DateTimeOffset.Now);
 
             Commands.Pull(repository, signature, options);

@@ -18,13 +18,14 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
     public class RegStorage : IProfileStorage {
         private const string ProfileNameValueName = "ProfileName";
         private const string ProfileProfileLocalPathName = "ProfileLocalPath";
-        
+
         private const string ProfileUriValueName = "ProfileUri";
         private const string ProfileStorageValueName = "ProfileStorage";
 
-        private const string GitProfileGitBranchValueName = "GitBranch";
-        private const string GitProfileGitUsernameValueName = "GitUsername";
-        private const string GitProfileGitPasswordValueName = "GitPassword";
+        private const string GitProfileBranchValueName = "Branch";
+        private const string ProfileCredentialsValueName = "Credentials";
+        private const string ProfileCredentialsUsernameValueName = "GitUsername";
+        private const string ProfileCredentialsPasswordValueName = "GitPassword";
 
         private readonly string _regPath;
         private readonly string _applicationVersion;
@@ -44,14 +45,14 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
 
         /// <inheritdoc />
         public string ProfileName {
-            get => (string) Registry.GetValue(_regPath, ProfileNameValueName, null);
-            set => Registry.SetValue(_regPath, ProfileNameValueName, value);
+            get => GetRegistryValue<string>(_regPath, ProfileNameValueName);
+            set => SetRegistryValue(_regPath, ProfileNameValueName, value);
         }
 
         /// <inheritdoc />
         public string ProfileLocalPath {
-            get => (string) Registry.GetValue(_regPath, ProfileProfileLocalPathName, null);
-            set => Registry.SetValue(_regPath, ProfileProfileLocalPathName, value);
+            get => GetRegistryValue<string>(_regPath, ProfileProfileLocalPathName);
+            set => SetRegistryValue(_regPath, ProfileProfileLocalPathName, value);
         }
 
         /// <inheritdoc />
@@ -74,7 +75,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             profileDefinition.ApplicationVersion = _applicationVersion;
             profileDefinition.SerializationService = _serializationService;
             profileDefinition.CopyProfile(ProfileLocalPath);
-            
+
             return profileDefinition;
         }
 
@@ -82,7 +83,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             string keyFullName = GetKeyFullName(profileInfo, profileSpace);
 
             string profileUri =
-                (string) Registry.GetValue(keyFullName, ProfileUriValueName, null);
+                GetRegistryValue<string>(keyFullName, ProfileUriValueName);
 
             ProfileStorage profileStorage =
                 (ProfileStorage) Enum.Parse(typeof(ProfileStorage),
@@ -91,9 +92,8 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             switch(profileStorage) {
                 case ProfileStorage.Git:
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
-                        Branch = (string) Registry.GetValue(keyFullName, GitProfileGitBranchValueName, null),
-                        Username = (string) Registry.GetValue(keyFullName, GitProfileGitUsernameValueName, null),
-                        Password = (string) Registry.GetValue(keyFullName, GitProfileGitPasswordValueName, null)
+                        Credentials = GetCredentials(keyFullName),
+                        Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName),
                     };
                 case ProfileStorage.Directory:
                     return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace);
@@ -119,6 +119,22 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
 
         private string GetKeyFullName(ProfileInfo profileInfo, ProfileSpace profileSpace) {
             return Path.Combine(profileInfo.FullName, profileSpace.ToString());
+        }
+
+        private Credentials GetCredentials(string keyFullName) {
+            keyFullName = Path.Combine(keyFullName, ProfileCredentialsValueName);
+            return new Credentials() {
+                Username = GetRegistryValue<string>(keyFullName, ProfileCredentialsUsernameValueName),
+                Password = GetRegistryValue<string>(keyFullName, ProfileCredentialsPasswordValueName),
+            };
+        }
+
+        private T GetRegistryValue<T>(string keyFullName, string keyName, T defaultValue = default) {
+            return (T) Registry.GetValue(keyFullName, keyName, defaultValue);
+        }
+        
+        private void SetRegistryValue<T>(string keyFullName, string keyName, T value) {
+            Registry.SetValue(keyFullName, keyName, value);
         }
     }
 }

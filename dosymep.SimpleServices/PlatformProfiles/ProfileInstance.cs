@@ -2,6 +2,11 @@ using System;
 using System.IO;
 
 namespace dosymep.SimpleServices.PlatformProfiles {
+    internal class Credentials {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+    
     internal abstract class ProfileInstance : IProfileInstance {
         public ProfileInstance(string profileUri, ProfileInfo profileInfo, ProfileSpace profileSpace) {
             ProfileUri = profileUri;
@@ -16,6 +21,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public ProfileInfo ProfileInfo { get; }
         public ProfileSpace ProfileSpace { get; }
 
+        public Credentials Credentials { get; set; }
         public string ApplicationVersion { get; set; }
         public ISerializationService SerializationService { get; set; }
 
