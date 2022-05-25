@@ -10,11 +10,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\dosymep.SimpleServices.xml</DocumentationFile>
+        <DocumentationFile>bin\Debug\dosymep.SimpleServices.xml</DocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\dosymep.SimpleServices.xml</DocumentationFile>
+        <DocumentationFile>bin\Release\dosymep.SimpleServices.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,6 +24,10 @@
     <ItemGroup>
         <Reference Include="PresentationCore" />
         <Reference Include="PresentationFramework" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="LibGit2Sharp" Version="0.26.2" />
     </ItemGroup>
 
 </Project>
