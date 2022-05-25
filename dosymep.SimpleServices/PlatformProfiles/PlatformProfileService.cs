@@ -3,9 +3,14 @@
 using dosymep.SimpleServices.PlatformProfiles.ProfileStorages;
 
 namespace dosymep.SimpleServices.PlatformProfiles {
-    internal class PlatformProfile : 
-        IPlatformProfile<UserProfileSpace>, IPlatformProfile<SystemProfileSpace>, IPlatformProfile<OrganizationProfileSpace> {
-        
+    /// <summary>
+    /// Класс сервиса профилей платформы.
+    /// </summary>
+    public class PlatformProfileService : 
+        IPlatformProfileService,
+        IPlatformProfile<UserProfileSpace>,
+        IPlatformProfile<SystemProfileSpace>,
+        IPlatformProfile<OrganizationProfileSpace> {
         /// <summary>
         /// Хранилище профилей.
         /// </summary>
@@ -16,7 +21,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         /// </summary>
         /// <param name="profileStorage">Хранилище профилей.</param>
         /// <param name="profileInfo">Информация о профиле.</param>
-        internal PlatformProfile(IProfileStorage profileStorage, ProfileInfo profileInfo) {
+        public PlatformProfileService(IProfileStorage profileStorage, ProfileInfo profileInfo) {
             if(profileStorage == null) {
                 throw new ArgumentNullException(nameof(profileStorage));
             }
@@ -32,19 +37,13 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             Organization = _profileStorage.LoadProfileSpace(profileInfo, ProfileSpace.OrganizationProfileSpace);
         }
 
-        /// <summary>
-        /// Профиль пользователя.
-        /// </summary>
+        /// <inheritdoc />
         public IProfileInstance User { get; }
         
-        /// <summary>
-        /// Профиль системы.
-        /// </summary>
+        /// <inheritdoc />
         public IProfileInstance System { get; }
         
-        /// <summary>
-        /// Профиль организации 
-        /// </summary>
+        /// <inheritdoc />
         public IProfileInstance Organization { get; }
 
         #region IPlatformProfile<UserProfileSpace>
