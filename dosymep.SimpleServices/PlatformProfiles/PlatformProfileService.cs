@@ -10,6 +10,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         IPlatformProfileService<UserProfileSpace>,
         IPlatformProfileService<SystemProfileSpace>,
         IPlatformProfileService<OrganizationProfileSpace> {
+        
         /// <summary>
         /// Хранилище профилей.
         /// </summary>

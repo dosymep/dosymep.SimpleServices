@@ -17,6 +17,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
     /// </summary>
     public class RegStorage : IProfileStorage {
         private const string ProfileNameValueName = "ProfileName";
+        private const string ProfileProfileLocalPathName = "ProfileLocalPath";
         
         private const string ProfileUriValueName = "ProfileUri";
         private const string ProfileStorageValueName = "ProfileStorage";
@@ -48,6 +49,12 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         }
 
         /// <inheritdoc />
+        public string ProfileLocalPath {
+            get => (string) Registry.GetValue(_regPath, ProfileProfileLocalPathName, null);
+            set => Registry.SetValue(_regPath, ProfileProfileLocalPathName, value);
+        }
+
+        /// <inheritdoc />
         public ProfileInfo[] GetProfileInfos() {
             IEnumerable<ProfileInfo> currentUser = GetSubKeyNames(Registry.CurrentUser, false);
             IEnumerable<ProfileInfo> localMachine = GetSubKeyNames(Registry.LocalMachine, true);
@@ -66,7 +73,8 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             ProfileInstance profileDefinition = CreateProfileDefinition(profileInfo, profileSpace);
             profileDefinition.ApplicationVersion = _applicationVersion;
             profileDefinition.SerializationService = _serializationService;
-
+            profileDefinition.CopyProfile(ProfileLocalPath);
+            
             return profileDefinition;
         }
 
