@@ -23,9 +23,11 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private const string GitProfileGitPasswordValueName = "GitPassword";
 
         private readonly string _regPath;
+        private readonly string _applicationVersion;
 
-        public RegStorage(string regPath) {
+        public RegStorage(string regPath, string applicationVersion) {
             _regPath = regPath;
+            _applicationVersion = applicationVersion;
         }
 
         public string ProfileName {
@@ -59,10 +61,13 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
                         Branch = (string) Registry.GetValue(keyFullName, GitProfileGitBranchValueName, null),
                         Username = (string) Registry.GetValue(keyFullName, GitProfileGitUsernameValueName, null),
-                        Password = (string) Registry.GetValue(keyFullName, GitProfileGitPasswordValueName, null)
+                        Password = (string) Registry.GetValue(keyFullName, GitProfileGitPasswordValueName, null),
+                        ApplicationVersion = _applicationVersion
                     };
                 case ProfileStorage.Directory:
-                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace);
+                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
+                        ApplicationVersion = _applicationVersion
+                    };
                 default:
                     throw new ArgumentOutOfRangeException();
             }

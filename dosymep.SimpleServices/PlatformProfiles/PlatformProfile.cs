@@ -17,6 +17,14 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         /// <param name="profileStorage">Хранилище профилей.</param>
         /// <param name="profileInfo">Информация о профиле.</param>
         internal PlatformProfile(IProfileStorage profileStorage, ProfileInfo profileInfo) {
+            if(profileStorage == null) {
+                throw new ArgumentNullException(nameof(profileStorage));
+            }
+
+            if(profileInfo == null) {
+                throw new ArgumentNullException(nameof(profileInfo));
+            }
+
             _profileStorage = profileStorage;
 
             User = _profileStorage.LoadProfileSpace(profileInfo, ProfileSpace.UserProfileSpace);

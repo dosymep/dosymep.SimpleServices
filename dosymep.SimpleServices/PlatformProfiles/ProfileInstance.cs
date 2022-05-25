@@ -15,6 +15,8 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public string ProfileUri { get; }
         public ProfileInfo ProfileInfo { get; }
         public ProfileSpace ProfileSpace { get; }
+        
+        public string ApplicationVersion { get; set; }
 
         public T GetProfileSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
