@@ -1,5 +1,5 @@
 ﻿namespace dosymep.SimpleServices.PlatformProfiles {
-    internal interface IProfileInstance {
+    public interface IProfileInstance {
         T GetProfileSettings<T>(string pluginName);
         T GetProfileSettings<T>(string pluginName, string settingsName);
 

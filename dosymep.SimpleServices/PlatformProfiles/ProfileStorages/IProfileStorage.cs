@@ -2,7 +2,7 @@
     /// <summary>
     /// Интерфейс предоставляет доступ к профилям.
     /// </summary>
-    internal interface IProfileStorage {
+    public interface IProfileStorage {
         /// <summary>
         /// Возвращает и устанавливает используемое наименование профиля.
         /// </summary>

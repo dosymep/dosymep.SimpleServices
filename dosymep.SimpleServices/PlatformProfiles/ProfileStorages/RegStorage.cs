@@ -12,7 +12,10 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         Directory
     }
 
-    internal class RegStorage : IProfileStorage {
+    /// <summary>
+    /// Класс хранилища профиля в реестре.
+    /// </summary>
+    public class RegStorage : IProfileStorage {
         private const string ProfileNameValueName = "ProfileName";
         
         private const string ProfileUriValueName = "ProfileUri";
@@ -26,17 +29,25 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private readonly string _applicationVersion;
         private readonly ISerializationService _serializationService;
 
+        /// <summary>
+        /// Конструктор хранилища профиля в реестре.
+        /// </summary>
+        /// <param name="regPath">Относительный путь до хранилища в реестре.</param>
+        /// <param name="applicationVersion">Версия приложения.</param>
+        /// <param name="serializationService">Сервис сериализации.</param>
         public RegStorage(string regPath, string applicationVersion, ISerializationService serializationService) {
             _regPath = regPath;
             _applicationVersion = applicationVersion;
             _serializationService = serializationService;
         }
 
+        /// <inheritdoc />
         public string ProfileName {
             get => (string) Registry.GetValue(_regPath, ProfileNameValueName, null);
             set => Registry.SetValue(_regPath, ProfileNameValueName, value);
         }
 
+        /// <inheritdoc />
         public ProfileInfo[] GetProfileInfos() {
             IEnumerable<ProfileInfo> currentUser = GetSubKeyNames(Registry.CurrentUser, false);
             IEnumerable<ProfileInfo> localMachine = GetSubKeyNames(Registry.LocalMachine, true);
@@ -44,11 +55,16 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             return localMachine.Union(currentUser).ToArray();
         }
 
+        /// <inheritdoc />
         public IProfileInstance LoadProfileSpace(ProfileInfo profileInfo, ProfileSpace profileSpace) {
-            return CreateProfileDefinition(profileInfo, profileSpace);
+            ProfileInstance profileDefinition = CreateProfileDefinition(profileInfo, profileSpace);
+            profileDefinition.ApplicationVersion = _applicationVersion;
+            profileDefinition.SerializationService = _serializationService;
+
+            return profileDefinition;
         }
 
-        private IProfileInstance CreateProfileDefinition(ProfileInfo profileInfo, ProfileSpace profileSpace) {
+        private ProfileInstance CreateProfileDefinition(ProfileInfo profileInfo, ProfileSpace profileSpace) {
             string keyFullName = GetKeyFullName(profileInfo, profileSpace);
 
             string profileUri =
@@ -63,15 +79,10 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
                         Branch = (string) Registry.GetValue(keyFullName, GitProfileGitBranchValueName, null),
                         Username = (string) Registry.GetValue(keyFullName, GitProfileGitUsernameValueName, null),
-                        Password = (string) Registry.GetValue(keyFullName, GitProfileGitPasswordValueName, null),
-                        ApplicationVersion = _applicationVersion,
-                        SerializationService = _serializationService,
+                        Password = (string) Registry.GetValue(keyFullName, GitProfileGitPasswordValueName, null)
                     };
                 case ProfileStorage.Directory:
-                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
-                        ApplicationVersion = _applicationVersion,
-                        SerializationService = _serializationService,
-                    };
+                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace);
                 default:
                     throw new ArgumentOutOfRangeException();
             }
