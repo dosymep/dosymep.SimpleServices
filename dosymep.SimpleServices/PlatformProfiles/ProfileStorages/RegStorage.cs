@@ -24,10 +24,12 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
 
         private readonly string _regPath;
         private readonly string _applicationVersion;
+        private readonly ISerializationService _serializationService;
 
-        public RegStorage(string regPath, string applicationVersion) {
+        public RegStorage(string regPath, string applicationVersion, ISerializationService serializationService) {
             _regPath = regPath;
             _applicationVersion = applicationVersion;
+            _serializationService = serializationService;
         }
 
         public string ProfileName {
@@ -62,11 +64,13 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
                         Branch = (string) Registry.GetValue(keyFullName, GitProfileGitBranchValueName, null),
                         Username = (string) Registry.GetValue(keyFullName, GitProfileGitUsernameValueName, null),
                         Password = (string) Registry.GetValue(keyFullName, GitProfileGitPasswordValueName, null),
-                        ApplicationVersion = _applicationVersion
+                        ApplicationVersion = _applicationVersion,
+                        SerializationService = _serializationService,
                     };
                 case ProfileStorage.Directory:
                     return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
-                        ApplicationVersion = _applicationVersion
+                        ApplicationVersion = _applicationVersion,
+                        SerializationService = _serializationService,
                     };
                 default:
                     throw new ArgumentOutOfRangeException();
