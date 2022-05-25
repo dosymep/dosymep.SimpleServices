@@ -13,6 +13,13 @@
         /// </summary>
         /// <returns>Возвращает информацию о сохраненных профилях в системе.</returns>
         ProfileInfo[] GetProfileInfos();
+
+
+        /// <summary>
+        /// Возвращает информацию о текущем профиле.
+        /// </summary>
+        /// <returns>Возвращает информацию о текущем профиле.</returns>
+        ProfileInfo GetCurrentProfileInfo();
         
         /// <summary>
         /// Возвращает определение профиля из хранилища.

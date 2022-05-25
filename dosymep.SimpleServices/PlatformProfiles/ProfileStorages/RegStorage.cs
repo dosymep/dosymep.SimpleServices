@@ -56,6 +56,12 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         }
 
         /// <inheritdoc />
+        public ProfileInfo GetCurrentProfileInfo() {
+            return GetProfileInfos()
+                .FirstOrDefault(item => item.Name.Equals(ProfileName));
+        }
+
+        /// <inheritdoc />
         public IProfileInstance LoadProfileSpace(ProfileInfo profileInfo, ProfileSpace profileSpace) {
             ProfileInstance profileDefinition = CreateProfileDefinition(profileInfo, profileSpace);
             profileDefinition.ApplicationVersion = _applicationVersion;
