@@ -20,12 +20,16 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private const string ProfileProfileLocalPathName = "ProfileLocalPath";
 
         private const string ProfileUriValueName = "ProfileUri";
+        private const string ProfileAllowCopyName = "ProfileAllowCopy";
         private const string ProfileStorageValueName = "ProfileStorage";
+        
+        
 
-        private const string GitProfileBranchValueName = "Branch";
         private const string ProfileCredentialsValueName = "Credentials";
-        private const string ProfileCredentialsUsernameValueName = "GitUsername";
-        private const string ProfileCredentialsPasswordValueName = "GitPassword";
+        private const string ProfileCredentialsUsernameValueName = "Username";
+        private const string ProfileCredentialsPasswordValueName = "Password";
+        
+        private const string GitProfileBranchValueName = "Branch";
 
         private readonly string _regPath;
         private readonly string _applicationVersion;
@@ -93,10 +97,14 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
                 case ProfileStorage.Git:
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
                         Credentials = GetCredentials(keyFullName),
+                        AllowCopy = GetRegistryValue<bool>(keyFullName, ProfileAllowCopyName),
                         Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName),
                     };
                 case ProfileStorage.Directory:
-                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace);
+                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
+                        Credentials = GetCredentials(keyFullName),
+                        AllowCopy = GetRegistryValue<bool>(keyFullName, ProfileAllowCopyName)
+                    };
                 default:
                     throw new ArgumentOutOfRangeException();
             }

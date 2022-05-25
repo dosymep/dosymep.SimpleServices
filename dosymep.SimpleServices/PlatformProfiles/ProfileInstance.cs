@@ -21,6 +21,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public ProfileInfo ProfileInfo { get; }
         public ProfileSpace ProfileSpace { get; }
 
+        public bool AllowCopy { get; set; }
         public Credentials Credentials { get; set; }
         public string ApplicationVersion { get; set; }
         public ISerializationService SerializationService { get; set; }
@@ -80,17 +81,19 @@ namespace dosymep.SimpleServices.PlatformProfiles {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(directory));
             }
 
-            directory = GetProfileName(directory);
-            try {
-                CopyProfileImp(directory);
-            } catch {
-                RemoveProfile(directory);
-                CopyProfileImp(directory);
+            if(AllowCopy) {
+                directory = GetProfileName(directory);
+                try {
+                    CopyProfileImp(directory);
+                } catch {
+                    RemoveProfile(directory);
+                    CopyProfileImp(directory);
+                }
             }
         }
 
         protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
-            return Path.Combine(ProfileUri, pluginName, settingsName);
+            return Path.Combine(ProfileUri, ApplicationVersion, pluginName, settingsName);
         }
 
         protected string GetProfileName(string directory) {
