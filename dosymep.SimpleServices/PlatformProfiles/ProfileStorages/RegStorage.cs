@@ -107,22 +107,21 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
                 GetRegistryValue<string>(keyFullName, ProfileUriValueName);
 
             ProfileStorage profileStorage =
-                (ProfileStorage) Enum.Parse(typeof(ProfileStorage),
-                    (string) Registry.GetValue(keyFullName, ProfileStorageValueName, nameof(ProfileStorage.Unknown)));
+                GetRegistryValue(keyFullName, ProfileStorageValueName, ProfileStorage.Unknown);
 
             switch(profileStorage) {
                 case ProfileStorage.Git:
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
                         ProfileLocalPath = ProfileLocalPath,
                         Credentials = GetCredentials(keyFullName),
-                        AllowCopy = GetRegistryValue<bool>(keyFullName, ProfileAllowCopyName),
+                        AllowCopy = Convert.ToBoolean(GetRegistryValue<int>(keyFullName, ProfileAllowCopyName)),
                         Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName)
                     };
                 case ProfileStorage.Directory:
                     return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
                         ProfileLocalPath = ProfileLocalPath,
                         Credentials = GetCredentials(keyFullName),
-                        AllowCopy = GetRegistryValue<bool>(keyFullName, ProfileAllowCopyName)
+                        AllowCopy = Convert.ToBoolean(GetRegistryValue<int>(keyFullName, ProfileAllowCopyName))
                     };
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -145,7 +144,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         }
 
         private string GetKeyFullName(ProfileInfo profileInfo, ProfileSpace profileSpace) {
-            return Path.Combine(profileInfo.FullName, profileSpace.ToString());
+            return Path.Combine(profileInfo.FullName, profileSpace.Name);
         }
 
         private Credentials GetCredentials(string keyFullName) {

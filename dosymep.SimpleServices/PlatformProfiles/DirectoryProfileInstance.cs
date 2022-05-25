@@ -17,11 +17,5 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         protected override string GetPluginConfigPath(string pluginName, string settingsName) {
             return GetDirectoryPath(base.GetPluginConfigPath(pluginName, settingsName));
         }
-
-        private string GetDirectoryPath(string profileUri) {
-            return Environment.ExpandEnvironmentVariables(profileUri)
-                .Replace($"%{Environment.SpecialFolder.MyDocuments}%",
-                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-        }
     }
 }

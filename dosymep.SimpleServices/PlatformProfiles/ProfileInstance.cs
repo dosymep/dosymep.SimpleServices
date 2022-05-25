@@ -93,7 +93,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
         
         protected string GetProfileName(string directory) {
-            return Path.Combine(directory, ProfileSpace.Name, ProfileInfo.Name);
+            return GetDirectoryPath(Path.Combine(directory, ProfileSpace.Name, ProfileInfo.Name));
         }
 
         protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
@@ -144,6 +144,12 @@ namespace dosymep.SimpleServices.PlatformProfiles {
                     CopyProfile(subDirectoryInfo.FullName, newDestinationDir, true);
                 }
             }
+        }
+        
+        protected string GetDirectoryPath(string directory) {
+            return Environment.ExpandEnvironmentVariables(directory)
+                .Replace($"%{Environment.SpecialFolder.MyDocuments}%",
+                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
         }
 
         private T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
