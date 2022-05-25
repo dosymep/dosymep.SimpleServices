@@ -30,7 +30,9 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         public void GitPull(Repository repository) {
             PullOptions options = CreatePullOptions(Credentials.Username, Credentials.Password);
-            Signature signature = new Signature("dosymep", "dosymep@gmail.com", DateTimeOffset.Now);
+            Signature signature = new Signature(
+                Credentials.Username ?? Environment.UserName,
+                Credentials.Username ?? Environment.UserDomainName, DateTimeOffset.Now);
 
             Commands.Pull(repository, signature, options);
         }
