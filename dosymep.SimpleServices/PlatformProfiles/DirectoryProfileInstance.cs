@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace dosymep.SimpleServices.PlatformProfiles {
     internal class DirectoryProfileInstance : ProfileInstance {
@@ -13,12 +14,8 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             CopyProfile(ProfileUri, directory, true);
         }
 
-        protected override T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
-            throw new NotImplementedException();
-        }
-
-        protected override void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName) {
-            throw new NotImplementedException();
+        protected override string GetPluginConfigPath(string pluginName, string settingsName) {
+            return GetDirectoryPath(base.GetPluginConfigPath(pluginName, settingsName));
         }
 
         private string GetDirectoryPath(string profileUri) {

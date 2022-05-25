@@ -20,14 +20,6 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             }
         }
 
-        protected override T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
-            throw new NotImplementedException();
-        }
-
-        protected override void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName) {
-            throw new NotImplementedException();
-        }
-
         public Repository GitClone(string directory) {
             CloneOptions cloneOptions = CreateCloneOptions(Branch, Username, Password);
             if(Directory.Exists(directory)) {

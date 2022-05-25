@@ -15,7 +15,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public string ProfileUri { get; }
         public ProfileInfo ProfileInfo { get; }
         public ProfileSpace ProfileSpace { get; }
-        
+
         public string ApplicationVersion { get; set; }
         public ISerializationService SerializationService { get; set; }
 
@@ -69,9 +69,6 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         protected abstract void CopyProfileImp(string directory);
 
-        protected abstract T GetProfileSettingsImp<T>(string pluginName, string settingsName);
-        protected abstract void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName);
-
         public void CopyProfile(string directory) {
             if(string.IsNullOrEmpty(directory)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(directory));
@@ -84,6 +81,10 @@ namespace dosymep.SimpleServices.PlatformProfiles {
                 RemoveProfile(directory);
                 CopyProfileImp(directory);
             }
+        }
+
+        protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
+            return Path.Combine(ProfileUri, pluginName, settingsName);
         }
 
         protected string GetProfileName(string directory) {
@@ -134,6 +135,16 @@ namespace dosymep.SimpleServices.PlatformProfiles {
                     CopyProfile(subDirectoryInfo.FullName, newDestinationDir, true);
                 }
             }
+        }
+
+        private T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
+            string pluginConfigPath = GetPluginConfigPath(pluginName, settingsName);
+            return SerializationService.Deserialize<T>(File.ReadAllText(pluginConfigPath));
+        }
+
+        private void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName) {
+            string pluginConfigPath = GetPluginConfigPath(pluginName, settingsName);
+            File.WriteAllText(pluginConfigPath, SerializationService.Serialize(settings));
         }
     }
 }
