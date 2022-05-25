@@ -22,10 +22,14 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public ProfileSpace ProfileSpace { get; }
 
         public bool AllowCopy { get; set; }
-        public Credentials Credentials { get; set; }
+        
+        public string ProfileLocalPath { get; set; }
         public string ApplicationVersion { get; set; }
+
+        public Credentials Credentials { get; set; }
         public ISerializationService SerializationService { get; set; }
 
+        
         public T GetProfileSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
@@ -76,13 +80,9 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         protected abstract void CopyProfileImp(string directory);
 
-        public void CopyProfile(string directory) {
-            if(string.IsNullOrEmpty(directory)) {
-                throw new ArgumentException("Value cannot be null or empty.", nameof(directory));
-            }
-
+        public void CopyProfile() {
             if(AllowCopy) {
-                directory = GetProfileName(directory);
+                string directory = GetProfileName(ProfileLocalPath);
                 try {
                     CopyProfileImp(directory);
                 } catch {
@@ -91,13 +91,13 @@ namespace dosymep.SimpleServices.PlatformProfiles {
                 }
             }
         }
-
-        protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
-            return Path.Combine(ProfileUri, ApplicationVersion, pluginName, settingsName);
-        }
-
+        
         protected string GetProfileName(string directory) {
             return Path.Combine(directory, ProfileSpace.Name, ProfileInfo.Name);
+        }
+
+        protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
+            return Path.Combine(ProfileLocalPath, ApplicationVersion, pluginName, settingsName);
         }
 
         protected void RemoveProfile(string directory) {

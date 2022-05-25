@@ -78,7 +78,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             ProfileInstance profileDefinition = CreateProfileDefinition(profileInfo, profileSpace);
             profileDefinition.ApplicationVersion = _applicationVersion;
             profileDefinition.SerializationService = _serializationService;
-            profileDefinition.CopyProfile(ProfileLocalPath);
+            profileDefinition.CopyProfile();
 
             return profileDefinition;
         }
@@ -96,12 +96,14 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
             switch(profileStorage) {
                 case ProfileStorage.Git:
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
+                        ProfileLocalPath = ProfileLocalPath,
                         Credentials = GetCredentials(keyFullName),
                         AllowCopy = GetRegistryValue<bool>(keyFullName, ProfileAllowCopyName),
-                        Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName),
+                        Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName)
                     };
                 case ProfileStorage.Directory:
                     return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
+                        ProfileLocalPath = ProfileLocalPath,
                         Credentials = GetCredentials(keyFullName),
                         AllowCopy = GetRegistryValue<bool>(keyFullName, ProfileAllowCopyName)
                     };
