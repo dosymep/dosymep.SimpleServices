@@ -11,11 +11,15 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         public string Branch { get; set; }
 
-        protected override void CopyProfileImp(string directory) {
+        protected override void CopyProfileImpl(string directory) {
             using(Repository repository = GitClone(directory)) {
                 Commands.Checkout(repository, repository.Branches[Branch]);
                 GitPull(repository);
             }
+        }
+
+        protected override void CommitProfileImpl(string pluginConfigPath) {
+            throw new NotImplementedException();
         }
 
         public Repository GitClone(string directory) {
