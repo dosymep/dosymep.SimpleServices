@@ -98,7 +98,8 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
-            return Path.Combine(AllowCopy ? ProfileLocalPath : ProfileUri, ApplicationVersion, pluginName, settingsName) + SerializationService.FileExtension;
+            return Path.Combine(AllowCopy ? ProfileLocalPath : ProfileUri, ProfileSpace.Name, ProfileInfo.Name,
+                ApplicationVersion, pluginName, settingsName) + SerializationService.FileExtension;
         }
 
         protected void RemoveProfile(string directory) {

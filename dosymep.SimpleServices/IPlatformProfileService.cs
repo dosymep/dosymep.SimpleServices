@@ -77,17 +77,17 @@ namespace dosymep.SimpleServices {
         /// <summary>
         /// Пользовательские настройки пространства профиля.
         /// </summary>
-        public static UserProfileSpace UserProfileSpace => new UserProfileSpace("User");
+        public static UserSpace UserSpace => new UserSpace("User");
 
         /// <summary>
         /// Системные настройки пространства профиля.
         /// </summary>
-        public static SystemProfileSpace SystemProfileSpace => new SystemProfileSpace("System");
+        public static SystemSpace SystemSpace => new SystemSpace("System");
 
         /// <summary>
         /// Организации настройки пространства профиля.
         /// </summary>
-        public static OrganizationProfileSpace OrganizationProfileSpace => new OrganizationProfileSpace("Organization");
+        public static OrganizationSpace OrganizationSpace => new OrganizationSpace("Organization");
 
         /// <summary>
         /// Наименование пространства профиля.
@@ -98,12 +98,12 @@ namespace dosymep.SimpleServices {
     /// <summary>
     /// Пользовательские настройки пространства профиля.
     /// </summary>
-    public sealed class UserProfileSpace : ProfileSpace {
+    public sealed class UserSpace : ProfileSpace {
         /// <summary>
         /// Создает экземпляр пользовательского пространства настроек профиля.
         /// </summary>
         /// <param name="name">Наименование профиля.</param>
-        internal UserProfileSpace(string name)
+        internal UserSpace(string name)
             : base(name) {
         }
     }
@@ -111,12 +111,12 @@ namespace dosymep.SimpleServices {
     /// <summary>
     /// Системные настройки пространства профиля.
     /// </summary>
-    public sealed class SystemProfileSpace : ProfileSpace {
+    public sealed class SystemSpace : ProfileSpace {
         /// <summary>
         /// Создает экземпляр системного пространства настроек профиля.
         /// </summary>
         /// <param name="name">Наименование профиля.</param>
-        internal SystemProfileSpace(string name)
+        internal SystemSpace(string name)
             : base(name) {
         }
     }
@@ -124,12 +124,12 @@ namespace dosymep.SimpleServices {
     /// <summary>
     /// Организации настройки пространства профиля.
     /// </summary>
-    public sealed class OrganizationProfileSpace : ProfileSpace {
+    public sealed class OrganizationSpace : ProfileSpace {
         /// <summary>
         /// Создает экземпляр организации пространства настроек профиля.
         /// </summary>
         /// <param name="name">Наименование профиля.</param>
-        internal OrganizationProfileSpace(string name)
+        internal OrganizationSpace(string name)
             : base(name) {
         }
     }
