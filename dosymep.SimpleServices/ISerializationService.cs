@@ -4,6 +4,11 @@
     /// </summary>
     public interface ISerializationService {
         /// <summary>
+        /// Расширение файла при сериализации в файл.
+        /// </summary>
+        string FileExtension { get; }
+        
+        /// <summary>
         /// Сериализует объект в строку.
         /// </summary>
         /// <typeparam name="T">Тип объекта сериализации.</typeparam>
