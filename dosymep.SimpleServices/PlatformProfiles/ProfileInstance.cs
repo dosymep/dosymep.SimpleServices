@@ -78,16 +78,17 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             SaveProfileSettingsImpl(settings, pluginName, settingsName);
         }
 
-        protected abstract void CopyProfileImp(string directory);
+        protected abstract void CopyProfileImpl(string directory);
+        protected abstract void CommitProfileImpl(string pluginConfigPath);
 
         public void CopyProfile() {
             if(AllowCopy) {
                 string directory = GetProfileName(ProfileLocalPath);
                 try {
-                    CopyProfileImp(directory);
+                    CopyProfileImpl(directory);
                 } catch {
                     RemoveProfile(directory);
-                    CopyProfileImp(directory);
+                    CopyProfileImpl(directory);
                 }
             }
         }
@@ -159,6 +160,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         private void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName) {
             string pluginConfigPath = GetPluginConfigPath(pluginName, settingsName);
+            Directory.CreateDirectory(Path.GetDirectoryName(pluginConfigPath));
             File.WriteAllText(pluginConfigPath, SerializationService.Serialize(settings));
         }
     }
