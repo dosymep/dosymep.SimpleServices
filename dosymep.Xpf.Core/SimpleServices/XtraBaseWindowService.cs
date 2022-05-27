@@ -11,7 +11,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
     /// </summary>
     public abstract class XtraBaseWindowService<TServiceBase> : IDisposable
         where TServiceBase : ServiceBase {
-        
+
         /// <summary>
         /// Родительское окно сервиса
         /// </summary>
@@ -31,7 +31,9 @@ namespace dosymep.Xpf.Core.SimpleServices {
             _window = window;
             _serviceBase = serviceBase;
 
-            Interaction.GetBehaviors(_window).Add(_serviceBase);
+            if(_window != null) {
+                Interaction.GetBehaviors(_window).Add(_serviceBase);
+            }
         }
 
         /// <summary>
@@ -40,7 +42,9 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <param name="disposing">Указывает на очистку ресурсов.</param>
         protected virtual void Dispose(bool disposing) {
             if(disposing) {
-                Interaction.GetBehaviors(_window).Remove(_serviceBase);
+                if(_window != null) {
+                    Interaction.GetBehaviors(_window).Remove(_serviceBase);
+                }
             }
         }
 
