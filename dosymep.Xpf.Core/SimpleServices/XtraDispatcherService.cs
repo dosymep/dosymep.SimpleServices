@@ -1,24 +1,33 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Windows;
+
 using DevExpress.Mvvm.UI;
+using DevExpress.Mvvm.UI.Interactivity;
 
 using dosymep.SimpleServices;
 
-namespace dosymep.Xpf.Core.SimpleServices
-{
-    public class XtraDispatcherService : IDispatcherService
-    {
-        private readonly DispatcherService _dispatcherService
-            = new DispatcherService();
-
-        public Task BeginInvoke(Action action)
-        {
-            return _dispatcherService.BeginInvoke(action);
+namespace dosymep.Xpf.Core.SimpleServices {
+    /// <summary>
+    /// Класс сервиса диспетчера окна.
+    /// </summary>
+    public class XtraDispatcherService : XtraBaseWindowService<DispatcherService>, IDispatcherService {
+        /// <summary>
+        /// Создает экземпляр сервиса диспетчера окна.
+        /// </summary>
+        /// <param name="window">Родительское окно сервиса.</param>
+        public XtraDispatcherService(Window window)
+            : base(window, new DispatcherService()) {
         }
-
-        public void Invoke(Action action)
-        {
-            _dispatcherService.Invoke(action);
+        
+        /// <inheritdoc />
+        public void Invoke(Action action) {
+            _serviceBase.Invoke(action);
+        }
+        
+        /// <inheritdoc />
+        public Task BeginInvoke(Action action) {
+            return _serviceBase.BeginInvoke(action);
         }
     }
 }

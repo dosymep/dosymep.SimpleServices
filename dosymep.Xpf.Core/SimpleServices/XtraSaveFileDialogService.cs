@@ -1,117 +1,126 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Windows;
+
 using DevExpress.Mvvm.UI;
 using DevExpress.Xpf.Dialogs;
 
 using dosymep.SimpleServices;
 
-namespace dosymep.Xpf.Core.SimpleServices
-{
-    public class XtraSaveFileDialogService : ISaveFileDialogService
-    {
-        private readonly DevExpress.Mvvm.ISaveFileDialogService _saveFileDialogService
-            = new DXSaveFileDialogService();
-
-        public bool CheckFileExists
-        {
-            get => _saveFileDialogService.CheckFileExists;
-            set => _saveFileDialogService.CheckFileExists = value;
+namespace dosymep.Xpf.Core.SimpleServices {
+    /// <summary>
+    /// Класс сервиса открытия диалога сохранения файла.
+    /// </summary>
+    public class XtraSaveFileDialogService : XtraBaseWindowService<DXSaveFileDialogService>, ISaveFileDialogService {
+        /// <summary>
+        /// Создает экземпляр сервиса открытия диалога сохранения файла.
+        /// </summary>
+        /// <param name="window">Родительское окно сервиса.</param>
+        public XtraSaveFileDialogService(Window window)
+            : base(window, new DXSaveFileDialogService()) {
         }
 
-        public bool AddExtension
-        {
-            get => _saveFileDialogService.AddExtension;
-            set => _saveFileDialogService.AddExtension = value;
+        /// <inheritdoc />
+        public bool CheckFileExists {
+            get => _serviceBase.CheckFileExists;
+            set => _serviceBase.CheckFileExists = value;
         }
 
-        public bool AutoUpgradeEnabled
-        {
-            get => _saveFileDialogService.AutoUpgradeEnabled;
-            set => _saveFileDialogService.AutoUpgradeEnabled = value;
+        /// <inheritdoc />
+        public bool AddExtension {
+            get => _serviceBase.AddExtension;
+            set => _serviceBase.AddExtension = value;
         }
 
-        public bool CheckPathExists
-        {
-            get => _saveFileDialogService.CheckPathExists;
-            set => _saveFileDialogService.CheckPathExists = value;
+        /// <inheritdoc />
+        public bool AutoUpgradeEnabled {
+            get => _serviceBase.AutoUpgradeEnabled;
+            set => _serviceBase.AutoUpgradeEnabled = value;
         }
 
-        public bool DereferenceLinks
-        {
-            get => _saveFileDialogService.DereferenceLinks;
-            set => _saveFileDialogService.DereferenceLinks = value;
+        /// <inheritdoc />
+        public bool CheckPathExists {
+            get => _serviceBase.CheckPathExists;
+            set => _serviceBase.CheckPathExists = value;
         }
 
-        public bool RestoreDirectory
-        {
-            get => _saveFileDialogService.RestoreDirectory;
-            set => _saveFileDialogService.RestoreDirectory = value;
+        /// <inheritdoc />
+        public bool DereferenceLinks {
+            get => _serviceBase.DereferenceLinks;
+            set => _serviceBase.DereferenceLinks = value;
         }
 
-        public bool ShowHelp
-        {
-            get => _saveFileDialogService.ShowHelp;
-            set => _saveFileDialogService.ShowHelp = value;
+        /// <inheritdoc />
+        public bool RestoreDirectory {
+            get => _serviceBase.RestoreDirectory;
+            set => _serviceBase.RestoreDirectory = value;
         }
 
-        public bool SupportMultiDottedExtensions
-        {
-            get => _saveFileDialogService.SupportMultiDottedExtensions;
-            set => _saveFileDialogService.SupportMultiDottedExtensions = value;
+        /// <inheritdoc />
+        public bool ShowHelp {
+            get => _serviceBase.ShowHelp;
+            set => _serviceBase.ShowHelp = value;
         }
 
-        public bool ValidateNames
-        {
-            get => _saveFileDialogService.ValidateNames;
-            set => _saveFileDialogService.ValidateNames = value;
+        /// <inheritdoc />
+        public bool SupportMultiDottedExtensions {
+            get => _serviceBase.SupportMultiDottedExtensions;
+            set => _serviceBase.SupportMultiDottedExtensions = value;
         }
 
-        public int FilterIndex
-        {
-            get => _saveFileDialogService.FilterIndex;
-            set => _saveFileDialogService.FilterIndex = value;
+        /// <inheritdoc />
+        public bool ValidateNames {
+            get => _serviceBase.ValidateNames;
+            set => _serviceBase.ValidateNames = value;
         }
 
-        public string DefaultExt
-        {
-            get => _saveFileDialogService.DefaultExt;
-            set => _saveFileDialogService.DefaultExt = value;
+        /// <inheritdoc />
+        public int FilterIndex {
+            get => _serviceBase.FilterIndex;
+            set => _serviceBase.FilterIndex = value;
         }
 
-        public string DefaultFileName
-        {
-            get => _saveFileDialogService.DefaultFileName;
-            set => _saveFileDialogService.DefaultFileName = value;
+        /// <inheritdoc />
+        public string DefaultExt {
+            get => _serviceBase.DefaultExt;
+            set => _serviceBase.DefaultExt = value;
         }
 
-        public string Title
-        {
-            get => _saveFileDialogService.Title;
-            set => _saveFileDialogService.Title = value;
+        /// <inheritdoc />
+        public string DefaultFileName {
+            get => _serviceBase.DefaultFileName;
+            set => _serviceBase.DefaultFileName = value;
         }
 
-        public string Filter
-        {
-            get => _saveFileDialogService.Filter;
-            set => _saveFileDialogService.Filter = value;
+        /// <inheritdoc />
+        public string Title {
+            get => _serviceBase.Title;
+            set => _serviceBase.Title = value;
         }
 
-        public string InitialDirectory
-        {
-            get => _saveFileDialogService.InitialDirectory;
-            set => _saveFileDialogService.InitialDirectory = value;
+        /// <inheritdoc />
+        public string Filter {
+            get => _serviceBase.Filter;
+            set => _serviceBase.Filter = value;
         }
 
-        public void Reset()
-        {
-            _saveFileDialogService.Reset();
-        }
-        
-        public bool ShowDialog(string directoryName, string fileName)
-        {
-            return _saveFileDialogService.ShowDialog(null, directoryName, fileName);
+        /// <inheritdoc />
+        public string InitialDirectory {
+            get => _serviceBase.InitialDirectory;
+            set => _serviceBase.InitialDirectory = value;
         }
 
-        public FileInfo File => ((FileInfoWrapper) _saveFileDialogService.File).FileInfo;
+        /// <inheritdoc />
+        public void Reset() {
+            ((DevExpress.Mvvm.ISaveFileDialogService)_serviceBase).Reset();
+        }
+
+        /// <inheritdoc />
+        public bool ShowDialog(string directoryName, string fileName) {
+            return ((DevExpress.Mvvm.ISaveFileDialogService)_serviceBase).ShowDialog(null, directoryName, fileName);
+        }
+
+        /// <inheritdoc />
+        public FileInfo File => ((FileInfoWrapper) ((DevExpress.Mvvm.ISaveFileDialogService)_serviceBase).File).FileInfo;
     }
 }
