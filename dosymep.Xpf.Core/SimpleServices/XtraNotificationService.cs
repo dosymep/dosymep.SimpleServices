@@ -28,6 +28,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
             _serviceBase.CustomNotificationPosition = NotificationPosition.BottomRight;
             _serviceBase.CustomNotificationScreen = NotificationScreen.ApplicationWindow;
             _serviceBase.PredefinedNotificationDuration = PredefinedNotificationDuration.Default;
+            _serviceBase.PredefinedNotificationTemplate = NotificationTemplate.ShortHeaderAndLongText;
         }
 
         /// <summary>
