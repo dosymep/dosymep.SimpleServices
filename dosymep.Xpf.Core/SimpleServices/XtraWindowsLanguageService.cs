@@ -9,7 +9,7 @@ using dosymep.SimpleServices;
 
 namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
-    /// Предоставляет доступ к языку Windows.
+    /// Класс сервиса доступа к языку Windows.
     /// </summary>
     public class XtraWindowsLanguageService : ILanguageService { 
         /// <inheritdoc/>
