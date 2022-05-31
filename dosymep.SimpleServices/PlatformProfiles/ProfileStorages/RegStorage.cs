@@ -18,10 +18,10 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
     /// </summary>
     public class RegStorage : IProfileStorage {
         private const string ProfileNameValueName = "ProfileName";
-        private const string ProfileProfileLocalPathName = "ProfileLocalPath";
+        private const string ProfileLocalPathName = "ProfileLocalPath";
 
-        private const string ProfileUriValueName = "ProfileUri";
         private const string ProfileStorageValueName = "ProfileStorage";
+        private const string ProfileOriginalValueName = "ProfileOriginal";
 
         private const string ProfileCredentialsValueName = "Credentials";
         private const string ProfileCredentialsUsernameValueName = "Username";
@@ -62,13 +62,13 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         /// <inheritdoc />
         public string ProfileLocalPath {
             get =>
-                GetRegistryValue<string>(Registry.LocalMachine, ProfileProfileLocalPathName)
-                ?? GetRegistryValue<string>(Registry.CurrentUser, ProfileProfileLocalPathName);
+                GetRegistryValue<string>(Registry.LocalMachine, ProfileLocalPathName)
+                ?? GetRegistryValue<string>(Registry.CurrentUser, ProfileLocalPathName);
             set {
                 try {
-                    SetRegistryValue(Registry.LocalMachine, ProfileProfileLocalPathName, value);
+                    SetRegistryValue(Registry.LocalMachine, ProfileLocalPathName, value);
                 } catch(SecurityException) {
-                    SetRegistryValue(Registry.CurrentUser, ProfileProfileLocalPathName, value);
+                    SetRegistryValue(Registry.CurrentUser, ProfileLocalPathName, value);
                 }
             }
         }
@@ -100,22 +100,20 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private ProfileInstance CreateProfileInstance(ProfileInfo profileInfo, ProfileSpace profileSpace) {
             string keyFullName = GetKeyFullName(profileInfo, profileSpace);
 
-            string profileUri =
-                GetRegistryValue<string>(keyFullName, ProfileUriValueName);
+            string profileOriginalPath =
+                GetRegistryValue<string>(keyFullName, ProfileOriginalValueName);
 
             ProfileStorage profileStorage =
                 GetRegistryValue(keyFullName, ProfileStorageValueName, ProfileStorage.Unknown);
 
             switch(profileStorage) {
                 case ProfileStorage.Git:
-                    return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
-                        ProfileLocalPath = ProfileLocalPath,
+                    return new GitProfileInstance(ProfileLocalPath, profileOriginalPath, profileInfo, profileSpace) {
                         Credentials = GetCredentials(keyFullName),
                         Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName)
                     };
                 case ProfileStorage.Directory:
-                    return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
-                        ProfileLocalPath = ProfileLocalPath,
+                    return new DirectoryProfileInstance(ProfileLocalPath, profileOriginalPath, profileInfo, profileSpace) {
                         Credentials = GetCredentials(keyFullName),
                     };
                 default:

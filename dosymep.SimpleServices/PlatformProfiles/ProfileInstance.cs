@@ -6,10 +6,13 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public string Username { get; set; }
         public string Password { get; set; }
     }
-    
+
     internal abstract class ProfileInstance : IProfileInstance {
-        public ProfileInstance(string profileUri, ProfileInfo profileInfo, ProfileSpace profileSpace) {
-            ProfileUri = profileUri;
+        public ProfileInstance(string profileLocalPath, string profileOriginalPath, ProfileInfo profileInfo,
+            ProfileSpace profileSpace) {
+            ProfileLocalPath = profileLocalPath;
+            ProfileOriginalPath = profileOriginalPath;
+
             ProfileInfo = profileInfo;
             ProfileSpace = profileSpace;
         }
@@ -17,26 +20,105 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public string Name => ProfileInfo.Name;
         public bool IsReadOnly => ProfileInfo.IsReadOnly;
 
-        public string ProfileUri { get; }
+
+        public string ProfileLocalPath { get; }
+        public string ProfileOriginalPath { get; }
+
+
         public ProfileInfo ProfileInfo { get; }
         public ProfileSpace ProfileSpace { get; }
-       
-        public string ProfileLocalPath { get; set; }
-        public string ApplicationVersion { get; set; }
+
 
         public Credentials Credentials { get; set; }
+        public string ApplicationVersion { get; set; }
         public ISerializationService SerializationService { get; set; }
 
+
+        public string LocalPath => GetExpandedPath(ProfileLocalPath);
+        public string OriginalPath => GetExpandedPath(ProfileOriginalPath);
+
+
         public void LoadProfile() {
-            string directory = GetProfileName(ProfileLocalPath);
-            try {
-                LoadProfileImpl(directory);
-            } catch {
-                RemoveProfile(directory);
-                LoadProfileImpl(directory);
+            LoadProfileImpl();
+        }
+
+        protected abstract void LoadProfileImpl();
+        protected abstract void CommitProfileImpl(string pluginConfigPath);
+
+        protected string GetExpandedPath(string notExpandPath) {
+            return ExpandEnvironmentVariables(Path.Combine(notExpandPath, ProfileSpace.Name, ProfileInfo.Name));
+        }
+
+        protected string GetProfileConfigPath(string pluginName, string settingsName) {
+            return Path.Combine(LocalPath, ProfileSpace.Name, ProfileInfo.Name,
+                ApplicationVersion, pluginName, settingsName) + SerializationService.FileExtension;
+        }
+
+        protected void RemoveProfile() {
+            if(Directory.Exists(LocalPath)) {
+                File.SetAttributes(LocalPath, FileAttributes.Normal);
+                foreach(string fileSystemEntry
+                        in Directory.GetFileSystemEntries(LocalPath, "*", SearchOption.AllDirectories)) {
+                    File.SetAttributes(fileSystemEntry, FileAttributes.Normal);
+                }
+
+                try {
+                    Directory.Delete(LocalPath, true);
+                } catch(IOException) {
+                    Directory.Delete(LocalPath, true);
+                }
             }
         }
-        
+
+        protected void CopyDirectory(string source, string destination, bool recursive) {
+            // Get information about the source directory
+            DirectoryInfo directoryInfo = new DirectoryInfo(source);
+
+            // Check if the source directory exists
+            if(!directoryInfo.Exists) {
+                throw new DirectoryNotFoundException($"Source directory not found: {directoryInfo.FullName}");
+            }
+
+            // Cache directories before we start copying
+            DirectoryInfo[] directoryInfos = directoryInfo.GetDirectories();
+
+            // Create the destination directory
+            Directory.CreateDirectory(destination);
+
+            // Get the files in the source directory and copy to the destination directory
+            foreach(FileInfo fileInfo in directoryInfo.GetFiles()) {
+                string targetFilePath = Path.Combine(destination, fileInfo.Name);
+                fileInfo.CopyTo(targetFilePath);
+            }
+
+            // If recursive and copying subdirectories, recursively call this method
+            if(recursive) {
+                foreach(DirectoryInfo subDirectoryInfo in directoryInfos) {
+                    string newDestinationDir = Path.Combine(destination, subDirectoryInfo.Name);
+                    CopyDirectory(subDirectoryInfo.FullName, newDestinationDir, true);
+                }
+            }
+        }
+
+        protected string ExpandEnvironmentVariables(string directory) {
+            return Environment.ExpandEnvironmentVariables(directory)
+                .Replace($"%{Environment.SpecialFolder.MyDocuments}%",
+                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+        }
+
+        private T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
+            string pluginConfigPath = GetProfileConfigPath(pluginName, settingsName);
+            return SerializationService.Deserialize<T>(File.ReadAllText(pluginConfigPath));
+        }
+
+        private void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName) {
+            string pluginConfigPath = GetProfileConfigPath(pluginName, settingsName);
+            Directory.CreateDirectory(Path.GetDirectoryName(pluginConfigPath));
+            File.WriteAllText(pluginConfigPath, SerializationService.Serialize(settings));
+        }
+
+        #region IProfileInstance
+
         public T GetProfileSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(pluginName));
@@ -85,79 +167,6 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             SaveProfileSettingsImpl(settings, pluginName, settingsName);
         }
 
-        protected abstract void LoadProfileImpl(string directory);
-        protected abstract void CommitProfileImpl(string pluginConfigPath);
-        
-        protected string GetProfileName(string directory) {
-            return GetDirectoryPath(Path.Combine(directory, ProfileSpace.Name, ProfileInfo.Name));
-        }
-
-        protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
-            return Path.Combine(ProfileLocalPath, ProfileSpace.Name, ProfileInfo.Name,
-                ApplicationVersion, pluginName, settingsName) + SerializationService.FileExtension;
-        }
-
-        protected void RemoveProfile(string directory) {
-            if(Directory.Exists(directory)) {
-                File.SetAttributes(directory, FileAttributes.Normal);
-                foreach(string fileSystemEntry
-                        in Directory.GetFileSystemEntries(directory, "*", SearchOption.AllDirectories)) {
-                    File.SetAttributes(fileSystemEntry, FileAttributes.Normal);
-                }
-
-                try {
-                    Directory.Delete(directory, true);
-                } catch(IOException) {
-                    Directory.Delete(directory, true);
-                }
-            }
-        }
-
-        protected void LoadProfile(string source, string destination, bool recursive) {
-            // Get information about the source directory
-            DirectoryInfo directoryInfo = new DirectoryInfo(source);
-
-            // Check if the source directory exists
-            if(!directoryInfo.Exists) {
-                throw new DirectoryNotFoundException($"Source directory not found: {directoryInfo.FullName}");
-            }
-
-            // Cache directories before we start copying
-            DirectoryInfo[] directoryInfos = directoryInfo.GetDirectories();
-
-            // Create the destination directory
-            Directory.CreateDirectory(destination);
-
-            // Get the files in the source directory and copy to the destination directory
-            foreach(FileInfo fileInfo in directoryInfo.GetFiles()) {
-                string targetFilePath = Path.Combine(destination, fileInfo.Name);
-                fileInfo.CopyTo(targetFilePath);
-            }
-
-            // If recursive and copying subdirectories, recursively call this method
-            if(recursive) {
-                foreach(DirectoryInfo subDirectoryInfo in directoryInfos) {
-                    string newDestinationDir = Path.Combine(destination, subDirectoryInfo.Name);
-                    LoadProfile(subDirectoryInfo.FullName, newDestinationDir, true);
-                }
-            }
-        }
-        
-        protected string GetDirectoryPath(string directory) {
-            return Environment.ExpandEnvironmentVariables(directory)
-                .Replace($"%{Environment.SpecialFolder.MyDocuments}%",
-                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-        }
-
-        private T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
-            string pluginConfigPath = GetPluginConfigPath(pluginName, settingsName);
-            return SerializationService.Deserialize<T>(File.ReadAllText(pluginConfigPath));
-        }
-
-        private void SaveProfileSettingsImpl<T>(T settings, string pluginName, string settingsName) {
-            string pluginConfigPath = GetPluginConfigPath(pluginName, settingsName);
-            Directory.CreateDirectory(Path.GetDirectoryName(pluginConfigPath));
-            File.WriteAllText(pluginConfigPath, SerializationService.Serialize(settings));
-        }
+        #endregion
     }
 }

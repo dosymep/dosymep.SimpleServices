@@ -5,16 +5,24 @@ using LibGit2Sharp;
 
 namespace dosymep.SimpleServices.PlatformProfiles {
     internal class GitProfileInstance : ProfileInstance {
-        public GitProfileInstance(ProfileInfo profileInfo, string profileUri, ProfileSpace profileSpace)
-            : base(profileUri, profileInfo, profileSpace) {
+        public GitProfileInstance(string profileLocalPath, string profileOriginalPath,
+            ProfileInfo profileInfo, ProfileSpace profileSpace)
+            : base(profileLocalPath, profileOriginalPath, profileInfo, profileSpace) {
         }
 
-        public string Branch { get; set; }
+        public string Branch { get; set; } = "master";
 
-        protected override void LoadProfileImpl(string directory) {
-            using(Repository repository = GitClone(directory)) {
-                Commands.Checkout(repository, repository.Branches[Branch]);
-                GitPull(repository);
+        protected override void LoadProfileImpl() {
+            try {
+                using(Repository repository = GitClone(LocalPath)) {
+                    Commands.Checkout(repository, repository.Branches[Branch]);
+                    GitPull(repository);
+                }
+            } catch {
+                RemoveProfile();
+                using(Repository repository = GitClone(LocalPath)) {
+                    Commands.Checkout(repository, repository.Branches[Branch]);
+                }
             }
         }
 
@@ -28,7 +36,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
                 return new Repository(directory);
             }
 
-            string clonedPath = Repository.Clone(ProfileUri, directory, cloneOptions);
+            string clonedPath = Repository.Clone(ProfileOriginalPath, directory, cloneOptions);
             return new Repository(clonedPath);
         }
 
