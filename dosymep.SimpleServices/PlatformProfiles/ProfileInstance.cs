@@ -20,9 +20,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public string ProfileUri { get; }
         public ProfileInfo ProfileInfo { get; }
         public ProfileSpace ProfileSpace { get; }
-
-        public bool AllowCopy { get; set; }
-        
+       
         public string ProfileLocalPath { get; set; }
         public string ApplicationVersion { get; set; }
 
@@ -78,18 +76,16 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             SaveProfileSettingsImpl(settings, pluginName, settingsName);
         }
 
-        protected abstract void CopyProfileImpl(string directory);
+        protected abstract void LoadProfileImpl(string directory);
         protected abstract void CommitProfileImpl(string pluginConfigPath);
 
-        public void CopyProfile() {
-            if(AllowCopy) {
-                string directory = GetProfileName(ProfileLocalPath);
-                try {
-                    CopyProfileImpl(directory);
-                } catch {
-                    RemoveProfile(directory);
-                    CopyProfileImpl(directory);
-                }
+        public void LoadProfile() {
+            string directory = GetProfileName(ProfileLocalPath);
+            try {
+                LoadProfileImpl(directory);
+            } catch {
+                RemoveProfile(directory);
+                LoadProfileImpl(directory);
             }
         }
         
@@ -98,7 +94,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         protected virtual string GetPluginConfigPath(string pluginName, string settingsName) {
-            return Path.Combine(AllowCopy ? ProfileLocalPath : ProfileUri, ProfileSpace.Name, ProfileInfo.Name,
+            return Path.Combine(ProfileLocalPath, ProfileSpace.Name, ProfileInfo.Name,
                 ApplicationVersion, pluginName, settingsName) + SerializationService.FileExtension;
         }
 
@@ -118,7 +114,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             }
         }
 
-        protected void CopyProfile(string source, string destination, bool recursive) {
+        protected void LoadProfile(string source, string destination, bool recursive) {
             // Get information about the source directory
             DirectoryInfo directoryInfo = new DirectoryInfo(source);
 
@@ -143,7 +139,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
             if(recursive) {
                 foreach(DirectoryInfo subDirectoryInfo in directoryInfos) {
                     string newDestinationDir = Path.Combine(destination, subDirectoryInfo.Name);
-                    CopyProfile(subDirectoryInfo.FullName, newDestinationDir, true);
+                    LoadProfile(subDirectoryInfo.FullName, newDestinationDir, true);
                 }
             }
         }

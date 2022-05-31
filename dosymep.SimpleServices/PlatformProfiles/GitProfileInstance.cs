@@ -11,7 +11,7 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         public string Branch { get; set; }
 
-        protected override void CopyProfileImpl(string directory) {
+        protected override void LoadProfileImpl(string directory) {
             using(Repository repository = GitClone(directory)) {
                 Commands.Checkout(repository, repository.Branches[Branch]);
                 GitPull(repository);

@@ -9,9 +9,9 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         public string ComputedProfileUri => GetDirectoryPath(ProfileUri);
 
-        protected override void CopyProfileImpl(string directory) {
+        protected override void LoadProfileImpl(string directory) {
             RemoveProfile(directory);
-            CopyProfile(ProfileUri, directory, true);
+            LoadProfile(ProfileUri, directory, true);
         }
 
         protected override void CommitProfileImpl(string pluginConfigPath) {

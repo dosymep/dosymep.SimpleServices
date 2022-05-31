@@ -21,10 +21,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private const string ProfileProfileLocalPathName = "ProfileLocalPath";
 
         private const string ProfileUriValueName = "ProfileUri";
-        private const string ProfileAllowCopyName = "ProfileAllowCopy";
         private const string ProfileStorageValueName = "ProfileStorage";
-
-
 
         private const string ProfileCredentialsValueName = "Credentials";
         private const string ProfileCredentialsUsernameValueName = "Username";
@@ -92,15 +89,15 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
 
         /// <inheritdoc />
         public IProfileInstance LoadProfileSpace(ProfileInfo profileInfo, ProfileSpace profileSpace) {
-            ProfileInstance profileDefinition = CreateProfileDefinition(profileInfo, profileSpace);
+            ProfileInstance profileDefinition = CreateProfileInstance(profileInfo, profileSpace);
             profileDefinition.ApplicationVersion = _applicationVersion;
             profileDefinition.SerializationService = _serializationService;
-            profileDefinition.CopyProfile();
+            profileDefinition.LoadProfile();
 
             return profileDefinition;
         }
 
-        private ProfileInstance CreateProfileDefinition(ProfileInfo profileInfo, ProfileSpace profileSpace) {
+        private ProfileInstance CreateProfileInstance(ProfileInfo profileInfo, ProfileSpace profileSpace) {
             string keyFullName = GetKeyFullName(profileInfo, profileSpace);
 
             string profileUri =
@@ -114,14 +111,12 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
                     return new GitProfileInstance(profileInfo, profileUri, profileSpace) {
                         ProfileLocalPath = ProfileLocalPath,
                         Credentials = GetCredentials(keyFullName),
-                        AllowCopy = Convert.ToBoolean(GetRegistryValue<int>(keyFullName, ProfileAllowCopyName)),
                         Branch = GetRegistryValue<string>(keyFullName, GitProfileBranchValueName)
                     };
                 case ProfileStorage.Directory:
                     return new DirectoryProfileInstance(profileInfo, profileUri, profileSpace) {
                         ProfileLocalPath = ProfileLocalPath,
                         Credentials = GetCredentials(keyFullName),
-                        AllowCopy = Convert.ToBoolean(GetRegistryValue<int>(keyFullName, ProfileAllowCopyName))
                     };
                 default:
                     throw new ArgumentOutOfRangeException();
