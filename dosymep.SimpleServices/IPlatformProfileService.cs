@@ -1,4 +1,6 @@
-﻿using dosymep.SimpleServices.PlatformProfiles;
+﻿using System;
+
+using dosymep.SimpleServices.PlatformProfiles;
 
 namespace dosymep.SimpleServices {
     /// <summary>
@@ -65,7 +67,7 @@ namespace dosymep.SimpleServices {
     /// <summary>
     /// Абстрактный класс настроек пространства профиля.
     /// </summary>
-    public abstract class ProfileSpace {
+    public abstract class ProfileSpace : IEquatable<ProfileSpace> {
         /// <summary>
         /// Создает экземпляр пространства настроек профиля.
         /// </summary>
@@ -93,6 +95,65 @@ namespace dosymep.SimpleServices {
         /// Наименование пространства профиля.
         /// </summary>
         public string Name { get; }
+
+        #region IEquatable
+
+        /// <inheritdoc />
+        public bool Equals(ProfileSpace other) {
+            if(ReferenceEquals(null, other)) {
+                return false;
+            }
+
+            if(ReferenceEquals(this, other)) {
+                return true;
+            }
+
+            return string.Equals(Name, other.Name, StringComparison.CurrentCulture);
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) {
+            if(ReferenceEquals(null, obj)) {
+                return false;
+            }
+
+            if(ReferenceEquals(this, obj)) {
+                return true;
+            }
+
+            if(obj.GetType() != this.GetType()) {
+                return false;
+            }
+
+            return Equals((ProfileSpace) obj);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode() {
+            return (Name != null ? StringComparer.CurrentCulture.GetHashCode(Name) : 0);
+        }
+
+        /// <summary>
+        /// Оператор сравнения.
+        /// </summary>
+        /// <param name="left">Левый операнд.</param>
+        /// <param name="right">Правый операнд.</param>
+        /// <returns>Возвращает true - если левый операнд равен правому, иначе false.</returns>
+        public static bool operator ==(ProfileSpace left, ProfileSpace right) {
+            return Equals(left, right);
+        }
+
+        /// <summary>
+        /// Оператор сравнения.
+        /// </summary>
+        /// <param name="left">Левый операнд.</param>
+        /// <param name="right">Правый операнд.</param>
+        /// <returns>Возвращает true - если левый операнд не равен правому, иначе false.</returns>
+        public static bool operator !=(ProfileSpace left, ProfileSpace right) {
+            return !Equals(left, right);
+        }
+
+        #endregion
     }
 
     /// <summary>
