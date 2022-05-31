@@ -27,6 +27,15 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public Credentials Credentials { get; set; }
         public ISerializationService SerializationService { get; set; }
 
+        public void LoadProfile() {
+            string directory = GetProfileName(ProfileLocalPath);
+            try {
+                LoadProfileImpl(directory);
+            } catch {
+                RemoveProfile(directory);
+                LoadProfileImpl(directory);
+            }
+        }
         
         public T GetProfileSettings<T>(string pluginName) {
             if(string.IsNullOrEmpty(pluginName)) {
@@ -78,16 +87,6 @@ namespace dosymep.SimpleServices.PlatformProfiles {
 
         protected abstract void LoadProfileImpl(string directory);
         protected abstract void CommitProfileImpl(string pluginConfigPath);
-
-        public void LoadProfile() {
-            string directory = GetProfileName(ProfileLocalPath);
-            try {
-                LoadProfileImpl(directory);
-            } catch {
-                RemoveProfile(directory);
-                LoadProfileImpl(directory);
-            }
-        }
         
         protected string GetProfileName(string directory) {
             return GetDirectoryPath(Path.Combine(directory, ProfileSpace.Name, ProfileInfo.Name));
