@@ -21,7 +21,7 @@ namespace dosymep.SimpleServices.PlatformProfiles.ProfileStorages {
         private const string ProfileLocalPathName = "ProfileLocalPath";
 
         private const string ProfileStorageValueName = "ProfileStorage";
-        private const string ProfileOriginalValueName = "ProfileOriginal";
+        private const string ProfileOriginalValueName = "ProfileOriginalPath";
 
         private const string ProfileCredentialsValueName = "Credentials";
         private const string ProfileCredentialsUsernameValueName = "Username";

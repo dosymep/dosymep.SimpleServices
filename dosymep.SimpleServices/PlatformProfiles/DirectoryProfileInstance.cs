@@ -9,9 +9,9 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         protected override void LoadProfileImpl() {
-            if(Directory.Exists(ProfileOriginalPath)) {
+            if(Directory.Exists(OriginalPath)) {
                 RemoveProfile();
-                CopyDirectory(ProfileOriginalPath, LocalPath, true);
+                CopyDirectory(OriginalPath, LocalPath, true);
             }
         }
 

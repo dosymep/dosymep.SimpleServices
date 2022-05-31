@@ -34,8 +34,8 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public ISerializationService SerializationService { get; set; }
 
 
-        public string LocalPath => GetExpandedPath(ProfileLocalPath);
-        public string OriginalPath => GetExpandedPath(ProfileOriginalPath);
+        public string LocalPath => GetLocalPath(ProfileLocalPath);
+        public string OriginalPath => ExpandEnvironmentVariables(ProfileOriginalPath);
 
 
         public void LoadProfile() {
@@ -45,13 +45,13 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         protected abstract void LoadProfileImpl();
         protected abstract void CommitProfileImpl(string pluginConfigPath);
 
-        protected string GetExpandedPath(string notExpandPath) {
-            return ExpandEnvironmentVariables(Path.Combine(notExpandPath, ProfileSpace.Name, ProfileInfo.Name));
+        protected string GetLocalPath(string profileLocalPath) {
+            return ExpandEnvironmentVariables(Path.Combine(profileLocalPath, ProfileSpace.Name, ProfileInfo.Name));
         }
 
         protected string GetProfileConfigPath(string pluginName, string settingsName) {
-            return Path.Combine(LocalPath, ProfileSpace.Name, ProfileInfo.Name,
-                ApplicationVersion, pluginName, settingsName) + SerializationService.FileExtension;
+            return Path.Combine(LocalPath, ApplicationVersion, pluginName, settingsName)
+                   + SerializationService.FileExtension;
         }
 
         protected void RemoveProfile() {
