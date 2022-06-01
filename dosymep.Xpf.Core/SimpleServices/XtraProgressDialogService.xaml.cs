@@ -15,8 +15,9 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Инициализирует окно прогресс бара.
         /// </summary>
-        public XtraProgressDialogService() {
+        public XtraProgressDialogService(Window window) {
             InitializeComponent();
+            Owner = window;
         }
 
         /// <inheritdoc />
