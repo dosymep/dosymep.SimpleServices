@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Threading;
 using System.Windows;
-using System.Windows.Input;
 using System.Windows.Threading;
-
-using DevExpress.Mvvm;
 
 using dosymep.SimpleServices;
 
-namespace dosymep.Xpf.Core.Windows {
+namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Класс окна прогресса.
     /// </summary>
