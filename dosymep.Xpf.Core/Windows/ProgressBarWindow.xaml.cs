@@ -6,11 +6,13 @@ using System.Windows.Threading;
 
 using DevExpress.Mvvm;
 
+using dosymep.SimpleServices;
+
 namespace dosymep.Xpf.Core.Windows {
     /// <summary>
     /// Класс окна прогресса.
     /// </summary>
-    public partial class ProgressBarWindow : IDisposable {
+    public partial class ProgressBarWindow : IProgressDialogService {
         private CancellationTokenSource _cancellationTokenSource;
 
         /// <summary>
@@ -20,33 +22,21 @@ namespace dosymep.Xpf.Core.Windows {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Максимальное значение прогресса.
-        /// </summary>
+        /// <inheritdoc />
         public int MaxValue { get; set; }
 
-        /// <summary>
-        /// Шаг обновления значение прогресса.
-        /// </summary>
+        /// <inheritdoc />
         public int StepValue { get; set; }
 
-        /// <summary>
-        /// Строка форматирования отображения.
-        /// </summary>
+        /// <inheritdoc />
         public string DisplayTitleFormat { get; set; } = "Progress ...";
 
-        /// <summary>
-        /// Создает класс прогресса.
-        /// </summary>
-        /// <returns>Возвращает прогресс.</returns>
+        /// <inheritdoc />
         public IProgress<int> CreateProgress() {
             return new CustomProgress(this);
         }
 
-        /// <summary>
-        /// Создает класс прогресса.
-        /// </summary>
-        /// <returns>Возвращает прогресс.</returns>
+        /// <inheritdoc />
         public IProgress<int> CreateAsyncProgress() {
             return new Progress<int>(UpdateWindow);
         }
@@ -67,14 +57,14 @@ namespace dosymep.Xpf.Core.Windows {
         /// <summary>
         /// Обновляет окно.
         /// </summary>
-        public void DispatcherUpdateWindow(int currentValue) {
+        internal void DispatcherUpdateWindow(int currentValue) {
             Dispatcher.Invoke(() => UpdateWindow(currentValue), DispatcherPriority.Background);
         }
 
         /// <summary>
         /// Обновляет окно.
         /// </summary>
-        public void UpdateWindow(int currentValue) {
+        internal void UpdateWindow(int currentValue) {
             if(StepValue > 0) {
                 if(currentValue % StepValue == 0) {
                     UpdateWindowImpl(currentValue);
@@ -107,6 +97,10 @@ namespace dosymep.Xpf.Core.Windows {
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Очищает подписку на событие.
+        /// </summary>
+        /// <param name="disposing">Указывает на очистку ресурсов.</param>
         protected virtual void Dispose(bool disposing) {
             if(disposing) {
                 Close();
