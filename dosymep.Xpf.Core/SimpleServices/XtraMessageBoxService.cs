@@ -12,18 +12,19 @@ namespace dosymep.Xpf.Core.SimpleServices {
         XtraBaseWindowService<DXMessageBoxService>,
         dosymep.SimpleServices.IMessageBoxService {
 
-        /// <inheritdoc />
-        public MessageBoxResult Show(string messageBoxText, string caption,
-            MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult) {
-            return _serviceBase.Show(messageBoxText, caption, button, icon, defaultResult);
-        }
-
         /// <summary>
         /// Создает экземпляр класса сервиса окна сообщений.
         /// </summary>
         /// <param name="window">Родительское окно сервиса.</param>
         public XtraMessageBoxService(Window window)
-            : base(window, new DXMessageBoxService() {SetMessageBoxOwner = true}) {
+            : base(window, new DXMessageBoxService()) {
+            _serviceBase.SetMessageBoxOwner = true;
+        }
+        
+        /// <inheritdoc />
+        public MessageBoxResult Show(string messageBoxText, string caption,
+            MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult) {
+            return _serviceBase.Show(messageBoxText, caption, button, icon, defaultResult);
         }
     }
 }
