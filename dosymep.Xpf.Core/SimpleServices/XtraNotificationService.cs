@@ -44,8 +44,24 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <inheritdoc />
         public INotification CreateNotification(string title, string body, string footer,
             ImageSource imageSource = null) {
-            var notification = _serviceBase.CreatePredefinedNotification(title, body, footer, imageSource);
-            return new XtraNotification(notification);
+            return CreatePredefinedNotification(title, body, footer, imageSource);
+        }
+
+        /// <inheritdoc />
+        public INotification CreateFatalNotification(string title, string body, string footer = null, 
+            ImageSource imageSource = null) {
+            return CreateNotification(title, body, footer, imageSource);
+        }
+
+        /// <inheritdoc />
+        public INotification CreateWarningNotification(string title, string body, string footer = null,
+            ImageSource imageSource = null) {
+            return CreateNotification(title, body, footer, imageSource);
+        }
+
+        private XtraNotification CreatePredefinedNotification(string title, string body, string footer = null,
+            ImageSource imageSource = null) {
+            return new XtraNotification(_serviceBase.CreatePredefinedNotification(title, body, footer, imageSource));
         }
 
         private class XtraNotification : INotification {
