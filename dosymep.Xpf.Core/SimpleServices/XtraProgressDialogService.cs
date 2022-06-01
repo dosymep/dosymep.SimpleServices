@@ -15,10 +15,26 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр класса сервиса прогресс диалога.
         /// </summary>
-        /// <param name="window"></param>
+        /// <param name="window">Родительское окно.</param>
         public XtraProgressDialogService(Window window) {
             _xtraProgressWindow = new XtraProgressWindow();
             _xtraProgressWindow.Owner = window;
+        }
+        
+        /// <summary>
+        /// Сервис по получению тем.
+        /// </summary>
+        public IUIThemeService UIThemeService {
+            get => _xtraProgressWindow.UIThemeService;
+            set => _xtraProgressWindow.UIThemeService = value;
+        }
+
+        /// <summary>
+        /// Сервис по установке тем.
+        /// </summary>
+        public IThemeUpdaterService ThemeUpdaterService {
+            get => _xtraProgressWindow.ThemeUpdaterService;
+            set => _xtraProgressWindow.ThemeUpdaterService = value;
         }
 
         /// <inheritdoc />

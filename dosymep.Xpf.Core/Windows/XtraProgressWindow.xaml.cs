@@ -25,6 +25,10 @@ namespace dosymep.Xpf.Core.Windows {
 
         public string DisplayTitleFormat { get; set; } = "Progress ...";
 
+        public IUIThemeService UIThemeService { get; set; }
+
+        public IThemeUpdaterService ThemeUpdaterService { get; set; }
+
         public IProgress<int> CreateProgress() {
             return new CustomProgress(this);
         }
@@ -44,6 +48,29 @@ namespace dosymep.Xpf.Core.Windows {
             }
 
             return _cancellationTokenSource.Token;
+        }
+
+        protected override void OnSourceInitialized(EventArgs e) {
+            base.OnSourceInitialized(e);
+            SetTheme(UIThemeService?.HostTheme);
+            UIThemeService.UIThemeChanged += SetTheme;
+        }
+
+        protected override void OnClosed(EventArgs e) {
+            base.OnClosed(e);
+            if(UIThemeService != null) {
+                UIThemeService.UIThemeChanged -= SetTheme;
+            }
+        }
+
+        protected void SetTheme(UIThemes uiThemes) {
+            ThemeUpdaterService?.SetTheme(this, uiThemes);
+        }
+
+        protected void SetTheme(UIThemes? uiThemes) {
+            if(uiThemes.HasValue) {
+                SetTheme(uiThemes.Value);
+            }
         }
 
         /// <summary>
