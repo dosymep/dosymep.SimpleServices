@@ -5,36 +5,30 @@ using System.Windows.Threading;
 
 using dosymep.SimpleServices;
 
-namespace dosymep.Xpf.Core.SimpleServices {
+namespace dosymep.Xpf.Core.Windows {
     /// <summary>
     /// Класс окна прогресса.
     /// </summary>
-    public partial class XtraProgressDialogService : IProgressDialogService {
+    internal partial class XtraProgressWindow : IDisposable {
         private CancellationTokenSource _cancellationTokenSource;
 
         /// <summary>
         /// Инициализирует окно прогресс бара.
         /// </summary>
-        public XtraProgressDialogService(Window window) {
+        public XtraProgressWindow() {
             InitializeComponent();
-            Owner = window;
         }
 
-        /// <inheritdoc />
         public int MaxValue { get; set; }
 
-        /// <inheritdoc />
         public int StepValue { get; set; }
 
-        /// <inheritdoc />
         public string DisplayTitleFormat { get; set; } = "Progress ...";
 
-        /// <inheritdoc />
         public IProgress<int> CreateProgress() {
             return new CustomProgress(this);
         }
 
-        /// <inheritdoc />
         public IProgress<int> CreateAsyncProgress() {
             return new Progress<int>(UpdateWindow);
         }
@@ -85,7 +79,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
 
         #region IDispose
 
-        ~XtraProgressDialogService() {
+        ~XtraProgressWindow() {
             Dispose(false);
         }
 
@@ -109,9 +103,9 @@ namespace dosymep.Xpf.Core.SimpleServices {
     }
 
     internal class CustomProgress : IProgress<int> {
-        private readonly XtraProgressDialogService _window;
+        private readonly XtraProgressWindow _window;
 
-        public CustomProgress(XtraProgressDialogService window) {
+        public CustomProgress(XtraProgressWindow window) {
             _window = window;
         }
 

@@ -1,5 +1,5 @@
 ﻿<dx:ThemedWindow
-    x:Class="dosymep.Xpf.Core.SimpleServices.XtraProgressDialogService"
+    x:Class="dosymep.Xpf.Core.Windows.XtraProgressWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -19,7 +19,7 @@
     Margin="0"
     Padding="0"
    
-    x:Name="_this">
+    x:Name="_this" x:ClassModifier="internal">
     <Grid>
         <dxe:ProgressBarEdit
             x:Name="_progressEdit"
