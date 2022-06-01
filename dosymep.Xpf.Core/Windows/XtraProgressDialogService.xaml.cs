@@ -12,13 +12,13 @@ namespace dosymep.Xpf.Core.Windows {
     /// <summary>
     /// Класс окна прогресса.
     /// </summary>
-    public partial class ProgressBarWindow : IProgressDialogService {
+    public partial class XtraProgressDialogService : IProgressDialogService {
         private CancellationTokenSource _cancellationTokenSource;
 
         /// <summary>
         /// Инициализирует окно прогресс бара.
         /// </summary>
-        public ProgressBarWindow() {
+        public XtraProgressDialogService() {
             InitializeComponent();
         }
 
@@ -87,7 +87,7 @@ namespace dosymep.Xpf.Core.Windows {
 
         #region IDispose
 
-        ~ProgressBarWindow() {
+        ~XtraProgressDialogService() {
             Dispose(false);
         }
 
@@ -111,9 +111,9 @@ namespace dosymep.Xpf.Core.Windows {
     }
 
     internal class CustomProgress : IProgress<int> {
-        private readonly ProgressBarWindow _window;
+        private readonly XtraProgressDialogService _window;
 
-        public CustomProgress(ProgressBarWindow window) {
+        public CustomProgress(XtraProgressDialogService window) {
             _window = window;
         }
 
