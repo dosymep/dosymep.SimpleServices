@@ -4,7 +4,7 @@ namespace dosymep.SimpleServices {
     /// <summary>
     /// Интерфейс по обновлению тем окон.
     /// </summary>
-    public interface IThemeUpdaterService {
+    public interface IUIThemeUpdaterService {
         /// <summary>
         /// Устанавливает текущую тему окна.
         /// </summary>

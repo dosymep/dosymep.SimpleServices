@@ -8,7 +8,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Класс по обновлению тем окон.
     /// </summary>
-    public class XtraThemeUpdaterService : IThemeUpdaterService {
+    public class XtraThemeUpdaterService : IUIThemeUpdaterService {
         /// <inheritdoc />
         public void SetTheme(Window window, UIThemes theme) {
             if(theme == UIThemes.Dark) {

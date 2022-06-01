@@ -27,7 +27,7 @@ namespace dosymep.Xpf.Core.Windows {
 
         public IUIThemeService UIThemeService { get; set; }
 
-        public IThemeUpdaterService ThemeUpdaterService { get; set; }
+        public IUIThemeUpdaterService UIThemeUpdaterService { get; set; }
 
         public IProgress<int> CreateProgress() {
             return new CustomProgress(this);
@@ -64,7 +64,7 @@ namespace dosymep.Xpf.Core.Windows {
         }
 
         protected void SetTheme(UIThemes uiThemes) {
-            ThemeUpdaterService?.SetTheme(this, uiThemes);
+            UIThemeUpdaterService?.SetTheme(this, uiThemes);
         }
 
         protected void SetTheme(UIThemes? uiThemes) {

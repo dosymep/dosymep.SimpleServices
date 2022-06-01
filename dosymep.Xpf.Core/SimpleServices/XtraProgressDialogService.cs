@@ -32,9 +32,9 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Сервис по установке тем.
         /// </summary>
-        public IThemeUpdaterService ThemeUpdaterService {
-            get => _xtraProgressWindow.ThemeUpdaterService;
-            set => _xtraProgressWindow.ThemeUpdaterService = value;
+        public IUIThemeUpdaterService UIThemeUpdaterService {
+            get => _xtraProgressWindow.UIThemeUpdaterService;
+            set => _xtraProgressWindow.UIThemeUpdaterService = value;
         }
 
         /// <inheritdoc />
