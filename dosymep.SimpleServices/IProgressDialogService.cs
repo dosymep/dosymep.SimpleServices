@@ -38,6 +38,11 @@ namespace dosymep.SimpleServices {
         /// </summary>
         /// <returns>Возвращает токен отмены.</returns>
         CancellationToken CreateCancellationToken();
+        
+        /// <summary>
+        /// Закрывает диалог прогресса.
+        /// </summary>
+        void Close();
 
         /// <summary>
         /// Открывает диалог прогресса не в модальном режиме.

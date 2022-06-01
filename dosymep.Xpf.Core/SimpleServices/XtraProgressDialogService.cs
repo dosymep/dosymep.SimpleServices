@@ -58,6 +58,11 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public CancellationToken CreateCancellationToken() {
             return _xtraProgressWindow.CreateCancellationToken();
         }
+        
+        /// <inheritdoc />
+        public void Close() {
+            _xtraProgressWindow.Close();
+        }
 
         /// <inheritdoc />
         public void Show() {
