@@ -13,29 +13,30 @@ namespace dosymep.SimpleServices {
         /// <param name="title">Заголовок уведомления.</param>
         /// <param name="body">Текст отображаемый в уведомлении.</param>
         /// <param name="footer">Отображаемый текст снизу уведомления.</param>
+        /// <param name="author">Автор плагина.</param>
         /// <param name="imageSource">Изображение отображаемое в уведомлении.</param>
         /// <returns>Возвращает созданное уведомление.</returns>
-        INotification CreateNotification(string title, string body, string footer = null, ImageSource imageSource = null);
-        
+        INotification CreateNotification(string title, string body, string footer = null, string author = null, ImageSource imageSource = null);
+
         /// <summary>
         /// Создает и возвращает предустановленное уведомление предупреждения.
         /// </summary>
         /// <param name="title">Заголовок уведомления.</param>
         /// <param name="body">Текст отображаемый в уведомлении.</param>
-        /// <param name="footer">Отображаемый текст снизу уведомления.</param>
+        /// <param name="author">Автор плагина.</param>
         /// <param name="imageSource">Изображение отображаемое в уведомлении.</param>
         /// <returns>Возвращает созданное уведомление.</returns>
-        INotification CreateFatalNotification(string title, string body, string footer = null, ImageSource imageSource = null);
-        
+        INotification CreateFatalNotification(string title, string body, string author = null, ImageSource imageSource = null);
+
         /// <summary>
         /// Создает и возвращает предустановленное уведомление ошибки.
         /// </summary>
         /// <param name="title">Заголовок уведомления.</param>
         /// <param name="body">Текст отображаемый в уведомлении.</param>
-        /// <param name="footer">Отображаемый текст снизу уведомления.</param>
+        /// <param name="author">Автор плагина.</param>
         /// <param name="imageSource">Изображение отображаемое в уведомлении.</param>
         /// <returns>Возвращает созданное уведомление.</returns>
-        INotification CreateWarningNotification(string title, string body, string footer = null, ImageSource imageSource = null);
+        INotification CreateWarningNotification(string title, string body, string author = null, ImageSource imageSource = null);
     }
 
     /// <summary>
