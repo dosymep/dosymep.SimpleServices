@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Windows;
+using System.Windows.Interop;
 
 using dosymep.SimpleServices;
 using dosymep.Xpf.Core.Windows;
@@ -11,6 +13,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
     /// </summary>
     public class XtraProgressDialogService : IProgressDialogService {
         private readonly XtraProgressWindow _xtraProgressWindow;
+        private readonly WindowInteropHelper _windowInteropHelper;
 
         /// <summary>
         /// Создает экземпляр класса сервиса прогресс диалога.
@@ -19,8 +22,14 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public XtraProgressDialogService(Window window) {
             _xtraProgressWindow = new XtraProgressWindow();
             _xtraProgressWindow.Owner = window;
+
+            if(window == null) {
+                _windowInteropHelper = new WindowInteropHelper(_xtraProgressWindow) {
+                    Owner = Process.GetCurrentProcess().MainWindowHandle
+                };
+            }
         }
-        
+
         /// <summary>
         /// Сервис по получению тем.
         /// </summary>
