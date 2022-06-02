@@ -58,6 +58,7 @@ namespace dosymep.Xpf.Core.Windows {
 
         protected override void OnClosed(EventArgs e) {
             base.OnClosed(e);
+            _cancellationTokenSource?.Cancel();
             if(UIThemeService != null) {
                 UIThemeService.UIThemeChanged -= SetTheme;
             }
