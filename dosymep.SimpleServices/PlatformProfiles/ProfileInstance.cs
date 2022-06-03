@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace dosymep.SimpleServices.PlatformProfiles {
     internal class Credentials {
@@ -34,8 +35,8 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         public ISerializationService SerializationService { get; set; }
 
 
-        public string LocalPath => GetLocalPath(ProfileLocalPath);
-        public string OriginalPath => ExpandEnvironmentVariables(ProfileOriginalPath);
+        public virtual string LocalPath => GetLocalPath(ProfileLocalPath);
+        public virtual string OriginalPath => ExpandEnvironmentVariables(ProfileOriginalPath);
 
 
         public void LoadProfile() {
@@ -101,9 +102,9 @@ namespace dosymep.SimpleServices.PlatformProfiles {
         }
 
         protected string ExpandEnvironmentVariables(string directory) {
-            return Environment.ExpandEnvironmentVariables(directory)
-                .Replace($"%{Environment.SpecialFolder.MyDocuments}%",
-                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            return Regex.Replace(Environment.ExpandEnvironmentVariables(directory),
+                $"%{Environment.SpecialFolder.MyDocuments}%",
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), RegexOptions.IgnoreCase);
         }
 
         private T GetProfileSettingsImp<T>(string pluginName, string settingsName) {
