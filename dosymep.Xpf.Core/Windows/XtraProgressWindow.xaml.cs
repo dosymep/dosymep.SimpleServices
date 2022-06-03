@@ -3,6 +3,8 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
 
+using DevExpress.Xpf.Editors;
+
 using dosymep.SimpleServices;
 
 namespace dosymep.Xpf.Core.Windows {
@@ -10,6 +12,7 @@ namespace dosymep.Xpf.Core.Windows {
     /// Класс окна прогресса.
     /// </summary>
     internal partial class XtraProgressWindow : IDisposable {
+        private bool _indeterminate;
         private CancellationTokenSource _cancellationTokenSource;
 
         /// <summary>
@@ -17,6 +20,17 @@ namespace dosymep.Xpf.Core.Windows {
         /// </summary>
         public XtraProgressWindow() {
             InitializeComponent();
+        }
+
+        public bool Indeterminate {
+            get => _indeterminate;
+            set {
+                _indeterminate = value;
+                _progressEdit.StyleSettings =
+                    _indeterminate
+                        ? (BaseEditStyleSettings) new ProgressBarMarqueeStyleSettings()
+                        : (BaseEditStyleSettings) new ProgressBarStyleSettings();
+            }
         }
 
         public int MaxValue { get; set; }

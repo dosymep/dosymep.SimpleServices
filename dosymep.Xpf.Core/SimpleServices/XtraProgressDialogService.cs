@@ -52,6 +52,12 @@ namespace dosymep.Xpf.Core.SimpleServices {
         }
 
         /// <inheritdoc />
+        public bool Indeterminate {
+            get => _xtraProgressWindow.Indeterminate;
+            set => _xtraProgressWindow.Indeterminate = value;
+        }
+
+        /// <inheritdoc />
         public int MaxValue {
             get => _xtraProgressWindow.MaxValue;
             set => _xtraProgressWindow.MaxValue = value;

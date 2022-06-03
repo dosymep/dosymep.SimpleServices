@@ -7,6 +7,11 @@ namespace dosymep.SimpleServices {
     /// </summary>
     public interface IProgressDialogService : IDisposable {
         /// <summary>
+        /// Указывает будет ли прогресс бар неопределенным
+        /// </summary>
+        bool Indeterminate { get; set; }
+        
+        /// <summary>
         /// Максимальное значение прогресса.
         /// </summary>
         int MaxValue { get; set; }
