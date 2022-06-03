@@ -20,6 +20,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
     /// Класс сервиса уведомлений
     /// </summary>
     public class XtraNotificationService : XtraBaseWindowService<NotificationService>, INotificationService {
+        private UIThemes? _oldTheme;
         private IUIThemeService _uiThemeService;
 
         private string DataTemplate =>
@@ -139,9 +140,17 @@ namespace dosymep.Xpf.Core.SimpleServices {
                 ImageSource = imageSource
             };
 
-            _serviceBase.CustomNotificationTemplate
-                = (DataTemplate) XamlReader.Parse(DataTemplate);
+
+            UpdateDataTemplate();
             return new XtraNotification(_serviceBase.CreateCustomNotification(viewModel));
+        }
+
+        private void UpdateDataTemplate() {
+            if(UIThemeService.HostTheme != _oldTheme) {
+                _oldTheme = UIThemeService.HostTheme;
+                _serviceBase.CustomNotificationTemplate
+                    = (DataTemplate) XamlReader.Parse(DataTemplate);
+            }
         }
 
         private string GetThemeName() {
