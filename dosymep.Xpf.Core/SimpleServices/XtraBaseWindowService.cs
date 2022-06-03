@@ -9,7 +9,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Абстрактный класс сервиса окна.
     /// </summary>
-    public abstract class XtraBaseWindowService<TServiceBase> : IDisposable
+    public abstract class XtraBaseWindowService<TServiceBase>
         where TServiceBase : ServiceBase {
 
         /// <summary>
@@ -33,25 +33,14 @@ namespace dosymep.Xpf.Core.SimpleServices {
 
             if(_window != null) {
                 Interaction.GetBehaviors(_window).Add(_serviceBase);
+                _window.Closed += WindowOnClosed;
             }
         }
 
-        /// <summary>
-        /// Очищает привязку к окну.
-        /// </summary>
-        /// <param name="disposing">Указывает на очистку ресурсов.</param>
-        protected virtual void Dispose(bool disposing) {
-            if(disposing) {
-                if(_window != null) {
-                    Interaction.GetBehaviors(_window).Remove(_serviceBase);
-                }
+        private void WindowOnClosed(object sender, EventArgs e) {
+            if(_window != null) {
+                Interaction.GetBehaviors(_window).Remove(_serviceBase);
             }
-        }
-
-        /// <inheritdoc />
-        public void Dispose() {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }
