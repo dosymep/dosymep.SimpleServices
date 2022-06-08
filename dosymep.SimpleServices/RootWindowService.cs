@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 
 namespace dosymep.SimpleServices {
@@ -6,22 +8,24 @@ namespace dosymep.SimpleServices {
     /// Класс текущего рабочего окна.
     /// </summary>
     public class RootWindowService : IRootWindowService {
-        private Window _rootWindow;
+        private readonly Stack<Window> _stackWindows = new Stack<Window>();
 
         /// <inheritdoc />
         public Window RootWindow {
-            get => _rootWindow;
+            get => _stackWindows.Count == 0
+                ? null 
+                : _stackWindows.Peek();
             set {
-                _rootWindow = value;
-                if(_rootWindow != null) {
-                    _rootWindow.Closed += RootWindowOnClosed;
+                if(value != null) {
+                    _stackWindows.Push(value);
+                    value.Closed += RootWindowOnClosed;
                 }
             }
         }
 
         private void RootWindowOnClosed(object sender, EventArgs e) {
-            _rootWindow.Closed -= RootWindowOnClosed;
-            _rootWindow = null;
+            Window rootWindow = _stackWindows.Pop();
+            rootWindow.Closed -= RootWindowOnClosed;
         }
     }
 }
