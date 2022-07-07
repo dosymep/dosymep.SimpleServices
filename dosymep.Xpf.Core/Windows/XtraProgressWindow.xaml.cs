@@ -130,6 +130,7 @@ namespace dosymep.Xpf.Core.Windows {
 
         private void _cancelButton_OnClick(object sender, RoutedEventArgs e) {
             _cancelButton.IsEnabled = false;
+            _textEdit.EditValue = "Отмена операции ...";
             _cancellationTokenSource?.Cancel();
         }
 
