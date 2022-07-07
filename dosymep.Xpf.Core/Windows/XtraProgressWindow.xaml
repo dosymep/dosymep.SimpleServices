@@ -35,6 +35,7 @@
             x:Name="_cancelButton"
             Content="Отменить" Height="25" Width="80" Margin="10 0 10 0" HorizontalAlignment="Right"
             Visibility="Hidden"
+            IsCancel="True"
             Click="_cancelButton_OnClick "/>
     </Grid>
 </dx:ThemedWindow>
