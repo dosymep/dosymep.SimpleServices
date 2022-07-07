@@ -64,6 +64,18 @@ namespace dosymep.Xpf.Core.Windows {
             return _cancellationTokenSource.Token;
         }
 
+        internal void SetOwnerWindowStyle() {
+            if(Owner != null) {
+                Owner.IsEnabled = false;
+            }
+        }
+
+        internal void ResetOwnerWindowStyle() {
+            if(Owner != null) {
+                Owner.IsEnabled = true;
+            }
+        }
+
         protected override void OnSourceInitialized(EventArgs e) {
             base.OnSourceInitialized(e);
             SetTheme(UIThemeService?.HostTheme);
@@ -72,6 +84,8 @@ namespace dosymep.Xpf.Core.Windows {
 
         protected override void OnClosed(EventArgs e) {
             base.OnClosed(e);
+            ResetOwnerWindowStyle();
+            
             _cancellationTokenSource?.Cancel();
             if(UIThemeService != null) {
                 UIThemeService.UIThemeChanged -= SetTheme;

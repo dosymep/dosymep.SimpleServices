@@ -22,7 +22,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public XtraProgressDialogService(Window window) {
             _xtraProgressWindow = new XtraProgressWindow();
             _xtraProgressWindow.Owner = window;
-
+            _xtraProgressWindow.SetOwnerWindowStyle();
+            
             if(window == null) {
                 _windowInteropHelper = new WindowInteropHelper(_xtraProgressWindow) {
                     Owner = Process.GetCurrentProcess().MainWindowHandle
