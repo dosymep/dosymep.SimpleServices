@@ -37,7 +37,7 @@ namespace dosymep.Xpf.Core.Windows {
 
         public int StepValue { get; set; }
 
-        public string DisplayTitleFormat { get; set; } = "Progress ...";
+        public string DisplayTitleFormat { get; set; } = "Пожалуйста подождите ...";
 
         public IUIThemeService UIThemeService { get; set; }
 
