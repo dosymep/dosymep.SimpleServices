@@ -78,7 +78,7 @@ namespace dosymep.Xpf.Core.Windows {
 
         protected override void OnSourceInitialized(EventArgs e) {
             base.OnSourceInitialized(e);
-            SetTheme(UIThemeService?.HostTheme);
+            SetTheme(UIThemeService.HostTheme);
             UIThemeService.UIThemeChanged += SetTheme;
         }
 
@@ -94,12 +94,6 @@ namespace dosymep.Xpf.Core.Windows {
 
         protected void SetTheme(UIThemes uiThemes) {
             UIThemeUpdaterService?.SetTheme(this, uiThemes);
-        }
-
-        protected void SetTheme(UIThemes? uiThemes) {
-            if(uiThemes.HasValue) {
-                SetTheme(uiThemes.Value);
-            }
         }
 
         /// <summary>
