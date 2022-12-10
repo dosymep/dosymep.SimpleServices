@@ -58,4 +58,17 @@ class Build : NukeBuild {
                 .SetOutputDirectory(OutputDirectory)
                 .EnableNoRestore());
         });
+    
+    Target DocInit => _ => _
+        .Executes(() => {
+            DocFXInit(s => s
+                .SetOutputFolder(DocsDirectory));
+        });
+
+    Target DocBuild => _ => _
+        .DependsOn(Compile)
+        .Executes(() => {
+            DocFXBuild(s => s
+                .SetConfigFile(DocsDirectory));
+        });
 }
