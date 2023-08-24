@@ -32,15 +32,13 @@ namespace dosymep.Xpf.Core.SimpleServices {
             _serviceBase = serviceBase;
 
             if(_window != null) {
-                Interaction.GetBehaviors(_window).Add(_serviceBase);
+                _serviceBase.Attach(window);
                 _window.Closed += WindowOnClosed;
             }
         }
 
         private void WindowOnClosed(object sender, EventArgs e) {
-            if(_window != null) {
-                Interaction.GetBehaviors(_window).Remove(_serviceBase);
-            }
+            _serviceBase.Detach();
         }
     }
 }
