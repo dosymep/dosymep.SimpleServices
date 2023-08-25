@@ -15,10 +15,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр класса сервиса окна сообщений.
         /// </summary>
-        /// <param name="window">Родительское окно сервиса.</param>
-        public XtraMessageBoxService(Window window)
-            : base(window, new DXMessageBoxService()) {
-            _serviceBase.SetMessageBoxOwner = true;
+        public XtraMessageBoxService()
+            : base(new DXMessageBoxService()) {
         }
         
         /// <inheritdoc />

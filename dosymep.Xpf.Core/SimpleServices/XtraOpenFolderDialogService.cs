@@ -18,9 +18,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр сервиса открытия диалога выбора папки.
         /// </summary>
-        /// <param name="window">Родительское окно сервиса.</param>
-        public XtraOpenFolderDialogService(Window window)
-            : base(window, new DXOpenFolderDialogService()) {
+        public XtraOpenFolderDialogService()
+            : base(new DXOpenFolderDialogService()) {
         }
 
         /// <inheritdoc />

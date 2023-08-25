@@ -15,9 +15,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр сервиса открытия диалога сохранения файла.
         /// </summary>
-        /// <param name="window">Родительское окно сервиса.</param>
-        public XtraSaveFileDialogService(Window window)
-            : base(window, new DXSaveFileDialogService()) {
+        public XtraSaveFileDialogService()
+            : base(new DXSaveFileDialogService()) {
         }
 
         /// <inheritdoc />

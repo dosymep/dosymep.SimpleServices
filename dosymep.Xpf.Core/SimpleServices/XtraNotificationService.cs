@@ -85,8 +85,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// Создает экземпляр сервиса уведомлений.
         /// </summary>
         /// <param name="window">Родительское окно сервиса.</param>
-        public XtraNotificationService(Window window)
-            : base(window, new NotificationService()) {
+        public XtraNotificationService()
+            : base(new NotificationService()) {
             _serviceBase.ApplicationId = "dosymep";
             _serviceBase.UseWin8NotificationsIfAvailable = false;
             _serviceBase.Sound = PredefinedSound.Notification_Default;
@@ -105,10 +105,9 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр сервиса уведомлений.
         /// </summary>
-        /// <param name="window">Родительское окно сервиса.</param>
         /// <param name="applicationId">Идентификатор приложения.</param>
-        public XtraNotificationService(Window window, string applicationId)
-            : this(window) {
+        public XtraNotificationService(string applicationId)
+            : this() {
             _serviceBase.ApplicationId = applicationId;
         }
 

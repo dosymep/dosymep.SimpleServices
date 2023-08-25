@@ -5,17 +5,14 @@ using DevExpress.Mvvm.UI;
 using DevExpress.Mvvm.UI.Interactivity;
 using DevExpress.Xpf.Grid;
 
+using dosymep.SimpleServices;
+
 namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Абстрактный класс сервиса окна.
     /// </summary>
-    public abstract class XtraBaseWindowService<TServiceBase>
+    public abstract class XtraBaseWindowService<TServiceBase> : IAttachableService
         where TServiceBase : ServiceBase {
-
-        /// <summary>
-        /// Родительское окно сервиса
-        /// </summary>
-        protected readonly Window _window;
 
         /// <summary>
         /// Привязанный сервис к окну.
@@ -25,20 +22,32 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр сервиса окна.
         /// </summary>
-        /// <param name="window">Родительское окно для сервиса.</param>
         /// <param name="serviceBase">Привязываемый сервис к окну.</param>
-        protected XtraBaseWindowService(Window window, TServiceBase serviceBase) {
-            _window = window;
+        protected XtraBaseWindowService(TServiceBase serviceBase) {
             _serviceBase = serviceBase;
+        }
 
-            if(_window != null) {
-                _serviceBase.Attach(window);
-                _window.Closed += WindowOnClosed;
+        /// <inheritdoc />
+        public bool IsAttached => _serviceBase.IsAttached;
+
+        /// <inheritdoc />
+        public bool AllowAttach { get; set; } = true;
+        
+        /// <inheritdoc />
+        public DependencyObject AssociatedObject => _serviceBase.AssociatedObject;
+        
+        /// <inheritdoc />
+        public void Detach() {
+            if(AllowAttach) {
+                _serviceBase.Detach();
             }
         }
 
-        private void WindowOnClosed(object sender, EventArgs e) {
-            _serviceBase.Detach();
+        /// <inheritdoc />
+        public void Attach(DependencyObject dependencyObject) {
+            if(AllowAttach) {
+                _serviceBase.Attach(dependencyObject);
+            }
         }
     }
 }

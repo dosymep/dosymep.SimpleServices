@@ -15,9 +15,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр сервиса диспетчера окна.
         /// </summary>
-        /// <param name="window">Родительское окно сервиса.</param>
-        public XtraDispatcherService(Window window)
-            : base(window, new DispatcherService()) {
+        public XtraDispatcherService()
+            : base(new DispatcherService()) {
         }
         
         /// <inheritdoc />

@@ -11,24 +11,18 @@ namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Класс сервиса прогресс диалога.
     /// </summary>
-    public class XtraProgressDialogService : IProgressDialogService {
-        private readonly XtraProgressWindow _xtraProgressWindow;
+    public class XtraProgressDialogService : IProgressDialogService, IAttachableService {
+        private XtraProgressWindow _xtraProgressWindow;
         private readonly WindowInteropHelper _windowInteropHelper;
 
         /// <summary>
         /// Создает экземпляр класса сервиса прогресс диалога.
         /// </summary>
-        /// <param name="window">Родительское окно.</param>
-        public XtraProgressDialogService(Window window) {
+        public XtraProgressDialogService() {
             _xtraProgressWindow = new XtraProgressWindow();
-            _xtraProgressWindow.Owner = window;
-            _xtraProgressWindow.SetOwnerWindowStyle();
-            
-            if(window == null) {
-                _windowInteropHelper = new WindowInteropHelper(_xtraProgressWindow) {
-                    Owner = Process.GetCurrentProcess().MainWindowHandle
-                };
-            }
+            _windowInteropHelper = new WindowInteropHelper(_xtraProgressWindow) {
+                Owner = Process.GetCurrentProcess().MainWindowHandle
+            };
         }
 
         /// <summary>
@@ -104,6 +98,31 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <inheritdoc />
         public void ShowDialog() {
             _xtraProgressWindow.ShowDialog();
+        }
+
+        /// <inheritdoc />
+        public bool IsAttached => AssociatedObject != null;
+
+        /// <inheritdoc />
+        public bool AllowAttach { get; set; } = true;
+        
+        /// <inheritdoc />
+        public DependencyObject AssociatedObject => _xtraProgressWindow.Owner;
+        
+        /// <inheritdoc />
+        public void Detach() {
+            if(AllowAttach) {
+                _xtraProgressWindow.ResetOwnerWindowStyle();
+                _xtraProgressWindow.Owner = null;
+            }
+        }
+
+        /// <inheritdoc />
+        public void Attach(DependencyObject dependencyObject) {
+            if(AllowAttach) {
+                _xtraProgressWindow.Owner = (Window) dependencyObject;
+                _xtraProgressWindow.SetOwnerWindowStyle();
+            }
         }
     }
 }
