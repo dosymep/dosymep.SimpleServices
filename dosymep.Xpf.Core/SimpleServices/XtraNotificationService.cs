@@ -75,27 +75,13 @@ namespace dosymep.Xpf.Core.SimpleServices {
                                                 + " xmlns:dxe=\"http://schemas.devexpress.com/winfx/2008/xaml/editors\" xmlns:dx=\"http://schemas.devexpress.com/winfx/2008/xaml/core\">"
                                                 + "<Setter Property=\"Foreground\" Value=\"Brown\" />"
                                                 + "</Style>";
+
         private static string WarningStyleXaml => "<Style x:Key=\"_style\" TargetType=\"dxe:TextEdit\""
                                                   + " xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\""
                                                   + " xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\""
                                                   + " xmlns:dxe=\"http://schemas.devexpress.com/winfx/2008/xaml/editors\" xmlns:dx=\"http://schemas.devexpress.com/winfx/2008/xaml/core\">"
                                                   + "<Setter Property=\"Foreground\" Value=\"Orange\" />"
                                                   + "</Style>";
-        /// <summary>
-        /// Создает экземпляр сервиса уведомлений.
-        /// </summary>
-        /// <param name="window">Родительское окно сервиса.</param>
-        public XtraNotificationService()
-            : base(new NotificationService()) {
-            _serviceBase.ApplicationId = "dosymep";
-            _serviceBase.UseWin8NotificationsIfAvailable = false;
-            _serviceBase.Sound = PredefinedSound.Notification_Default;
-            _serviceBase.CustomNotificationVisibleMaxCount = 5;
-            _serviceBase.CustomNotificationPosition = NotificationPosition.BottomRight;
-            _serviceBase.CustomNotificationScreen = NotificationScreen.ApplicationWindow;
-            _serviceBase.PredefinedNotificationDuration = PredefinedNotificationDuration.Default;
-            _serviceBase.PredefinedNotificationTemplate = NotificationTemplate.ShortHeaderAndLongText;
-        }
 
         /// <summary>
         /// Устанавливает и получает сервис тем.
@@ -105,12 +91,68 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <summary>
         /// Создает экземпляр сервиса уведомлений.
         /// </summary>
-        /// <param name="applicationId">Идентификатор приложения.</param>
-        public XtraNotificationService(string applicationId)
-            : this() {
-            _serviceBase.ApplicationId = applicationId;
+        public XtraNotificationService()
+            : base(new NotificationService()) {
+            _serviceBase.UseWin8NotificationsIfAvailable = false;
+            _serviceBase.PredefinedNotificationDuration = PredefinedNotificationDuration.Default;
+            _serviceBase.PredefinedNotificationTemplate = NotificationTemplate.ShortHeaderAndLongText;
+        }
+        
+        /// <summary>
+        /// Идентификатор приложения.
+        /// </summary>
+        public string ApplicationId {
+            get => _serviceBase.ApplicationId;
+            set => _serviceBase.ApplicationId = value;
+        }
+        
+        /// <summary>
+        /// Значение автора по умолчанию.
+        /// </summary>
+        public string DefaultAutor { get; set; }
+        
+        /// <summary>
+        /// Значение футера по умолчанию.
+        /// </summary>
+        public string DefaultFooter { get; set; }
+        
+        /// <summary>
+        /// Значение изображения по умолчанию.
+        /// </summary>
+        public ImageSource DefaultImage { get; set; }
+
+        /// <summary>
+        /// Предопределенные звуки уведомления.
+        /// </summary>
+        public PredefinedSound Sound {
+            get => _serviceBase.Sound;
+            set => _serviceBase.Sound = value;
+        }
+        
+        /// <summary>
+        /// Определяет на каком мониторе будет отображаться уведомление.
+        /// </summary>
+        public NotificationScreen NotificationScreen {
+            get => _serviceBase.CustomNotificationScreen;
+            set => _serviceBase.CustomNotificationScreen = value;
         }
 
+        /// <summary>
+        /// Позиция уведомления на экране.
+        /// </summary>
+        public NotificationPosition NotificationPosition {
+            get => _serviceBase.CustomNotificationPosition;
+            set => _serviceBase.CustomNotificationPosition = value;
+        }
+        
+        /// <summary>
+        /// Максимальное количество отображаемых уведомлений на экране.
+        /// </summary>
+        public int NotificationVisibleMaxCount {
+            get => _serviceBase.CustomNotificationVisibleMaxCount;
+            set => _serviceBase.CustomNotificationVisibleMaxCount = value;
+        }
+        
         /// <inheritdoc />
         public INotification CreateNotification(string title, string body, string footer = null, string author = null,
             ImageSource imageSource = null) {
@@ -132,14 +174,17 @@ namespace dosymep.Xpf.Core.SimpleServices {
         private XtraNotification CreatePredefinedNotification(string title, string body,
             string footer = null, string author = null, ImageSource imageSource = null) {
             var viewModel = new CustomNotificationViewModel() {
-                Title = title.Replace(Environment.NewLine, " ").Replace("\n", " "),
+                Title = title
+                    .Replace(Environment.NewLine, " ")
+                    .Replace("\n", " "),
+                Footer = footer?
+                    .Replace(Environment.NewLine, " ")
+                    .Replace("\n", " "),
                 Body = body,
-                Footer = footer?.Replace(Environment.NewLine, " ").Replace("\n", " "),
                 Author = author ?? "dosymep",
                 ImageSource = imageSource
             };
-
-
+            
             UpdateDataTemplate();
             return new XtraNotification(_serviceBase.CreateCustomNotification(viewModel));
         }
@@ -174,12 +219,16 @@ namespace dosymep.Xpf.Core.SimpleServices {
             }
 
             public async Task<bool?> ShowAsync() {
-                var result = await _notification.ShowAsync();
+                NotificationResult result = await _notification.ShowAsync();
                 if(result == NotificationResult.UserCanceled) {
                     return false;
                 }
 
-                return true;
+                if(result == NotificationResult.Activated) {
+                    return true;
+                }
+
+                return default;
             }
 
             public Task<bool?> ShowAsync(int millisecond) {
@@ -187,15 +236,15 @@ namespace dosymep.Xpf.Core.SimpleServices {
             }
 
             public async Task<bool?> ShowAsync(TimeSpan interval) {
-                var timer = new DispatcherTimer();
-                timer.Interval = interval;
+                DispatcherTimer timer = new DispatcherTimer {Interval = interval};
                 timer.Tick += (s, e) => Hide();
+
                 timer.Start();
-
-                var result = await ShowAsync();
-                timer.Stop();
-
-                return result;
+                try {
+                    return await ShowAsync();
+                } finally {
+                    timer.Stop();
+                }
             }
         }
     }
@@ -203,8 +252,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
     internal class CustomNotificationViewModel {
         public string Title { get; set; }
         public string Body { get; set; }
-        public string Footer { get; set; } = "Bim4Everyone";
-        public string Author { get; set; } = "dosymep";
+        public string Footer { get; set; }
+        public string Author { get; set; }
         public ImageSource ImageSource { get; set; }
     }
 }
