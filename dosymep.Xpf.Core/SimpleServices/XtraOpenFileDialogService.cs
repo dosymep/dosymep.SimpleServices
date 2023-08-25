@@ -110,6 +110,11 @@ namespace dosymep.Xpf.Core.SimpleServices {
         }
 
         /// <inheritdoc />
+        public bool ShowDialog() {
+            return ShowDialog(null);
+        }
+        
+        /// <inheritdoc />
         public bool ShowDialog(string directoryName) {
             return ((DevExpress.Mvvm.IOpenFileDialogService) _serviceBase).ShowDialog(null, directoryName);
         }

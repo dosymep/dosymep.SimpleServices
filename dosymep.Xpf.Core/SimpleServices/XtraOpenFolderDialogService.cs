@@ -110,6 +110,11 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public void Reset() {
             ((DevExpress.Mvvm.IOpenFolderDialogService) _serviceBase).Reset();
         }
+        
+        /// <inheritdoc />
+        public bool ShowDialog() {
+            return ShowDialog(null);
+        }
 
         /// <inheritdoc />
         public bool ShowDialog(string directoryName) {

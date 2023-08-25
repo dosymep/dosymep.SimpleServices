@@ -11,6 +11,12 @@
         /// <summary>
         /// Показывает диалог выбора.
         /// </summary>
+        /// <returns>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</returns>
+        bool ShowDialog();
+        
+        /// <summary>
+        /// Показывает диалог выбора.
+        /// </summary>
         /// <param name="directoryName">Устанавливает исходную папку.</param>
         /// <returns>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</returns>
         bool ShowDialog(string directoryName);
