@@ -9,34 +9,61 @@
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
 
-    WindowStyle="None" 
+    WindowStyle="None"
     ResizeMode="NoResize"
     ShowInTaskbar="False"
     WindowStartupLocation="CenterOwner"
 
     mc:Ignorable="d"
     Title="Пожалуйста подождите ..." Height="50" Width="400"
-    
+
     Margin="0"
     Padding="0"
-   
+
     x:Name="_this" x:ClassModifier="internal">
+
+    <dx:ThemedWindow.Resources>
+        <dxmvvm:ObjectToObjectConverter x:Key="VisibilityConverter">
+            <dxmvvm:MapItem Source="Hidden" Target="2" />
+            <dxmvvm:MapItem Source="Visible" Target="0" />
+        </dxmvvm:ObjectToObjectConverter>
+    </dx:ThemedWindow.Resources>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
         <dxe:ProgressBarEdit
+            Grid.ColumnSpan="2"
             x:Name="_progressEdit"
             ContentDisplayMode="None"
-            VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
-        
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch" />
+
         <dxe:TextEdit
+            Grid.Column="0"
+            Grid.ColumnSpan="{Binding 
+            Visibility, ElementName=_cancelButton,
+                                Converter={StaticResource VisibilityConverter}}"
             x:Name="_textEdit"
-            VerticalAlignment="Stretch" HorizontalAlignment="Center"
-            IsReadOnly="True" EditMode="InplaceActive" />
+            IsReadOnly="True"
+            EditMode="InplaceActive"
+            EditValue="Пожалуйста подождите ..."
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Center" />
 
         <dx:SimpleButton
+            Grid.Column="1"
             x:Name="_cancelButton"
-            Content="Отменить" Height="25" Width="80" Margin="10 0 10 0" HorizontalAlignment="Right"
+            Content="Отменить"
+            Height="25"
+            Width="80"
+            Margin="10 0 10 0"
             Visibility="Hidden"
+            HorizontalAlignment="Right"
             IsCancel="True"
-            Click="_cancelButton_OnClick "/>
+            Click="_cancelButton_OnClick " />
     </Grid>
 </dx:ThemedWindow>
