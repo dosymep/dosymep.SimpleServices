@@ -107,7 +107,8 @@ namespace dosymep.Xpf.Core.Windows {
         /// Обновляет окно.
         /// </summary>
         internal void UpdateWindow(int currentValue) {
-            if(StepValue > 0) {
+            ++currentValue;
+            if(StepValue > 0 && currentValue < MaxValue) {
                 if(currentValue % StepValue == 0) {
                     UpdateWindowImpl(currentValue);
                 }
