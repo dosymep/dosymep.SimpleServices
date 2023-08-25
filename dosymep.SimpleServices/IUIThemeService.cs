@@ -2,7 +2,7 @@
 
 namespace dosymep.SimpleServices {
     /// <summary>
-    /// Предоставляет доступ к теме инттерфейса
+    /// Предоставляет доступ к теме интерфейса.
     /// </summary>
     public interface IUIThemeService {
         /// <summary>
