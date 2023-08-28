@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core", "dosymep
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{CBC741BD-9A25-4096-AD32-2FF1BEA9B504}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core.Ninject", "dosymep.Xpf.Core.Ninject\dosymep.Xpf.Core.Ninject.csproj", "{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>11</LangVersion>
+        <UseWpf>true</UseWpf>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Ninject" Version="3.3.4">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+        <PackageReference Include="DevExpress.Wpf" Version="21.2.3">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Net"/>
+        <Reference Include="System.Net.Http"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\dosymep.Xpf.Core\dosymep.Xpf.Core.csproj"/>
+        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
+    </ItemGroup>
+
+</Project>
