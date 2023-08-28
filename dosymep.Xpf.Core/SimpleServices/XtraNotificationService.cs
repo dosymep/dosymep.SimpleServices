@@ -110,7 +110,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// Значение автора по умолчанию.
         /// </summary>
         public string DefaultAutor { get; set; }
-        
+
         /// <summary>
         /// Значение футера по умолчанию.
         /// </summary>
@@ -177,11 +177,13 @@ namespace dosymep.Xpf.Core.SimpleServices {
                 Title = title
                     .Replace(Environment.NewLine, " ")
                     .Replace("\n", " "),
+                
                 Footer = footer?
                     .Replace(Environment.NewLine, " ")
-                    .Replace("\n", " "),
+                    .Replace("\n", " ") ?? DefaultFooter,
+                
                 Body = body,
-                Author = author ?? "dosymep",
+                Author = author ?? DefaultAutor,
                 ImageSource = imageSource
             };
             
