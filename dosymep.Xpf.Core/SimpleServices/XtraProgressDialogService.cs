@@ -105,10 +105,10 @@ namespace dosymep.Xpf.Core.SimpleServices {
 
         /// <inheritdoc />
         public bool AllowAttach { get; set; } = true;
-        
+
         /// <inheritdoc />
-        public DependencyObject AssociatedObject => _xtraProgressWindow.Owner;
-        
+        public DependencyObject AssociatedObject { get; private set; }
+
         /// <inheritdoc />
         public void Detach() {
             if(AllowAttach) {
@@ -120,9 +120,24 @@ namespace dosymep.Xpf.Core.SimpleServices {
         /// <inheritdoc />
         public void Attach(DependencyObject dependencyObject) {
             if(AllowAttach) {
-                _xtraProgressWindow.Owner = (Window) dependencyObject;
-                _xtraProgressWindow.SetOwnerWindowStyle();
+                AssociatedObject = dependencyObject;
+                
+                var window = GetWindow();
+                if(window.IsVisible) {
+                    _xtraProgressWindow.Owner = window;
+                    _xtraProgressWindow.SetOwnerWindowStyle();
+                }
             }
+        }
+        
+        private Window GetWindow() {
+            if(AssociatedObject == null) {
+                return null;
+            }
+            
+            return AssociatedObject is Window window
+                ? window
+                : Window.GetWindow(AssociatedObject);
         }
     }
 }
