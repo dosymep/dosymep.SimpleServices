@@ -79,6 +79,10 @@ public static class NinjectExtensions {
 
         kernel.Bind<IMessageBoxService>()
             .To<XtraMessageBoxService>()
+            .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
+                c => c.Kernel.Get<IUIThemeUpdaterService>())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false);
 
         return kernel;
@@ -130,7 +134,7 @@ public static class NinjectExtensions {
         if(kernel == null) {
             throw new ArgumentNullException(nameof(kernel));
         }
-        
+
         kernel.Bind<IProgressDialogFactory>()
             .To<ProgressDialogFactory>()
             .WhenInjectedInto<T>()
