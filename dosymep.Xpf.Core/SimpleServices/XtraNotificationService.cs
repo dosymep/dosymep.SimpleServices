@@ -177,14 +177,12 @@ namespace dosymep.Xpf.Core.SimpleServices {
                 Title = title
                     .Replace(Environment.NewLine, " ")
                     .Replace("\n", " "),
-                
                 Footer = footer?
                     .Replace(Environment.NewLine, " ")
                     .Replace("\n", " ") ?? DefaultFooter,
-                
                 Body = body,
                 Author = author ?? DefaultAutor,
-                ImageSource = imageSource
+                ImageSource = imageSource ?? DefaultImage,
             };
             
             UpdateDataTemplate();
