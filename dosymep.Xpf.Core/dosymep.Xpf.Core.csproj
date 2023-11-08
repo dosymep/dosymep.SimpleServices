@@ -1,33 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
-        <TargetFramework>net48</TargetFramework>
-        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
         <UseWPF>true</UseWPF>
-        <Authors>dosymep</Authors>
-        <PackageProjectUrl>https://github.com/dosymep/dosymep.SimpleServices</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/dosymep/dosymep.SimpleServices</RepositoryUrl>
-        <RepositoryType>Git</RepositoryType>
-        <PackageTags>dosymep, WPF, DevExpress</PackageTags>
+        <TargetFramework>net48</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DocumentationFile>bin\Debug\dosymep.Xpf.Core.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <DocumentationFile>bin\Release\dosymep.Xpf.Core.xml</DocumentationFile>
+    
+    <PropertyGroup>
+        <Title>dosymep.Xpf.Core</Title>
+        <PackageId>dosymep.Xpf.Core</PackageId>
+        <Description>Данный пакет содержит базовую реализацию сервисов на DevExpress.</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Reference Include="PresentationCore" />
-        <Reference Include="PresentationFramework" />
         <Reference Include="System.Web" />
         <Reference Include="WindowsBase" />
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
         
         <PackageReference Include="DevExpress.Wpf" Version="21.2.3">
             <PrivateAssets>all</PrivateAssets>
@@ -35,4 +24,7 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+    </ItemGroup>
 </Project>

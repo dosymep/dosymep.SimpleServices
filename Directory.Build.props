@@ -1,0 +1,17 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Authors>dosymep</Authors>
+        <Company>dosymep</Company>
+        <RepositoryType>Git</RepositoryType>
+        <Copyright>Copyright © 2023 dosymep</Copyright>
+
+        <Version>1.0.0</Version>
+        <FileVersion>1.0.0</FileVersion>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+
+        <PackageTags>dosymep, wpf, devexpress, gui, services</PackageTags>
+        <RepositoryUrl>https://github.com/dosymep/dosymep.SimpleServices.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/dosymep/dosymep.SimpleServices</PackageProjectUrl>
+    </PropertyGroup>
+</Project>

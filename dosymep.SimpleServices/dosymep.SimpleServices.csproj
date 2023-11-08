@@ -1,30 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
-        <Authors>dosymep</Authors>
-        <PackageProjectUrl>https://github.com/dosymep/dosymep.SimpleServices</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/dosymep/dosymep.SimpleServices</RepositoryUrl>
-        <RepositoryType>Git</RepositoryType>
-        <PackageTags>dosymep</PackageTags>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DocumentationFile>bin\Debug\dosymep.SimpleServices.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <DocumentationFile>bin\Release\dosymep.SimpleServices.xml</DocumentationFile>
+    <PropertyGroup>
+        <Title>dosymep.SimpleServises</Title>
+        <PackageId>dosymep.SimpleServises</PackageId>
+        <Description>Данный пакет содержит базовые интерфейсы сервисов.</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Remove="Program.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
+        <Reference Include="WindowsBase" />
         <Reference Include="PresentationCore" />
         <Reference Include="PresentationFramework" />
-        <Reference Include="WindowsBase" />
     </ItemGroup>
 
     <ItemGroup>
@@ -33,5 +23,4 @@
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
     </ItemGroup>
-
 </Project>
