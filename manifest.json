@@ -1,18 +1,50 @@
 {
-  "homepages": [],
-  "source_base_path": "D:/Projects/Revit/dosymep.SimpleServices/docfx",
+  "sitemap": {
+    "fileOptions": {
+      "**/articles/**": {
+        "baseUrl": "https://dosymep.github.io/dosymep.SimpleServices/",
+        "changefreq": "monthly",
+        "priority": 0.8
+      },
+      "**/api/**": {
+        "baseUrl": "https://dosymep.github.io/dosymep.SimpleServices/",
+        "changefreq": "monthly",
+        "priority": 0.3
+      }
+    },
+    "baseUrl": "https://dosymep.github.io/dosymep.SimpleServices/",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  "source_base_path": "D:/a/dosymep.SimpleServices/dosymep.SimpleServices/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.SimpleServices.IAttachableService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.SimpleServices.IAttachableService.html"
+        }
+      },
+      "version": ""
+    },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/dosymep.SimpleServices.IDispatcherService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IDispatcherService.html",
-          "hash": "65AdAyAefDN/yaxS2th211wHh4ZKm+A2oHBkNGx4MAo="
+          "relative_path": "api/dosymep.SimpleServices.IDispatcherService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -20,11 +52,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IFileDialogServiceBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IFileDialogServiceBase.html",
-          "hash": "te8LRnde44YgeuSNw2RkPmeUr/kw9vEaU5osRFyrzPc="
+          "relative_path": "api/dosymep.SimpleServices.IFileDialogServiceBase.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -32,11 +62,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.ILanguageService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.ILanguageService.html",
-          "hash": "gm1/Ubogd+M1bmJprHZARA4QRLdVXmN/YHv56zMCPdY="
+          "relative_path": "api/dosymep.SimpleServices.ILanguageService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -44,11 +72,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.ILoggerService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.ILoggerService.html",
-          "hash": "LcWlYGnrEQNYkpJFCczRHUWY19XrsdCFG+U/gvYXu20="
+          "relative_path": "api/dosymep.SimpleServices.ILoggerService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -56,11 +82,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IMessageBoxService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IMessageBoxService.html",
-          "hash": "IzfU4R+F3he88C9wMkAfHbpo99J6iwk+uO8mc1j3bns="
+          "relative_path": "api/dosymep.SimpleServices.IMessageBoxService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -68,11 +92,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.INotification.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.INotification.html",
-          "hash": "bIJ13ppxoAQQ1rFeRndAclH10PdcQmnEULRlrnB7ep8="
+          "relative_path": "api/dosymep.SimpleServices.INotification.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -80,11 +102,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.INotificationService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.INotificationService.html",
-          "hash": "h63QC1PvZC2cAfsftW9geIkYfNGM9sjWipWkEmewEDw="
+          "relative_path": "api/dosymep.SimpleServices.INotificationService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -92,11 +112,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IOpenDialogServiceBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IOpenDialogServiceBase.html",
-          "hash": "k4G3cCuVTMjYOyQ1izmsrxTIkaJWEqy1+BNH80MHvyY="
+          "relative_path": "api/dosymep.SimpleServices.IOpenDialogServiceBase.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -104,11 +122,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IOpenFileDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IOpenFileDialogService.html",
-          "hash": "baAUQuSGdQAu+IwTeOdEA+v/sacFaSUvrdmSFZn+bA0="
+          "relative_path": "api/dosymep.SimpleServices.IOpenFileDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -116,11 +132,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IOpenFolderDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IOpenFolderDialogService.html",
-          "hash": "lVhSWsyZ8x7UNGu7zkKuiIs3/t7VMlaiaFLbE7+itSQ="
+          "relative_path": "api/dosymep.SimpleServices.IOpenFolderDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -128,11 +142,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IPlatformProfileService-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IPlatformProfileService-1.html",
-          "hash": "39gufFXKC+fmMRbSR3Uos8DppjAk0PqEC4OHmLG70UA="
+          "relative_path": "api/dosymep.SimpleServices.IPlatformProfileService-1.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -140,11 +152,19 @@
       "source_relative_path": "api/dosymep.SimpleServices.IPlatformProfileService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IPlatformProfileService.html",
-          "hash": "cfr++tRghVodJnRauzd18CiQySKhdpiSPYuqGR2v1B4="
+          "relative_path": "api/dosymep.SimpleServices.IPlatformProfileService.html"
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.SimpleServices.IProgressDialogFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.SimpleServices.IProgressDialogFactory.html"
+        }
+      },
       "version": ""
     },
     {
@@ -152,11 +172,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IProgressDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IProgressDialogService.html",
-          "hash": "zIiwuh52vLJUjp6GG3Sy3EhmYSOH4lFg1aMPMdERzEg="
+          "relative_path": "api/dosymep.SimpleServices.IProgressDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -164,11 +182,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IRootWindowService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IRootWindowService.html",
-          "hash": "rzP3vw9/GxNfObKxL74RlwL7O5t7XLnDw1Xn3XrCxYc="
+          "relative_path": "api/dosymep.SimpleServices.IRootWindowService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -176,11 +192,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.ISaveFileDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.ISaveFileDialogService.html",
-          "hash": "edtWZO0EAWJxAL1hEZaSw6HbjLgit2f9Cw0UO5XpHAI="
+          "relative_path": "api/dosymep.SimpleServices.ISaveFileDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -188,11 +202,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.ISerializationService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.ISerializationService.html",
-          "hash": "u8ELlhVYR/aInvy58rtUtEwByo6C4wPHUlf9y+Li4q4="
+          "relative_path": "api/dosymep.SimpleServices.ISerializationService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -200,11 +212,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.IUIThemeService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IUIThemeService.html",
-          "hash": "RX3koR7zrStP0K2sIJT83BoJKKHjToZZ2VGPRGlG+mA="
+          "relative_path": "api/dosymep.SimpleServices.IUIThemeService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -212,11 +222,19 @@
       "source_relative_path": "api/dosymep.SimpleServices.IUIThemeUpdaterService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.IUIThemeUpdaterService.html",
-          "hash": "K65UV9CTnwiTRB4jhtol7Fq/Z9JRS/D/bV7yDsoHm5k="
+          "relative_path": "api/dosymep.SimpleServices.IUIThemeUpdaterService.html"
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.SimpleServices.MessageBoxServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.SimpleServices.MessageBoxServiceExtensions.html"
+        }
+      },
       "version": ""
     },
     {
@@ -224,11 +242,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.OrganizationSpace.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.OrganizationSpace.html",
-          "hash": "t0HTBkvejkdfN9jOWcuUWyD2lCL2g1r2w9RqdEoumuM="
+          "relative_path": "api/dosymep.SimpleServices.OrganizationSpace.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -236,11 +252,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.IProfileInstance.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.IProfileInstance.html",
-          "hash": "cBc01IN8gGWhjQ/q3R4ddMvgrjN0tyHlDR60aKVWf0I="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.IProfileInstance.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -248,11 +262,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.PlatformProfileService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.PlatformProfileService.html",
-          "hash": "4atexwMpUiqbFxmcu7LNMLclZoZeD9Z6v76t38gU2Xk="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.PlatformProfileService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -260,11 +272,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileInfo.html",
-          "hash": "Enbe+00Iu0BqMzD+JtPT3KOhimgbQ/3s6BjtD5jfYJ8="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileInfo.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -272,11 +282,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.IProfileStorage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.IProfileStorage.html",
-          "hash": "AfbqHM0g3YeHGzsm15+55iMmraAKSjRWU5pgNzCo23Q="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.IProfileStorage.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -284,11 +292,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.html",
-          "hash": "Ti/zHUChslZa++TLRslo/yRNj/5z4ZXzmN/IiJt63gQ="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -296,11 +302,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.html",
-          "hash": "HhWoEz3kFUJe00U5kYXncFWp6ft3FCO9Ei2n8XgF7xs="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -308,11 +312,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.PlatformProfiles.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.html",
-          "hash": "cSE4Twj2ioMwPDIALwBWf2po6EPbeLc2QGO7TAE6XDk="
+          "relative_path": "api/dosymep.SimpleServices.PlatformProfiles.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -320,11 +322,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.ProfileSpace.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.ProfileSpace.html",
-          "hash": "xtfCgpjSVpT1tvVYmMe3tbfkuzN5F9Azy1gH4+7WeOU="
+          "relative_path": "api/dosymep.SimpleServices.ProfileSpace.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -332,11 +332,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.RootWindowService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.RootWindowService.html",
-          "hash": "fcCDLqcrBRb8h8QBpKrhrBPu6vaYh3R+OPtx3Zi/j24="
+          "relative_path": "api/dosymep.SimpleServices.RootWindowService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -344,11 +342,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.SystemSpace.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.SystemSpace.html",
-          "hash": "tHAhTqKKgF0uZsaPKma04yvsTed/CZizGL9hUBYEuyw="
+          "relative_path": "api/dosymep.SimpleServices.SystemSpace.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -356,11 +352,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.UIThemes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.UIThemes.html",
-          "hash": "YKUJQ4BYIwNcxVEKSVv9r9SI8vpvML4BEwolSH4wdco="
+          "relative_path": "api/dosymep.SimpleServices.UIThemes.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -368,11 +362,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.UserSpace.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.UserSpace.html",
-          "hash": "tXkL4az6ZHuSonS4qkVev9SIlFjfY1cYzV/FK58FlRE="
+          "relative_path": "api/dosymep.SimpleServices.UserSpace.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -380,11 +372,9 @@
       "source_relative_path": "api/dosymep.SimpleServices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.SimpleServices.html",
-          "hash": "D4GWkp9USTtdKIdPmm13cVna0qxkU/RfWFsgwoGiNts="
+          "relative_path": "api/dosymep.SimpleServices.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -392,11 +382,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.BaseViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.BaseViewModel.html",
-          "hash": "XxV167KVruAO0208b4+noFJb9rhTmWuJTvApot4T3CY="
+          "relative_path": "api/dosymep.Xpf.Core.BaseViewModel.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -404,11 +392,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.BaseWindow.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.BaseWindow.html",
-          "hash": "GIoFel2+CLlaXCneGVD6CPiqKY1/4ARaqcMjSpRjbiY="
+          "relative_path": "api/dosymep.Xpf.Core.BaseWindow.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -416,11 +402,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.XtraAsyncCommand-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraAsyncCommand-1.html",
-          "hash": "1kWzCcHWzZF4sSNdXqU2CXFytObX8QbWfTvg3z6VCjY="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraAsyncCommand-1.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -428,11 +412,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.XtraAsyncCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraAsyncCommand.html",
-          "hash": "nxc6vN9gT0KO1PlqP2cXkOz3mMf2cfti1zytg2R3krU="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraAsyncCommand.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -440,11 +422,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.XtraBaseCommand-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraBaseCommand-1.html",
-          "hash": "0mZ0Ok3fM2Pp0jW7pQnyU/lMiMaeXw62ETlkH/Fexm8="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraBaseCommand-1.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -452,11 +432,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.XtraBaseCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraBaseCommand.html",
-          "hash": "93bPModh9AOSbZ6F5xPirQg1+gWJmIUzHd2P/DUj+QE="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraBaseCommand.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -464,11 +442,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.XtraDelegateCommand-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraDelegateCommand-1.html",
-          "hash": "MupRX9R4+XkhqW4HTC1o0RoKLsxAx2t9X6qdZmk6rws="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraDelegateCommand-1.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -476,11 +452,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.XtraDelegateCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraDelegateCommand.html",
-          "hash": "+TGOpoSnADysaS3tUJq3EZRMek+9425mWiud1Ax7HwI="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.XtraDelegateCommand.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -488,11 +462,49 @@
       "source_relative_path": "api/dosymep.Xpf.Core.Commands.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.Commands.html",
-          "hash": "AjP8Ew+5FJ/nz/NEDZODIKAudpHe0RCCFRQalDHkREk="
+          "relative_path": "api/dosymep.Xpf.Core.Commands.html"
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.Ninject.NinjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.Ninject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.Ninject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.ProgressDialogFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.ProgressDialogFactory.html"
+        }
+      },
       "version": ""
     },
     {
@@ -500,11 +512,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html",
-          "hash": "JgUX24+IFFP/4VdNrnjqin7ja00vtev6ncZsuEz1Wyw="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -512,11 +522,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.html",
-          "hash": "VDeZzkjEzw6x8BqSoyv+5vImaNGW3qj7+9WDdPqBhRg="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -524,11 +532,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraMessageBoxService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraMessageBoxService.html",
-          "hash": "LlMMwIYGy7ml5knm4KVi3UTe5lMhXc7gTeBaPE8E80k="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraMessageBoxService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -536,11 +542,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraNotificationService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraNotificationService.html",
-          "hash": "Nw8y2bKJ5pTATnqtzXc9JuJSu3mJ4pJ4po/nrF17EI4="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraNotificationService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -548,11 +552,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.html",
-          "hash": "SQP+tyoaPAZwJ4ICMJytmZUEKaG8GC2gpXgCUocnssI="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -560,11 +562,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraOpenFolderDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraOpenFolderDialogService.html",
-          "hash": "67/zqfK3ts2JN5hC/ACyl+8Bq53M4XoZ4/TytH25ahU="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraOpenFolderDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -572,11 +572,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraProgressDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraProgressDialogService.html",
-          "hash": "dd4khHijIcFchz2Z8/YmTAUe0KxLMKLccNGBrC4qOIA="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraProgressDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -584,11 +582,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraSaveFileDialogService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraSaveFileDialogService.html",
-          "hash": "rXZp9lO6VvSm2yIwdKAyGnfDkUA/TNkeJRp7wPqJzXY="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraSaveFileDialogService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -596,11 +592,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.html",
-          "hash": "6nK8Re7CAyI0QmvL37nDt+NsqHLqx2OTR+LqH/utMtM="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -608,11 +602,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.html",
-          "hash": "D+qsZPGMT+X2I57zKPlo5Op+LoVDhVNk1YpZ6LFsRII="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -620,11 +612,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraWindowsThemeService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraWindowsThemeService.html",
-          "hash": "ofUG1vLSpPGyOiLRRu1tOFvkVJaoDm5ifmE22OsEorI="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraWindowsThemeService.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -632,11 +622,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.html",
-          "hash": "2RjA1yHX3pjsb1sPhQtY3NFJaimKHnWmUmxD1XJpBUw="
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -644,11 +632,9 @@
       "source_relative_path": "api/dosymep.Xpf.Core.yml",
       "output": {
         ".html": {
-          "relative_path": "api/dosymep.Xpf.Core.html",
-          "hash": "K4yN2qLeZ8NaYE83gFlOzW02zMbq/8mqmhihJqVZd0A="
+          "relative_path": "api/dosymep.Xpf.Core.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -656,11 +642,9 @@
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/index.html",
-          "hash": "WmzwUngeOW+PCZ394fbuzfLp4bbGFG2lcrhcxCcoxI4="
+          "relative_path": "api/index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -668,11 +652,12 @@
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "KFY+lnOJ0nn/Y/NxJY9HPQ17ZXTebBA7iHx1tt6En0g="
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -680,11 +665,9 @@
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "0tF1I8BeXqx4bPg7FW2fhZeg2JHn1o91bQzWmaMFpCI="
+          "relative_path": "articles/intro.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -692,11 +675,12 @@
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -704,11 +688,9 @@
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "sE2aCg7YymEBbKDeKlXQdTzESclP5grXSzv4bhecn+o="
+          "relative_path": "index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -716,56 +698,15 @@
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
-          "relative_path": "toc.html",
-          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     }
   ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": true,
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 54,
-          "skipped_file_count": 54
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
-    }
-  ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

@@ -1,808 +1,854 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-  
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class XtraOpenFileDialogService
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class XtraOpenFileDialogService
-   ">
-    <meta name="generator" content="docfx 2.59.4.0">
-    
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+      <title>Class XtraOpenFileDialogService
+ | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XtraOpenFileDialogService
+ | dosymep.SimpleServices ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService">
+
+        <article data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService">
+
+
+
+  <h1 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService" class="text-break">
+    Class XtraOpenFileDialogService
   
-  
-  <h1 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService" class="text-break">Class XtraOpenFileDialogService
   </h1>
-  <div class="markdown level0 summary"><p>Класс сервиса открытия диалога выбора файла.</p>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Xpf.html">Xpf</a>.<a class="xref" href="dosymep.Xpf.Core.html">Core</a>.<a class="xref" href="dosymep.Xpf.Core.SimpleServices.html">SimpleServices</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Xpf.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Класс сервиса открытия диалога выбора файла.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html">XtraBaseWindowService</a>&lt;<span class="xref">DevExpress.Xpf.Dialogs.DXOpenFileDialogService</span>&gt;</div>
-    <div class="level2"><span class="xref">XtraOpenFileDialogService</span></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class XtraOpenFileDialogService : XtraBaseWindowService&lt;DXOpenFileDialogService&gt;, IAttachableService, IOpenFileDialogService, IOpenDialogServiceBase, IFileDialogServiceBase</code></pre>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a></div>
-    <div><a class="xref" href="dosymep.SimpleServices.IOpenDialogServiceBase.html">IOpenDialogServiceBase</a></div>
-    <div><a class="xref" href="dosymep.SimpleServices.IFileDialogServiceBase.html">IFileDialogServiceBase</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1__window">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;._window</a>
-    </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html">XtraBaseWindowService</a>&lt;<span class="xref">DXOpenFileDialogService</span>&gt;</div>
+      <div><span class="xref">XtraOpenFileDialogService</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="dosymep.SimpleServices.IAttachableService.html">IAttachableService</a></div>
+      <div><a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a></div>
+      <div><a class="xref" href="dosymep.SimpleServices.IOpenDialogServiceBase.html">IOpenDialogServiceBase</a></div>
+      <div><a class="xref" href="dosymep.SimpleServices.IFileDialogServiceBase.html">IFileDialogServiceBase</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1__serviceBase">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;._serviceBase</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1_Detach">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;.Detach()</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1_Attach_System_Windows_DependencyObject_">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;.Attach(DependencyObject)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1_IsAttached">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;.IsAttached</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+      <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1_AllowAttach">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;.AllowAttach</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
+      <a class="xref" href="dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html#dosymep_Xpf_Core_SimpleServices_XtraBaseWindowService_1_AssociatedObject">XtraBaseWindowService&lt;DXOpenFileDialogService&gt;.AssociatedObject</a>
     </div>
     <div>
-      <span class="xref">System.Object.GetType()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="dosymep.Xpf.Core.SimpleServices.html">dosymep.Xpf.Core.SimpleServices</a></h6>
-  <h6><strong>Assembly</strong>: dosymep.Xpf.Core.dll</h6>
-  <h5 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class XtraOpenFileDialogService : XtraBaseWindowService&lt;DXOpenFileDialogService&gt;, IOpenFileDialogService, IOpenDialogServiceBase, IFileDialogServiceBase</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService__ctor_System_Windows_Window_.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.%23ctor(System.Windows.Window)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L20">View Source</a>
-  </span>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService__ctor_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.#ctor*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService__ctor_System_Windows_Window_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.#ctor(System.Windows.Window)">XtraOpenFileDialogService(Window)</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService__ctor" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.#ctor">
+  XtraOpenFileDialogService()
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Создает экземпляр сервиса открытия диалога выбора файла.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public XtraOpenFileDialogService(Window window)</code></pre>
+    <pre><code class="lang-csharp hljs">public XtraOpenFileDialogService()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Windows.Window</span></td>
-        <td><span class="parametername">window</span></td>
-        <td><p>Родительское окно сервиса.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AddExtension.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AddExtension%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L37">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AddExtension_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AddExtension*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AddExtension" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AddExtension">AddExtension</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AddExtension" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AddExtension">
+  AddExtension
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает значение признака автоматической установки расширения к имени файла.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool AddExtension { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AutoUpgradeEnabled.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AutoUpgradeEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L43">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AutoUpgradeEnabled_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AutoUpgradeEnabled*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AutoUpgradeEnabled" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AutoUpgradeEnabled">AutoUpgradeEnabled</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_AutoUpgradeEnabled" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.AutoUpgradeEnabled">
+  AutoUpgradeEnabled
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает значение признака автоматической смены внешнего вида и поведения.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool AutoUpgradeEnabled { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckFileExists.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckFileExists%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L31">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckFileExists_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckFileExists*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckFileExists" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckFileExists">CheckFileExists</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckFileExists" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckFileExists">
+  CheckFileExists
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения предупреждения, когда пользователь указывает не существующее имя файла.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool CheckFileExists { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckPathExists.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckPathExists%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L49">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckPathExists_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckPathExists*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckPathExists" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckPathExists">CheckPathExists</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_CheckPathExists" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.CheckPathExists">
+  CheckPathExists
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения предупреждения, когда пользователь указывает не существующий путь.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool CheckPathExists { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_DereferenceLinks.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.DereferenceLinks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L55">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_DereferenceLinks_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.DereferenceLinks*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_DereferenceLinks" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.DereferenceLinks">DereferenceLinks</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_DereferenceLinks" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.DereferenceLinks">
+  DereferenceLinks
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак возвращения расположения файла, на который ссылается ярлык или возвращает расположения ярлыка.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool DereferenceLinks { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_File.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.File%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L119">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_File_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.File*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_File" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.File">File</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_File" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.File">
+  File
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает объект определяющий файл выбранный в диалоговом окне.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public FileInfo File { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.IO.FileInfo</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Files.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Files%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L123">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Files_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Files*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Files" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Files">Files</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Files" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Files">
+  Files
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает коллекцию указывающую на все файлы выбранные в диалоговом окне.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileInfo&gt; Files { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.IO.FileInfo</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Filter.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Filter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L97">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Filter_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Filter*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Filter" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Filter">Filter</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Filter" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Filter">
+  Filter
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает строку фильтра, указывающую на параметры доступные в поле &quot;Тип файлов&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Filter { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_FilterIndex.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.FilterIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L85">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_FilterIndex_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.FilterIndex*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_FilterIndex" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.FilterIndex">FilterIndex</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_FilterIndex" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.FilterIndex">
+  FilterIndex
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает индекс параметра фильтрации.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int FilterIndex { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_InitialDirectory.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.InitialDirectory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L103">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_InitialDirectory_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.InitialDirectory*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_InitialDirectory" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.InitialDirectory">InitialDirectory</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_InitialDirectory" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.InitialDirectory">
+  InitialDirectory
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает исходную папку.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string InitialDirectory { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Multiselect.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Multiselect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L25">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Multiselect_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Multiselect*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Multiselect" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Multiselect">Multiselect</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Multiselect" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Multiselect">
+  Multiselect
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак выбора нескольких файлов.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Multiselect { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_RestoreDirectory.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.RestoreDirectory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L61">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_RestoreDirectory_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.RestoreDirectory*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_RestoreDirectory" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.RestoreDirectory">RestoreDirectory</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_RestoreDirectory" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.RestoreDirectory">
+  RestoreDirectory
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак запоминания предыдущего каталога при повторном отображении.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool RestoreDirectory { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowHelp.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowHelp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L67">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowHelp_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowHelp*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowHelp" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowHelp">ShowHelp</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowHelp" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowHelp">
+  ShowHelp
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения кнопки &quot;Справка&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ShowHelp { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_SupportMultiDottedExtensions.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.SupportMultiDottedExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L73">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_SupportMultiDottedExtensions_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.SupportMultiDottedExtensions*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_SupportMultiDottedExtensions" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.SupportMultiDottedExtensions">SupportMultiDottedExtensions</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_SupportMultiDottedExtensions" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.SupportMultiDottedExtensions">
+  SupportMultiDottedExtensions
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения и сохранения файлов с несколькими расширениями.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool SupportMultiDottedExtensions { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Title.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Title%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L91">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Title_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Title*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Title" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Title">Title</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Title" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Title">
+  Title
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает отображаемый заголовок.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ValidateNames.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ValidateNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L79">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ValidateNames_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ValidateNames*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ValidateNames" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ValidateNames">ValidateNames</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ValidateNames" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ValidateNames">
+  ValidateNames
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Возвращает или устанавливает признак принятия только допустимых имен файлов Win32.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ValidateNames { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Reset.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L109">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Reset_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Reset*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Reset" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Reset">Reset()</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_Reset" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.Reset">
+  Reset()
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Сбрасывает все свойства до значений по умолчанию.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowDialog_System_String_.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowDialog(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L114">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowDialog_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowDialog*"></a>
-  <h4 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowDialog_System_String_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowDialog(System.String)">ShowDialog(String)</h4>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowDialog" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowDialog">
+  ShowDialog()
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Показывает диалог выбора.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowDialog()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowDialog_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService_ShowDialog_System_String_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.ShowDialog(System.String)">
+  ShowDialog(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Показывает диалог выбора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ShowDialog(string directoryName)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">directoryName</span></td>
-        <td><p>Устанавливает исходную папку.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a>
-  </div>
-  <div>
-      <a class="xref" href="dosymep.SimpleServices.IOpenDialogServiceBase.html">IOpenDialogServiceBase</a>
-  </div>
-  <div>
-      <a class="xref" href="dosymep.SimpleServices.IFileDialogServiceBase.html">IFileDialogServiceBase</a>
-  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directoryName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Устанавливает исходную папку.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/dosymep/dosymep.SimpleServices/new/master/apiSpec/new?filename=dosymep_Xpf_Core_SimpleServices_XtraOpenFileDialogService.md&amp;value=---%0Auid%3A%20dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/dosymep.Xpf.Core/SimpleServices/XtraOpenFileDialogService.cs/#L15" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="toggle-mode">
-                <div class="icon">
-                  <i aria-hidden="true">☀</i>
-                </div>
-                <label class="switch">
-                  <input type="checkbox" id="switch-style">
-                  <span class="slider round"></span>
-                </label>
-                <div class="icon">
-                  <i aria-hidden="true">☾</i>
-                </div>
-              </div>
-          
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
-              <div></div>
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-              </nav>
-            </div>
-          </div>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
         </div>
       </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <div class="pull-left">
-              
-              <span>Generated by <strong>DocFX</strong></span>
-            </div>
-            <div class="toggle-mode pull-right visible-sm visible-xs">
-              <div class="icon">
-                <i aria-hidden="true">☀</i>
-              </div>
-              <label class="switch">
-                <input type="checkbox" id="switch-style-m">
-                <span class="slider round"></span>
-              </label>
-              <div class="icon">
-                <i aria-hidden="true">☾</i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
-      </footer>    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    </footer>
   </body>
 </html>

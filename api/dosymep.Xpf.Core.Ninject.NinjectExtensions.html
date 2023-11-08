@@ -1,0 +1,1309 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NinjectExtensions
+ | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NinjectExtensions
+ | dosymep.SimpleServices ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions">
+
+
+
+  <h1 id="dosymep_Xpf_Core_Ninject_NinjectExtensions" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions" class="text-break">
+    Class NinjectExtensions
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Xpf.html">Xpf</a>.<a class="xref" href="dosymep.Xpf.Core.html">Core</a>.<a class="xref" href="dosymep.Xpf.Core.Ninject.html">Ninject</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Xpf.Core.Ninject.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Расширения для настройки <span class="xref">Ninject.IKernel</span>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class NinjectExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NinjectExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraDispatcher*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraDispatcher(Ninject.IKernel)">
+  UseXtraDispatcher(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IDispatcherService.html">IDispatcherService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraDispatcher(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraDispatcher*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher__1_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraDispatcher``1(Ninject.IKernel)">
+  UseXtraDispatcher&lt;T&gt;(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IDispatcherService.html">IDispatcherService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraDispatcher&lt;T&gt;(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher__1_Ninject_IKernel__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraLanguage_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLanguage*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraLanguage_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLanguage(Ninject.IKernel)">
+  UseXtraLanguage(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.ILanguageService.html">ILanguageService</a>,
+который возвращает установленную локализацию в настройках Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraLanguage(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraMessageBox_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraMessageBox*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraMessageBox_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraMessageBox(Ninject.IKernel)">
+  UseXtraMessageBox(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IMessageBoxService.html">IMessageBoxService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraMessageBox(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraMessageBox_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraMessageBox*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraMessageBox__1_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraMessageBox``1(Ninject.IKernel)">
+  UseXtraMessageBox&lt;T&gt;(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IMessageBoxService.html">IMessageBoxService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraMessageBox&lt;T&gt;(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraMessageBox__1_Ninject_IKernel__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_DevExpress_Mvvm_UI_PredefinedSound_DevExpress_Mvvm_UI_NotificationScreen_DevExpress_Mvvm_UI_NotificationPosition_System_Int32_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,DevExpress.Mvvm.UI.PredefinedSound,DevExpress.Mvvm.UI.NotificationScreen,DevExpress.Mvvm.UI.NotificationPosition,System.Int32)">
+  UseXtraNotifications(IKernel, string?, string?, string?, ImageSource?, PredefinedSound?, NotificationScreen?, NotificationPosition?, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.INotificationService.html">INotificationService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraNotifications(this IKernel kernel, string? applicationId = null, string? defaultAuthor = null, string? defaultFooter = null, ImageSource? defaultImage = null, PredefinedSound? sound = 1, NotificationScreen? notificationScreen = 0, NotificationPosition? notificationPosition = 0, int notificationVisibleMaxCount = 5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>applicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Идентификатор приложения.</p>
+</dd>
+    <dt><code>defaultAuthor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя автора по умолчанию. Расположение снизу справа на уведомлении.</p>
+</dd>
+    <dt><code>defaultFooter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение футера по умолчанию. Расположение снизу слева на уведомлении.</p>
+</dd>
+    <dt><code>defaultImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource">ImageSource</a></dt>
+    <dd><p>Значение изображения по умолчанию. Расположение слева на уведомлении.</p>
+</dd>
+    <dt><code>sound</code> <span class="xref">PredefinedSound</span></dt>
+    <dd><p>Значение звука уведомления (не используется).
+По умолчанию <span class="xref">DevExpress.Mvvm.UI.PredefinedSound.NoSound</span>.</p>
+</dd>
+    <dt><code>notificationScreen</code> <span class="xref">NotificationScreen</span></dt>
+    <dd><p>Значение выбора окна.
+По умолчанию <span class="xref">DevExpress.Mvvm.UI.NotificationScreen.Primary</span>.</p>
+</dd>
+    <dt><code>notificationPosition</code> <span class="xref">NotificationPosition</span></dt>
+    <dd><p>Значение места отображения уведомления.
+По умолчанию <span class="xref">DevExpress.Mvvm.UI.NotificationPosition.BottomRight</span>.</p>
+</dd>
+    <dt><code>notificationVisibleMaxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальное количество уведомлений на экране. По умолчанию &quot;5&quot;.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications__1_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_DevExpress_Mvvm_UI_PredefinedSound_DevExpress_Mvvm_UI_NotificationScreen_DevExpress_Mvvm_UI_NotificationPosition_System_Int32_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications``1(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,DevExpress.Mvvm.UI.PredefinedSound,DevExpress.Mvvm.UI.NotificationScreen,DevExpress.Mvvm.UI.NotificationPosition,System.Int32)">
+  UseXtraNotifications&lt;T&gt;(IKernel, string?, string?, string?, ImageSource?, PredefinedSound?, NotificationScreen?, NotificationPosition?, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.INotificationService.html">INotificationService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraNotifications&lt;T&gt;(this IKernel kernel, string? applicationId = null, string? defaultAuthor = null, string? defaultFooter = null, ImageSource? defaultImage = null, PredefinedSound? sound = 1, NotificationScreen? notificationScreen = 1, NotificationPosition? notificationPosition = 0, int notificationVisibleMaxCount = 5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>applicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Идентификатор приложения.</p>
+</dd>
+    <dt><code>defaultAuthor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя автора по умолчанию. Расположение снизу справа на уведомлении.</p>
+</dd>
+    <dt><code>defaultFooter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение футера по умолчанию. Расположение снизу слева на уведомлении.</p>
+</dd>
+    <dt><code>defaultImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource">ImageSource</a></dt>
+    <dd><p>Значение изображения по умолчанию. Расположение слева на уведомлении.</p>
+</dd>
+    <dt><code>sound</code> <span class="xref">PredefinedSound</span></dt>
+    <dd><p>Значение звука уведомления (не используется).
+По умолчанию <span class="xref">DevExpress.Mvvm.UI.PredefinedSound.NoSound</span>.</p>
+</dd>
+    <dt><code>notificationScreen</code> <span class="xref">NotificationScreen</span></dt>
+    <dd><p>Значение выбора окна.
+По умолчанию <span class="xref">DevExpress.Mvvm.UI.NotificationScreen.Primary</span>.</p>
+</dd>
+    <dt><code>notificationPosition</code> <span class="xref">NotificationPosition</span></dt>
+    <dd><p>Значение места отображения уведомления.
+По умолчанию <span class="xref">DevExpress.Mvvm.UI.NotificationPosition.BottomRight</span>.</p>
+</dd>
+    <dt><code>notificationVisibleMaxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальное количество уведомлений на экране. По умолчанию &quot;5&quot;.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications__1_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_DevExpress_Mvvm_UI_PredefinedSound_DevExpress_Mvvm_UI_NotificationScreen_DevExpress_Mvvm_UI_NotificationPosition_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFileDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFileDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFileDialog_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFileDialog(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseXtraOpenFileDialog(IKernel, string?, string?, int, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraOpenFileDialog(this IKernel kernel, string? title = &quot;Выбрать файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? initialDirectory = null, bool multiSelect = false, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = true, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает мультивыбор файлов. По умолчанию выключено.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFileDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFileDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFileDialog``1(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseXtraOpenFileDialog&lt;T&gt;(IKernel, string?, string?, int, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraOpenFileDialog&lt;T&gt;(this IKernel kernel, string? title = &quot;Выбрать файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? initialDirectory = null, bool multiSelect = false, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = true, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает мультивыбор файлов. По умолчанию выключено.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFolderDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFolderDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFolderDialog_Ninject_IKernel_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFolderDialog(Ninject.IKernel,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseXtraOpenFolderDialog(IKernel, string?, string?, bool, bool, bool, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFolderDialogService.html">IOpenFolderDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraOpenFolderDialog(this IKernel kernel, string? title = &quot;Выбрать папку&quot;, string? initialDirectory = null, bool multiSelect = false, bool autoUpgradeEnabled = true, bool checkPathExists = true, bool validateNames = true, bool restoreDirectory = false, bool showHelp = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать папку&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - разрешает мультивыбор. По умолчанию отключено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFolderDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFolderDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFolderDialog__1_Ninject_IKernel_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFolderDialog``1(Ninject.IKernel,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseXtraOpenFolderDialog&lt;T&gt;(IKernel, string?, string?, bool, bool, bool, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFolderDialogService.html">IOpenFolderDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraOpenFolderDialog&lt;T&gt;(this IKernel kernel, string? title = &quot;Выбрать папку&quot;, string? initialDirectory = null, bool multiSelect = false, bool autoUpgradeEnabled = true, bool checkPathExists = true, bool validateNames = true, bool restoreDirectory = false, bool showHelp = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать папку&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - разрешает мультивыбор. По умолчанию отключено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraOpenFolderDialog__1_Ninject_IKernel_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraProgressDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraProgressDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraProgressDialog_Ninject_IKernel_System_Int32_System_Boolean_System_String_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraProgressDialog(Ninject.IKernel,System.Int32,System.Boolean,System.String)">
+  UseXtraProgressDialog(IKernel, int, bool, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IProgressDialogService.html">IProgressDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraProgressDialog(this IKernel kernel, int stepValue = 10, bool indeterminate = false, string displayTitleFormat = &quot;Пожалуйста подождите [{0}/{1}] ...&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>stepValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Значение шага прогресса. По умолчанию &quot;10&quot;.</p>
+</dd>
+    <dt><code>indeterminate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает неопределенный ход выполнения. По умолчанию выключено.</p>
+</dd>
+    <dt><code>displayTitleFormat</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Формат отображения хода выполнения.
+Значение {0} - текущий прогресс, {1} - максимальное количество.
+По умолчанию &quot;Пожалуйста подождите [{0}/{1}] ...&quot;</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraProgressDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraProgressDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraProgressDialog__1_Ninject_IKernel_System_Int32_System_Boolean_System_String_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraProgressDialog``1(Ninject.IKernel,System.Int32,System.Boolean,System.String)">
+  UseXtraProgressDialog&lt;T&gt;(IKernel, int, bool, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IProgressDialogFactory.html">IProgressDialogFactory</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraProgressDialog&lt;T&gt;(this IKernel kernel, int stepValue = 10, bool indeterminate = false, string displayTitleFormat = &quot;Пожалуйста подождите [{0}/{1}] ...&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>stepValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Значение шага прогресса. По умолчанию &quot;10&quot;.</p>
+</dd>
+    <dt><code>indeterminate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает неопределенный ход выполнения. По умолчанию выключено.</p>
+</dd>
+    <dt><code>displayTitleFormat</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Формат отображения хода выполнения.
+Значение {0} - текущий прогресс, {1} - максимальное количество.
+По умолчанию &quot;Пожалуйста подождите [{0}/{1}] ...&quot;</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraProgressDialog__1_Ninject_IKernel_System_Int32_System_Boolean_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraSaveFileDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraSaveFileDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraSaveFileDialog_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraSaveFileDialog(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseXtraSaveFileDialog(IKernel, string?, string?, int, string?, string?, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.ISaveFileDialogService.html">ISaveFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraSaveFileDialog(this IKernel kernel, string? title = &quot;Сохранить файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? defaultExt = null, string? defaultFileName = null, string? initialDirectory = null, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = false, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Сохранить файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>defaultExt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Расширение файла по умолчанию.</p>
+</dd>
+    <dt><code>defaultFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя файла по умолчанию.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraSaveFileDialog_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraSaveFileDialog*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraSaveFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraSaveFileDialog``1(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseXtraSaveFileDialog&lt;T&gt;(IKernel, string?, string?, int, string?, string?, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.ISaveFileDialogService.html">ISaveFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraSaveFileDialog&lt;T&gt;(this IKernel kernel, string? title = &quot;Сохранить файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? defaultExt = null, string? defaultFileName = null, string? initialDirectory = null, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = false, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Сохранить файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>defaultExt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Расширение файла по умолчанию.</p>
+</dd>
+    <dt><code>defaultFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя файла по умолчанию.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraSaveFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html">AttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraTheme_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraTheme*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraTheme_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraTheme(Ninject.IKernel)">
+  UseXtraTheme(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IUIThemeService.html">IUIThemeService</a>,
+который возвращает установленную тему в настройках Windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraTheme(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraThemeUpdater_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraThemeUpdater*"></a>
+
+  <h3 id="dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraThemeUpdater_Ninject_IKernel_" data-uid="dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraThemeUpdater(Ninject.IKernel)">
+  UseXtraThemeUpdater(IKernel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IUIThemeUpdaterService.html">IUIThemeUpdaterService</a>,
+который устанавливает тему DevExpress для окна <span class="xref">DevExpress.Xpf.Core.ThemedWindow</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseXtraThemeUpdater(this IKernel kernel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
