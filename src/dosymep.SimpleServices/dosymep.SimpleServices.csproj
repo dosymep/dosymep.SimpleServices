@@ -12,15 +12,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="WindowsBase" />
-        <Reference Include="PresentationCore" />
-        <Reference Include="PresentationFramework" />
+        <Reference Include="WindowsBase"/>
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="LibGit2Sharp" Version="0.26.2">
-            <PrivateAssets>all</PrivateAssets>
-            <ExcludeAssets>runtime</ExcludeAssets>
+            <IncludeAssets>compile</IncludeAssets>
+        </PackageReference>
+
+        <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.320">
+            <IncludeAssets>compile</IncludeAssets>
         </PackageReference>
     </ItemGroup>
 </Project>
