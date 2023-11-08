@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Nuke.Common;
@@ -12,6 +13,7 @@ using Nuke.Common.Tools.DocFX;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Utilities.Collections;
+using Nuke.Components;
 
 using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.IO.FileSystemTasks;
@@ -19,7 +21,7 @@ using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.DocFX.DocFXTasks;
 
-class Build : NukeBuild {
+class Build : NukeBuild, IHazSolution {
     /// Support plugins are available for:
     ///   - JetBrains ReSharper        https://nuke.build/resharper
     ///   - JetBrains Rider            https://nuke.build/rider
@@ -30,45 +32,68 @@ class Build : NukeBuild {
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-    [Solution] readonly Solution Solution;
-
-    AbsolutePath SourceDirectory => RootDirectory;
-    AbsolutePath OutputDirectory => RootDirectory / "bin";
-
-    AbsolutePath DocsDirectory => RootDirectory / "docfx";
+    [Parameter] readonly AbsolutePath Output = RootDirectory / "bin";
+    [Parameter] readonly string DocsOutput = Path.Combine("docs", "_site");
+    [Parameter] readonly string DocsConfig = Path.Combine("docs", "docfx.json");
+    [Parameter] readonly AbsolutePath DocsCaches = RootDirectory / Path.Combine("docs", "api");
 
     Target Clean => _ => _
         .Executes(() => {
-            EnsureCleanDirectory(OutputDirectory);
+            Output.CreateOrCleanDirectory();
+            (RootDirectory / DocsOutput).CreateOrCleanDirectory();
+            DocsCaches.GlobFiles("**/*.yml").DeleteFiles();
+            RootDirectory.GlobDirectories("**/bin", "**/obj")
+                .Where(item => item != (RootDirectory / "build" / "bin"))
+                .Where(item => item != (RootDirectory / "build" / "obj"))
+                .DeleteDirectories();
         });
 
     Target Restore => _ => _
         .DependsOn(Clean)
         .Executes(() => {
             DotNetRestore(s => s
-                .SetProjectFile(Solution));
+                .SetProjectFile(((IHazSolution) this).Solution));
         });
 
     Target Compile => _ => _
         .DependsOn(Restore)
         .Executes(() => {
             DotNetBuild(s => s
-                .SetProjectFile(Solution)
+                .EnableForce()
+                .DisableNoRestore()
+                .SetOutputDirectory(Output)
                 .SetConfiguration(Configuration)
-                .SetOutputDirectory(OutputDirectory)
-                .EnableNoRestore());
+                .SetProjectFile(((IHazSolution) this).Solution)
+                .When(IsServerBuild, _ => _
+                    .EnableContinuousIntegrationBuild()));
         });
     
-    Target DocInit => _ => _
+    Target DownloadDocFx => _ => _
         .Executes(() => {
-            DocFXInit(s => s
-                .SetOutputFolder(DocsDirectory));
+            // В nuget.org лежит старая версия
+            ProcessTasks.StartProcess(
+                    "dotnet",
+                    "tool install -g docfx")
+                .WaitForExit();
         });
 
-    Target DocBuild => _ => _
+    Target DocsCompile => _ => _
         .DependsOn(Compile)
+        .DependsOn(DownloadDocFx)
         .Executes(() => {
-            DocFXBuild(s => s
-                .SetConfigFile(DocsDirectory));
+            ProcessTasks.StartProcess(
+                "docfx",
+                DocsConfig
+                + (IsLocalBuild
+                    ? " --serve"
+                    : string.Empty),
+                RootDirectory).WaitForExit();
+
+            // DocFXBuild(s => s
+            //     .EnableForceRebuild()
+            //     .SetServe(IsLocalBuild)
+            //     .SetOutputFolder(DocsOutput)
+            //     .SetProcessWorkingDirectory(RootDirectory)
+            // );
         });
 }

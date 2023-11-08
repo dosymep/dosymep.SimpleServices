@@ -1,0 +1,52 @@
+{
+  "$schema": "https://github.com/dotnet/docfx/blob/main/schemas/v1.0/schema.json",
+  "metadata": [
+    {
+      "dest": "api",
+      "src": [ { "src": "../bin", "files": "**.dll" } ]
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "toc.yml", "*.md" ] },
+      { "files": [ "api/*.yml", "api/*.md" ] },
+      { "files": [ "articles/**.md", "articles/**/toc.yml" ] }
+    ],
+    
+    "resource": [
+      { "files": [ "images/**" ] }
+    ],
+    
+    "output": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "modern"
+    ],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": false,
+    "globalMetadata" :
+    {
+      "_appName" : "dosymep.SimpleServices",
+      "_appTitle" : "dosymep.SimpleServices",
+      "_appFooter" : "Copyright &copy; 2023 dosymep",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "sitemap": {
+      "baseUrl": "https://dosymep.github.io/dosymep.SimpleServices",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "fileOptions": {
+        "**/articles/**": {
+          "priority": 0.8
+        },
+        "**/api/**": {
+          "priority": 0.3
+        }
+      }
+    }
+  }
+}
