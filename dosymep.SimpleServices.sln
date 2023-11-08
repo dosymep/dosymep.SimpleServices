@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.SimpleServices", "dosymep.SimpleServices\dosymep.SimpleServices.csproj", "{FEA822F8-6E69-4BC1-8366-2EEAF94B092C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.SimpleServices", "src/dosymep.SimpleServices\dosymep.SimpleServices.csproj", "{FEA822F8-6E69-4BC1-8366-2EEAF94B092C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E6B3F10-C94B-4FBC-AC7E-DE2BE1196531}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,11 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core", "dosymep.Xpf.Core\dosymep.Xpf.Core.csproj", "{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core", "src/dosymep.Xpf.Core\dosymep.Xpf.Core.csproj", "{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{CBC741BD-9A25-4096-AD32-2FF1BEA9B504}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core.Ninject", "dosymep.Xpf.Core.Ninject\dosymep.Xpf.Core.Ninject.csproj", "{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core.Ninject", "src/dosymep.Xpf.Core.Ninject\dosymep.Xpf.Core.Ninject.csproj", "{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
