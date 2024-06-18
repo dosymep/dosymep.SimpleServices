@@ -2,385 +2,397 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IAttachableService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IDispatcherService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IFileDialogServiceBase.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.ILanguageService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.ILocalizationService.html</loc>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.ILoggerService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IMessageBoxService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.INotification.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.INotificationService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IOpenDialogServiceBase.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IOpenFileDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IOpenFolderDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IPlatformProfileService-1.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IPlatformProfileService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IProgressDialogFactory.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IProgressDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IRootWindowService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.ISaveFileDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.ISerializationService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IUIThemeService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.IUIThemeUpdaterService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.MessageBoxServiceExtensions.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.OrganizationSpace.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.IProfileInstance.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.PlatformProfileService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.ProfileInfo.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.IProfileStorage.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.ProfileStorages.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.PlatformProfiles.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.ProfileSpace.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.RootWindowService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.SystemSpace.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.UIThemes.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.UserSpace.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.SimpleServices.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.BaseViewModel.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.BaseWindow.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.XtraAsyncCommand-1.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.XtraAsyncCommand.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.XtraBaseCommand-1.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.XtraBaseCommand.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.XtraDelegateCommand-1.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.XtraDelegateCommand.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Commands.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.Ninject.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.AttachServiceBehavior.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.ProgressDialogFactory.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraBaseWindowService-1.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html</loc>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraMessageBoxService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraNotificationService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraOpenFileDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraOpenFolderDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraProgressDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraSaveFileDialogService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.XtraWindowsThemeService.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.SimpleServices.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/dosymep.Xpf.Core.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/api/index.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/articles/intro.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dosymep.github.io/dosymep.SimpleServices/index.html</loc>
-    <lastmod>2023-11-08T06:49:45+00:00</lastmod>
+    <lastmod>2024-06-18T11:56:07+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -295,6 +295,48 @@ references:
   commentId: Overload:dosymep.SimpleServices.ILanguageService.HostLanguage
   fullName: dosymep.SimpleServices.ILanguageService.HostLanguage
   nameWithType: ILanguageService.HostLanguage
+- uid: dosymep.SimpleServices.ILocalizationService
+  name: ILocalizationService
+  href: api/dosymep.SimpleServices.ILocalizationService.html
+  commentId: T:dosymep.SimpleServices.ILocalizationService
+  fullName: dosymep.SimpleServices.ILocalizationService
+  nameWithType: ILocalizationService
+- uid: dosymep.SimpleServices.ILocalizationService.GetLocalizedString(System.String)
+  name: GetLocalizedString(string)
+  href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_GetLocalizedString_System_String_
+  commentId: M:dosymep.SimpleServices.ILocalizationService.GetLocalizedString(System.String)
+  name.vb: GetLocalizedString(String)
+  fullName: dosymep.SimpleServices.ILocalizationService.GetLocalizedString(string)
+  fullName.vb: dosymep.SimpleServices.ILocalizationService.GetLocalizedString(String)
+  nameWithType: ILocalizationService.GetLocalizedString(string)
+  nameWithType.vb: ILocalizationService.GetLocalizedString(String)
+- uid: dosymep.SimpleServices.ILocalizationService.GetLocalizedString(System.String,System.Object[])
+  name: GetLocalizedString(string, params object[])
+  href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_GetLocalizedString_System_String_System_Object___
+  commentId: M:dosymep.SimpleServices.ILocalizationService.GetLocalizedString(System.String,System.Object[])
+  name.vb: GetLocalizedString(String, ParamArray Object())
+  fullName: dosymep.SimpleServices.ILocalizationService.GetLocalizedString(string, params object[])
+  fullName.vb: dosymep.SimpleServices.ILocalizationService.GetLocalizedString(String, ParamArray Object())
+  nameWithType: ILocalizationService.GetLocalizedString(string, params object[])
+  nameWithType.vb: ILocalizationService.GetLocalizedString(String, ParamArray Object())
+- uid: dosymep.SimpleServices.ILocalizationService.GetLocalizedString*
+  name: GetLocalizedString
+  href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_GetLocalizedString_
+  commentId: Overload:dosymep.SimpleServices.ILocalizationService.GetLocalizedString
+  fullName: dosymep.SimpleServices.ILocalizationService.GetLocalizedString
+  nameWithType: ILocalizationService.GetLocalizedString
+- uid: dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo,System.Windows.FrameworkElement)
+  name: SetLocalization(CultureInfo, FrameworkElement)
+  href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_SetLocalization_System_Globalization_CultureInfo_System_Windows_FrameworkElement_
+  commentId: M:dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo,System.Windows.FrameworkElement)
+  fullName: dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo, System.Windows.FrameworkElement)
+  nameWithType: ILocalizationService.SetLocalization(CultureInfo, FrameworkElement)
+- uid: dosymep.SimpleServices.ILocalizationService.SetLocalization*
+  name: SetLocalization
+  href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_SetLocalization_
+  commentId: Overload:dosymep.SimpleServices.ILocalizationService.SetLocalization
+  fullName: dosymep.SimpleServices.ILocalizationService.SetLocalization
+  nameWithType: ILocalizationService.SetLocalization
 - uid: dosymep.SimpleServices.ILoggerService
   name: ILoggerService
   href: api/dosymep.SimpleServices.ILoggerService.html
@@ -2428,6 +2470,21 @@ references:
   commentId: T:dosymep.Xpf.Core.Ninject.NinjectExtensions
   fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions
   nameWithType: NinjectExtensions
+- uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel,System.String,System.Globalization.CultureInfo)
+  name: UseLocalization(IKernel, string, CultureInfo?)
+  href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseLocalization_Ninject_IKernel_System_String_System_Globalization_CultureInfo_
+  commentId: M:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel,System.String,System.Globalization.CultureInfo)
+  name.vb: UseLocalization(IKernel, String, CultureInfo)
+  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel, string, System.Globalization.CultureInfo?)
+  fullName.vb: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel, String, System.Globalization.CultureInfo)
+  nameWithType: NinjectExtensions.UseLocalization(IKernel, string, CultureInfo?)
+  nameWithType.vb: NinjectExtensions.UseLocalization(IKernel, String, CultureInfo)
+- uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization*
+  name: UseLocalization
+  href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseLocalization_
+  commentId: Overload:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization
+  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization
+  nameWithType: NinjectExtensions.UseLocalization
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraDispatcher(Ninject.IKernel)
   name: UseXtraDispatcher(IKernel)
   href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher_Ninject_IKernel_
@@ -3017,6 +3074,66 @@ references:
   commentId: Overload:dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.Invoke
   fullName: dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.Invoke
   nameWithType: XtraDispatcherService.Invoke
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService
+  name: XtraLocalizationService
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html
+  commentId: T:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService
+  nameWithType: XtraLocalizationService
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.#ctor(System.String,System.Globalization.CultureInfo)
+  name: XtraLocalizationService(string, CultureInfo)
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService__ctor_System_String_System_Globalization_CultureInfo_
+  commentId: M:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.#ctor(System.String,System.Globalization.CultureInfo)
+  name.vb: New(String, CultureInfo)
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.XtraLocalizationService(string, System.Globalization.CultureInfo)
+  fullName.vb: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.New(String, System.Globalization.CultureInfo)
+  nameWithType: XtraLocalizationService.XtraLocalizationService(string, CultureInfo)
+  nameWithType.vb: XtraLocalizationService.New(String, CultureInfo)
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.#ctor*
+  name: XtraLocalizationService
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService__ctor_
+  commentId: Overload:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.#ctor
+  name.vb: New
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.XtraLocalizationService
+  fullName.vb: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.New
+  nameWithType: XtraLocalizationService.XtraLocalizationService
+  nameWithType.vb: XtraLocalizationService.New
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(System.String)
+  name: GetLocalizedString(string)
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_GetLocalizedString_System_String_
+  commentId: M:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(System.String)
+  name.vb: GetLocalizedString(String)
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(string)
+  fullName.vb: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(String)
+  nameWithType: XtraLocalizationService.GetLocalizedString(string)
+  nameWithType.vb: XtraLocalizationService.GetLocalizedString(String)
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(System.String,System.Object[])
+  name: GetLocalizedString(string, params object[])
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_GetLocalizedString_System_String_System_Object___
+  commentId: M:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(System.String,System.Object[])
+  name.vb: GetLocalizedString(String, ParamArray Object())
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(string, params object[])
+  fullName.vb: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString(String, ParamArray Object())
+  nameWithType: XtraLocalizationService.GetLocalizedString(string, params object[])
+  nameWithType.vb: XtraLocalizationService.GetLocalizedString(String, ParamArray Object())
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString*
+  name: GetLocalizedString
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_GetLocalizedString_
+  commentId: Overload:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString
+  nameWithType: XtraLocalizationService.GetLocalizedString
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo,System.Windows.FrameworkElement)
+  name: SetLocalization(CultureInfo, FrameworkElement)
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_SetLocalization_System_Globalization_CultureInfo_System_Windows_FrameworkElement_
+  commentId: M:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo,System.Windows.FrameworkElement)
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo, System.Windows.FrameworkElement)
+  nameWithType: XtraLocalizationService.SetLocalization(CultureInfo, FrameworkElement)
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization*
+  name: SetLocalization
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_SetLocalization_
+  commentId: Overload:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization
+  nameWithType: XtraLocalizationService.SetLocalization
 - uid: dosymep.Xpf.Core.SimpleServices.XtraMessageBoxService
   name: XtraMessageBoxService
   href: api/dosymep.Xpf.Core.SimpleServices.XtraMessageBoxService.html

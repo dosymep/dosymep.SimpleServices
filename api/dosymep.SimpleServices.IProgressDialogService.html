@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IProgressDialogService
- | dosymep.SimpleServices </title>
+      <title>Interface IProgressDialogService | dosymep.SimpleServices </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IProgressDialogService
- | dosymep.SimpleServices ">
+      <meta name="title" content="Interface IProgressDialogService | dosymep.SimpleServices ">
       
+      <meta name="description" content="Интерфейс прогресс диалога.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_SimpleServices_IProgressDialogService" data-uid="dosymep.SimpleServices.IProgressDialogService" class="text-break">
-    Interface IProgressDialogService
-  
+Interface IProgressDialogService  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -113,7 +111,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -134,7 +132,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_DisplayTitleFormat" data-uid="dosymep.SimpleServices.IProgressDialogService.DisplayTitleFormat">
   DisplayTitleFormat
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Строка форматирования отображения.</p>
@@ -166,7 +164,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_Indeterminate" data-uid="dosymep.SimpleServices.IProgressDialogService.Indeterminate">
   Indeterminate
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Указывает будет ли прогресс бар неопределенным</p>
@@ -198,7 +196,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_MaxValue" data-uid="dosymep.SimpleServices.IProgressDialogService.MaxValue">
   MaxValue
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Максимальное значение прогресса.</p>
@@ -230,7 +228,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_StepValue" data-uid="dosymep.SimpleServices.IProgressDialogService.StepValue">
   StepValue
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Шаг обновления значение прогресса.</p>
@@ -266,7 +264,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_Close" data-uid="dosymep.SimpleServices.IProgressDialogService.Close">
   Close()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Закрывает диалог прогресса.</p>
@@ -293,7 +291,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_CreateAsyncProgress" data-uid="dosymep.SimpleServices.IProgressDialogService.CreateAsyncProgress">
   CreateAsyncProgress()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Создает класс прогресса.</p>
@@ -326,7 +324,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_CreateCancellationToken" data-uid="dosymep.SimpleServices.IProgressDialogService.CreateCancellationToken">
   CreateCancellationToken()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает токен отмены.</p>
@@ -359,7 +357,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_CreateProgress" data-uid="dosymep.SimpleServices.IProgressDialogService.CreateProgress">
   CreateProgress()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Создает класс прогресса.</p>
@@ -392,7 +390,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_Show" data-uid="dosymep.SimpleServices.IProgressDialogService.Show">
   Show()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Открывает диалог прогресса не в модальном режиме.</p>
@@ -419,7 +417,7 @@
 
   <h3 id="dosymep_SimpleServices_IProgressDialogService_ShowDialog" data-uid="dosymep.SimpleServices.IProgressDialogService.ShowDialog">
   ShowDialog()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IProgressDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Открывает диалог прогресса в модальном режиме.</p>

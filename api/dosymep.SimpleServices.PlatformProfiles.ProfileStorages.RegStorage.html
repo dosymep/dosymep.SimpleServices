@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class RegStorage
- | dosymep.SimpleServices </title>
+      <title>Class RegStorage | dosymep.SimpleServices </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class RegStorage
- | dosymep.SimpleServices ">
+      <meta name="title" content="Class RegStorage | dosymep.SimpleServices ">
       
+      <meta name="description" content="Класс хранилища профиля в реестре.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage" class="text-break">
-    Class RegStorage
-  
+Class RegStorage  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -126,7 +124,7 @@
   </dl>
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -165,7 +163,7 @@
 
   <h3 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage__ctor_System_String_System_String_dosymep_SimpleServices_ISerializationService_" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.#ctor(System.String,System.String,dosymep.SimpleServices.ISerializationService)">
   RegStorage(string, string, ISerializationService)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Конструктор хранилища профиля в реестре.</p>
@@ -208,7 +206,7 @@
 
   <h3 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage_ProfileLocalPath" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.ProfileLocalPath">
   ProfileLocalPath
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает и устанавливает путь до локального хранения профилей.</p>
@@ -240,7 +238,7 @@
 
   <h3 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage_ProfileName" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.ProfileName">
   ProfileName
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает и устанавливает используемое наименование профиля.</p>
@@ -276,7 +274,7 @@
 
   <h3 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage_GetCurrentProfileInfo" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.GetCurrentProfileInfo">
   GetCurrentProfileInfo()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает информацию о текущем профиле.</p>
@@ -309,7 +307,7 @@
 
   <h3 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage_GetProfileInfos" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.GetProfileInfos">
   GetProfileInfos()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает информацию о сохраненных профилях в системе.</p>
@@ -342,7 +340,7 @@
 
   <h3 id="dosymep_SimpleServices_PlatformProfiles_ProfileStorages_RegStorage_LoadProfileSpace_dosymep_SimpleServices_PlatformProfiles_ProfileInfo_dosymep_SimpleServices_ProfileSpace_" data-uid="dosymep.SimpleServices.PlatformProfiles.ProfileStorages.RegStorage.LoadProfileSpace(dosymep.SimpleServices.PlatformProfiles.ProfileInfo,dosymep.SimpleServices.ProfileSpace)">
   LoadProfileSpace(ProfileInfo, ProfileSpace)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/PlatformProfiles/ProfileStorages/RegStorage.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает определение профиля из хранилища.</p>

@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IOpenFolderDialogService
- | dosymep.SimpleServices </title>
+      <title>Interface IOpenFolderDialogService | dosymep.SimpleServices </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IOpenFolderDialogService
- | dosymep.SimpleServices ">
+      <meta name="title" content="Interface IOpenFolderDialogService | dosymep.SimpleServices ">
       
+      <meta name="description" content="Предоставляет методы для открытия папок.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_SimpleServices_IOpenFolderDialogService" data-uid="dosymep.SimpleServices.IOpenFolderDialogService" class="text-break">
-    Interface IOpenFolderDialogService
-  
+Interface IOpenFolderDialogService  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IOpenFolderDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -113,7 +111,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -182,7 +180,7 @@
 
   <h3 id="dosymep_SimpleServices_IOpenFolderDialogService_Folder" data-uid="dosymep.SimpleServices.IOpenFolderDialogService.Folder">
   Folder
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IOpenFolderDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает объект определяющий папку выбранную в диалоговом окне.</p>
@@ -214,7 +212,7 @@
 
   <h3 id="dosymep_SimpleServices_IOpenFolderDialogService_Folders" data-uid="dosymep.SimpleServices.IOpenFolderDialogService.Folders">
   Folders
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.SimpleServices/IOpenFolderDialogService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает коллекцию указывающую на все папки выбранные в диалоговом окне.</p>

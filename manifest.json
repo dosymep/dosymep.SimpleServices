@@ -69,6 +69,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.SimpleServices.ILocalizationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.SimpleServices.ILocalizationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/dosymep.SimpleServices.ILoggerService.yml",
       "output": {
         ".html": {
@@ -523,6 +533,16 @@
       "output": {
         ".html": {
           "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraDispatcherService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html"
         }
       },
       "version": ""
