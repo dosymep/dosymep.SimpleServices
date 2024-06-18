@@ -67,19 +67,9 @@ class Build : NukeBuild, IHazSolution {
                 .When(IsServerBuild, _ => _
                     .EnableContinuousIntegrationBuild()));
         });
-    
-    Target DownloadDocFx => _ => _
-        .Executes(() => {
-            // В nuget.org лежит старая версия
-            ProcessTasks.StartProcess(
-                    "dotnet",
-                    "tool install -g docfx")
-                .WaitForExit();
-        });
 
     Target DocsCompile => _ => _
         .DependsOn(Compile)
-        .DependsOn(DownloadDocFx)
         .Executes(() => {
             ProcessTasks.StartProcess(
                 "docfx",
