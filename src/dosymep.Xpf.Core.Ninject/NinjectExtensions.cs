@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
 using System.Windows.Media;
 
 using DevExpress.Mvvm.UI;
@@ -510,6 +511,21 @@ public static class NinjectExtensions {
             .WithPropertyValue(nameof(ISaveFileDialogService.DefaultExt), defaultExt!)
             .WithPropertyValue(nameof(ISaveFileDialogService.DefaultFileName), defaultFileName!);
 
+        return kernel;
+    }
+
+    /// <summary>
+    /// Добавляет в контейнер <see cref="ILocalizationService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="resourceName">Наименование ресурсов.</param>
+    /// <param name="defaultCulture">Языковые настройки по умолчанию. Значение по умолчанию <see cref="CultureInfo.CurrentUICulture"/>.</param>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    public static IKernel UseLocalization(this IKernel kernel, string resourceName, CultureInfo? defaultCulture = default) {
+        kernel.Bind<ILocalizationService>().To<XtraLocalizationService>()
+            .WithConstructorArgument(nameof(resourceName), resourceName)
+            .WithConstructorArgument(nameof(defaultCulture), defaultCulture ?? CultureInfo.CurrentUICulture);
+        
         return kernel;
     }
 
