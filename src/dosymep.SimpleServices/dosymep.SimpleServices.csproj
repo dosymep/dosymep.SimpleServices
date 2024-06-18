@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
+        <UseWpf>true</UseWpf>
         <TargetFramework>net48</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
@@ -22,7 +23,7 @@
             <IncludeAssets>compile</IncludeAssets>
         </PackageReference>
 
-        <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.320">
+        <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.306">
             <IncludeAssets>compile</IncludeAssets>
         </PackageReference>
     </ItemGroup>
