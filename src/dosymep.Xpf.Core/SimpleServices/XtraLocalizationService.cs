@@ -79,11 +79,11 @@ namespace dosymep.Xpf.Core.SimpleServices {
         }
 
         private ResourceDictionary CreateResourceDictionary(string resourceName, CultureInfo cultureInfo) {
-            if(cultureInfo == null) {
-                return new ResourceDictionary() {Source = new Uri(resourceName, UriKind.RelativeOrAbsolute)};
-            }
-
             try {
+                if(cultureInfo == null) {
+                    return new ResourceDictionary() {Source = new Uri(resourceName, UriKind.RelativeOrAbsolute)};
+                }
+
                 return new ResourceDictionary() {
                     Source = new Uri(GetResourceName(resourceName, cultureInfo), UriKind.RelativeOrAbsolute)
                 };
