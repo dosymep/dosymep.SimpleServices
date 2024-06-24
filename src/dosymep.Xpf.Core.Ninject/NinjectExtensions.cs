@@ -523,6 +523,7 @@ public static class NinjectExtensions {
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
     public static IKernel UseLocalization(this IKernel kernel, string resourceName, CultureInfo? defaultCulture = default) {
         kernel.Bind<ILocalizationService>().To<XtraLocalizationService>()
+            .InSingletonScope()
             .WithConstructorArgument(nameof(resourceName), resourceName)
             .WithConstructorArgument(nameof(defaultCulture), defaultCulture ?? CultureInfo.CurrentUICulture);
         
