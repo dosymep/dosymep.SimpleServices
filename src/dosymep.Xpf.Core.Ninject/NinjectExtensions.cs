@@ -521,7 +521,7 @@ public static class NinjectExtensions {
     /// <param name="resourceName">Наименование ресурсов.</param>
     /// <param name="defaultCulture">Языковые настройки по умолчанию. Значение по умолчанию <see cref="CultureInfo.CurrentUICulture"/>.</param>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
-    public static IKernel UseLocalization(this IKernel kernel, string resourceName, CultureInfo? defaultCulture = default) {
+    public static IKernel UseXtraLocalization(this IKernel kernel, string resourceName, CultureInfo? defaultCulture = default) {
         kernel.Bind<ILocalizationService>().To<XtraLocalizationService>()
             .InSingletonScope()
             .WithConstructorArgument(nameof(resourceName), resourceName)
