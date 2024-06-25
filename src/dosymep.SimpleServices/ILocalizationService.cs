@@ -25,6 +25,12 @@ namespace dosymep.SimpleServices {
         /// Устанавливает ресурсы локализации для интерфейса.
         /// </summary>
         /// <param name="cultureInfo">Применяемые языковые стандарты.</param>
+        void SetLocalization(CultureInfo cultureInfo);
+        
+        /// <summary>
+        /// Устанавливает ресурсы локализации для интерфейса.
+        /// </summary>
+        /// <param name="cultureInfo">Применяемые языковые стандарты.</param>
         /// <param name="frameworkElement">Элемент интерфейса WPF.</param>
         void SetLocalization(CultureInfo cultureInfo, FrameworkElement frameworkElement);
     }

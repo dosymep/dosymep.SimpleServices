@@ -37,6 +37,20 @@ namespace dosymep.Xpf.Core.SimpleServices {
         }
 
         /// <inheritdoc />
+        public void SetLocalization(CultureInfo cultureInfo) {
+            if(cultureInfo == null) {
+                throw new ArgumentNullException(nameof(cultureInfo));
+            }
+            
+            _dictionary = CreateResourceDictionary(_resourceName, cultureInfo)
+                          ?? CreateResourceDictionary(_resourceName, default) ?? new ResourceDictionary();
+
+            if(_dictionary.Source != _defaultDictionary.Source) {
+                _dictionary.MergedDictionaries.Add(_defaultDictionary);
+            }
+        }
+
+        /// <inheritdoc />
         public void SetLocalization(CultureInfo cultureInfo, FrameworkElement frameworkElement) {
             if(cultureInfo == null) {
                 throw new ArgumentNullException(nameof(cultureInfo));
@@ -48,12 +62,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
 
             frameworkElement.Resources.MergedDictionaries.Remove(_dictionary);
 
-            _dictionary = CreateResourceDictionary(_resourceName, cultureInfo)
-                          ?? CreateResourceDictionary(_resourceName, default) ?? new ResourceDictionary();
-
-            if(_dictionary.Source != _defaultDictionary.Source) {
-                _dictionary.MergedDictionaries.Add(_defaultDictionary);
-            }
+            SetLocalization(cultureInfo);
 
             frameworkElement.Resources.MergedDictionaries.Add(_dictionary);
         }
