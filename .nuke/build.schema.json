@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Build Schema",
   "$ref": "#/definitions/build",
+  "title": "Build Schema",
   "definitions": {
     "build": {
       "type": "object",
@@ -17,6 +17,15 @@
         "Continue": {
           "type": "boolean",
           "description": "Indicates to continue a previously failed build attempt"
+        },
+        "DocsCaches": {
+          "type": "string"
+        },
+        "DocsConfig": {
+          "type": "string"
+        },
+        "DocsOutput": {
+          "type": "string"
         },
         "Help": {
           "type": "boolean",
@@ -47,6 +56,9 @@
           "type": "boolean",
           "description": "Disables displaying the NUKE logo"
         },
+        "Output": {
+          "type": "string"
+        },
         "Partition": {
           "type": "string",
           "description": "Partition to use on CI"
@@ -74,8 +86,7 @@
             "enum": [
               "Clean",
               "Compile",
-              "DocBuild",
-              "DocInit",
+              "DocsCompile",
               "Restore"
             ]
           }
@@ -92,8 +103,7 @@
             "enum": [
               "Clean",
               "Compile",
-              "DocBuild",
-              "DocInit",
+              "DocsCompile",
               "Restore"
             ]
           }
