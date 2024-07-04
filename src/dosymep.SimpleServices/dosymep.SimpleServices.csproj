@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Title>dosymep.SimpleServises</Title>
-        <PackageId>dosymep.SimpleServises</PackageId>
+        <Title>dosymep.SimpleServices</Title>
+        <PackageId>dosymep.SimpleServices</PackageId>
         <Description>Данный пакет содержит базовые интерфейсы сервисов.</Description>
     </PropertyGroup>
 

@@ -7,8 +7,6 @@
 
         <Version>1.0.0</Version>
         <FileVersion>1.0.0</FileVersion>
-        <PackageVersion>1.0.0</PackageVersion>
-        <AssemblyVersion>1.0.0</AssemblyVersion>
 
         <PackageTags>dosymep, wpf, devexpress, gui, services</PackageTags>
         <RepositoryUrl>https://github.com/dosymep/dosymep.SimpleServices.git</RepositoryUrl>
