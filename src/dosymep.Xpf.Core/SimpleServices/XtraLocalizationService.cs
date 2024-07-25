@@ -33,7 +33,12 @@ namespace dosymep.Xpf.Core.SimpleServices {
             }
 
             _resourceName = resourceName;
+
             _defaultDictionary = CreateResourceDictionary(_resourceName, defaultCulture) ?? new ResourceDictionary();
+            
+            // Добавляем в словарь словарь поумолчанию
+            // чтобы если изначально была хоть какая-то локализация
+            _dictionary.MergedDictionaries.Add(_defaultDictionary);
         }
 
         /// <inheritdoc />
@@ -73,7 +78,10 @@ namespace dosymep.Xpf.Core.SimpleServices {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(name));
             }
 
-            return _dictionary[name] as string;
+            ResourceDictionary dictionary 
+                = _dictionary ?? _defaultDictionary;
+            
+            return dictionary[name] as string;
         }
 
         /// <inheritdoc />

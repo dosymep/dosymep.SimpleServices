@@ -525,7 +525,12 @@ public static class NinjectExtensions {
         kernel.Bind<ILocalizationService>().To<XtraLocalizationService>()
             .InSingletonScope()
             .WithConstructorArgument(nameof(resourceName), resourceName)
-            .WithConstructorArgument(nameof(defaultCulture), defaultCulture ?? CultureInfo.CurrentUICulture);
+            .WithConstructorArgument(nameof(defaultCulture), defaultCulture ?? CultureInfo.CurrentUICulture)
+            .OnActivation((context, service) =>
+                service.SetLocalization(
+                    context.Kernel.TryGet<ILanguageService>()?.HostLanguage
+                    ?? defaultCulture
+                    ?? CultureInfo.CurrentUICulture));
         
         return kernel;
     }
