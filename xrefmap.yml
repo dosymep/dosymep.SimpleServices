@@ -325,6 +325,12 @@ references:
   commentId: Overload:dosymep.SimpleServices.ILocalizationService.GetLocalizedString
   fullName: dosymep.SimpleServices.ILocalizationService.GetLocalizedString
   nameWithType: ILocalizationService.GetLocalizedString
+- uid: dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo)
+  name: SetLocalization(CultureInfo)
+  href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_SetLocalization_System_Globalization_CultureInfo_
+  commentId: M:dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo)
+  fullName: dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo)
+  nameWithType: ILocalizationService.SetLocalization(CultureInfo)
 - uid: dosymep.SimpleServices.ILocalizationService.SetLocalization(System.Globalization.CultureInfo,System.Windows.FrameworkElement)
   name: SetLocalization(CultureInfo, FrameworkElement)
   href: api/dosymep.SimpleServices.ILocalizationService.html#dosymep_SimpleServices_ILocalizationService_SetLocalization_System_Globalization_CultureInfo_System_Windows_FrameworkElement_
@@ -2470,21 +2476,6 @@ references:
   commentId: T:dosymep.Xpf.Core.Ninject.NinjectExtensions
   fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions
   nameWithType: NinjectExtensions
-- uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel,System.String,System.Globalization.CultureInfo)
-  name: UseLocalization(IKernel, string, CultureInfo?)
-  href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseLocalization_Ninject_IKernel_System_String_System_Globalization_CultureInfo_
-  commentId: M:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel,System.String,System.Globalization.CultureInfo)
-  name.vb: UseLocalization(IKernel, String, CultureInfo)
-  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel, string, System.Globalization.CultureInfo?)
-  fullName.vb: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization(Ninject.IKernel, String, System.Globalization.CultureInfo)
-  nameWithType: NinjectExtensions.UseLocalization(IKernel, string, CultureInfo?)
-  nameWithType.vb: NinjectExtensions.UseLocalization(IKernel, String, CultureInfo)
-- uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization*
-  name: UseLocalization
-  href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseLocalization_
-  commentId: Overload:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization
-  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseLocalization
-  nameWithType: NinjectExtensions.UseLocalization
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraDispatcher(Ninject.IKernel)
   name: UseXtraDispatcher(IKernel)
   href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraDispatcher_Ninject_IKernel_
@@ -2518,6 +2509,21 @@ references:
   commentId: Overload:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLanguage
   fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLanguage
   nameWithType: NinjectExtensions.UseXtraLanguage
+- uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization(Ninject.IKernel,System.String,System.Globalization.CultureInfo)
+  name: UseXtraLocalization(IKernel, string, CultureInfo?)
+  href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraLocalization_Ninject_IKernel_System_String_System_Globalization_CultureInfo_
+  commentId: M:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization(Ninject.IKernel,System.String,System.Globalization.CultureInfo)
+  name.vb: UseXtraLocalization(IKernel, String, CultureInfo)
+  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization(Ninject.IKernel, string, System.Globalization.CultureInfo?)
+  fullName.vb: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization(Ninject.IKernel, String, System.Globalization.CultureInfo)
+  nameWithType: NinjectExtensions.UseXtraLocalization(IKernel, string, CultureInfo?)
+  nameWithType.vb: NinjectExtensions.UseXtraLocalization(IKernel, String, CultureInfo)
+- uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization*
+  name: UseXtraLocalization
+  href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraLocalization_
+  commentId: Overload:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization
+  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraLocalization
+  nameWithType: NinjectExtensions.UseXtraLocalization
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraMessageBox(Ninject.IKernel)
   name: UseXtraMessageBox(IKernel)
   href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraMessageBox_Ninject_IKernel_
@@ -3122,6 +3128,12 @@ references:
   commentId: Overload:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString
   fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.GetLocalizedString
   nameWithType: XtraLocalizationService.GetLocalizedString
+- uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo)
+  name: SetLocalization(CultureInfo)
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_SetLocalization_System_Globalization_CultureInfo_
+  commentId: M:dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo)
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo)
+  nameWithType: XtraLocalizationService.SetLocalization(CultureInfo)
 - uid: dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.SetLocalization(System.Globalization.CultureInfo,System.Windows.FrameworkElement)
   name: SetLocalization(CultureInfo, FrameworkElement)
   href: api/dosymep.Xpf.Core.SimpleServices.XtraLocalizationService.html#dosymep_Xpf_Core_SimpleServices_XtraLocalizationService_SetLocalization_System_Globalization_CultureInfo_System_Windows_FrameworkElement_
