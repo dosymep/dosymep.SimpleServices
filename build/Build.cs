@@ -36,6 +36,12 @@ class Build : NukeBuild, IHazSolution {
     [Parameter] readonly string DocsOutput = Path.Combine("docs", "_site");
     [Parameter] readonly string DocsConfig = Path.Combine("docs", "docfx.json");
     [Parameter] readonly AbsolutePath DocsCaches = RootDirectory / Path.Combine("docs", "api");
+    [Parameter] readonly AbsolutePath PublishOutput;
+
+    public Build() {
+        AbsolutePath appdataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        PublishOutput = appdataFolder / "pyRevit" / "Extensions" / "BIM4Everyone.lib" / "dosymep_libs" / "libs";
+    }
 
     Target Clean => _ => _
         .Executes(() => {
@@ -61,11 +67,23 @@ class Build : NukeBuild, IHazSolution {
             DotNetBuild(s => s
                 .EnableForce()
                 .DisableNoRestore()
-                .SetOutputDirectory(Output)
                 .SetConfiguration(Configuration)
                 .SetProjectFile(((IHazSolution) this).Solution)
-                .When(IsServerBuild, _ => _
-                    .EnableContinuousIntegrationBuild()));
+                .When(settings => IsServerBuild,
+                    _ => _
+                        .EnableContinuousIntegrationBuild())
+                .SetProperty("OutputPath", Output));
+        });
+
+    Target Publish => _ => _
+        .DependsOn(Restore)
+        .OnlyWhenStatic(() => IsLocalBuild)
+        .Executes(() => {
+            DotNetPublish(s => s
+                .EnableForce()
+                .DisableNoRestore()
+                .SetConfiguration(Configuration)
+                .SetProperty("PublishDir", PublishOutput));
         });
 
     Target DocsCompile => _ => _

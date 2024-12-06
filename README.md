@@ -5,3 +5,20 @@
 [![DevExpress](https://img.shields.io/badge/DevExpress-WPF-blue.svg)](https://www.devexpress.com/products/net/controls/wpf)
 
 Данный пакет содержит базовые интерфейсы сервисов.
+
+## Сборка проекта
+
+Компиляция проекта в папку `bin`
+```
+nuke compile
+```
+
+Локальная публикация проекта
+```
+nuke publish
+```
+
+Сборка и публикация документации
+```
+nuke doc-compile
+```
