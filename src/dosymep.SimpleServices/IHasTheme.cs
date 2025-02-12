@@ -7,15 +7,5 @@ namespace dosymep.SimpleServices {
         /// Текущая используемая тема.
         /// </summary>
         UIThemes HostTheme { get; }
-        
-        /// <summary>
-        /// Сервис тем.
-        /// </summary>
-        IUIThemeService UIThemeService { get; }
-        
-        /// <summary>
-        /// Сервис обновления темы.
-        /// </summary>
-        IUIThemeUpdaterService UIThemeUpdaterService { get; }
     }
 }

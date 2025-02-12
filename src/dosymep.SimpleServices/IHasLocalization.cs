@@ -9,15 +9,5 @@ namespace dosymep.SimpleServices {
         /// Используемый язык.
         /// </summary>
         CultureInfo HostLanguage { get;  }
-        
-        /// <summary>
-        /// Сервис языка.
-        /// </summary>
-        ILanguageService LanguageService { get; }
-        
-        /// <summary>
-        /// Сервис локализации.
-        /// </summary>
-        ILocalizationService LocalizationService { get; }
     }
 }
