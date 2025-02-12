@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.SimpleServices", "src\dosymep.SimpleServices\dosymep.SimpleServices.csproj", "{FEA822F8-6E69-4BC1-8366-2EEAF94B092C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E6B3F10-C94B-4FBC-AC7E-DE2BE1196531}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -14,9 +12,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core", "src\dosymep.Xpf.Core\dosymep.Xpf.Core.csproj", "{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{CBC741BD-9A25-4096-AD32-2FF1BEA9B504}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.SimpleServices", "src\dosymep.SimpleServices\dosymep.SimpleServices.csproj", "{FEA822F8-6E69-4BC1-8366-2EEAF94B092C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Wpf.Core", "src\dosymep.Wpf.Core\dosymep.Wpf.Core.csproj", "{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Wpf.Core.Ninject", "src\dosymep.Wpf.Core.Ninject\dosymep.Wpf.Core.Ninject.csproj", "{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.WpfUI.Core", "src\dosymep.WpfUI.Core\dosymep.WpfUI.Core.csproj", "{657DB082-D554-4D31-8848-86A108DCD0F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.WpfUI.Core.Ninject", "src\dosymep.WpfUI.Core.Ninject\dosymep.WpfUI.Core.Ninject.csproj", "{41C385FE-AC37-42CD-8939-A0B25C07B825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core", "src\dosymep.Xpf.Core\dosymep.Xpf.Core.csproj", "{05FD14D1-F6C7-4D93-83E9-8F6A4E5535F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Xpf.Core.Ninject", "src\dosymep.Xpf.Core.Ninject\dosymep.Xpf.Core.Ninject.csproj", "{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}"
 EndProject
@@ -40,6 +48,22 @@ Global
 		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C5A9AE-F0F8-4914-8587-5AF42EE53C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657DB082-D554-4D31-8848-86A108DCD0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657DB082-D554-4D31-8848-86A108DCD0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657DB082-D554-4D31-8848-86A108DCD0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657DB082-D554-4D31-8848-86A108DCD0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C385FE-AC37-42CD-8939-A0B25C07B825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C385FE-AC37-42CD-8939-A0B25C07B825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C385FE-AC37-42CD-8939-A0B25C07B825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C385FE-AC37-42CD-8939-A0B25C07B825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
