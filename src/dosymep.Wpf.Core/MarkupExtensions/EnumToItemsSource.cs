@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Reflection;
 using System.Windows.Markup;
 
 namespace dosymep.Wpf.Core.MarkupExtensions;
@@ -6,6 +7,7 @@ namespace dosymep.Wpf.Core.MarkupExtensions;
 /// <summary>
 /// Конвертирует enum в список значений.
 /// </summary>
+[MarkupExtensionReturnType(typeof(string[]))]
 public sealed class EnumToItemsSource : MarkupExtension {
     /// <summary>
     /// Конструирует объект.
@@ -33,11 +35,11 @@ public sealed class EnumToItemsSource : MarkupExtension {
             throw new InvalidOperationException("EnumType must be an enum.");
         }
 
-        return EnumType.GetMembers()
+        return EnumType.GetFields(BindingFlags.Static | BindingFlags.Public)
             .Select(item => item
                 .GetCustomAttributes(typeof(DescriptionAttribute), false)
                 .Cast<DescriptionAttribute>()
                 .FirstOrDefault()?.Description ?? item.Name)
-            .ToList();
+            .ToArray();
     }
 }

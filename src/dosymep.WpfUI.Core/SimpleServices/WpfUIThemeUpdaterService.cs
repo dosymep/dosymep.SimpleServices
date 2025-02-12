@@ -17,9 +17,6 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
 
     /// <inheritdoc />
     public void SetTheme(Window window, UIThemes theme) {
-        window.Resources.MergedDictionaries.Remove(_theme);
-        window.Resources.MergedDictionaries.Remove(_controlsDictionary);
-
         ApplicationTheme appTheme = ApplicationTheme.Unknown;
         if(theme == UIThemes.Dark) {
             appTheme = ApplicationTheme.Dark;
@@ -28,8 +25,10 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
         }
 
         _theme.Theme = appTheme;
-        window.Resources.MergedDictionaries.Add(_theme);
-        window.Resources.MergedDictionaries.Add(_controlsDictionary);
+        if(!window.Resources.MergedDictionaries.Contains(_theme)) {
+            window.Resources.MergedDictionaries.Add(_theme);
+            window.Resources.MergedDictionaries.Add(_controlsDictionary);
+        }
 
         WindowBackgroundManager.UpdateBackground(window, appTheme, WindowBackdropType.Mica);
     }
