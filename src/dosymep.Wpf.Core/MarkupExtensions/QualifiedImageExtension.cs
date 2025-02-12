@@ -15,8 +15,14 @@ public sealed class QualifiedImageExtension : MarkupExtension {
     /// <summary>
     /// Конструирует объект.
     /// </summary>
-    public QualifiedImageExtension() {
-    }
+    public QualifiedImageExtension() { }
+    
+
+    /// <summary>
+    /// Конструирует объект.
+    /// </summary>
+    /// <param name="uri">Путь до ресурса.</param>
+    public QualifiedImageExtension(string? uri) => Uri = uri;
 
     /// <summary>
     /// Путь до ресурса.
