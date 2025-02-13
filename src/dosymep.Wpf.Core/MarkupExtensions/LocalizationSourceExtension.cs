@@ -1,8 +1,12 @@
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Windows;
+using System.Windows.Data;
 using System.Windows.Markup;
 using System.Xaml;
 
 using dosymep.SimpleServices;
+using dosymep.Wpf.Core.MarkupExtensions.Internal;
 
 namespace dosymep.Wpf.Core.MarkupExtensions;
 
@@ -10,6 +14,9 @@ namespace dosymep.Wpf.Core.MarkupExtensions;
 /// Класс для получения локализации.
 /// </summary>
 public sealed class LocalizationSourceExtension : MarkupExtension {
+    private readonly MarkupValueObject _markupValueObject = new();
+    private readonly Binding _binding = new(nameof(MarkupValueObject.Value));
+
     /// <summary>
     /// Конструирует объект.
     /// </summary>
@@ -29,16 +36,26 @@ public sealed class LocalizationSourceExtension : MarkupExtension {
     /// <inheritdoc />
     public override object? ProvideValue(IServiceProvider serviceProvider) {
         if(string.IsNullOrEmpty(ResourceKey)) {
-            throw new InvalidOperationException("ResourceKey cannot be null or empty.");
+            throw new InvalidOperationException("ResourceKey is not set.");
         }
 
-        IRootObjectProvider rootObjectProvider =
-            (IRootObjectProvider) serviceProvider.GetService(typeof(IRootObjectProvider));
-        
-        Debug.Print("ResourceKey: {0}", ResourceKey);
-        Debug.Print("RootObject: {0}", rootObjectProvider.RootObject);
+        if(DesignerProperties.GetIsInDesignMode(
+               serviceProvider.GetRootObject<DependencyObject>()!)) {
+            return ResourceKey;
+        }
 
-        ILocalizationService? localizationService = rootObjectProvider.RootObject as ILocalizationService;
-        return localizationService?.GetLocalizedString(ResourceKey) ?? ResourceKey;
+        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
+        if(localization is not null) {
+            localization.LanguageChanged += _ => _markupValueObject.Value = GetLocalizedString(localization);
+        }
+
+        _binding.Source = _markupValueObject;
+        _markupValueObject.Value = GetLocalizedString(localization);
+       
+        return _binding.ProvideValue(serviceProvider);
+    }
+
+    private string? GetLocalizedString(IHasLocalization? localization) {
+        return localization?.LocalizationService.GetLocalizedString(ResourceKey) ?? ResourceKey;
     }
 }
