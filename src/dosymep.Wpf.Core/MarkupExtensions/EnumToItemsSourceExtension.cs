@@ -14,20 +14,20 @@ namespace dosymep.Wpf.Core.MarkupExtensions;
 /// Конвертирует enum в список значений.
 /// </summary>
 [MarkupExtensionReturnType(typeof(string[]))]
-public sealed class EnumToItemsSource : MarkupExtension {
+public sealed class EnumToItemsSourceExtension : MarkupExtension {
     private readonly MarkupValueObject _markupValueObject = new();
     private readonly Binding _binding = new(nameof(MarkupValueObject.Value));
 
     /// <summary>
     /// Конструирует объект.
     /// </summary>
-    public EnumToItemsSource() { }
+    public EnumToItemsSourceExtension() { }
 
     /// <summary>
     /// Конструирует объект.
     /// </summary>
     /// <param name="enumType">Тип enum.</param>
-    public EnumToItemsSource(Type enumType) => EnumType = enumType;
+    public EnumToItemsSourceExtension(Type enumType) => EnumType = enumType;
 
     /// <summary>
     /// Тип enum.

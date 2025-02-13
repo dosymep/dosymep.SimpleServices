@@ -6,13 +6,16 @@ using dosymep.SimpleServices;
 
 namespace dosymep.Wpf.Core.MarkupExtensions;
 
-public sealed class LocalizationSource : MarkupExtension {
+/// <summary>
+/// 
+/// </summary>
+public sealed class LocalizationSourceExtension : MarkupExtension {
 
-    public LocalizationSource() {
+    public LocalizationSourceExtension() {
 
     }
 
-    public LocalizationSource(string resourceKey) {
+    public LocalizationSourceExtension(string resourceKey) {
         ResourceKey = resourceKey;
     }
 
