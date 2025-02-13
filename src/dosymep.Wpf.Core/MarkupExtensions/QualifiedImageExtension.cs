@@ -41,22 +41,20 @@ public sealed class QualifiedImageExtension : MarkupExtension {
     public string? Uri { get; set; }
 
     /// <inheritdoc />
-    public override object? ProvideValue(IServiceProvider serviceProvider) {
+    public override object ProvideValue(IServiceProvider serviceProvider) {
         if(Uri == null) {
             throw new InvalidOperationException("Uri is not set.");
         }
 
-        Uri[] items = Items(serviceProvider);
+        Uri item = GetImageUri(serviceProvider);
 
-        if(items.Length == 1) {
-            _markupValueObject.Value = items[0];
-            return _binding.ProvideValue(serviceProvider);
-        }
+        _binding.Source = _markupValueObject;
+        _markupValueObject.Value = item;
 
-        return default;
+        return _binding.ProvideValue(serviceProvider);
     }
 
-    private Uri[] Items(IServiceProvider serviceProvider) {
+    private Uri GetImageUri(IServiceProvider serviceProvider) {
         IEnumerable<string> variations = GetVariations(serviceProvider);
         IUriContext uriContext = (IUriContext) serviceProvider.GetService(typeof(IUriContext));
 
@@ -73,18 +71,24 @@ public sealed class QualifiedImageExtension : MarkupExtension {
             throw new InvalidOperationException("Find multiple images.");
         }
 
-        return items;
+        if(items.Length == 1) {
+            return items[0];
+        }
+
+        // return no image
+        return new Uri(
+            "pack://application:,,,/dosymep.Wpf.Core;component/assets/images/icons8-no-image-96.png", UriKind.Absolute);
     }
 
     private IEnumerable<string> GetVariations(IServiceProvider serviceProvider) {
         IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
         if(localization is not null) {
-            localization.LanguageChanged += _ => _markupValueObject.Value = GetVariations(serviceProvider);
+            localization.LanguageChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
         }
 
         IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
         if(theme is not null) {
-            theme.ThemeChanged += _ => _markupValueObject.Value = GetVariations(serviceProvider);
+            theme.ThemeChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
         }
 
         string? themeName = theme?.HostTheme.ToString();
@@ -145,7 +149,7 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         return Enumerable
             .Range(0, 1 << (data.Length))
             .Select(index => data
-                .Where((v, i) => (index & (1 << i)) != 0)
+                .Where((_, i) => (index & (1 << i)) != 0)
                 .ToArray());
     }
 }

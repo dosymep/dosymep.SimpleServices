@@ -15,12 +15,12 @@ internal class MarkupDisplayObject : DependencyObject {
         _updateDisplayName = updateDisplayName;
     }
 
-    public object Value {
+    public object? Value {
         get => GetValue(ValueProperty);
         set => SetValue(ValueProperty, value);
     }
 
-    public object DisplayName {
+    public object? DisplayName {
         get => GetValue(DisplayNameProperty);
         set => SetValue(DisplayNameProperty, value);
     }
