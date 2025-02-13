@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace dosymep.Wpf.Core.MarkupExtensions;
+namespace dosymep.Wpf.Core.MarkupExtensions.Internal;
 
 internal class MarkupValueObject : DependencyObject {
     public static readonly DependencyProperty ValueProperty = DependencyProperty.Register(

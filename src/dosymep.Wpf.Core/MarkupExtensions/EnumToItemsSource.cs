@@ -1,3 +1,4 @@
+using System.Collections;
 using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Data;
@@ -5,6 +6,7 @@ using System.Windows.Markup;
 using System.Xaml;
 
 using dosymep.SimpleServices;
+using dosymep.Wpf.Core.MarkupExtensions.Internal;
 
 namespace dosymep.Wpf.Core.MarkupExtensions;
 
@@ -46,7 +48,7 @@ public sealed class EnumToItemsSource : MarkupExtension {
         ILocalizationService? localizationService = localization?.LocalizationService;
 
         if(localization is not null) {
-            localization.LanguageChanged += _ => _markupValueObject.Value = GetEnumValues(localizationService);
+            localization.LanguageChanged += _ => UpdateDisplayName(_markupValueObject.Value);
         }
 
         _binding.Source = _markupValueObject;
@@ -55,20 +57,37 @@ public sealed class EnumToItemsSource : MarkupExtension {
         return _binding.ProvideValue(serviceProvider);
     }
 
-    private string[] GetEnumValues(ILocalizationService? localizationService) {
+    private void UpdateDisplayName(object value) {
+        IEnumerable<MarkupDisplayObject> list = ((IEnumerable) value)
+            .OfType<MarkupDisplayObject>();
+
+        foreach(MarkupDisplayObject magicObject in list) {
+            magicObject.UpdateDisplayName();
+        }
+    }
+
+    private object[] GetEnumValues(ILocalizationService? localizationService) {
         return EnumType?.GetFields(BindingFlags.Static | BindingFlags.Public)
-            .Select(item => GetEnumName(item, localizationService))
-            .ToArray() ?? Array.Empty<string>();
+            .Select(item =>
+                new MarkupDisplayObject(() => GetEnumName(item, localizationService)) {
+                    Value = item.GetValue(null), DisplayName = GetEnumName(item, localizationService)
+                })
+            .Cast<object>()
+            .ToArray() ?? Array.Empty<object>();
     }
 
     private string GetEnumName(FieldInfo item, ILocalizationService? localizationService) {
         string? desciption = GetDescription(item);
 
         if(string.IsNullOrEmpty(desciption)) {
-            return item.Name;
+            return localizationService?.GetLocalizedString($"{item.FieldType.Name}.{item.Name}")
+                   ?? item.Name;
         }
 
-        return localizationService?.GetLocalizedString(desciption) ?? desciption!;
+        return localizationService?.GetLocalizedString(desciption)
+               ?? localizationService?.GetLocalizedString($"{item.FieldType.Name}.{item.Name}")
+               ?? desciption
+               ?? item.Name;
     }
 
     private string? GetDescription(FieldInfo fieldInfo) {

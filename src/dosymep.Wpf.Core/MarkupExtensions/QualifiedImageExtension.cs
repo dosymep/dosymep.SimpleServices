@@ -9,6 +9,7 @@ using System.Xaml;
 
 using dosymep.SimpleServices;
 using dosymep.Wpf.Core.Converters;
+using dosymep.Wpf.Core.MarkupExtensions.Internal;
 
 namespace dosymep.Wpf.Core.MarkupExtensions;
 
