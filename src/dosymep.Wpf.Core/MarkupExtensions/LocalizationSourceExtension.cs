@@ -7,20 +7,26 @@ using dosymep.SimpleServices;
 namespace dosymep.Wpf.Core.MarkupExtensions;
 
 /// <summary>
-/// 
+/// Класс для получения локализации.
 /// </summary>
 public sealed class LocalizationSourceExtension : MarkupExtension {
+    /// <summary>
+    /// Конструирует объект.
+    /// </summary>
+    public LocalizationSourceExtension() { }
 
-    public LocalizationSourceExtension() {
+    /// <summary>
+    /// Конструирует объект.
+    /// </summary>
+    /// <param name="resourceKey">Наименование ресурса.</param>
+    public LocalizationSourceExtension(string resourceKey) => ResourceKey = resourceKey;
 
-    }
-
-    public LocalizationSourceExtension(string resourceKey) {
-        ResourceKey = resourceKey;
-    }
-
+    /// <summary>
+    /// Наименование ресурса.
+    /// </summary>
     public string? ResourceKey { get; set; }
 
+    /// <inheritdoc />
     public override object? ProvideValue(IServiceProvider serviceProvider) {
         if(string.IsNullOrEmpty(ResourceKey)) {
             throw new InvalidOperationException("ResourceKey cannot be null or empty.");
