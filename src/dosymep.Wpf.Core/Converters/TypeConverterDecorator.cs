@@ -11,16 +11,13 @@ public sealed class TypeConverterDecorator : IValueConverter {
     /// <summary>
     /// Конструирует объект. 
     /// </summary>
-    public TypeConverterDecorator() {
-    }
+    public TypeConverterDecorator() { }
 
     /// <summary>
     /// Конструирует объект.
     /// </summary>
     /// <param name="converter">Конвертер типов.</param>
-    public TypeConverterDecorator(TypeConverter converter) {
-        Converter = converter;
-    }
+    public TypeConverterDecorator(TypeConverter converter) => Converter = converter;
 
     /// <summary>
     /// Конвертер типов.

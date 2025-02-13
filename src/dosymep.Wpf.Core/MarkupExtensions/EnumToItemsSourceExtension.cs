@@ -57,7 +57,11 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
         return _binding.ProvideValue(serviceProvider);
     }
 
-    private void UpdateDisplayName(object value) {
+    private void UpdateDisplayName(object? value) {
+        if(value == null) {
+            return;
+        }
+        
         IEnumerable<MarkupDisplayObject> list = ((IEnumerable) value)
             .OfType<MarkupDisplayObject>();
 
