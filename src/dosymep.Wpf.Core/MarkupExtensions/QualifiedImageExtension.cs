@@ -1,10 +1,14 @@
+using System.Globalization;
 using System.IO;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Markup;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xaml;
 
 using dosymep.SimpleServices;
+using dosymep.Wpf.Core.Converters;
 
 namespace dosymep.Wpf.Core.MarkupExtensions;
 
@@ -12,11 +16,17 @@ namespace dosymep.Wpf.Core.MarkupExtensions;
 /// Расширение выбора изображений, на основе темы окна и его языка.
 /// </summary>
 public sealed class QualifiedImageExtension : MarkupExtension {
+    private readonly MarkupValueObject _markupValueObject = new();
+
+    private readonly Binding _binding = new(nameof(MarkupValueObject.Value)) {
+        Converter = new TypeConverterDecorator(new ImageSourceConverter())
+    };
+
     /// <summary>
     /// Конструирует объект.
     /// </summary>
     public QualifiedImageExtension() { }
-    
+
 
     /// <summary>
     /// Конструирует объект.
@@ -32,9 +42,20 @@ public sealed class QualifiedImageExtension : MarkupExtension {
     /// <inheritdoc />
     public override object? ProvideValue(IServiceProvider serviceProvider) {
         if(Uri == null) {
-            throw new InvalidOperationException("Uri cannot be null.");
+            throw new InvalidOperationException("Uri is not set.");
         }
 
+        Uri[] items = Items(serviceProvider);
+
+        if(items.Length == 1) {
+            _markupValueObject.Value = items[0];
+            return _binding.ProvideValue(serviceProvider);
+        }
+
+        return default;
+    }
+
+    private Uri[] Items(IServiceProvider serviceProvider) {
         IEnumerable<string> variations = GetVariations(serviceProvider);
         IUriContext uriContext = (IUriContext) serviceProvider.GetService(typeof(IUriContext));
 
@@ -51,19 +72,19 @@ public sealed class QualifiedImageExtension : MarkupExtension {
             throw new InvalidOperationException("Find multiple images.");
         }
 
-        if(items.Length == 1) {
-            return BitmapFrame.Create(items[0]);
-        }
-
-        return default;
+        return items;
     }
 
     private IEnumerable<string> GetVariations(IServiceProvider serviceProvider) {
-        IRootObjectProvider rootObjectProvider =
-            (IRootObjectProvider) serviceProvider.GetService(typeof(IRootObjectProvider));
+        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
+        if(localization is not null) {
+            localization.LanguageChanged += _ => _markupValueObject.Value = GetVariations(serviceProvider);
+        }
 
-        IHasTheme? theme = rootObjectProvider.RootObject as IHasTheme;
-        IHasLocalization? localization = rootObjectProvider.RootObject as IHasLocalization;
+        IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
+        if(theme is not null) {
+            theme.ThemeChanged += _ => _markupValueObject.Value = GetVariations(serviceProvider);
+        }
 
         string? themeName = theme?.HostTheme.ToString();
         string? cultureName = localization?.HostLanguage.Name;
@@ -105,6 +126,7 @@ public sealed class QualifiedImageExtension : MarkupExtension {
 
     private bool HasResources(Uri uri) {
         try {
+            // too slow method, need optimize
             Application.GetResourceStream(uri);
             return true;
         } catch {

@@ -32,11 +32,13 @@ public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDial
         _uiThemeService = uiThemeService;
         _uiThemeUpdaterService = uiThemeUpdaterService;
 
-        _wpfUIProgressWindow = new WpfUIProgressWindow(languageService, localizationService);
+        _wpfUIProgressWindow = new WpfUIProgressWindow(
+            languageService, localizationService, uiThemeService, uiThemeUpdaterService);
+        
         _windowInteropHelper = new WindowInteropHelper(_wpfUIProgressWindow) {
             Owner = Process.GetCurrentProcess().MainWindowHandle
         };
-
+        
         _uiThemeService.UIThemeChanged += SetTheme;
     }
 

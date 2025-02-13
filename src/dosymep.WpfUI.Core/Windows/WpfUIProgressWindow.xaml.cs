@@ -8,18 +8,40 @@ using dosymep.WpfUI.Core.SimpleServices;
 
 namespace dosymep.WpfUI.Core.Windows;
 
-internal partial class WpfUIProgressWindow : IHasLocalization, IDisposable {
+internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDisposable {
+    public event Action<UIThemes>? ThemeChanged;
+    public event Action<CultureInfo>? LanguageChanged;
+    
     private CancellationTokenSource? _cancellationTokenSource;
 
     /// <summary>
     /// Инициализирует окно прогресс бара.
     /// </summary>
-    public WpfUIProgressWindow(ILanguageService languageService, ILocalizationService localizationService) {
+    public WpfUIProgressWindow(
+        ILanguageService languageService,
+        ILocalizationService localizationService,
+        IUIThemeService themeService,
+        IUIThemeUpdaterService themeUpdaterService) {
+       
         InitializeComponent();
 
         LanguageService = languageService;
         LocalizationService = localizationService;
+        
+        ThemeService = themeService;
+        ThemeUpdaterService = themeUpdaterService;
+
+        ThemeService.UIThemeChanged += ThemeChanged;
     }
+
+    public ILanguageService LanguageService { get; set; }
+    public ILocalizationService LocalizationService { get; }
+  
+    public IUIThemeService ThemeService { get; }
+    public IUIThemeUpdaterService ThemeUpdaterService { get; }
+
+    public UIThemes HostTheme => ThemeService.HostTheme;
+    public CultureInfo HostLanguage => LanguageService.HostLanguage;
 
     public bool Indeterminate {
         get => _progressEdit.IsIndeterminate;
@@ -123,10 +145,6 @@ internal partial class WpfUIProgressWindow : IHasLocalization, IDisposable {
     }
 
     #endregion
-
-    public CultureInfo HostLanguage => LanguageService.HostLanguage;
-    public ILanguageService LanguageService { get; }
-    public ILocalizationService LocalizationService { get; }
 }
 
 internal class CustomProgress : IProgress<int> {
