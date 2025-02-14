@@ -29,4 +29,13 @@
     <ItemGroup>
         <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="assets\images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="assets\images\icons8-no-image-96.png" />
+      <Resource Include="assets\images\icons8-no-image-96.png" />
+    </ItemGroup>
 </Project>

@@ -31,6 +31,19 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="assets\" />
+      <Resource Include="assets\images\icons8-cross-26.png" />
+      <Resource Include="assets\images\icons8-empty-26.png" />
+      <Resource Include="assets\images\icons8-error-26.png" />
+      <Resource Include="assets\images\icons8-exclamation-26.png" />
+      <Resource Include="assets\images\icons8-question-26.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="assets\localizations\language.ru-RU.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="assets\localizations\language.en-US.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
     </ItemGroup>
 </Project>

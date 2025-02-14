@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Globalization;
 using System.IO;
+using System.Reflection;
+using System.Resources;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
@@ -23,6 +26,10 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         Converter = new TypeConverterDecorator(new ImageSourceConverter())
     };
 
+    private Uri? _cacheBaseUri;
+    private string? _cacheLibName;
+    private HashSet<string>? _cacheResources;
+
     /// <summary>
     /// Конструирует объект.
     /// </summary>
@@ -45,6 +52,20 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         if(Uri == null) {
             throw new InvalidOperationException("Uri is not set.");
         }
+        
+        IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
+        if(theme is not null) {
+            theme.ThemeChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
+        }
+        
+        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
+        if(localization is not null) {
+            localization.LanguageChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
+        }
+        
+        _cacheLibName = GetLibName(serviceProvider);
+        _cacheBaseUri = new Uri($"pack://application:,,,/{_cacheLibName};component/");
+        _cacheResources ??= GetResources(_cacheLibName).ToHashSet(StringComparer.OrdinalIgnoreCase);
 
         Uri item = GetImageUri(serviceProvider);
 
@@ -55,24 +76,13 @@ public sealed class QualifiedImageExtension : MarkupExtension {
     }
 
     private Uri GetImageUri(IServiceProvider serviceProvider) {
-        IEnumerable<string> variations = GetVariations(serviceProvider);
-        IUriContext uriContext = (IUriContext) serviceProvider.GetService(typeof(IUriContext));
-
-        Uri baseUri = new(
-            string.Concat("pack://application:,,,/", uriContext.BaseUri.Segments[1]), UriKind.Absolute);
-
-        Uri[] items = variations
-            .Select(item => new Uri(baseUri,
-                new Uri(item, UriKind.Relative)))
-            .Where(item => HasResources(item))
-            .ToArray();
-
-        if(items.Length > 1) {
-            throw new InvalidOperationException("Find multiple images.");
-        }
-
-        if(items.Length == 1) {
-            return items[0];
+        HashSet<string> variations = GetVariations(serviceProvider)
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+        
+        foreach(string resourceName in _cacheResources!) {
+            if(variations!.Contains(resourceName)) {
+                return new Uri(_cacheBaseUri!, resourceName);
+            }
         }
 
         // return no image
@@ -80,17 +90,37 @@ public sealed class QualifiedImageExtension : MarkupExtension {
             "pack://application:,,,/dosymep.Wpf.Core;component/assets/images/icons8-no-image-96.png", UriKind.Absolute);
     }
 
+    private List<string> GetResources(string libName) {
+        List<string> resources = new();
+        try {
+            Assembly assembly = Assembly.Load(libName);
+            using Stream? stream = assembly.GetManifestResourceStream(libName + ".g.resources");
+
+            using ResourceReader resourceReader = new(stream!);
+            foreach(DictionaryEntry resource in resourceReader) {
+                resources.Add((string) resource.Key);
+            }
+        } catch {
+            // pass
+        }
+
+        return resources;
+    }
+
+    private string GetLibName(IServiceProvider serviceProvider) {
+        IUriContext uriContext = (IUriContext) serviceProvider.GetService(typeof(IUriContext));
+
+        string? libName = Uri?.Split('/')
+            .FirstOrDefault(item => item.EndsWith(";component"));
+
+        libName ??= uriContext.BaseUri.Segments[1].Trim('/');
+        return libName.Replace(";component", string.Empty);
+    }
+
     private IEnumerable<string> GetVariations(IServiceProvider serviceProvider) {
-        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
-        if(localization is not null) {
-            localization.LanguageChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
-        }
-
         IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
-        if(theme is not null) {
-            theme.ThemeChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
-        }
-
+        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
+        
         string? themeName = theme?.HostTheme.ToString();
         string? cultureName = localization?.HostLanguage.Name;
 
@@ -100,7 +130,10 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         string fileName = Path.GetFileName(Uri)!;
         string extension = Path.GetExtension(Uri)!;
         string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(Uri)!;
-        string? directoryName = Path.GetDirectoryName(Uri);
+        string? directoryName = Uri
+            ?.Substring(0, Uri.LastIndexOf('/'))
+            .Replace($"{_cacheLibName};component", string.Empty)
+            .Trim('/');
 
         IEnumerable<string[]> list = Combinations(
             new[] {themeName, cultureName}
@@ -127,16 +160,6 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         }
 
         yield return string.Join("/", directoryName, fileName);
-    }
-
-    private bool HasResources(Uri uri) {
-        try {
-            // too slow method, need optimize
-            Application.GetResourceStream(uri);
-            return true;
-        } catch {
-            return false;
-        }
     }
 
     private static IEnumerable<T[]> Combinations<T>(IEnumerable<T> source) {
