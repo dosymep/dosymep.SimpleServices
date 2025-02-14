@@ -37,7 +37,7 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
     /// <inheritdoc />
     public override object? ProvideValue(IServiceProvider serviceProvider) {
         if(EnumType is null) {
-            throw new InvalidOperationException("EnumType must be set before calling ProvideValue.");
+            throw new InvalidOperationException("EnumType is not set.");
         }
 
         if(!EnumType.IsEnum) {
