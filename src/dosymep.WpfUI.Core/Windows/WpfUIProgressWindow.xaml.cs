@@ -9,6 +9,9 @@ using dosymep.WpfUI.Core.SimpleServices;
 namespace dosymep.WpfUI.Core.Windows;
 
 internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDisposable {
+    private readonly IHasTheme _theme;
+    private readonly IHasLocalization _localization;
+    
     public event Action<UIThemes>? ThemeChanged;
     public event Action<CultureInfo>? LanguageChanged;
     
@@ -18,30 +21,21 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
     /// Инициализирует окно прогресс бара.
     /// </summary>
     public WpfUIProgressWindow(
-        ILanguageService languageService,
-        ILocalizationService localizationService,
-        IUIThemeService themeService,
-        IUIThemeUpdaterService themeUpdaterService) {
-       
+        IHasTheme theme,
+        IHasLocalization localization) {
         InitializeComponent();
-
-        LanguageService = languageService;
-        LocalizationService = localizationService;
         
-        ThemeService = themeService;
-        ThemeUpdaterService = themeUpdaterService;
+        _theme = theme;
+        _localization = localization;
 
-        ThemeService.UIThemeChanged += ThemeChanged;
+        _theme.ThemeChanged += ThemeChanged;
+        _localization.LanguageChanged += LanguageChanged;
     }
 
-    public ILanguageService LanguageService { get; set; }
-    public ILocalizationService LocalizationService { get; }
-  
-    public IUIThemeService ThemeService { get; }
-    public IUIThemeUpdaterService ThemeUpdaterService { get; }
-
-    public UIThemes HostTheme => ThemeService.HostTheme;
-    public CultureInfo HostLanguage => LanguageService.HostLanguage;
+    public UIThemes HostTheme => _theme.HostTheme;
+    public IUIThemeUpdaterService ThemeUpdaterService => _theme.ThemeUpdaterService;
+    public CultureInfo HostLanguage => _localization.HostLanguage;
+    public ILocalizationService LocalizationService => _localization.LocalizationService;
 
     public bool Indeterminate {
         get => _progressEdit.IsIndeterminate;
@@ -112,8 +106,7 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
         _progressEdit.Maximum = MaxValue;
         _progressEdit.Value = currentValue;
         _textEdit.Text = string.Format(
-            DisplayTitleFormat ?? LocalizationService.GetLocalizedString("ProgressBar.PleaseWaitFormat"), currentValue,
-            MaxValue);
+            DisplayTitleFormat ?? LocalizationService.GetLocalizedString("ProgressBar.PleaseWaitFormat"), currentValue, MaxValue);
     }
 
     private void CancelButton_OnClick(object sender, RoutedEventArgs e) {
@@ -141,6 +134,8 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
     protected virtual void Dispose(bool disposing) {
         if(disposing) {
             Close();
+            _theme.ThemeChanged -= ThemeChanged;
+            _localization.LanguageChanged -= LanguageChanged;
         }
     }
 

@@ -11,40 +11,22 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 /// Класс сервиса прогресс диалога.
 /// </summary>
 public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDialogService {
-    private readonly IUIThemeService _uiThemeService;
-    private readonly IUIThemeUpdaterService _uiThemeUpdaterService;
-
     private WpfUIProgressWindow _wpfUIProgressWindow;
     private readonly WindowInteropHelper _windowInteropHelper;
 
     /// <summary>
     /// Конструирует объект.
     /// </summary>
-    /// <param name="languageService">Сервис языка.</param>
-    /// <param name="localizationService">Сервис локализации.</param>
-    /// <param name="uiThemeService">Сервис тем.</param>
-    /// <param name="uiThemeUpdaterService">Сервис обновления тем.</param>
-    public WpfUIProgressDialogService(
-        ILanguageService languageService,
-        ILocalizationService localizationService,
-        IUIThemeService uiThemeService,
-        IUIThemeUpdaterService uiThemeUpdaterService) {
-        _uiThemeService = uiThemeService;
-        _uiThemeUpdaterService = uiThemeUpdaterService;
-
-        _wpfUIProgressWindow = new WpfUIProgressWindow(
-            languageService, localizationService, uiThemeService, uiThemeUpdaterService);
+    public WpfUIProgressDialogService(IHasTheme theme, IHasLocalization localization) {
+        _wpfUIProgressWindow = new WpfUIProgressWindow(theme, localization);
         
         _windowInteropHelper = new WindowInteropHelper(_wpfUIProgressWindow) {
             Owner = Process.GetCurrentProcess().MainWindowHandle
         };
-        
-        _uiThemeService.UIThemeChanged += SetTheme;
     }
 
     /// <inheritdoc />
     public void Dispose() {
-        _uiThemeService.UIThemeChanged -= SetTheme;
         _wpfUIProgressWindow.Dispose();
     }
 
@@ -94,13 +76,11 @@ public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDial
 
     /// <inheritdoc />
     public void Show() {
-        SetTheme(_uiThemeService.HostTheme);
         _wpfUIProgressWindow.Show();
     }
 
     /// <inheritdoc />
     public void ShowDialog() {
-        SetTheme(_uiThemeService.HostTheme);
         _wpfUIProgressWindow.ShowDialog();
     }
 
@@ -131,9 +111,5 @@ public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDial
         }
 
         return Window.GetWindow(AssociatedObject);
-    }
-
-    private void SetTheme(UIThemes theme) {
-        _uiThemeUpdaterService.SetTheme(_wpfUIProgressWindow, theme);
     }
 }

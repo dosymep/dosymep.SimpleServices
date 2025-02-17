@@ -8,27 +8,15 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 /// Класс фабрики создания сервиса прогресс диалога.
 /// </summary>
 public sealed class WpfUIProgressDialogFactory : WpfUIBaseService, IProgressDialogFactory {
-    private readonly ILanguageService _languageService;
-    private readonly ILocalizationService _localizationService;
-    private readonly IUIThemeService _uiThemeService;
-    private readonly IUIThemeUpdaterService _uiThemeUpdaterService;
+    private readonly IHasTheme _theme;
+    private readonly IHasLocalization _localization;
 
     /// <summary>
     /// Конструирует объект.
     /// </summary>
-    /// <param name="languageService">Сервис языка.</param>
-    /// <param name="localizationService">Сервис локализации.</param>
-    /// <param name="uiThemeService">Сервис тем.</param>
-    /// <param name="uiThemeUpdaterService">Сервис обновления тем.</param>
-    public WpfUIProgressDialogFactory(
-        ILanguageService languageService,
-        ILocalizationService localizationService,
-        IUIThemeService uiThemeService,
-        IUIThemeUpdaterService uiThemeUpdaterService) {
-        _languageService = languageService;
-        _localizationService = localizationService;
-        _uiThemeService = uiThemeService;
-        _uiThemeUpdaterService = uiThemeUpdaterService;
+    public WpfUIProgressDialogFactory(IHasTheme theme, IHasLocalization localization) {
+        _theme = theme;
+        _localization = localization;
     }
 
     /// <summary>
@@ -49,8 +37,10 @@ public sealed class WpfUIProgressDialogFactory : WpfUIBaseService, IProgressDial
     /// <inheritdoc />
     public IProgressDialogService CreateDialog() {
         WpfUIProgressDialogService dialogService =
-            new(_languageService, _localizationService, _uiThemeService, _uiThemeUpdaterService) {
-                StepValue = StepValue, Indeterminate = Indeterminate, DisplayTitleFormat = DisplayTitleFormat,
+            new(_theme, _localization) {
+                StepValue = StepValue, 
+                Indeterminate = Indeterminate, 
+                DisplayTitleFormat = DisplayTitleFormat,
             };
 
         if(AssociatedObject != default) {
