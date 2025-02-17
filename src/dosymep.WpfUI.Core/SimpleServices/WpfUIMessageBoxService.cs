@@ -9,6 +9,9 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 /// Класс сервиса окна сообщений. 
 /// </summary>
 public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxService {
+    private static readonly string _messageBoxLanguage =
+        "pack://application:,,,/dosymep.WpfUI.Core;component/assets/localizations/language.xaml";
+    
     private static readonly string _messageBoxContentTemplate =
         "pack://application:,,,/dosymep.WpfUI.Core;component/Views/MessageBoxContentTemplate.xaml";
     
@@ -38,7 +41,7 @@ public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxServic
             Title = caption,
             WindowStartupLocation = WindowStartupLocation.CenterOwner
         };
-
+        
         messageBox.Content = new {ImageSource = GetImageSource(icon), MessageBoxText = messageBoxText};
        
         messageBox.Resources.MergedDictionaries.Add(
@@ -53,7 +56,7 @@ public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxServic
         try {
             _theme.ThemeChanged += UpdateTheme;
             _theme.ThemeUpdaterService.SetTheme(messageBox, _theme.HostTheme);
-
+            
             (MessageBoxResult closeResult,
                 MessageBoxResult primaryResult,
                 MessageBoxResult secondaryResult) = ShowMessageBox(button, messageBox);
