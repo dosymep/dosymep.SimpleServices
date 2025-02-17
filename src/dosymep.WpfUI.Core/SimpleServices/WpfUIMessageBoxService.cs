@@ -1,4 +1,5 @@
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 using dosymep.SimpleServices;
 
@@ -8,23 +9,20 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 /// Класс сервиса окна сообщений. 
 /// </summary>
 public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxService {
-    private readonly ILocalizationService _localizationService;
-    private readonly IUIThemeService _uiThemeService;
-    private readonly IUIThemeUpdaterService _uiThemeUpdaterService;
+    private static readonly string _messageBoxContentTemplate =
+        "pack://application:,,,/dosymep.WpfUI.Core;component/Views/MessageBoxContentTemplate.xaml";
+    
+    private readonly IHasTheme _theme;
+    private readonly IHasLocalization _localization;
 
     /// <summary>
     /// Конструирует объект.
     /// </summary>
-    /// <param name="localizationService">Сервис локализации.</param>
-    /// <param name="uiThemeService">Сервис тем.</param>
-    /// <param name="uiThemeUpdaterService">Сервис обновления тем.</param>
     public WpfUIMessageBoxService(
-        ILocalizationService localizationService,
-        IUIThemeService uiThemeService,
-        IUIThemeUpdaterService uiThemeUpdaterService) {
-        _localizationService = localizationService;
-        _uiThemeService = uiThemeService;
-        _uiThemeUpdaterService = uiThemeUpdaterService;
+        IHasTheme theme,
+        IHasLocalization localization) {
+        _theme = theme;
+        _localization = localization;
     }
 
     /// <inheritdoc />
@@ -33,88 +31,98 @@ public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxServic
         MessageBoxButton button,
         MessageBoxImage icon,
         MessageBoxResult defaultResult) {
-        global::Wpf.Ui.Controls.MessageBox messageBox = new() {
+       
+        Wpf.Ui.Controls.MessageBox messageBox = new() {
             Owner = GetWindow(),
-            MinWidth = 300,
-            ShowTitle = true,
+            MinWidth = 350,
             Title = caption,
             WindowStartupLocation = WindowStartupLocation.CenterOwner
         };
 
         messageBox.Content = new {ImageSource = GetImageSource(icon), MessageBoxText = messageBoxText};
+       
         messageBox.Resources.MergedDictionaries.Add(
-            new ResourceDictionary() {Source = new Uri("../Views/MessageBoxContentTemplate.xaml")});
+            new ResourceDictionary() {Source = new Uri(_messageBoxContentTemplate, UriKind.Absolute)});
+        
+        messageBox.ContentTemplate = messageBox.FindResource("MessageBoxContentTemplate") as DataTemplate;
 
         void UpdateTheme(UIThemes uiTheme) {
-            _uiThemeUpdaterService.SetTheme(messageBox, uiTheme);
+            _theme.ThemeUpdaterService.SetTheme(messageBox, uiTheme);
         }
 
         try {
-            _uiThemeService.UIThemeChanged += UpdateTheme;
-            _uiThemeUpdaterService.SetTheme(messageBox, _uiThemeService.HostTheme);
+            _theme.ThemeChanged += UpdateTheme;
+            _theme.ThemeUpdaterService.SetTheme(messageBox, _theme.HostTheme);
 
             (MessageBoxResult closeResult,
                 MessageBoxResult primaryResult,
                 MessageBoxResult secondaryResult) = ShowMessageBox(button, messageBox);
 
-            return messageBox.ShowDialogAsync().Result switch {
-                global::Wpf.Ui.Controls.MessageBoxResult.None => closeResult,
-                global::Wpf.Ui.Controls.MessageBoxResult.Primary => primaryResult,
-                global::Wpf.Ui.Controls.MessageBoxResult.Secondary => secondaryResult,
+            // magic hack :D
+            return messageBox.ShowDialogAsync()
+                .ConfigureAwait(false).GetAwaiter().GetResult() switch {
+                Wpf.Ui.Controls.MessageBoxResult.None => closeResult,
+                Wpf.Ui.Controls.MessageBoxResult.Primary => primaryResult,
+                Wpf.Ui.Controls.MessageBoxResult.Secondary => secondaryResult,
                 _ => MessageBoxResult.None
             };
         } finally {
-            _uiThemeService.UIThemeChanged -= UpdateTheme;
+            _theme.ThemeChanged -= UpdateTheme;
         }
     }
 
-    private Uri GetImageSource(MessageBoxImage icon) {
+    private BitmapFrame GetImageSource(MessageBoxImage icon) {
         string symbol = icon switch {
-            MessageBoxImage.None => "assets/icons8-empty-26.png",
-            MessageBoxImage.Hand => "assets/icons8-cross-26.png",
-            MessageBoxImage.Question => "assets/icons8-question-26.png",
-            MessageBoxImage.Exclamation => "assets/icons8-error-26.png",
-            MessageBoxImage.Asterisk => "assets/icons8-exclamation-26.png",
+            MessageBoxImage.None =>
+                "pack://application:,,,/dosymep.WpfUI.Core;component/assets/images/icons8-empty-26.png",
+            MessageBoxImage.Hand =>
+                "pack://application:,,,/dosymep.WpfUI.Core;component/assets/images/icons8-cross-26.png",
+            MessageBoxImage.Question =>
+                "pack://application:,,,/dosymep.WpfUI.Core;component/assets/images/icons8-question-26.png",
+            MessageBoxImage.Exclamation =>
+                "pack://application:,,,/dosymep.WpfUI.Core;component/assets/images/icons8-error-26.png",
+            MessageBoxImage.Asterisk =>
+                "pack://application:,,,/dosymep.WpfUI.Core;component/assets/images/icons8-exclamation-26.png",
             _ => throw new ArgumentOutOfRangeException(nameof(icon), icon, default)
         };
 
-        return new Uri(symbol);
+        return BitmapFrame.Create(new Uri(symbol, UriKind.Absolute));
     }
 
     private (MessageBoxResult closeResult,
         MessageBoxResult primaryResult,
         MessageBoxResult secondaryResult)
-        ShowMessageBox(MessageBoxButton button, global::Wpf.Ui.Controls.MessageBox messageBox) {
+        ShowMessageBox(MessageBoxButton button, Wpf.Ui.Controls.MessageBox messageBox) {
         if(button == MessageBoxButton.OK) {
             messageBox.IsPrimaryButtonEnabled = false;
             messageBox.IsSecondaryButtonEnabled = false;
-            messageBox.CloseButtonText = _localizationService.GetLocalizedString("MessageBox.Ok");
-            messageBox.CloseButtonAppearance = global::Wpf.Ui.Controls.ControlAppearance.Info;
+            messageBox.CloseButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.Ok");
+            messageBox.CloseButtonAppearance = Wpf.Ui.Controls.ControlAppearance.Info;
 
             return (MessageBoxResult.OK, MessageBoxResult.None, MessageBoxResult.None);
         } else if(button == MessageBoxButton.OKCancel) {
             messageBox.IsPrimaryButtonEnabled = true;
             messageBox.IsSecondaryButtonEnabled = true;
-            messageBox.CloseButtonText = _localizationService.GetLocalizedString("MessageBox.Cancel");
-            messageBox.PrimaryButtonText = _localizationService.GetLocalizedString("MessageBox.Ok");
-            messageBox.PrimaryButtonAppearance = global::Wpf.Ui.Controls.ControlAppearance.Info;
+            messageBox.CloseButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.Cancel");
+            messageBox.PrimaryButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.Ok");
+            messageBox.PrimaryButtonAppearance = Wpf.Ui.Controls.ControlAppearance.Info;
 
             return (MessageBoxResult.Cancel, MessageBoxResult.OK, MessageBoxResult.None);
         } else if(button == MessageBoxButton.YesNo) {
             messageBox.IsPrimaryButtonEnabled = true;
             messageBox.IsSecondaryButtonEnabled = false;
-            messageBox.CloseButtonText = _localizationService.GetLocalizedString("MessageBox.No");
-            messageBox.PrimaryButtonText = _localizationService.GetLocalizedString("MessageBox.Yes");
-            messageBox.PrimaryButtonAppearance = global::Wpf.Ui.Controls.ControlAppearance.Info;
+            messageBox.CloseButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.No");
+            messageBox.PrimaryButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.Yes");
+            messageBox.PrimaryButtonAppearance = Wpf.Ui.Controls.ControlAppearance.Info;
 
             return (MessageBoxResult.No, MessageBoxResult.Yes, MessageBoxResult.None);
         } else if(button == MessageBoxButton.YesNoCancel) {
             messageBox.IsPrimaryButtonEnabled = true;
             messageBox.IsSecondaryButtonEnabled = true;
-            messageBox.CloseButtonText = _localizationService.GetLocalizedString("MessageBox.Cancel");
-            messageBox.PrimaryButtonText = _localizationService.GetLocalizedString("MessageBox.Yes");
-            messageBox.SecondaryButtonText = _localizationService.GetLocalizedString("MessageBox.No");
-            messageBox.SecondaryButtonAppearance = global::Wpf.Ui.Controls.ControlAppearance.Info;
+            messageBox.CloseButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.Cancel");
+            messageBox.PrimaryButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.Yes");
+            messageBox.SecondaryButtonText = _localization.LocalizationService.GetLocalizedString("MessageBox.No");
+            messageBox.SecondaryButtonAppearance = Wpf.Ui.Controls.ControlAppearance.Info;
 
             return (MessageBoxResult.Cancel, MessageBoxResult.Yes, MessageBoxResult.No);
         }

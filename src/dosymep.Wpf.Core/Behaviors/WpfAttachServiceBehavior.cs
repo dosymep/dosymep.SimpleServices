@@ -4,12 +4,12 @@ using dosymep.SimpleServices;
 
 using Microsoft.Xaml.Behaviors;
 
-namespace dosymep.Wpf.Core.Behaviours;
+namespace dosymep.Wpf.Core.Behaviors;
 
 /// <summary>
 /// Поведение прикрепление сервисов.
 /// </summary>
-internal sealed class WpfAttachServiceBehavior : Behavior<DependencyObject> {
+public sealed class WpfAttachServiceBehavior : Behavior<DependencyObject> {
     /// <summary>
     /// Свойство прикрепляемого сервиса.
     /// </summary>
