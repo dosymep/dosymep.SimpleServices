@@ -15,10 +15,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="System.Web" />
-        <Reference Include="WindowsBase" />
-        <Reference Include="PresentationCore" />
-        <Reference Include="PresentationFramework" />
+        <Reference Include="Microsoft.Xaml.Behaviors">
+            <HintPath>C:\Users\biseuv_o\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web"/>
+        <Reference Include="WindowsBase"/>
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
 
         <PackageReference Include="WPF-UI" Version="4.0.0">
             <PrivateAssets>all</PrivateAssets>
@@ -27,23 +30,24 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
+        <ProjectReference Include="..\dosymep.WpfCore\dosymep.WpfCore.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Resource Include="assets\images\icons8-cross-26.png" />
-      <Resource Include="assets\images\icons8-empty-26.png" />
-      <Resource Include="assets\images\icons8-error-26.png" />
-      <Resource Include="assets\images\icons8-exclamation-26.png" />
-      <Resource Include="assets\images\icons8-question-26.png" />
+        <Resource Include="assets\images\icons8-cross-26.png"/>
+        <Resource Include="assets\images\icons8-empty-26.png"/>
+        <Resource Include="assets\images\icons8-error-26.png"/>
+        <Resource Include="assets\images\icons8-exclamation-26.png"/>
+        <Resource Include="assets\images\icons8-question-26.png"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Page Update="assets\localizations\language.ru-RU.xaml">
-        <Generator>MSBuild:Compile</Generator>
-      </Page>
-      <Page Update="assets\localizations\language.en-US.xaml">
-        <Generator>MSBuild:Compile</Generator>
-      </Page>
+        <Page Update="assets\localizations\language.ru-RU.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="assets\localizations\language.en-US.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
     </ItemGroup>
 </Project>

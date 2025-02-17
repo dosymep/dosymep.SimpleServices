@@ -16,9 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.cspr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.SimpleServices", "src\dosymep.SimpleServices\dosymep.SimpleServices.csproj", "{FEA822F8-6E69-4BC1-8366-2EEAF94B092C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Wpf.Core", "src\dosymep.Wpf.Core\dosymep.Wpf.Core.csproj", "{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.WpfCore", "src\dosymep.WpfCore\dosymep.WpfCore.csproj", "{7ACB8D10-9B80-40FA-BBF0-53D3429D6A62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.Wpf.Core.Ninject", "src\dosymep.Wpf.Core.Ninject\dosymep.Wpf.Core.Ninject.csproj", "{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.WpfCore.Ninject", "src\dosymep.WpfCore.Ninject\dosymep.WpfCore.Ninject.csproj", "{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.WpfUI.Core", "src\dosymep.WpfUI.Core\dosymep.WpfUI.Core.csproj", "{657DB082-D554-4D31-8848-86A108DCD0F4}"
 EndProject
@@ -64,6 +64,10 @@ Global
 		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7DA1D93-4785-42F2-9BA5-D4B78E345ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C02B1B7F-589D-4AC3-AFFC-3C1002C4E706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02B1B7F-589D-4AC3-AFFC-3C1002C4E706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02B1B7F-589D-4AC3-AFFC-3C1002C4E706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02B1B7F-589D-4AC3-AFFC-3C1002C4E706}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
