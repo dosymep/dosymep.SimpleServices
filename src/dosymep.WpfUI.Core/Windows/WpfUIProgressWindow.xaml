@@ -48,6 +48,7 @@
             Grid.Column="0"
             Grid.ColumnSpan="2"
             Height="50"
+            Background="Transparent"
             x:Name="_progressEdit" />
 
         <ui:TextBlock
@@ -61,6 +62,7 @@
             Grid.Column="1"
             x:Name="_cancelButton"
             Margin="10 0 10 0"
+            Opacity="100"
             IsCancel="True"
             Appearance="Dark"
             Visibility="Hidden"
