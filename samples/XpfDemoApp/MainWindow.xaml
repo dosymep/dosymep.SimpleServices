@@ -84,6 +84,8 @@
         <dxe:TextEdit
             Grid.Row="1"
             Margin="10"
+            IsReadOnly="True"
+            EditMode="InplaceInactive"
             TextWrapping="WrapWithOverflow"
             Text="{me:LocalizationSource MainWindow.RandomText}" />
 
