@@ -162,12 +162,12 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
         _progressEdit.Maximum = MaxValue;
         _progressEdit.Value = currentValue;
         WaitText = string.Format(
-            DisplayTitleFormat ?? GetLocalization("ProgressBar.PleaseWaitFormat"), currentValue, MaxValue);
+            DisplayTitleFormat ?? GetLocalization("ProgressDialog.PleaseWaitFormat"), currentValue, MaxValue);
     }
 
     private void CancelButton_OnClick(object sender, RoutedEventArgs e) {
         _cancelButton.IsEnabled = false;
-        WaitText = GetLocalization("ProgressBar.Canceling");
+        WaitText = GetLocalization("ProgressDialog.Canceling");
         _cancellationTokenSource?.Cancel();
     }
 
