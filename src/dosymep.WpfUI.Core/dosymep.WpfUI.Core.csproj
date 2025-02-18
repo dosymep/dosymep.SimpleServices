@@ -31,6 +31,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
+        <ProjectReference Include="..\dosymep.WpfCore.Ninject\dosymep.WpfCore.Ninject.csproj" />
         <ProjectReference Include="..\dosymep.WpfCore\dosymep.WpfCore.csproj" />
     </ItemGroup>
 

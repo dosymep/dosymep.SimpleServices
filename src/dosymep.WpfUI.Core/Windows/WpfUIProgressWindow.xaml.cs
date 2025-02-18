@@ -4,18 +4,34 @@ using System.Windows;
 using System.Windows.Threading;
 
 using dosymep.SimpleServices;
+using dosymep.WpfCore.SimpleServices;
 using dosymep.WpfUI.Core.SimpleServices;
 
 namespace dosymep.WpfUI.Core.Windows;
 
 internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDisposable {
+    public static readonly DependencyProperty TitleTextProperty = DependencyProperty.Register(
+        nameof(TitleText), typeof(string), typeof(WpfUIProgressWindow), new PropertyMetadata(default(string)));
+
+    public static readonly DependencyProperty WaitTextProperty = DependencyProperty.Register(
+        nameof(WaitText), typeof(string), typeof(WpfUIProgressWindow), new PropertyMetadata(default(string)));
+
+    public static readonly DependencyProperty CancelButtonTextProperty = DependencyProperty.Register(
+        nameof(CancelButtonText), typeof(string), typeof(WpfUIProgressWindow), new PropertyMetadata(default(string)));
+
+
+    private static readonly string _progressWindowLanguage =
+        "pack://application:,,,/dosymep.WpfUI.Core;component/assets/localizations/language.xaml";
+
     private readonly IHasTheme _theme;
     private readonly IHasLocalization _localization;
-    
+    private readonly ILocalizationService _internalLocalization;
+
     public event Action<UIThemes>? ThemeChanged;
     public event Action<CultureInfo>? LanguageChanged;
-    
+
     private CancellationTokenSource? _cancellationTokenSource;
+
 
     /// <summary>
     /// Инициализирует окно прогресс бара.
@@ -23,13 +39,32 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
     public WpfUIProgressWindow(
         IHasTheme theme,
         IHasLocalization localization) {
-        InitializeComponent();
-        
         _theme = theme;
         _localization = localization;
 
         _theme.ThemeChanged += ThemeChanged;
         _localization.LanguageChanged += LanguageChanged;
+
+        _internalLocalization = new WpfLocalizationService(_progressWindowLanguage, _localization.HostLanguage);
+        _internalLocalization.SetLocalization(_localization.HostLanguage, this);
+
+
+        InitializeComponent();
+    }
+
+    public string TitleText {
+        get => (string) GetValue(TitleTextProperty);
+        set => SetValue(TitleTextProperty, value);
+    }
+
+    public string WaitText {
+        get => (string) GetValue(WaitTextProperty);
+        set => SetValue(WaitTextProperty, value);
+    }
+
+    public string CancelButtonText {
+        get => (string) GetValue(CancelButtonTextProperty);
+        set => SetValue(CancelButtonTextProperty, value);
     }
 
     public UIThemes HostTheme => _theme.HostTheme;
@@ -81,6 +116,21 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
         }
     }
 
+    protected override void OnInitialized(EventArgs e) {
+        base.OnInitialized(e);
+        _internalLocalization.SetLocalization(_localization.HostLanguage);
+
+        TitleText = GetLocalization("ProgressDialog.Title");
+        WaitText = GetLocalization("ProgressDialog.PleaseWait");
+        CancelButtonText = GetLocalization("ProgressDialog.CancelButton");
+    }
+
+    protected override void OnClosed(EventArgs e) {
+        base.OnClosed(e);
+        ResetOwnerWindowStyle();
+        _cancellationTokenSource?.Cancel();
+    }
+
     /// <summary>
     /// Обновляет окно.
     /// </summary>
@@ -105,14 +155,19 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
     private void UpdateWindowImpl(int currentValue) {
         _progressEdit.Maximum = MaxValue;
         _progressEdit.Value = currentValue;
-        _textEdit.Text = string.Format(
-            DisplayTitleFormat ?? LocalizationService.GetLocalizedString("ProgressBar.PleaseWaitFormat"), currentValue, MaxValue);
+        WaitText = string.Format(
+            DisplayTitleFormat ?? GetLocalization("ProgressBar.PleaseWaitFormat"), currentValue, MaxValue);
     }
 
     private void CancelButton_OnClick(object sender, RoutedEventArgs e) {
         _cancelButton.IsEnabled = false;
-        _textEdit.Text = LocalizationService.GetLocalizedString("ProgressBar.Canceling");
+        WaitText = GetLocalization("ProgressBar.Canceling");
         _cancellationTokenSource?.Cancel();
+    }
+
+    private string GetLocalization(string localizationName) {
+        return LocalizationService.GetLocalizedString(localizationName)
+               ?? _internalLocalization.GetLocalizedString(localizationName);
     }
 
     #region IDispose

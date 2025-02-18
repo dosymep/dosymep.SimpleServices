@@ -6,9 +6,9 @@
     <system:String x:Key="MessageBox.Yes">Yes</system:String>
     <system:String x:Key="MessageBox.No">No</system:String>
     
-    <system:String x:Key="ProgressBar.Title">Please wait...</system:String>
-    <system:String x:Key="ProgressBar.CanceButton">Cancel</system:String>
-    <system:String x:Key="ProgressBar.Canceling">Process canceling...</system:String>
-    <system:String x:Key="ProgressBar.PleaseWait">Please wait...</system:String>
-    <system:String x:Key="ProgressBar.PleaseWaitFormat">Please wait [{0}/{1}]...</system:String>
+    <system:String x:Key="ProgressDialog.Title">Please wait...</system:String>
+    <system:String x:Key="ProgressDialog.CancelButton">Cancel</system:String>
+    <system:String x:Key="ProgressDialog.Canceling">Process canceling...</system:String>
+    <system:String x:Key="ProgressDialog.PleaseWait">Please wait...</system:String>
+    <system:String x:Key="ProgressDialog.PleaseWaitFormat">Please wait [{0}/{1}]...</system:String>
 </ResourceDictionary>
