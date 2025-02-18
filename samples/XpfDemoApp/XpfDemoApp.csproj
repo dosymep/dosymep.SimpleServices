@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net48</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Web"/>
+        <PackageReference Include="DevExpress.Wpf" Version="21.2.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\dosymep.WpfCore\dosymep.WpfCore.csproj"/>
+        <ProjectReference Include="..\..\src\\dosymep.Xpf.Core\dosymep.Xpf.Core.csproj"/>
+        <ProjectReference Include="..\..\src\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
+        <ProjectReference Include="..\WpfDemoLib\WpfDemoLib.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="assets\localizations\language.en-US.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="assets\localizations\language.ru-RU.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="assets\images\icons8-google-photos-144.theme-dark.png" />
+      <Resource Include="assets\images\icons8-google-photos-144.theme-light.png" />
+    </ItemGroup>
+  
+</Project>

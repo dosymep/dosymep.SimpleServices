@@ -1,12 +1,11 @@
-﻿<ui:FluentWindow
-    x:Class="WpfUIDemoApp.MainWindow"
+﻿<dx:ThemedWindow
+    x:Class="XpfDemoApp.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:WpfUIDemoApp"
+    xmlns:local="clr-namespace:XpfDemoApp"
 
-    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
     xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
 
@@ -14,6 +13,9 @@
     xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
     xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
     xmlns:viewModels="clr-namespace:WpfDemoLib.ViewModels;assembly=WpfDemoLib"
+
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
 
     Width="800"
     Height="450"
@@ -33,7 +35,7 @@
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding MessageBoxService, ElementName=_this}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding ProgressDialogFactory, ElementName=_this}" />
     </b:Interaction.Behaviors>
-    
+
     <b:Interaction.Triggers>
         <b:EventTrigger
             EventName="Loaded">
@@ -49,40 +51,37 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ui:TitleBar
+        <StackPanel
             Grid.Row="0"
-            Title="{me:LocalizationSource MainWindow.Title}"
-            Icon="{me:QualifiedImage assets/images/icons8-google-photos-144.png}">
-            <ui:TitleBar.TrailingContent>
-                <StackPanel
-                    VerticalAlignment="Top"
-                    Orientation="Horizontal">
-                    
-                    <ComboBox
-                        x:Name="_themesComboBox"
-                        FontSize="1"
-                        SelectedIndex="0"
-                        SelectedValuePath="Value"
-                        DisplayMemberPath="DisplayName"
-                        ItemsSource="{me:EnumToItemsSource ss:UIThemes}"
-                        SelectionChanged="Theme_Changed">
-                    </ComboBox>
+            Margin="0 10"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            
+            <dxe:ComboBoxEdit
+                x:Name="_themesComboBox"
+                SelectedIndex="0"
+                ValueMember="Value"
+                DisplayMember="DisplayName"
+                IsTextEditable="False"
+                ItemsSource="{me:EnumToItemsSource ss:UIThemes}"
+                EditValueChanged="Theme_Changed">
+            </dxe:ComboBoxEdit>
 
-                    <ComboBox
-                        x:Name="_langsComboBox"
-                        Margin="10 0 0 0"
-                        SelectedIndex="0"
-                        SelectionChanged="Language_Changed">
-                        <ComboBox.Items>
-                            <system:String>ru-RU</system:String>
-                            <system:String>en-US</system:String>
-                        </ComboBox.Items>
-                    </ComboBox>
-                </StackPanel>
-            </ui:TitleBar.TrailingContent>
-        </ui:TitleBar>
+            <dxe:ComboBoxEdit
+                x:Name="_langsComboBox"
+                Margin="10 0 0 0"
+                SelectedIndex="0"
+                IsTextEditable="False"
+                EditValueChanged="Language_Changed">
+                <dxe:ComboBoxEdit.Items>
+                    <system:String>ru-RU</system:String>
+                    <system:String>en-US</system:String>
+                </dxe:ComboBoxEdit.Items>
+            </dxe:ComboBoxEdit>
+        </StackPanel>
 
-        <ui:TextBlock
+        <dxe:TextEdit
             Grid.Row="1"
             Margin="10"
             TextWrapping="WrapWithOverflow"
@@ -97,20 +96,19 @@
                 Height="18"
                 Margin="10 0"
                 Source="{me:QualifiedImage /dosymep.WpfCore;component/assets/images/icons8-no-image-96.png}" />
-
+            
             <Image
                 Height="18"
                 Source="{me:QualifiedImage assets/images/icons8-google-photos-144.png}" />
 
-            <ui:Button
+            <dx:SimpleButton
                 Margin="10"
                 Width="80"
-                Appearance="Info"
                 Click="ButtonOk_OnClick"
                 Command="{Binding AcceptViewCommand}"
                 Content="{me:LocalizationSource MainWindow.ButtonOk}" />
 
-            <ui:Button
+            <dx:SimpleButton
                 Margin="10"
                 Width="80"
                 IsCancel="True"
@@ -118,4 +116,4 @@
                 Content="{me:LocalizationSource MainWindow.ButtonCancel}" />
         </StackPanel>
     </Grid>
-</ui:FluentWindow>
+</dx:ThemedWindow>

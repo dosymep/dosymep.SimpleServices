@@ -20,6 +20,9 @@ using dosymep.WpfCore.MarkupExtensions;
 using dosymep.WpfUI.Core.SimpleServices;
 using dosymep.WpfUI.Core.Windows;
 
+using WpfDemoLib.Input;
+using WpfDemoLib.ViewModels;
+
 namespace WpfUIDemoApp;
 
 /// <summary>
@@ -39,6 +42,10 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
         MessageBoxService = new WpfUIMessageBoxService(this, this);
         ProgressDialogFactory = new WpfUIProgressDialogFactory(this, this);
 
+        DataContext = new MainViewModel(
+            new RelayCommandFactory(),
+            MessageBoxService, LocalizationService, ProgressDialogFactory);
+
         InitializeComponent();
     }
 
@@ -56,33 +63,8 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
         ? CultureInfo.GetCultureInfo("ru-RU")
         : CultureInfo.GetCultureInfo((string) _langsComboBox.SelectedValue);
 
-    private async void ButtonOk_OnClick(object sender, RoutedEventArgs e) {
-        MessageBoxResult result = MessageBoxService.Show(
-            LocalizationService.GetLocalizedString("MessageBox.Content"),
-            LocalizationService.GetLocalizedString("MessageBox.Title"),
-            MessageBoxButton.YesNo, MessageBoxImage.Information);
-
-        try {
-            if(result == MessageBoxResult.Yes) {
-                using IProgressDialogService dialog = ProgressDialogFactory.CreateDialog();
-
-                dialog.DisplayTitleFormat = LocalizationService.GetLocalizedString("ProgressDialog.Content");
-                dialog.MaxValue = 10;
-
-                dialog.Show();
-
-                IProgress<int> progress = dialog.CreateProgress();
-                CancellationToken cancellationToken = dialog.CreateCancellationToken();
-                for(int i = 0; i < 10; i++) {
-                    progress.Report(i);
-                    cancellationToken.ThrowIfCancellationRequested();
-
-                    Thread.Sleep(1000);
-                }
-            }
-        } catch(OperationCanceledException) {
-            //pass
-        }
+    private void ButtonOk_OnClick(object sender, RoutedEventArgs e) {
+        Close();
     }
 
     private void ButtonCancel_OnClick(object sender, RoutedEventArgs e) {

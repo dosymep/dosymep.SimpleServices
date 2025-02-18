@@ -18,6 +18,7 @@
         <ProjectReference Include="..\..\src\dosymep.WpfCore\dosymep.WpfCore.csproj" />
         <ProjectReference Include="..\..\src\\dosymep.WpfUI.Core\dosymep.WpfUI.Core.csproj" />
         <ProjectReference Include="..\..\src\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+        <ProjectReference Include="..\WpfDemoLib\WpfDemoLib.csproj" />
     </ItemGroup>
 
     <ItemGroup>
