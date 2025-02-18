@@ -1,11 +1,14 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Threading;
 
 using dosymep.SimpleServices;
 using dosymep.WpfCore.SimpleServices;
 using dosymep.WpfUI.Core.SimpleServices;
+
+using Wpf.Ui.Controls;
 
 namespace dosymep.WpfUI.Core.Windows;
 
@@ -47,7 +50,6 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
 
         _internalLocalization = new WpfLocalizationService(_progressWindowLanguage, _localization.HostLanguage);
         _internalLocalization.SetLocalization(_localization.HostLanguage, this);
-
 
         InitializeComponent();
     }
@@ -123,6 +125,10 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
         TitleText = GetLocalization("ProgressDialog.Title");
         WaitText = GetLocalization("ProgressDialog.PleaseWait");
         CancelButtonText = GetLocalization("ProgressDialog.CancelButton");
+    }
+    
+    private void WpfUIProgressWindow_OnLoaded(object sender, RoutedEventArgs e) {
+        RenderSize = new Size(MaxWidth, MaxHeight);
     }
 
     protected override void OnClosed(EventArgs e) {

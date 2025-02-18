@@ -4,11 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:local="clr-namespace:dosymep.WpfUI.Core.Windows"
     xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+
+    xmlns:local="clr-namespace:dosymep.WpfUI.Core.Windows"
     xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
-    xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
 
     WindowStyle="None"
     ResizeMode="NoResize"
@@ -18,11 +18,18 @@
     mc:Ignorable="d"
     Title="{Binding TitleText, ElementName=_this}"
 
+    Width="400"
+    Height="50"
+    
+    MinWidth="400"
+    MinHeight="50"
+    
     MaxWidth="400"
     MaxHeight="50"
 
     Margin="0"
     Padding="0"
+    Loaded="WpfUIProgressWindow_OnLoaded"
 
     x:Name="_this" x:ClassModifier="internal">
 
@@ -41,9 +48,7 @@
             Grid.Column="0"
             Grid.ColumnSpan="2"
             Height="50"
-            x:Name="_progressEdit"
-            VerticalAlignment="Stretch"
-            HorizontalAlignment="Stretch" />
+            x:Name="_progressEdit" />
 
         <ui:TextBlock
             Grid.Column="0"
@@ -55,7 +60,6 @@
         <ui:Button
             Grid.Column="1"
             x:Name="_cancelButton"
-            Width="80"
             Margin="10 0 10 0"
             IsCancel="True"
             Appearance="Dark"
