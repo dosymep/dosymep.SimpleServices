@@ -118,7 +118,7 @@ public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxServic
             return (MessageBoxResult.OK, MessageBoxResult.None, MessageBoxResult.None);
         } else if(button == MessageBoxButton.OKCancel) {
             messageBox.IsPrimaryButtonEnabled = true;
-            messageBox.IsSecondaryButtonEnabled = true;
+            messageBox.IsSecondaryButtonEnabled = false;
             messageBox.CloseButtonText = GetLocalization("MessageBox.Cancel");
             messageBox.PrimaryButtonText = GetLocalization("MessageBox.Ok");
             messageBox.PrimaryButtonAppearance = Wpf.Ui.Controls.ControlAppearance.Info;
