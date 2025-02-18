@@ -19,7 +19,7 @@ public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDial
     /// </summary>
     public WpfUIProgressDialogService(IHasTheme theme, IHasLocalization localization) {
         _wpfUIProgressWindow = new WpfUIProgressWindow(theme, localization);
-        
+
         _windowInteropHelper = new WindowInteropHelper(_wpfUIProgressWindow) {
             Owner = Process.GetCurrentProcess().MainWindowHandle
         };
@@ -101,6 +101,9 @@ public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDial
             if(window?.IsVisible == true) {
                 _wpfUIProgressWindow.Owner = window;
                 _wpfUIProgressWindow.SetOwnerWindowStyle();
+            } else {
+                WindowInteropHelper helper = new(_wpfUIProgressWindow);
+                helper.Owner = Process.GetCurrentProcess().MainWindowHandle;
             }
         }
     }

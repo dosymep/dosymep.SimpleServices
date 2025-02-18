@@ -1,4 +1,6 @@
+using System.Diagnostics;
 using System.Windows;
+using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 
 using dosymep.SimpleServices;
@@ -54,6 +56,12 @@ public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxServic
 
         messageBox.ContentTemplate = messageBox.FindResource("MessageBoxContentTemplate") as DataTemplate;
 
+
+        if(messageBox.Owner is null) {
+            WindowInteropHelper helper = new(messageBox);
+            helper.Owner = Process.GetCurrentProcess().MainWindowHandle;
+        }
+        
         void UpdateTheme(UIThemes uiTheme) {
             _theme.ThemeUpdaterService.SetTheme(messageBox, uiTheme);
         }
