@@ -43,24 +43,25 @@ public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxServic
         _internalLocalization.SetLocalization(_localization.HostLanguage);
 
         Wpf.Ui.Controls.MessageBox messageBox = new() {
-            Owner = GetWindow(),
             MinWidth = 350,
             Title = caption,
             WindowStartupLocation = WindowStartupLocation.CenterOwner
         };
 
+        Window? window = GetWindow();
+        if(window?.IsVisible == true) {
+            messageBox.Owner = window;
+        } else {
+            WindowInteropHelper helper = new(messageBox);
+            helper.Owner = Process.GetCurrentProcess().MainWindowHandle;
+        }
+        
         messageBox.Content = new {ImageSource = GetImageSource(icon), MessageBoxText = messageBoxText};
 
         messageBox.Resources.MergedDictionaries.Add(
             new ResourceDictionary() {Source = new Uri(_messageBoxContentTemplate, UriKind.Absolute)});
 
         messageBox.ContentTemplate = messageBox.FindResource("MessageBoxContentTemplate") as DataTemplate;
-
-
-        if(messageBox.Owner is null) {
-            WindowInteropHelper helper = new(messageBox);
-            helper.Owner = Process.GetCurrentProcess().MainWindowHandle;
-        }
         
         void UpdateTheme(UIThemes uiTheme) {
             _theme.ThemeUpdaterService.SetTheme(messageBox, uiTheme);
