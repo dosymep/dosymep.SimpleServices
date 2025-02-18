@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net48</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="WPF-UI" Version="4.0.0"/>
+        <PackageReference Include="WPF-UI.Tray" Version="4.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\dosymep.WpfCore\dosymep.WpfCore.csproj" />
+        <ProjectReference Include="..\..\src\\dosymep.WpfUI.Core\dosymep.WpfUI.Core.csproj" />
+        <ProjectReference Include="..\..\src\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="assets\images\icons8-google-photos-144.theme-dark.png"/>
+        <Resource Include="assets\images\icons8-google-photos-144.theme-light.png"/>
+    </ItemGroup>
+
+</Project>
