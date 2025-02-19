@@ -6,14 +6,14 @@ namespace dosymep.WpfCore.SimpleServices {
     /// <summary>
     /// Класс сервиса тем для окон.
     /// </summary>
-    public class WpfThemeService : IUIThemeService, IDisposable {
+    public class WpfWindowsThemeService : IUIThemeService, IDisposable {
         /// <inheritdoc />
         public event Action<UIThemes>? UIThemeChanged;
 
         /// <summary>
         /// Создает экземпляр сервиса для окон.
         /// </summary>
-        public WpfThemeService() {
+        public WpfWindowsThemeService() {
             SystemEvents.UserPreferenceChanged += OnSystemEventsOnUserPreferenceChanged;
         }
 

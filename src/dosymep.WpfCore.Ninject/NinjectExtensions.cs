@@ -19,13 +19,13 @@ public static class NinjectExtensions {
     /// <param name="kernel">Ninject контейнер.</param>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
     /// <exception cref="ArgumentNullException">kernel is null.</exception>
-    public static IKernel UseWpfLanguage(this IKernel kernel) {
+    public static IKernel UseWpfWindowsLanguage(this IKernel kernel) {
         if(kernel is null) {
             throw new ArgumentNullException(nameof(kernel));
         }
 
         kernel.Bind<ILanguageService>()
-            .To<WpfLanguageService>();
+            .To<WpfWindowsLanguageService>();
 
         return kernel;
     }
@@ -37,13 +37,13 @@ public static class NinjectExtensions {
     /// <param name="kernel">Ninject контейнер.</param>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
     /// <exception cref="ArgumentNullException">kernel is null.</exception>
-    public static IKernel UseWpfTheme(this IKernel kernel) {
+    public static IKernel UseWpfWindowsTheme(this IKernel kernel) {
         if(kernel is null) {
             throw new ArgumentNullException(nameof(kernel));
         }
 
         kernel.Bind<IUIThemeService>()
-            .To<WpfThemeService>();
+            .To<WpfWindowsThemeService>();
 
         return kernel;
     }

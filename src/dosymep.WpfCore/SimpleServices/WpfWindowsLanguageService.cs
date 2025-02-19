@@ -6,7 +6,7 @@ namespace dosymep.WpfCore.SimpleServices {
     /// <summary>
     /// Класс сервиса доступа к языку Windows.
     /// </summary>
-    public class WpfLanguageService : ILanguageService {
+    public class WpfWindowsLanguageService : ILanguageService {
         /// <inheritdoc/>
         public CultureInfo HostLanguage => CultureInfo.InstalledUICulture;
     }
