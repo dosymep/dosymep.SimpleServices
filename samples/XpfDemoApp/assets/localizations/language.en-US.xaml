@@ -9,6 +9,9 @@
     <system:String x:Key="MainWindow.ButtonOk">OK</system:String>
     <system:String x:Key="MainWindow.ButtonCancel">Cancel</system:String>
     
+    <system:String x:Key="MainWindow.CloseTitle">DemoApp</system:String>
+    <system:String x:Key="MainWindow.CloseContent">Application will be closed!</system:String>
+    
     <system:String x:Key="MainWindow.LoadedTitle">Load</system:String>
     <system:String x:Key="MainWindow.LoadedContent">Window has loaded!</system:String>
     <system:String x:Key="MainWindow.NotLoadedContent">Window has no loaded!</system:String>

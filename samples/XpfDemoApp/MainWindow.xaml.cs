@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using DevExpress.Xpf.Editors;
+using DevExpress.Xpf.Utils.Themes;
 
 using dosymep.SimpleServices;
 using dosymep.WpfCore.SimpleServices;
@@ -33,27 +34,13 @@ namespace XpfDemoApp {
         public event Action<UIThemes>? ThemeChanged;
         public event Action<CultureInfo>? LanguageChanged;
 
-        public MainWindow() {
-            string assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+        public MainWindow(MainViewModel mainViewModel,
+            ILocalizationService localizationService,
+            IUIThemeUpdaterService themeUpdaterService) {
+            DataContext = mainViewModel;
 
-            ThemeUpdaterService = new XtraThemeUpdaterService();
-            LocalizationService = new WpfLocalizationService(
-                $"/{assemblyName};component/assets/localizations/language.xaml", CultureInfo.GetCultureInfo("ru-RU"));
-
-            var uiThemeService = new XtraWindowsThemeService();
-            
-            MessageBoxService = new XtraMessageBoxService() {
-                UIThemeService = uiThemeService, UIThemeUpdaterService = ThemeUpdaterService
-            };
-            
-            ProgressDialogFactory = new ProgressDialogFactory() {
-                DisplayTitleFormat = LocalizationService.GetLocalizedString("ProgressDialog.Content"),
-                UIThemeService = uiThemeService, UIThemeUpdaterService = ThemeUpdaterService
-            };
-
-            DataContext = new MainViewModel(
-                new RelayCommandFactory(),
-                MessageBoxService, LocalizationService, ProgressDialogFactory);
+            LocalizationService = localizationService;
+            ThemeUpdaterService = themeUpdaterService;
 
             InitializeComponent();
 
@@ -62,8 +49,6 @@ namespace XpfDemoApp {
 
         public ILocalizationService LocalizationService { get; }
         public IUIThemeUpdaterService ThemeUpdaterService { get; }
-        public IMessageBoxService MessageBoxService { get; set; }
-        public IProgressDialogFactory ProgressDialogFactory { get; set; }
 
         public UIThemes HostTheme => _themesComboBox?.EditValue == null
             ? UIThemes.Light
@@ -73,7 +58,9 @@ namespace XpfDemoApp {
             ? CultureInfo.GetCultureInfo("ru-RU")
             : CultureInfo.GetCultureInfo((string) _langsComboBox.EditValue);
 
-        private void ButtonOk_OnClick(object sender, RoutedEventArgs e) {
+        private async void ButtonOk_OnClick(object sender, RoutedEventArgs e) {
+            IsEnabled = false;
+            await Task.Delay(2000);
             Close();
         }
 

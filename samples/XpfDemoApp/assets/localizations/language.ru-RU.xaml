@@ -18,6 +18,9 @@
     <system:String x:Key="MainWindow.LoadedContent">Окно было загружено!</system:String>
     <system:String x:Key="MainWindow.NotLoadedContent">Окно не было загружено!</system:String>
     
+    <system:String x:Key="MainWindow.CloseTitle">DemoApp</system:String>
+    <system:String x:Key="MainWindow.CloseContent">Приложение будет закрыто!</system:String>
+    
     <system:String x:Key="MainWindow.AcceptTitle">Закрыть</system:String>
     <system:String x:Key="MainWindow.AcceptContent">Окно было закрыто!</system:String>
     

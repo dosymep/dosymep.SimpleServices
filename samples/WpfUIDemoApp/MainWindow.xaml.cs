@@ -44,7 +44,7 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
 
         DataContext = new MainViewModel(
             new RelayCommandFactory(),
-            MessageBoxService, LocalizationService, ProgressDialogFactory);
+            MessageBoxService, LocalizationService, ProgressDialogFactory, default!);
 
         InitializeComponent();
     }

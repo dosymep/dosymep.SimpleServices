@@ -17,4 +17,8 @@
       <Reference Include="PresentationFramework" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Resource Include="assets\images\icons8-notification-warning-32.png" />
+    </ItemGroup>
+
 </Project>
