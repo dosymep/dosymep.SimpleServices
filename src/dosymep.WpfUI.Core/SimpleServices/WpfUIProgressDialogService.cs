@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Interop;
 
 using dosymep.SimpleServices;
+using dosymep.WpfCore.SimpleServices;
 using dosymep.WpfUI.Core.Windows;
 
 namespace dosymep.WpfUI.Core.SimpleServices;
@@ -10,7 +11,7 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 /// <summary>
 /// Класс сервиса прогресс диалога.
 /// </summary>
-public sealed class WpfUIProgressDialogService : WpfUIBaseService, IProgressDialogService {
+public sealed class WpfUIProgressDialogService : WpfBaseService, IProgressDialogService {
     private WpfUIProgressWindow _wpfUIProgressWindow;
     private readonly WindowInteropHelper _windowInteropHelper;
 

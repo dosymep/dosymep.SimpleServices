@@ -1,13 +1,14 @@
 using System.Windows;
 
 using dosymep.SimpleServices;
+using dosymep.WpfCore.SimpleServices;
 
 namespace dosymep.WpfUI.Core.SimpleServices;
 
 /// <summary>
 /// Класс фабрики создания сервиса прогресс диалога.
 /// </summary>
-public sealed class WpfUIProgressDialogFactory : WpfUIBaseService, IProgressDialogFactory {
+public sealed class WpfUIProgressDialogFactory : WpfBaseService, IProgressDialogFactory {
     private readonly IHasTheme _theme;
     private readonly IHasLocalization _localization;
 

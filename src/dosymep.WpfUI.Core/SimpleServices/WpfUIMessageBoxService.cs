@@ -11,7 +11,7 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 /// <summary>
 /// Класс сервиса окна сообщений. 
 /// </summary>
-public sealed class WpfUIMessageBoxService : WpfUIBaseService, IMessageBoxService {
+public sealed class WpfUIMessageBoxService : WpfBaseService, IMessageBoxService {
     private static readonly string _messageBoxLanguage =
         "pack://application:,,,/dosymep.WpfUI.Core;component/assets/localizations/language.xaml";
 

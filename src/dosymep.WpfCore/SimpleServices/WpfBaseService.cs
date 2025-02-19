@@ -12,18 +12,22 @@ public abstract class WpfBaseService : IAttachableService {
     public virtual bool IsAttached => AssociatedObject != default;
 
     /// <inheritdoc />
-    public virtual bool AllowAttach { get; } = true;
+    public virtual bool AllowAttach { get; set; } = true;
     
     /// <inheritdoc />
     public virtual DependencyObject? AssociatedObject { get; protected set; }
     
     /// <inheritdoc />
     public virtual void Detach() {
-        AssociatedObject = default;
+        if(AllowAttach) {
+            AssociatedObject = default;
+        }
     }
 
     /// <inheritdoc />
     public virtual void Attach(DependencyObject dependencyObject) {
-        AssociatedObject = dependencyObject;
+        if(AllowAttach) {
+            AssociatedObject = dependencyObject;
+        }
     }
 }
