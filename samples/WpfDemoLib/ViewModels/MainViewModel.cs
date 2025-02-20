@@ -15,12 +15,10 @@ public sealed class MainViewModel : ObservableObject {
         ICommandFactory commandFactory,
         IMessageBoxService messageBoxService,
         ILocalizationService localizationService,
-        IProgressDialogFactory progressDialogFactory,
-        INotificationService? notificationService) {
+        IProgressDialogFactory progressDialogFactory) {
         MessageBoxService = messageBoxService;
         LocalizationService = localizationService;
         ProgressDialogFactory = progressDialogFactory;
-        NotificationService = notificationService;
 
         LoadViewCommand = commandFactory.CreateAsync(LoadAsync);
         AcceptViewCommand = commandFactory.CreateAsync(AcceptAsync);
@@ -29,7 +27,6 @@ public sealed class MainViewModel : ObservableObject {
     public IMessageBoxService MessageBoxService { get; }
     public ILocalizationService LocalizationService { get; }
     public IProgressDialogFactory ProgressDialogFactory { get; }
-    public INotificationService? NotificationService { get; }
 
     public IAsyncRelayCommand LoadViewCommand { get; set; }
     public IAsyncRelayCommand AcceptViewCommand { get; set; }
@@ -50,39 +47,18 @@ public sealed class MainViewModel : ObservableObject {
                     LocalizationService.GetLocalizedString("MainWindow.LoadedContent"),
                     LocalizationService.GetLocalizedString("MainWindow.LoadedTitle"),
                     MessageBoxButton.OK, MessageBoxImage.Information);
-
-                if(NotificationService is not null) {
-                    await NotificationService.CreateNotification(
-                            LocalizationService.GetLocalizedString("MainWindow.LoadedTitle"),
-                            LocalizationService.GetLocalizedString("MainWindow.LoadedContent"))
-                        .ShowAsync();
-                }
             } catch(OperationCanceledException) {
                 progressDialogService.Close();
                 MessageBoxService.Show(
                     LocalizationService.GetLocalizedString("MainWindow.NotLoadedContent"),
                     LocalizationService.GetLocalizedString("MainWindow.LoadedTitle"),
                     MessageBoxButton.OK, MessageBoxImage.Information);
-
-                if(NotificationService is not null) {
-                    await NotificationService.CreateWarningNotification(
-                            LocalizationService.GetLocalizedString("MainWindow.LoadedTitle"),
-                            LocalizationService.GetLocalizedString("MainWindow.NotLoadedContent"),
-                            imageSource: BitmapFrame.Create(new Uri(NotificationWarningIconResourceName,
-                                UriKind.Absolute)))
-                        .ShowAsync();
-                }
             }
         }
     }
 
     private async Task AcceptAsync() {
-        if(NotificationService is not null) {
-            await NotificationService.CreateNotification(
-                    LocalizationService.GetLocalizedString("MainWindow.CloseTitle"),
-                    LocalizationService.GetLocalizedString("MainWindow.CloseContent"))
-                .ShowAsync();
-        }
+        await Task.Delay(1000);
     }
 
     private async Task AsyncOperation(int maxValue, IProgress<int>? progress, CancellationToken cancellationToken) {

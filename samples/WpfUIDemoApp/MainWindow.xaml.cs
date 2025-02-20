@@ -32,28 +32,18 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
     public event Action<UIThemes>? ThemeChanged;
     public event Action<CultureInfo>? LanguageChanged;
 
-    public MainWindow() {
-        string assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
-
-        ThemeUpdaterService = new WpfUIThemeUpdaterService();
-        LocalizationService = new WpfLocalizationService(
-            $"/{assemblyName};component/assets/localizations/language.xaml", CultureInfo.GetCultureInfo("ru-RU"));
-
-        MessageBoxService = new WpfUIMessageBoxService(this, this);
-        ProgressDialogFactory = new WpfUIProgressDialogFactory(this, this);
-
-        DataContext = new MainViewModel(
-            new RelayCommandFactory(),
-            MessageBoxService, LocalizationService, ProgressDialogFactory, default!);
+    public MainWindow(
+        ILocalizationService localizationService,
+        IUIThemeUpdaterService themeUpdaterService) {
+        
+        LocalizationService = localizationService;
+        ThemeUpdaterService = themeUpdaterService;
 
         InitializeComponent();
     }
-
-
-    public ILocalizationService LocalizationService { get; }
-    public IUIThemeUpdaterService ThemeUpdaterService { get; }
-    public IMessageBoxService MessageBoxService { get; set; }
-    public IProgressDialogFactory ProgressDialogFactory { get; set; }
+    
+    public ILocalizationService LocalizationService { get; set; }
+    public IUIThemeUpdaterService ThemeUpdaterService { get; set; }
 
     public UIThemes HostTheme => _themesComboBox?.SelectedValue == null
         ? UIThemes.Light

@@ -4,8 +4,7 @@
              xmlns:local="clr-namespace:WpfUIDemoApp"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
              xmlns:vio="http://schemas.lepo.co/wpfui/2022/xaml/violeta"
-             xmlns:md="http://schemas.lepo.co/wpfui/2022/xaml/markdown"
-             StartupUri="MainWindow.xaml">
+             xmlns:md="http://schemas.lepo.co/wpfui/2022/xaml/markdown">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

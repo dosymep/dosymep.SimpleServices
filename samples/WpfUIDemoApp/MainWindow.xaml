@@ -30,8 +30,8 @@
     <b:Interaction.Behaviors>
         <behaviors:WpfThemeBehavior />
         <behaviors:WpfLocalizationBehavior />
-        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding MessageBoxService, ElementName=_this}" />
-        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding ProgressDialogFactory, ElementName=_this}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding MessageBoxService}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding ProgressDialogFactory}" />
     </b:Interaction.Behaviors>
     
     <b:Interaction.Triggers>
