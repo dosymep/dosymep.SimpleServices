@@ -14,9 +14,6 @@ namespace dosymep.WpfCore.MarkupExtensions;
 /// Класс для получения локализации.
 /// </summary>
 public sealed class LocalizationSourceExtension : MarkupExtension {
-    private readonly MarkupValueObject _markupValueObject = new();
-    private readonly Binding _binding = new(nameof(MarkupValueObject.Value));
-
     /// <summary>
     /// Конструирует объект.
     /// </summary>
@@ -44,18 +41,8 @@ public sealed class LocalizationSourceExtension : MarkupExtension {
             return ResourceKey;
         }
 
-        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
-        if(localization is not null) {
-            localization.LanguageChanged += _ => _markupValueObject.Value = GetLocalizedString(localization);
-        }
-
-        _binding.Source = _markupValueObject;
-        _markupValueObject.Value = GetLocalizedString(localization);
-       
-        return _binding.ProvideValue(serviceProvider);
-    }
-
-    private string? GetLocalizedString(IHasLocalization? localization) {
-        return localization?.LocalizationService.GetLocalizedString(ResourceKey) ?? ResourceKey;
+        // use dynamic resource instead of own realization with MarkupValueObject
+        // to fix update localization text when not update because of sequence subscribe to event
+        return new DynamicResourceExtension(ResourceKey!).ProvideValue(serviceProvider);
     }
 }
