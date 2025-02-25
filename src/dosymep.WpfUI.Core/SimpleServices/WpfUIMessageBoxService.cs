@@ -48,13 +48,7 @@ public sealed class WpfUIMessageBoxService : WpfBaseService, IMessageBoxService 
             WindowStartupLocation = WindowStartupLocation.CenterOwner
         };
 
-        Window? window = GetWindow();
-        if(window?.IsVisible == true) {
-            messageBox.Owner = window;
-        } else {
-            WindowInteropHelper helper = new(messageBox);
-            helper.Owner = Process.GetCurrentProcess().MainWindowHandle;
-        }
+        SetAssociatedOwner(messageBox);
         
         messageBox.Content = new {ImageSource = GetImageSource(icon), MessageBoxText = messageBoxText};
 
@@ -145,16 +139,6 @@ public sealed class WpfUIMessageBoxService : WpfBaseService, IMessageBoxService 
         }
 
         return (MessageBoxResult.None, MessageBoxResult.None, MessageBoxResult.None);
-    }
-
-    private Window? GetWindow() {
-        if(AssociatedObject == null) {
-            return default;
-        }
-
-        return AssociatedObject is Window window
-            ? window
-            : Window.GetWindow(AssociatedObject);
     }
 
     private string GetLocalization(string localizationName) {

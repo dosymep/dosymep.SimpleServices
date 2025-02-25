@@ -97,23 +97,9 @@ public sealed class WpfUIProgressDialogService : WpfBaseService, IProgressDialog
     public override void Attach(DependencyObject dependencyObject) {
         if(AllowAttach) {
             AssociatedObject = dependencyObject;
-
-            Window? window = GetWindow();
-            if(window?.IsVisible == true) {
-                _wpfUIProgressWindow.Owner = window;
-                _wpfUIProgressWindow.SetOwnerWindowStyle();
-            } else {
-                WindowInteropHelper helper = new(_wpfUIProgressWindow);
-                helper.Owner = Process.GetCurrentProcess().MainWindowHandle;
-            }
+            
+            SetAssociatedOwner(_wpfUIProgressWindow);
+            _wpfUIProgressWindow.SetOwnerWindowStyle();
         }
-    }
-
-    private Window? GetWindow() {
-        if(AssociatedObject == null) {
-            return default;
-        }
-
-        return Window.GetWindow(AssociatedObject);
     }
 }
