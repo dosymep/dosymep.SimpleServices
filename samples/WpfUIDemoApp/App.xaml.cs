@@ -53,12 +53,8 @@ public partial class App {
         _kernel.UseWpfUIProgressDialog<MainViewModel>(
             displayTitleFormat: localizationService.GetLocalizedString("ProgressDialog.Content"));
 
-        _kernel.Bind<MainViewModel>().ToSelf();
-        _kernel.Bind<IHasTheme, IHasLocalization, MainWindow>()
-            .To<MainWindow>()
-            .InSingletonScope()
-            .WithPropertyValue("DataContext", c => c.Kernel.Get<MainViewModel>());
-
+        _kernel.BindWindow<MainViewModel, MainWindow>();
+        
         _kernel.Get<MainWindow>().Show();
     }
 

@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Windows;
 
 using dosymep.SimpleServices;
 using dosymep.WpfCore.Behaviors;
@@ -12,6 +13,26 @@ namespace dosymep.WpfCore.Ninject;
 /// Расширения для настройки <see cref="IKernel"/>.
 /// </summary>
 public static class NinjectExtensions {
+    /// <summary>
+    /// Регистрирует окно с вьюмоделью.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <typeparam name="TViewModel">ViewModel</typeparam>
+    /// <typeparam name="TMainWindow">Window</typeparam>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <remarks>Биндит окно и вьюмодель как синглтон.</remarks>
+    public static IKernel BindWindow<TViewModel, TMainWindow>(this IKernel kernel)
+        where TMainWindow : Window, IHasTheme, IHasLocalization {
+
+        kernel.Bind<TViewModel>().ToSelf().InSingletonScope();
+        kernel.Bind<IHasTheme, IHasLocalization, TMainWindow>()
+            .To<TMainWindow>()
+            .InSingletonScope()
+            .WithPropertyValue(nameof(Window.DataContext), c => c.Kernel.Get<TViewModel>());
+
+        return kernel;
+    }
+
     /// <summary>
     /// Добавляет в контейнер <see cref="ILanguageService"/>,
     /// который возвращает установленную локализацию в настройках Windows.

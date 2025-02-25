@@ -10,6 +10,7 @@ using System.Windows.Media.Imaging;
 using DevExpress.Utils.MVVM.Internal;
 
 using dosymep.SimpleServices;
+using dosymep.WpfCore.Ninject;
 using dosymep.Xpf.Core.Ninject;
 
 using Ninject;
@@ -40,12 +41,12 @@ namespace XpfDemoApp {
 
             _kernel.Bind<ICommandFactory>().To<RelayCommandFactory>();
 
-            _kernel.UseXtraDispatcher();
+            _kernel.UseWpfDispatcher();
 
-            _kernel.UseXtraLanguage();
-            _kernel.UseXtraLocalization(LocalizationResourceName, CultureInfo.GetCultureInfo("ru-RU"));
+            _kernel.UseWpfWindowsLanguage();
+            _kernel.UseWpfLocalization(LocalizationResourceName, CultureInfo.GetCultureInfo("ru-RU"));
 
-            _kernel.UseXtraTheme();
+            _kernel.UseWpfWindowsTheme();
             _kernel.UseXtraThemeUpdater();
 
             ILocalizationService localizationService = _kernel.Get<ILocalizationService>();
@@ -61,8 +62,7 @@ namespace XpfDemoApp {
             _kernel.UseXtraProgressDialog<MainViewModel>(
                 displayTitleFormat: localizationService.GetLocalizedString("ProgressDialog.Content"));
 
-            _kernel.Bind<MainWindow>().ToSelf();
-            _kernel.Bind<MainViewModel>().ToSelf();
+            _kernel.BindWindow<MainViewModel, MainWindow>();
 
             _kernel.Get<MainWindow>().Show();
         }

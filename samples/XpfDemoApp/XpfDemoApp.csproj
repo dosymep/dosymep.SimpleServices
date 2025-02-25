@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\src\dosymep.WpfCore.Ninject\dosymep.WpfCore.Ninject.csproj" />
         <ProjectReference Include="..\..\src\dosymep.WpfCore\dosymep.WpfCore.csproj"/>
         <ProjectReference Include="..\..\src\dosymep.Xpf.Core.Ninject\dosymep.Xpf.Core.Ninject.csproj" />
         <ProjectReference Include="..\..\src\\dosymep.Xpf.Core\dosymep.Xpf.Core.csproj"/>
