@@ -1,6 +1,6 @@
-using System.Windows.Input;
+using WpfDemoLib.Input.Interfaces;
 
-namespace WpfDemoLib.Input.Interfaces;
+namespace WpfDemoLib.Factories;
 
 public interface ICommandFactory {
     IRelayCommand Create(Action action);

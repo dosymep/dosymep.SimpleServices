@@ -1,8 +1,7 @@
-using System.Windows.Input;
-
+using WpfDemoLib.Input;
 using WpfDemoLib.Input.Interfaces;
 
-namespace WpfDemoLib.Input;
+namespace WpfDemoLib.Factories;
 
 public sealed class RelayCommandFactory : ICommandFactory {
     /// <inheritdoc />
