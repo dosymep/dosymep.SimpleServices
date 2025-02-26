@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+      <ProjectReference Include="..\..\src\dosymep.WpfCore\dosymep.WpfCore.csproj" />
     </ItemGroup>
 
     <ItemGroup>

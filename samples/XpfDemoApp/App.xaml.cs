@@ -15,9 +15,13 @@ using dosymep.Xpf.Core.Ninject;
 
 using Ninject;
 
+using WpfDemoLib.Factories;
 using WpfDemoLib.Input;
 using WpfDemoLib.Input.Interfaces;
+using WpfDemoLib.Services;
 using WpfDemoLib.ViewModels;
+
+using WpfUIDemoApp.Views;
 
 namespace XpfDemoApp {
     /// <summary>
@@ -61,8 +65,15 @@ namespace XpfDemoApp {
 
             _kernel.UseXtraProgressDialog<MainViewModel>(
                 displayTitleFormat: localizationService.GetLocalizedString("ProgressDialog.Content"));
+            
+            _kernel.Bind<ISecondViewService>().To<SecondViewService>();
+            _kernel.Bind<ISecondViewFactory>()
+                .ToMethod(c => new SecondViewFactory<SecondWindow>(() => c.Kernel.Get<SecondWindow>()));
+        
+            _kernel.Bind<SecondWindow>().ToSelf();
+            _kernel.Bind<SecondViewModel>().ToSelf();
 
-            _kernel.BindWindow<MainViewModel, MainWindow>();
+            _kernel.BindMainWindow<MainViewModel, MainWindow>();
 
             _kernel.Get<MainWindow>().Show();
         }

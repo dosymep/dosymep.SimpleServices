@@ -24,6 +24,11 @@
     <system:String x:Key="MainWindow.AcceptTitle">Закрыть</system:String>
     <system:String x:Key="MainWindow.AcceptContent">Окно было закрыто!</system:String>
     
+    <system:String x:Key="MainWindow.ButtonSecondWindowShow">Показать</system:String>
+    <system:String x:Key="MainWindow.ButtonSecondWindowShowDialog">Открыть</system:String>
+    
+    <system:String x:Key="SecondWindow.Title">Введите значение</system:String>
+    
     <system:String x:Key="MessageBox.Title">Название</system:String>
     <system:String x:Key="MessageBox.Content">Привет мир!</system:String>
     <system:String x:Key="ProgressDialog.Content">Пожалуйста подождите [{0}/{1}]...</system:String>

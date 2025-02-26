@@ -19,6 +19,11 @@
     <system:String x:Key="MainWindow.AcceptTitle">Close</system:String>
     <system:String x:Key="MainWindow.AcceptContent">Window has closed!</system:String>
     
+    <system:String x:Key="MainWindow.ButtonSecondWindowShow">Show</system:String>
+    <system:String x:Key="MainWindow.ButtonSecondWindowShowDialog">Show dialog</system:String>
+    
+    <system:String x:Key="SecondWindow.Title">Enter value</system:String>
+    
     <system:String x:Key="MessageBox.Title">Title</system:String>
     <system:String x:Key="MessageBox.Content">Hello world!</system:String>
     <system:String x:Key="ProgressDialog.Content">Please wait [{0}/{1}]...</system:String>

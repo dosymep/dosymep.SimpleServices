@@ -48,12 +48,36 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
+        
         <StackPanel
             Grid.Row="0"
+            Orientation="Horizontal">
+
+            <dx:SimpleButton
+                Margin="10"
+                Width="80"
+                Command="{Binding ShowSecondWindowCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShow}" />
+
+            <dx:SimpleButton
+                Margin="10"
+                Width="80"
+                Command="{Binding ShowDialogSecondWindowCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShowDialog}" />
+
+            <dxe:TextEdit
+                Margin="10"
+                Width="180"
+                IsReadOnly="True"
+                Text="{Binding SecondWindowResult}" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
             Margin="0 10"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
@@ -83,7 +107,7 @@
         </StackPanel>
 
         <dxe:TextEdit
-            Grid.Row="1"
+            Grid.Row="2"
             Margin="10"
             IsReadOnly="True"
             EditMode="InplaceInactive"
@@ -91,7 +115,7 @@
             Text="{me:LocalizationSource MainWindow.RandomText}" />
 
         <StackPanel
-            Grid.Row="2"
+            Grid.Row="3"
             Orientation="Horizontal"
             HorizontalAlignment="Right">
 

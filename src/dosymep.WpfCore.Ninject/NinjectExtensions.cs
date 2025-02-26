@@ -14,20 +14,38 @@ namespace dosymep.WpfCore.Ninject;
 /// </summary>
 public static class NinjectExtensions {
     /// <summary>
-    /// Регистрирует окно с вьюмоделью.
+    /// Регистрирует основное окно с вьюмоделью.
     /// </summary>
     /// <param name="kernel">Ninject контейнер.</param>
     /// <typeparam name="TViewModel">ViewModel</typeparam>
     /// <typeparam name="TMainWindow">Window</typeparam>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
-    /// <remarks>Биндит окно и вьюмодель как синглтон.</remarks>
-    public static IKernel BindWindow<TViewModel, TMainWindow>(this IKernel kernel)
+    /// <remarks>Биндит основное окно и вьюмодель как синглтон.</remarks>
+    public static IKernel BindMainWindow<TViewModel, TMainWindow>(this IKernel kernel)
         where TMainWindow : Window, IHasTheme, IHasLocalization {
 
         kernel.Bind<TViewModel>().ToSelf().InSingletonScope();
         kernel.Bind<IHasTheme, IHasLocalization, TMainWindow>()
             .To<TMainWindow>()
             .InSingletonScope()
+            .WithPropertyValue(nameof(Window.DataContext), c => c.Kernel.Get<TViewModel>());
+
+        return kernel;
+    }
+    
+    /// <summary>
+    /// Регистрирует окно с вьюмоделью.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <typeparam name="TViewModel">ViewModel</typeparam>
+    /// <typeparam name="TWindow">Window</typeparam>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <remarks>Биндит окно и вьюмодель как синглтон.</remarks>
+    public static IKernel BindOtherWindow<TViewModel, TWindow>(this IKernel kernel)
+        where TWindow : Window {
+
+        kernel.Bind<TViewModel>().ToSelf();
+        kernel.Bind<TWindow>().ToSelf()
             .WithPropertyValue(nameof(Window.DataContext), c => c.Kernel.Get<TViewModel>());
 
         return kernel;

@@ -20,7 +20,7 @@
 
     x:Name="_this"
     mc:Ignorable="d"
-    
+
     Icon="{me:QualifiedImage assets/images/icons8-google-photos-144.png}"
 
     WindowStartupLocation="CenterScreen"
@@ -30,10 +30,11 @@
     <b:Interaction.Behaviors>
         <behaviors:WpfThemeBehavior />
         <behaviors:WpfLocalizationBehavior />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding SecondViewService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding MessageBoxService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding ProgressDialogFactory}" />
     </b:Interaction.Behaviors>
-    
+
     <b:Interaction.Triggers>
         <b:EventTrigger
             EventName="Loaded">
@@ -44,6 +45,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
@@ -57,7 +59,7 @@
                 <StackPanel
                     VerticalAlignment="Top"
                     Orientation="Horizontal">
-                    
+
                     <ComboBox
                         x:Name="_themesComboBox"
                         FontSize="1"
@@ -82,14 +84,37 @@
             </ui:TitleBar.TrailingContent>
         </ui:TitleBar>
 
-        <ui:TextBlock
+        <StackPanel
             Grid.Row="1"
+            Orientation="Horizontal">
+
+            <ui:Button
+                Margin="10"
+                Width="80"
+                Command="{Binding ShowSecondWindowCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShow}" />
+
+            <ui:Button
+                Margin="10"
+                Width="80"
+                Command="{Binding ShowDialogSecondWindowCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShowDialog}" />
+
+            <ui:TextBox
+                Margin="10"
+                Width="180"
+                IsReadOnly="True"
+                Text="{Binding SecondWindowResult}" />
+        </StackPanel>
+
+        <ui:TextBlock
+            Grid.Row="2"
             Margin="10"
             TextWrapping="WrapWithOverflow"
             Text="{me:LocalizationSource MainWindow.RandomText}" />
 
         <StackPanel
-            Grid.Row="2"
+            Grid.Row="3"
             Orientation="Horizontal"
             HorizontalAlignment="Right">
 

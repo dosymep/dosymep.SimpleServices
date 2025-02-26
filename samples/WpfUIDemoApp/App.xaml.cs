@@ -9,10 +9,15 @@ using dosymep.WpfCore.Ninject;
 using dosymep.WpfUI.Core.Ninject;
 
 using Ninject;
+using Ninject.Syntax;
 
+using WpfDemoLib.Factories;
 using WpfDemoLib.Input;
 using WpfDemoLib.Input.Interfaces;
+using WpfDemoLib.Services;
 using WpfDemoLib.ViewModels;
+
+using WpfUIDemoApp.Views;
 
 namespace WpfUIDemoApp;
 
@@ -53,8 +58,15 @@ public partial class App {
         _kernel.UseWpfUIProgressDialog<MainViewModel>(
             displayTitleFormat: localizationService.GetLocalizedString("ProgressDialog.Content"));
 
-        _kernel.BindWindow<MainViewModel, MainWindow>();
+        _kernel.Bind<ISecondViewService>().To<SecondViewService>();
+        _kernel.Bind<ISecondViewFactory>()
+            .ToMethod(c => new SecondViewFactory<SecondWindow>(() => c.Kernel.Get<SecondWindow>()));
         
+        _kernel.Bind<SecondWindow>().ToSelf();
+        _kernel.Bind<SecondViewModel>().ToSelf();
+
+        _kernel.BindMainWindow<MainViewModel, MainWindow>();
+
         _kernel.Get<MainWindow>().Show();
     }
 

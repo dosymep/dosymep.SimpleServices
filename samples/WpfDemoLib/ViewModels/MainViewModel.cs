@@ -4,25 +4,36 @@ using System.Windows.Media.Imaging;
 using dosymep.SimpleServices;
 
 using WpfDemoLib.Input.Interfaces;
+using WpfDemoLib.Services;
 
 namespace WpfDemoLib.ViewModels;
 
 public sealed class MainViewModel : ObservableObject {
     public const string NotificationWarningIconResourceName =
         "pack://application:,,,/WpfDemoLib;component/assets/images/icons8-notification-warning-32.png";
+    
+    private string? _secondWindowResult;
 
     public MainViewModel(
         ICommandFactory commandFactory,
+        ISecondViewService secondViewService,
         IMessageBoxService messageBoxService,
         ILocalizationService localizationService,
         IProgressDialogFactory progressDialogFactory) {
+        SecondViewService = secondViewService;
+        
         MessageBoxService = messageBoxService;
         LocalizationService = localizationService;
         ProgressDialogFactory = progressDialogFactory;
 
         LoadViewCommand = commandFactory.CreateAsync(LoadAsync);
         AcceptViewCommand = commandFactory.CreateAsync(AcceptAsync);
+
+        ShowSecondWindowCommand = commandFactory.CreateAsync(ShowSecondWindowAsync);
+        ShowDialogSecondWindowCommand = commandFactory.CreateAsync(ShowDialogSecondWindowAsync);
     }
+    
+    public ISecondViewService SecondViewService { get; }
 
     public IMessageBoxService MessageBoxService { get; }
     public ILocalizationService LocalizationService { get; }
@@ -30,6 +41,13 @@ public sealed class MainViewModel : ObservableObject {
 
     public IAsyncRelayCommand LoadViewCommand { get; set; }
     public IAsyncRelayCommand AcceptViewCommand { get; set; }
+    public IAsyncRelayCommand ShowSecondWindowCommand { get; set; }
+    public IAsyncRelayCommand ShowDialogSecondWindowCommand { get; set; }
+    
+    public string? SecondWindowResult {
+        get => _secondWindowResult;
+        set => this.RaiseAndSetIfChanged(ref _secondWindowResult, value);
+    }
 
     private async Task LoadAsync() {
         using(IProgressDialogService progressDialogService = ProgressDialogFactory.CreateDialog()) {
@@ -59,6 +77,17 @@ public sealed class MainViewModel : ObservableObject {
 
     private async Task AcceptAsync() {
         await Task.Delay(1000);
+    }
+    
+    private async Task ShowSecondWindowAsync() {
+        await SecondViewService.ShowAsync();
+        SecondWindowResult = SecondViewService.Result;
+    }
+
+    private async Task ShowDialogSecondWindowAsync() {
+        if(await SecondViewService.ShowDialogAsync() == true) {
+            SecondWindowResult = SecondViewService.Result;
+        }
     }
 
     private async Task AsyncOperation(int maxValue, IProgress<int>? progress, CancellationToken cancellationToken) {
