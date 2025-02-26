@@ -27,7 +27,7 @@ public sealed class StringToBoolConverter : IValueConverter {
     /// <inheritdoc />
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
         string? stringValue = value?.ToString();
-        return (string.IsNullOrEmpty(stringValue) ? false : true) ^ Inverted;
+        return !string.IsNullOrEmpty(stringValue) ^ Inverted;
     }
 
     /// <inheritdoc />
