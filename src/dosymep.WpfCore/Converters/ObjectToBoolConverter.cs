@@ -26,7 +26,7 @@ public sealed class ObjectToBoolConverter : IValueConverter {
     
     /// <inheritdoc />
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
-        return value != null ^ Inverted;
+        return !ReferenceEquals(value, default) ^ Inverted;
     }
 
     /// <inheritdoc />
