@@ -1,3 +1,5 @@
+using WpfDemoLib.ComponentModel;
+
 namespace WpfDemoLib.ViewModels;
 
 public sealed class SecondViewModel : ObservableObject {

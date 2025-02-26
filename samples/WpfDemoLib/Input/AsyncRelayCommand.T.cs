@@ -1,5 +1,6 @@
 using System.Windows.Input;
 
+using WpfDemoLib.ComponentModel;
 using WpfDemoLib.Input.Interfaces;
 using WpfDemoLib.ViewModels;
 

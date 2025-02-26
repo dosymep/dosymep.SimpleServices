@@ -3,6 +3,7 @@ using System.Windows.Media.Imaging;
 
 using dosymep.SimpleServices;
 
+using WpfDemoLib.ComponentModel;
 using WpfDemoLib.Factories;
 using WpfDemoLib.Input.Interfaces;
 using WpfDemoLib.Services;

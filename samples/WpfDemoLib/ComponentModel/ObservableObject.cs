@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WpfDemoLib.ViewModels;
+namespace WpfDemoLib.ComponentModel;
 
 public abstract class ObservableObject : INotifyPropertyChanged, INotifyPropertyChanging {
     public event PropertyChangedEventHandler? PropertyChanged;
