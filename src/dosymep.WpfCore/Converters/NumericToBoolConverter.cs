@@ -7,6 +7,7 @@ namespace dosymep.WpfCore.Converters;
 /// Конвертер числа в bool.
 /// </summary>
 [ValueConversion(typeof(int), typeof(bool))]
+[ValueConversion(typeof(float), typeof(bool))]
 [ValueConversion(typeof(double), typeof(bool))]
 public sealed class NumericToBoolConverter : IValueConverter {
     /// <summary>
