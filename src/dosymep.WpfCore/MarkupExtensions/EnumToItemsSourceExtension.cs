@@ -72,15 +72,18 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
 
     private object[] GetEnumValues(ILocalizationService? localizationService) {
         return EnumType?.GetFields(BindingFlags.Static | BindingFlags.Public)
-            .Select(item =>
-                new MarkupDisplayObject(() => GetEnumName(item, localizationService)) {
-                    Value = item.GetValue(null), DisplayName = GetEnumName(item, localizationService)
-                })
+            .Select(item => CreateMarkupDisplayObject(item, localizationService))
             .Cast<object>()
             .ToArray() ?? Array.Empty<object>();
     }
 
-    private string GetEnumName(FieldInfo item, ILocalizationService? localizationService) {
+    internal static MarkupDisplayObject CreateMarkupDisplayObject(FieldInfo item, ILocalizationService? localizationService) {
+        return new MarkupDisplayObject(() => GetEnumName(item, localizationService)) {
+            Value = item.GetValue(null), DisplayName = GetEnumName(item, localizationService)
+        };
+    }
+
+    internal static string GetEnumName(FieldInfo item, ILocalizationService? localizationService) {
         string? desciption = GetDescription(item);
 
         if(string.IsNullOrEmpty(desciption)) {
@@ -94,7 +97,7 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
                ?? item.Name;
     }
 
-    private string? GetDescription(FieldInfo fieldInfo) {
+    internal static string? GetDescription(FieldInfo fieldInfo) {
         return fieldInfo.GetCustomAttribute<DescriptionAttribute>()?.Description;
     }
 }
