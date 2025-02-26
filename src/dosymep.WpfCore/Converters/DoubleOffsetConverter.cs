@@ -7,7 +7,7 @@ namespace dosymep.WpfCore.Converters;
 /// Добавляет указаное значение.
 /// </summary>
 [ValueConversion(typeof(double), typeof(double))]
-internal sealed class DoubleOffsetConverter : IValueConverter {
+public sealed class DoubleOffsetConverter : IValueConverter {
     /// <summary>
     /// Конструирует объект.
     /// </summary>
