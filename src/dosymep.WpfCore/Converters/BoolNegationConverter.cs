@@ -21,12 +21,6 @@ public sealed class BoolNegationConverter : IValueConverter {
 
     /// <inheritdoc />
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
-        bool? boolValue = (bool?) value;
-
-        if(boolValue is null) {
-            return default;
-        }
-
-        return boolValue == true;
+        return Convert(value, targetType, parameter, culture);
     }
 }
