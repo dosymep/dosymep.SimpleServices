@@ -21,6 +21,16 @@ public sealed class StringToVisibilityConverter : IValueConverter {
     public StringToVisibilityConverter(bool inverted) => Inverted = inverted;
     
     /// <summary>
+    /// Конструирует объект.
+    /// </summary>
+    /// <param name="inverted">Признак инвертированости.</param>
+    /// <param name="falseValue">Вывод, когда значение bool == False.</param>
+    public StringToVisibilityConverter(bool inverted, Visibility falseValue) {
+        Inverted = inverted;
+        FalseValue = falseValue;
+    }
+
+    /// <summary>
     /// Признак инвертированости.
     /// </summary>
     public bool Inverted { get; set; }
