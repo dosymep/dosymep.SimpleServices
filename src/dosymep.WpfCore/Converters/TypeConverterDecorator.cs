@@ -30,6 +30,10 @@ public sealed class TypeConverterDecorator : IValueConverter {
             throw new InvalidOperationException("Converter is not set.");
         }
 
+        if(value is null) {
+            return value;
+        }
+
         return Converter.ConvertFrom(value);
     }
 
@@ -39,6 +43,10 @@ public sealed class TypeConverterDecorator : IValueConverter {
             throw new InvalidOperationException("Converter is not set.");
         }
 
-        return Converter.ConvertFrom(value);
+        if(value is null) {
+            return value;
+        }
+
+        return Converter.ConvertTo(value, targetType);
     }
 }
