@@ -1,10 +1,9 @@
 using System.ComponentModel;
 using System.Globalization;
-using System.Windows.Media;
 
 using dosymep.WpfCore.Converters;
 
-namespace dosymep.WpfCore.Tests;
+namespace dosymep.WpfCore.Tests.Converters;
 
 public sealed class TypeConverterDecoratorTests {
     private readonly TypeConverterDecorator _valueConverter;

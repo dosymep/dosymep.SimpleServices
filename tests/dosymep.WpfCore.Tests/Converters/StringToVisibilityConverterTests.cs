@@ -3,7 +3,7 @@ using System.Windows;
 
 using dosymep.WpfCore.Converters;
 
-namespace dosymep.WpfCore.Tests;
+namespace dosymep.WpfCore.Tests.Converters;
 
 public sealed class StringToVisibilityConverterTests {
     [Fact]

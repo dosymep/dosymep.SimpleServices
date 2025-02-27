@@ -1,11 +1,8 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 
 using dosymep.WpfCore.Converters;
 
-using Xunit;
-
-namespace dosymep.WpfCore.Tests;
+namespace dosymep.WpfCore.Tests.Converters;
 
 public sealed class BoolNegationConverterTests {
     [Fact]

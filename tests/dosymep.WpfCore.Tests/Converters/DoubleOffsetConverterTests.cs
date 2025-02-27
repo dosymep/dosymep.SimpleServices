@@ -2,7 +2,7 @@ using System.Globalization;
 
 using dosymep.WpfCore.Converters;
 
-namespace dosymep.WpfCore.Tests;
+namespace dosymep.WpfCore.Tests.Converters;
 
 public sealed class DoubleOffsetConverterTests {
     private readonly DoubleOffsetConverter _valueConverter;
