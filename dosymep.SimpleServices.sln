@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfUIDemoApp", "samples\Wpf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpfDemoApp", "samples\XpfDemoApp\XpfDemoApp.csproj", "{144670CB-6396-488C-A76D-2E03A3B69E78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dosymep.WpfCore.Tests", "tests\dosymep.WpfCore.Tests\dosymep.WpfCore.Tests.csproj", "{626B1778-A0B6-4A02-8DB3-A8CC9DE4AF75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{144670CB-6396-488C-A76D-2E03A3B69E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{144670CB-6396-488C-A76D-2E03A3B69E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{144670CB-6396-488C-A76D-2E03A3B69E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{626B1778-A0B6-4A02-8DB3-A8CC9DE4AF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{626B1778-A0B6-4A02-8DB3-A8CC9DE4AF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{626B1778-A0B6-4A02-8DB3-A8CC9DE4AF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{626B1778-A0B6-4A02-8DB3-A8CC9DE4AF75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{E28CC1B6-3299-498F-82AC-48EA1C344C48} = {6A2EC13C-F7E2-4AA7-A2F4-836D9A430230}
 		{E3FB0B99-C266-4645-8FFB-2C6AA4431D23} = {6A2EC13C-F7E2-4AA7-A2F4-836D9A430230}
 		{144670CB-6396-488C-A76D-2E03A3B69E78} = {6A2EC13C-F7E2-4AA7-A2F4-836D9A430230}
+		{626B1778-A0B6-4A02-8DB3-A8CC9DE4AF75} = {6818E761-7593-48A3-B359-DE5DED96C2AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {216183AF-6C0C-436A-9020-D4BCCB700FA4}
