@@ -11,6 +11,11 @@ namespace dosymep.SimpleServices {
     /// </summary>
     public interface ILanguageService {
         /// <summary>
+        /// Событие возникающее при изменении языка.
+        /// </summary>
+        event Action<CultureInfo> LanguageChanged;
+        
+        /// <summary>
         /// Используемый язык.
         /// </summary>
         CultureInfo HostLanguage { get; }
