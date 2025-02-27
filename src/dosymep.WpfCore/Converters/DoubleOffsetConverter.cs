@@ -12,13 +12,28 @@ public sealed class DoubleOffsetConverter : IValueConverter {
     /// Конструирует объект.
     /// </summary>
     public DoubleOffsetConverter() { }
-
+    
     /// <summary>
     /// Конструирует объект.
     /// </summary>
     /// <param name="offsetValue">Значение на которое изменяется.</param>
     public DoubleOffsetConverter(double offsetValue) => OffsetValue = offsetValue;
-    
+
+    /// <summary>
+    /// Конструирует объект.
+    /// </summary>
+    /// <param name="inverted">Признак инвертированости.</param>
+    /// <param name="offsetValue">Значение на которое изменяется.</param>
+    public DoubleOffsetConverter(bool inverted, double offsetValue) {
+        Inverted = inverted;
+        OffsetValue = offsetValue;
+    }
+
+    /// <summary>
+    /// Признак инвертированости.
+    /// </summary>
+    public bool Inverted { get; set; }
+
     /// <summary>
     /// Значение на которое изменяется.
     /// </summary>
@@ -26,11 +41,19 @@ public sealed class DoubleOffsetConverter : IValueConverter {
 
     /// <inheritdoc />
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
-        return value is double doubleValue ? doubleValue + OffsetValue : value;
+        return !Inverted ? Add(value) : Subtract(value);
     }
 
     /// <inheritdoc />
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
+        return Inverted ? Add(value) : Subtract(value);
+    }
+
+    private object? Add(object? value) {
+        return value is double doubleValue ? doubleValue + OffsetValue : value;
+    }
+
+    private object? Subtract(object? value) {
         return value is double doubleValue ? doubleValue - OffsetValue : value;
     }
 }
