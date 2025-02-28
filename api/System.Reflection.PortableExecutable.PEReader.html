@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PEReader | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PEReader | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="System.Reflection.PortableExecutable.PEReader">
+
+
+
+  <h1 id="System_Reflection_PortableExecutable_PEReader" data-uid="System.Reflection.PortableExecutable.PEReader" class="text-break">
+Class PEReader  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="System.html">System</a>.<a class="xref" href="System.Reflection.html">Reflection</a>.<a class="xref" href="System.Reflection.PortableExecutable.html">PortableExecutable</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>System.Reflection.Metadata.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PEReader : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PEReader</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader__ctor_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader__ctor_System_Byte__System_Int32_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor(System.Byte*,System.Int32)">
+  PEReader(byte*, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEReader(byte* peImage, int size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader__ctor_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader__ctor_System_Byte__System_Int32_System_Boolean_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor(System.Byte*,System.Int32,System.Boolean)">
+  PEReader(byte*, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEReader(byte* peImage, int size, bool isLoadedImage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>isLoadedImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader__ctor_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader__ctor_System_Collections_Immutable_ImmutableArray_System_Byte__" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor(System.Collections.Immutable.ImmutableArray{System.Byte})">
+  PEReader(ImmutableArray&lt;byte&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEReader(ImmutableArray&lt;byte&gt; peImage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader__ctor_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader__ctor_System_IO_Stream_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor(System.IO.Stream)">
+  PEReader(Stream)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEReader(Stream peStream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader__ctor_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader__ctor_System_IO_Stream_System_Reflection_PortableExecutable_PEStreamOptions_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor(System.IO.Stream,System.Reflection.PortableExecutable.PEStreamOptions)">
+  PEReader(Stream, PEStreamOptions)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEReader(Stream peStream, PEStreamOptions options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="System.Reflection.PortableExecutable.PEStreamOptions.html">PEStreamOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader__ctor_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader__ctor_System_IO_Stream_System_Reflection_PortableExecutable_PEStreamOptions_System_Int32_" data-uid="System.Reflection.PortableExecutable.PEReader.#ctor(System.IO.Stream,System.Reflection.PortableExecutable.PEStreamOptions,System.Int32)">
+  PEReader(Stream, PEStreamOptions, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEReader(Stream peStream, PEStreamOptions options, int size)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="System.Reflection.PortableExecutable.PEStreamOptions.html">PEStreamOptions</a></dt>
+    <dd></dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_HasMetadata_" data-uid="System.Reflection.PortableExecutable.PEReader.HasMetadata*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_HasMetadata" data-uid="System.Reflection.PortableExecutable.PEReader.HasMetadata">
+  HasMetadata
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasMetadata { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_IsEntireImageAvailable_" data-uid="System.Reflection.PortableExecutable.PEReader.IsEntireImageAvailable*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_IsEntireImageAvailable" data-uid="System.Reflection.PortableExecutable.PEReader.IsEntireImageAvailable">
+  IsEntireImageAvailable
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEntireImageAvailable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_IsLoadedImage_" data-uid="System.Reflection.PortableExecutable.PEReader.IsLoadedImage*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_IsLoadedImage" data-uid="System.Reflection.PortableExecutable.PEReader.IsLoadedImage">
+  IsLoadedImage
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLoadedImage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_PEHeaders_" data-uid="System.Reflection.PortableExecutable.PEReader.PEHeaders*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_PEHeaders" data-uid="System.Reflection.PortableExecutable.PEReader.PEHeaders">
+  PEHeaders
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEHeaders PEHeaders { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEHeaders.html">PEHeaders</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_Dispose_" data-uid="System.Reflection.PortableExecutable.PEReader.Dispose*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_Dispose" data-uid="System.Reflection.PortableExecutable.PEReader.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_GetEntireImage_" data-uid="System.Reflection.PortableExecutable.PEReader.GetEntireImage*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_GetEntireImage" data-uid="System.Reflection.PortableExecutable.PEReader.GetEntireImage">
+  GetEntireImage()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEMemoryBlock GetEntireImage()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEMemoryBlock.html">PEMemoryBlock</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_GetMetadata_" data-uid="System.Reflection.PortableExecutable.PEReader.GetMetadata*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_GetMetadata" data-uid="System.Reflection.PortableExecutable.PEReader.GetMetadata">
+  GetMetadata()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEMemoryBlock GetMetadata()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEMemoryBlock.html">PEMemoryBlock</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_GetSectionData_" data-uid="System.Reflection.PortableExecutable.PEReader.GetSectionData*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_GetSectionData_System_Int32_" data-uid="System.Reflection.PortableExecutable.PEReader.GetSectionData(System.Int32)">
+  GetSectionData(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEMemoryBlock GetSectionData(int relativeVirtualAddress)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>relativeVirtualAddress</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEMemoryBlock.html">PEMemoryBlock</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_GetSectionData_" data-uid="System.Reflection.PortableExecutable.PEReader.GetSectionData*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_GetSectionData_System_String_" data-uid="System.Reflection.PortableExecutable.PEReader.GetSectionData(System.String)">
+  GetSectionData(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEMemoryBlock GetSectionData(string sectionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sectionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEMemoryBlock.html">PEMemoryBlock</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_ReadCodeViewDebugDirectoryData_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadCodeViewDebugDirectoryData*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_ReadCodeViewDebugDirectoryData_System_Reflection_PortableExecutable_DebugDirectoryEntry_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadCodeViewDebugDirectoryData(System.Reflection.PortableExecutable.DebugDirectoryEntry)">
+  ReadCodeViewDebugDirectoryData(DebugDirectoryEntry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CodeViewDebugDirectoryData ReadCodeViewDebugDirectoryData(DebugDirectoryEntry entry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="System.Reflection.PortableExecutable.DebugDirectoryEntry.html">DebugDirectoryEntry</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.CodeViewDebugDirectoryData.html">CodeViewDebugDirectoryData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_ReadDebugDirectory_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadDebugDirectory*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_ReadDebugDirectory" data-uid="System.Reflection.PortableExecutable.PEReader.ReadDebugDirectory">
+  ReadDebugDirectory()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableArray&lt;DebugDirectoryEntry&gt; ReadDebugDirectory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="System.Reflection.PortableExecutable.DebugDirectoryEntry.html">DebugDirectoryEntry</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_ReadEmbeddedPortablePdbDebugDirectoryData_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadEmbeddedPortablePdbDebugDirectoryData*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_ReadEmbeddedPortablePdbDebugDirectoryData_System_Reflection_PortableExecutable_DebugDirectoryEntry_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadEmbeddedPortablePdbDebugDirectoryData(System.Reflection.PortableExecutable.DebugDirectoryEntry)">
+  ReadEmbeddedPortablePdbDebugDirectoryData(DebugDirectoryEntry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetadataReaderProvider ReadEmbeddedPortablePdbDebugDirectoryData(DebugDirectoryEntry entry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="System.Reflection.PortableExecutable.DebugDirectoryEntry.html">DebugDirectoryEntry</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.Metadata.MetadataReaderProvider.html">MetadataReaderProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_ReadPdbChecksumDebugDirectoryData_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadPdbChecksumDebugDirectoryData*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_ReadPdbChecksumDebugDirectoryData_System_Reflection_PortableExecutable_DebugDirectoryEntry_" data-uid="System.Reflection.PortableExecutable.PEReader.ReadPdbChecksumDebugDirectoryData(System.Reflection.PortableExecutable.DebugDirectoryEntry)">
+  ReadPdbChecksumDebugDirectoryData(DebugDirectoryEntry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PdbChecksumDebugDirectoryData ReadPdbChecksumDebugDirectoryData(DebugDirectoryEntry entry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entry</code> <a class="xref" href="System.Reflection.PortableExecutable.DebugDirectoryEntry.html">DebugDirectoryEntry</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PdbChecksumDebugDirectoryData.html">PdbChecksumDebugDirectoryData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEReader_TryOpenAssociatedPortablePdb_" data-uid="System.Reflection.PortableExecutable.PEReader.TryOpenAssociatedPortablePdb*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEReader_TryOpenAssociatedPortablePdb_System_String_System_Func_System_String_System_IO_Stream__System_Reflection_Metadata_MetadataReaderProvider__System_String__" data-uid="System.Reflection.PortableExecutable.PEReader.TryOpenAssociatedPortablePdb(System.String,System.Func{System.String,System.IO.Stream},System.Reflection.Metadata.MetadataReaderProvider@,System.String@)">
+  TryOpenAssociatedPortablePdb(string, Func&lt;string, Stream&gt;, out MetadataReaderProvider, out string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryOpenAssociatedPortablePdb(string peImagePath, Func&lt;string, Stream&gt; pdbFileStreamProvider, out MetadataReaderProvider pdbReaderProvider, out string pdbPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>peImagePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>pdbFileStreamProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>pdbReaderProvider</code> <a class="xref" href="System.Reflection.Metadata.MetadataReaderProvider.html">MetadataReaderProvider</a></dt>
+    <dd></dd>
+    <dt><code>pdbPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

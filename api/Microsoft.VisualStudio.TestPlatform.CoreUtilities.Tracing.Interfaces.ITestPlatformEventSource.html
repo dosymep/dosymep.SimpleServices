@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ITestPlatformEventSource | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ITestPlatformEventSource | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource">
+
+
+
+  <h1 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource" class="text-break">
+Interface ITestPlatformEventSource  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.VisualStudio.html">VisualStudio</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.html">TestPlatform</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.CoreUtilities.html">CoreUtilities</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.html">Tracing</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.html">Interfaces</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Microsoft.TestPlatform.CoreUtilities.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITestPlatformEventSource</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterDiscoveryStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterDiscoveryStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterDiscoveryStart_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterDiscoveryStart(System.String)">
+  AdapterDiscoveryStart(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AdapterDiscoveryStart(string executorUri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executorUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterDiscoveryStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterDiscoveryStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterDiscoveryStop_System_Int64_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterDiscoveryStop(System.Int64)">
+  AdapterDiscoveryStop(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AdapterDiscoveryStop(long numberOfTests)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfTests</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterExecutionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterExecutionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterExecutionStart_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterExecutionStart(System.String)">
+  AdapterExecutionStart(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AdapterExecutionStart(string executorUri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executorUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterExecutionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterExecutionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterExecutionStop_System_Int64_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterExecutionStop(System.Int64)">
+  AdapterExecutionStop(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AdapterExecutionStop(long numberOfTests)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfTests</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterSearchStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterSearchStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterSearchStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterSearchStart">
+  AdapterSearchStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AdapterSearchStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterSearchStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterSearchStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_AdapterSearchStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.AdapterSearchStop">
+  AdapterSearchStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AdapterSearchStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DataCollectionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DataCollectionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DataCollectionStart_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DataCollectionStart(System.String)">
+  DataCollectionStart(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DataCollectionStart(string dataCollectorUri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataCollectorUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DataCollectionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DataCollectionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DataCollectionStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DataCollectionStop">
+  DataCollectionStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DataCollectionStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryRequestStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryRequestStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryRequestStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryRequestStart">
+  DiscoveryRequestStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DiscoveryRequestStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryRequestStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryRequestStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryRequestStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryRequestStop">
+  DiscoveryRequestStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DiscoveryRequestStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryStart">
+  DiscoveryStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DiscoveryStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_DiscoveryStop_System_Int64_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.DiscoveryStop(System.Int64)">
+  DiscoveryStop(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DiscoveryStop(long numberOfTests)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfTests</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionRequestStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionRequestStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionRequestStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionRequestStart">
+  ExecutionRequestStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ExecutionRequestStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionRequestStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionRequestStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionRequestStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionRequestStop">
+  ExecutionRequestStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ExecutionRequestStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionStart">
+  ExecutionStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ExecutionStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_ExecutionStop_System_Int64_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.ExecutionStop(System.Int64)">
+  ExecutionStop(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ExecutionStop(long numberOfTests)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfTests</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_MetricsDisposeStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.MetricsDisposeStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_MetricsDisposeStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.MetricsDisposeStart">
+  MetricsDisposeStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MetricsDisposeStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_MetricsDisposeStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.MetricsDisposeStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_MetricsDisposeStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.MetricsDisposeStop">
+  MetricsDisposeStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MetricsDisposeStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StartTestSessionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StartTestSessionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StartTestSessionStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StartTestSessionStart">
+  StartTestSessionStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StartTestSessionStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StartTestSessionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StartTestSessionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StartTestSessionStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StartTestSessionStop">
+  StartTestSessionStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StartTestSessionStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StopTestSessionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StopTestSessionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StopTestSessionStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StopTestSessionStart">
+  StopTestSessionStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopTestSessionStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StopTestSessionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StopTestSessionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_StopTestSessionStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.StopTestSessionStop">
+  StopTestSessionStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopTestSessionStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostAppDomainCreationStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostAppDomainCreationStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostAppDomainCreationStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostAppDomainCreationStart">
+  TestHostAppDomainCreationStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestHostAppDomainCreationStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostAppDomainCreationStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostAppDomainCreationStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostAppDomainCreationStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostAppDomainCreationStop">
+  TestHostAppDomainCreationStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestHostAppDomainCreationStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostStart">
+  TestHostStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestHostStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestHostStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestHostStop">
+  TestHostStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestHostStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingRequestStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingRequestStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingRequestStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingRequestStart">
+  TestRunAttachmentsProcessingRequestStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestRunAttachmentsProcessingRequestStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingRequestStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingRequestStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingRequestStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingRequestStop">
+  TestRunAttachmentsProcessingRequestStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestRunAttachmentsProcessingRequestStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingStart_System_Int64_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingStart(System.Int64)">
+  TestRunAttachmentsProcessingStart(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestRunAttachmentsProcessingStart(long numberOfAttachments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfAttachments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TestRunAttachmentsProcessingStop_System_Int64_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TestRunAttachmentsProcessingStop(System.Int64)">
+  TestRunAttachmentsProcessingStop(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TestRunAttachmentsProcessingStop(long numberOfAttachments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfAttachments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerDiscoveryStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerDiscoveryStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerDiscoveryStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerDiscoveryStart">
+  TranslationLayerDiscoveryStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerDiscoveryStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerDiscoveryStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerDiscoveryStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerDiscoveryStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerDiscoveryStop">
+  TranslationLayerDiscoveryStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerDiscoveryStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerExecutionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerExecutionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerExecutionStart_System_Int64_System_Int64_System_Int64_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerExecutionStart(System.Int64,System.Int64,System.Int64,System.String)">
+  TranslationLayerExecutionStart(long, long, long, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerExecutionStart(long customTestHost, long sourcesCount, long testCasesCount, string runSettings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>customTestHost</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>sourcesCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>testCasesCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+    <dt><code>runSettings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerExecutionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerExecutionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerExecutionStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerExecutionStop">
+  TranslationLayerExecutionStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerExecutionStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerInitializeStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerInitializeStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerInitializeStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerInitializeStart">
+  TranslationLayerInitializeStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerInitializeStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerInitializeStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerInitializeStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerInitializeStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerInitializeStop">
+  TranslationLayerInitializeStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerInitializeStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStartTestSessionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStartTestSessionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStartTestSessionStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStartTestSessionStart">
+  TranslationLayerStartTestSessionStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerStartTestSessionStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStartTestSessionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStartTestSessionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStartTestSessionStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStartTestSessionStop">
+  TranslationLayerStartTestSessionStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerStartTestSessionStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStopTestSessionStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStopTestSessionStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStopTestSessionStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStopTestSessionStart">
+  TranslationLayerStopTestSessionStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerStopTestSessionStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStopTestSessionStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStopTestSessionStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerStopTestSessionStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerStopTestSessionStop">
+  TranslationLayerStopTestSessionStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerStopTestSessionStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerTestRunAttachmentsProcessingStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerTestRunAttachmentsProcessingStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerTestRunAttachmentsProcessingStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerTestRunAttachmentsProcessingStart">
+  TranslationLayerTestRunAttachmentsProcessingStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerTestRunAttachmentsProcessingStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerTestRunAttachmentsProcessingStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerTestRunAttachmentsProcessingStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_TranslationLayerTestRunAttachmentsProcessingStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.TranslationLayerTestRunAttachmentsProcessingStop">
+  TranslationLayerTestRunAttachmentsProcessingStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TranslationLayerTestRunAttachmentsProcessingStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_VsTestConsoleStart_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.VsTestConsoleStart*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_VsTestConsoleStart" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.VsTestConsoleStart">
+  VsTestConsoleStart()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void VsTestConsoleStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_VsTestConsoleStop_" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.VsTestConsoleStop*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_CoreUtilities_Tracing_Interfaces_ITestPlatformEventSource_VsTestConsoleStop" data-uid="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing.Interfaces.ITestPlatformEventSource.VsTestConsoleStop">
+  VsTestConsoleStop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void VsTestConsoleStop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DefaultRunnerReporterWithTypesMessageHandler | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DefaultRunnerReporterWithTypesMessageHandler | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler">
+
+
+
+  <h1 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler" class="text-break">
+Class DefaultRunnerReporterWithTypesMessageHandler  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.runner.utility.net452.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DefaultRunnerReporterWithTypesMessageHandler : TestMessageSink, IMessageSinkWithTypes, IDisposable, IMessageSink</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="Xunit.Sdk.LongLivedMarshalByRefObject.html">LongLivedMarshalByRefObject</a></div>
+      <div><a class="xref" href="Xunit.AggregateMessageSink.html">AggregateMessageSink</a></div>
+      <div><a class="xref" href="Xunit.TestMessageSink.html">TestMessageSink</a></div>
+      <div><span class="xref">DefaultRunnerReporterWithTypesMessageHandler</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.IMessageSinkWithTypes.html">IMessageSinkWithTypes</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Xunit.Abstractions.IMessageSink.html">IMessageSink</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.Runner.Reporters.AppVeyorReporterMessageHandler.html">AppVeyorReporterMessageHandler</a></div>
+      <div><a class="xref" href="Xunit.Runner.Reporters.QuietReporterMessageHandler.html">QuietReporterMessageHandler</a></div>
+      <div><a class="xref" href="Xunit.Runner.Reporters.TeamCityReporterMessageHandler.html">TeamCityReporterMessageHandler</a></div>
+      <div><a class="xref" href="Xunit.Runner.Reporters.VerboseReporterMessageHandler.html">VerboseReporterMessageHandler</a></div>
+      <div><a class="xref" href="Xunit.Runner.Reporters.VstsReporterMessageHandler.html">VstsReporterMessageHandler</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.TestMessageSink.html#Xunit_TestMessageSink_OnMessage_Xunit_Abstractions_IMessageSinkMessage_">TestMessageSink.OnMessage(IMessageSinkMessage)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.TestMessageSink.html#Xunit_TestMessageSink_Diagnostics">TestMessageSink.Diagnostics</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.TestMessageSink.html#Xunit_TestMessageSink_Discovery">TestMessageSink.Discovery</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.TestMessageSink.html#Xunit_TestMessageSink_Execution">TestMessageSink.Execution</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.TestMessageSink.html#Xunit_TestMessageSink_Runner">TestMessageSink.Runner</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.AggregateMessageSink.html#Xunit_AggregateMessageSink_Dispose">AggregateMessageSink.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.AggregateMessageSink.html#Xunit_AggregateMessageSink_GetOrCreateAggregatedSink__1___0__">AggregateMessageSink.GetOrCreateAggregatedSink&lt;TDispatcher&gt;(ref TDispatcher)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.AggregateMessageSink.html#Xunit_AggregateMessageSink_OnMessageWithTypes_Xunit_Abstractions_IMessageSinkMessage_System_Collections_Generic_HashSet_System_String__">AggregateMessageSink.OnMessageWithTypes(IMessageSinkMessage, HashSet&lt;string&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.AggregateMessageSink.html#Xunit_AggregateMessageSink_AggregatedSinks">AggregateMessageSink.AggregatedSinks</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Sdk.LongLivedMarshalByRefObject.html#Xunit_Sdk_LongLivedMarshalByRefObject_DisconnectAll">LongLivedMarshalByRefObject.DisconnectAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Sdk.LongLivedMarshalByRefObject.html#Xunit_Sdk_LongLivedMarshalByRefObject_InitializeLifetimeService">LongLivedMarshalByRefObject.InitializeLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice">MarshalByRefObject.GetLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref">MarshalByRefObject.CreateObjRef(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="MessageSinkWithTypesExtensions.html#MessageSinkWithTypesExtensions_OnMessage_Xunit_IMessageSinkWithTypes_Xunit_Abstractions_IMessageSinkMessage_">MessageSinkWithTypesExtensions.OnMessage(IMessageSinkWithTypes, IMessageSinkMessage)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler__ctor_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.#ctor*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler__ctor_Xunit_IRunnerLogger_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.#ctor(Xunit.IRunnerLogger)">
+  DefaultRunnerReporterWithTypesMessageHandler(IRunnerLogger)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultRunnerReporterWithTypesMessageHandler(IRunnerLogger logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Xunit.IRunnerLogger.html">IRunnerLogger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_Logger_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.Logger*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_Logger" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.Logger">
+  Logger
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IRunnerLogger Logger { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.IRunnerLogger.html">IRunnerLogger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_Escape_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.Escape*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_Escape_System_String_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.Escape(System.String)">
+  Escape(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string Escape(string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_GetAssemblyDisplayName_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.GetAssemblyDisplayName*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_GetAssemblyDisplayName_Xunit_Abstractions_ITestAssemblyMessage_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.GetAssemblyDisplayName(Xunit.Abstractions.ITestAssemblyMessage)">
+  GetAssemblyDisplayName(ITestAssemblyMessage)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string GetAssemblyDisplayName(ITestAssemblyMessage assemblyMessage)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assemblyMessage</code> <a class="xref" href="Xunit.Abstractions.ITestAssemblyMessage.html">ITestAssemblyMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_GetAssemblyDisplayName_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.GetAssemblyDisplayName*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_GetAssemblyDisplayName_Xunit_XunitProjectAssembly_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.GetAssemblyDisplayName(Xunit.XunitProjectAssembly)">
+  GetAssemblyDisplayName(XunitProjectAssembly)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string GetAssemblyDisplayName(XunitProjectAssembly assembly)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assembly</code> <a class="xref" href="Xunit.XunitProjectAssembly.html">XunitProjectAssembly</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_GetExecutionOptions_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.GetExecutionOptions*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_GetExecutionOptions_System_String_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.GetExecutionOptions(System.String)">
+  GetExecutionOptions(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ITestFrameworkExecutionOptions GetExecutionOptions(string assemblyFilename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assemblyFilename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Abstractions.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleErrorMessage_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleErrorMessage*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleErrorMessage_Xunit_MessageHandlerArgs_Xunit_Abstractions_IErrorMessage__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleErrorMessage(Xunit.MessageHandlerArgs{Xunit.Abstractions.IErrorMessage})">
+  HandleErrorMessage(MessageHandlerArgs&lt;IErrorMessage&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleErrorMessage(MessageHandlerArgs&lt;IErrorMessage&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.IErrorMessage.html">IErrorMessage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyCleanupFailure_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyCleanupFailure*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyCleanupFailure_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestAssemblyCleanupFailure__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyCleanupFailure(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestAssemblyCleanupFailure})">
+  HandleTestAssemblyCleanupFailure(MessageHandlerArgs&lt;ITestAssemblyCleanupFailure&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestAssemblyCleanupFailure(MessageHandlerArgs&lt;ITestAssemblyCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyDiscoveryFinished_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyDiscoveryFinished*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyDiscoveryFinished_Xunit_MessageHandlerArgs_Xunit_ITestAssemblyDiscoveryFinished__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyDiscoveryFinished(Xunit.MessageHandlerArgs{Xunit.ITestAssemblyDiscoveryFinished})">
+  HandleTestAssemblyDiscoveryFinished(MessageHandlerArgs&lt;ITestAssemblyDiscoveryFinished&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestAssemblyDiscoveryFinished(MessageHandlerArgs&lt;ITestAssemblyDiscoveryFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.ITestAssemblyDiscoveryFinished.html">ITestAssemblyDiscoveryFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyDiscoveryStarting_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyDiscoveryStarting*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyDiscoveryStarting_Xunit_MessageHandlerArgs_Xunit_ITestAssemblyDiscoveryStarting__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyDiscoveryStarting(Xunit.MessageHandlerArgs{Xunit.ITestAssemblyDiscoveryStarting})">
+  HandleTestAssemblyDiscoveryStarting(MessageHandlerArgs&lt;ITestAssemblyDiscoveryStarting&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestAssemblyDiscoveryStarting(MessageHandlerArgs&lt;ITestAssemblyDiscoveryStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.ITestAssemblyDiscoveryStarting.html">ITestAssemblyDiscoveryStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyExecutionFinished_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyExecutionFinished*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyExecutionFinished_Xunit_MessageHandlerArgs_Xunit_ITestAssemblyExecutionFinished__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyExecutionFinished(Xunit.MessageHandlerArgs{Xunit.ITestAssemblyExecutionFinished})">
+  HandleTestAssemblyExecutionFinished(MessageHandlerArgs&lt;ITestAssemblyExecutionFinished&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestAssemblyExecutionFinished(MessageHandlerArgs&lt;ITestAssemblyExecutionFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.ITestAssemblyExecutionFinished.html">ITestAssemblyExecutionFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyExecutionStarting_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyExecutionStarting*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestAssemblyExecutionStarting_Xunit_MessageHandlerArgs_Xunit_ITestAssemblyExecutionStarting__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestAssemblyExecutionStarting(Xunit.MessageHandlerArgs{Xunit.ITestAssemblyExecutionStarting})">
+  HandleTestAssemblyExecutionStarting(MessageHandlerArgs&lt;ITestAssemblyExecutionStarting&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestAssemblyExecutionStarting(MessageHandlerArgs&lt;ITestAssemblyExecutionStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.ITestAssemblyExecutionStarting.html">ITestAssemblyExecutionStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestCaseCleanupFailure_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestCaseCleanupFailure*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestCaseCleanupFailure_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestCaseCleanupFailure__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestCaseCleanupFailure(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestCaseCleanupFailure})">
+  HandleTestCaseCleanupFailure(MessageHandlerArgs&lt;ITestCaseCleanupFailure&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestCaseCleanupFailure(MessageHandlerArgs&lt;ITestCaseCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestClassCleanupFailure_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestClassCleanupFailure*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestClassCleanupFailure_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestClassCleanupFailure__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestClassCleanupFailure(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestClassCleanupFailure})">
+  HandleTestClassCleanupFailure(MessageHandlerArgs&lt;ITestClassCleanupFailure&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestClassCleanupFailure(MessageHandlerArgs&lt;ITestClassCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestCleanupFailure_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestCleanupFailure*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestCleanupFailure_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestCleanupFailure__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestCleanupFailure(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestCleanupFailure})">
+  HandleTestCleanupFailure(MessageHandlerArgs&lt;ITestCleanupFailure&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestCleanupFailure(MessageHandlerArgs&lt;ITestCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCleanupFailure.html">ITestCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestCollectionCleanupFailure_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestCollectionCleanupFailure*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestCollectionCleanupFailure_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestCollectionCleanupFailure__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestCollectionCleanupFailure(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestCollectionCleanupFailure})">
+  HandleTestCollectionCleanupFailure(MessageHandlerArgs&lt;ITestCollectionCleanupFailure&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestCollectionCleanupFailure(MessageHandlerArgs&lt;ITestCollectionCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestExecutionSummary_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestExecutionSummary*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestExecutionSummary_Xunit_MessageHandlerArgs_Xunit_ITestExecutionSummary__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestExecutionSummary(Xunit.MessageHandlerArgs{Xunit.ITestExecutionSummary})">
+  HandleTestExecutionSummary(MessageHandlerArgs&lt;ITestExecutionSummary&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestExecutionSummary(MessageHandlerArgs&lt;ITestExecutionSummary&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.ITestExecutionSummary.html">ITestExecutionSummary</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestFailed_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestFailed*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestFailed_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestFailed__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestFailed(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestFailed})">
+  HandleTestFailed(MessageHandlerArgs&lt;ITestFailed&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestFailed(MessageHandlerArgs&lt;ITestFailed&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestFailed.html">ITestFailed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestMethodCleanupFailure_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestMethodCleanupFailure*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestMethodCleanupFailure_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestMethodCleanupFailure__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestMethodCleanupFailure(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestMethodCleanupFailure})">
+  HandleTestMethodCleanupFailure(MessageHandlerArgs&lt;ITestMethodCleanupFailure&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestMethodCleanupFailure(MessageHandlerArgs&lt;ITestMethodCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestPassed_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestPassed*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestPassed_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestPassed__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestPassed(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestPassed})">
+  HandleTestPassed(MessageHandlerArgs&lt;ITestPassed&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestPassed(MessageHandlerArgs&lt;ITestPassed&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestPassed.html">ITestPassed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestSkipped_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestSkipped*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_HandleTestSkipped_Xunit_MessageHandlerArgs_Xunit_Abstractions_ITestSkipped__" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.HandleTestSkipped(Xunit.MessageHandlerArgs{Xunit.Abstractions.ITestSkipped})">
+  HandleTestSkipped(MessageHandlerArgs&lt;ITestSkipped&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTestSkipped(MessageHandlerArgs&lt;ITestSkipped&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestSkipped.html">ITestSkipped</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_LogError_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.LogError*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_LogError_System_String_Xunit_Abstractions_IFailureInformation_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.LogError(System.String,Xunit.Abstractions.IFailureInformation)">
+  LogError(string, IFailureInformation)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void LogError(string failureType, IFailureInformation failureInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>failureType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>failureInfo</code> <a class="xref" href="Xunit.Abstractions.IFailureInformation.html">IFailureInformation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_LogOutput_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.LogOutput*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_LogOutput_Xunit_StackFrameInfo_System_String_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.LogOutput(Xunit.StackFrameInfo,System.String)">
+  LogOutput(StackFrameInfo, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LogOutput(StackFrameInfo frameInfo, string output)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameInfo</code> <a class="xref" href="Xunit.StackFrameInfo.html">StackFrameInfo</a></dt>
+    <dd></dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_LogStackTrace_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.LogStackTrace*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_LogStackTrace_Xunit_StackFrameInfo_System_String_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.LogStackTrace(Xunit.StackFrameInfo,System.String)">
+  LogStackTrace(StackFrameInfo, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LogStackTrace(StackFrameInfo frameInfo, string stackTrace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameInfo</code> <a class="xref" href="Xunit.StackFrameInfo.html">StackFrameInfo</a></dt>
+    <dd></dd>
+    <dt><code>stackTrace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_WriteDefaultSummary_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.WriteDefaultSummary*"></a>
+
+  <h3 id="Xunit_DefaultRunnerReporterWithTypesMessageHandler_WriteDefaultSummary_Xunit_IRunnerLogger_Xunit_ITestExecutionSummary_" data-uid="Xunit.DefaultRunnerReporterWithTypesMessageHandler.WriteDefaultSummary(Xunit.IRunnerLogger,Xunit.ITestExecutionSummary)">
+  WriteDefaultSummary(IRunnerLogger, ITestExecutionSummary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteDefaultSummary(IRunnerLogger logger, ITestExecutionSummary executionSummary)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Xunit.IRunnerLogger.html">IRunnerLogger</a></dt>
+    <dd></dd>
+    <dt><code>executionSummary</code> <a class="xref" href="Xunit.ITestExecutionSummary.html">ITestExecutionSummary</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

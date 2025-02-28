@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PropVariant | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PropVariant | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MS.WindowsAPICodePack.Internal.PropVariant">
+
+
+
+  <h1 id="MS_WindowsAPICodePack_Internal_PropVariant" data-uid="MS.WindowsAPICodePack.Internal.PropVariant" class="text-break">
+Class PropVariant  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MS.html">MS</a>.<a class="xref" href="MS.WindowsAPICodePack.html">WindowsAPICodePack</a>.<a class="xref" href="MS.WindowsAPICodePack.Internal.html">Internal</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Microsoft.WindowsAPICodePack.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PropVariant : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PropVariant</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor">
+  PropVariant()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Boolean_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Boolean)">
+  PropVariant(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Boolean___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Boolean[])">
+  PropVariant(bool[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(bool[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Byte_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Byte)">
+  PropVariant(byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(byte value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_DateTime_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.DateTime)">
+  PropVariant(DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(DateTime value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_DateTime___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.DateTime[])">
+  PropVariant(DateTime[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(DateTime[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Decimal_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Decimal)">
+  PropVariant(decimal)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(decimal value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Decimal___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Decimal[])">
+  PropVariant(decimal[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(decimal[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Double_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Double)">
+  PropVariant(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Double___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Double[])">
+  PropVariant(double[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(double[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Int16_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Int16)">
+  PropVariant(short)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(short value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Int16___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Int16[])">
+  PropVariant(short[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(short[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Int32_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Int32)">
+  PropVariant(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Int32___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Int32[])">
+  PropVariant(int[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(int[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Int64_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Int64)">
+  PropVariant(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Int64___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Int64[])">
+  PropVariant(long[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(long[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_SByte_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.SByte)">
+  PropVariant(sbyte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(sbyte value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Single_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Single)">
+  PropVariant(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(float value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_Single___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.Single[])">
+  PropVariant(float[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(float[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_String_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.String)">
+  PropVariant(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_String___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.String[])">
+  PropVariant(string[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(string[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_UInt16_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.UInt16)">
+  PropVariant(ushort)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(ushort value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_UInt16___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.UInt16[])">
+  PropVariant(ushort[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(ushort[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_UInt32_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.UInt32)">
+  PropVariant(uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(uint value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_UInt32___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.UInt32[])">
+  PropVariant(uint[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(uint[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_UInt64_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.UInt64)">
+  PropVariant(ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(ulong value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant__ctor_System_UInt64___" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.#ctor(System.UInt64[])">
+  PropVariant(ulong[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PropVariant(ulong[] value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_IsNullOrEmpty_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.IsNullOrEmpty*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_IsNullOrEmpty" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.IsNullOrEmpty">
+  IsNullOrEmpty
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNullOrEmpty { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_Value_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.Value*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_Value" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.Value">
+  Value
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_VarType_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.VarType*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_VarType" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.VarType">
+  VarType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VarEnum VarType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.varenum">VarEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_Dispose_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.Dispose*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_Dispose" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_Finalize_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.Finalize*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_Finalize" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.Finalize">
+  ~PropVariant()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~PropVariant()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_FromObject_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.FromObject*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_FromObject_System_Object_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.FromObject(System.Object)">
+  FromObject(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PropVariant FromObject(object value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MS.WindowsAPICodePack.Internal.PropVariant.html">PropVariant</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MS_WindowsAPICodePack_Internal_PropVariant_ToString_" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.ToString*"></a>
+
+  <h3 id="MS_WindowsAPICodePack_Internal_PropVariant_ToString" data-uid="MS.WindowsAPICodePack.Internal.PropVariant.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

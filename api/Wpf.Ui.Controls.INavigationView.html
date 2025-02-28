@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface INavigationView | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface INavigationView | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Wpf.Ui.Controls.INavigationView">
+
+
+
+  <h1 id="Wpf_Ui_Controls_INavigationView" data-uid="Wpf.Ui.Controls.INavigationView" class="text-break">
+Interface INavigationView  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Wpf.html">Wpf</a>.<a class="xref" href="Wpf.Ui.html">Ui</a>.<a class="xref" href="Wpf.Ui.Controls.html">Controls</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Wpf.Ui.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface INavigationView</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_AlwaysShowHeader_" data-uid="Wpf.Ui.Controls.INavigationView.AlwaysShowHeader*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_AlwaysShowHeader" data-uid="Wpf.Ui.Controls.INavigationView.AlwaysShowHeader">
+  AlwaysShowHeader
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AlwaysShowHeader { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_AutoSuggestBox_" data-uid="Wpf.Ui.Controls.INavigationView.AutoSuggestBox*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_AutoSuggestBox" data-uid="Wpf.Ui.Controls.INavigationView.AutoSuggestBox">
+  AutoSuggestBox
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AutoSuggestBox? AutoSuggestBox { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.AutoSuggestBox.html">AutoSuggestBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_BreadcrumbBar_" data-uid="Wpf.Ui.Controls.INavigationView.BreadcrumbBar*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_BreadcrumbBar" data-uid="Wpf.Ui.Controls.INavigationView.BreadcrumbBar">
+  BreadcrumbBar
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BreadcrumbBar? BreadcrumbBar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.BreadcrumbBar.html">BreadcrumbBar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_CanGoBack_" data-uid="Wpf.Ui.Controls.INavigationView.CanGoBack*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_CanGoBack" data-uid="Wpf.Ui.Controls.INavigationView.CanGoBack">
+  CanGoBack
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanGoBack { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_CompactPaneLength_" data-uid="Wpf.Ui.Controls.INavigationView.CompactPaneLength*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_CompactPaneLength" data-uid="Wpf.Ui.Controls.INavigationView.CompactPaneLength">
+  CompactPaneLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double CompactPaneLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_ContentOverlay_" data-uid="Wpf.Ui.Controls.INavigationView.ContentOverlay*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_ContentOverlay" data-uid="Wpf.Ui.Controls.INavigationView.ContentOverlay">
+  ContentOverlay
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? ContentOverlay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_FooterMenuItems_" data-uid="Wpf.Ui.Controls.INavigationView.FooterMenuItems*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_FooterMenuItems" data-uid="Wpf.Ui.Controls.INavigationView.FooterMenuItems">
+  FooterMenuItems
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList FooterMenuItems { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_FooterMenuItemsSource_" data-uid="Wpf.Ui.Controls.INavigationView.FooterMenuItemsSource*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_FooterMenuItemsSource" data-uid="Wpf.Ui.Controls.INavigationView.FooterMenuItemsSource">
+  FooterMenuItemsSource
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? FooterMenuItemsSource { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_FrameMargin_" data-uid="Wpf.Ui.Controls.INavigationView.FrameMargin*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_FrameMargin" data-uid="Wpf.Ui.Controls.INavigationView.FrameMargin">
+  FrameMargin
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Thickness FrameMargin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.thickness">Thickness</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_Header_" data-uid="Wpf.Ui.Controls.INavigationView.Header*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_Header" data-uid="Wpf.Ui.Controls.INavigationView.Header">
+  Header
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? Header { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_HeaderVisibility_" data-uid="Wpf.Ui.Controls.INavigationView.HeaderVisibility*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_HeaderVisibility" data-uid="Wpf.Ui.Controls.INavigationView.HeaderVisibility">
+  HeaderVisibility
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Visibility HeaderVisibility { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.visibility">Visibility</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_IsBackButtonVisible_" data-uid="Wpf.Ui.Controls.INavigationView.IsBackButtonVisible*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_IsBackButtonVisible" data-uid="Wpf.Ui.Controls.INavigationView.IsBackButtonVisible">
+  IsBackButtonVisible
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NavigationViewBackButtonVisible IsBackButtonVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.NavigationViewBackButtonVisible.html">NavigationViewBackButtonVisible</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_IsBackEnabled_" data-uid="Wpf.Ui.Controls.INavigationView.IsBackEnabled*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_IsBackEnabled" data-uid="Wpf.Ui.Controls.INavigationView.IsBackEnabled">
+  IsBackEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsBackEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_IsPaneOpen_" data-uid="Wpf.Ui.Controls.INavigationView.IsPaneOpen*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_IsPaneOpen" data-uid="Wpf.Ui.Controls.INavigationView.IsPaneOpen">
+  IsPaneOpen
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsPaneOpen { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_IsPaneToggleVisible_" data-uid="Wpf.Ui.Controls.INavigationView.IsPaneToggleVisible*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_IsPaneToggleVisible" data-uid="Wpf.Ui.Controls.INavigationView.IsPaneToggleVisible">
+  IsPaneToggleVisible
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsPaneToggleVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_IsPaneVisible_" data-uid="Wpf.Ui.Controls.INavigationView.IsPaneVisible*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_IsPaneVisible" data-uid="Wpf.Ui.Controls.INavigationView.IsPaneVisible">
+  IsPaneVisible
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsPaneVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_ItemTemplate_" data-uid="Wpf.Ui.Controls.INavigationView.ItemTemplate*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_ItemTemplate" data-uid="Wpf.Ui.Controls.INavigationView.ItemTemplate">
+  ItemTemplate
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ControlTemplate? ItemTemplate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.controltemplate">ControlTemplate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_MenuItems_" data-uid="Wpf.Ui.Controls.INavigationView.MenuItems*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_MenuItems" data-uid="Wpf.Ui.Controls.INavigationView.MenuItems">
+  MenuItems
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList MenuItems { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_MenuItemsSource_" data-uid="Wpf.Ui.Controls.INavigationView.MenuItemsSource*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_MenuItemsSource" data-uid="Wpf.Ui.Controls.INavigationView.MenuItemsSource">
+  MenuItemsSource
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? MenuItemsSource { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_OpenPaneLength_" data-uid="Wpf.Ui.Controls.INavigationView.OpenPaneLength*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_OpenPaneLength" data-uid="Wpf.Ui.Controls.INavigationView.OpenPaneLength">
+  OpenPaneLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double OpenPaneLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_PaneDisplayMode_" data-uid="Wpf.Ui.Controls.INavigationView.PaneDisplayMode*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_PaneDisplayMode" data-uid="Wpf.Ui.Controls.INavigationView.PaneDisplayMode">
+  PaneDisplayMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NavigationViewPaneDisplayMode PaneDisplayMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.NavigationViewPaneDisplayMode.html">NavigationViewPaneDisplayMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_PaneFooter_" data-uid="Wpf.Ui.Controls.INavigationView.PaneFooter*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_PaneFooter" data-uid="Wpf.Ui.Controls.INavigationView.PaneFooter">
+  PaneFooter
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? PaneFooter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_PaneHeader_" data-uid="Wpf.Ui.Controls.INavigationView.PaneHeader*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_PaneHeader" data-uid="Wpf.Ui.Controls.INavigationView.PaneHeader">
+  PaneHeader
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object? PaneHeader { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_PaneTitle_" data-uid="Wpf.Ui.Controls.INavigationView.PaneTitle*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_PaneTitle" data-uid="Wpf.Ui.Controls.INavigationView.PaneTitle">
+  PaneTitle
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string? PaneTitle { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_SelectedItem_" data-uid="Wpf.Ui.Controls.INavigationView.SelectedItem*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_SelectedItem" data-uid="Wpf.Ui.Controls.INavigationView.SelectedItem">
+  SelectedItem
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">INavigationViewItem? SelectedItem { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.INavigationViewItem.html">INavigationViewItem</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_TitleBar_" data-uid="Wpf.Ui.Controls.INavigationView.TitleBar*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_TitleBar" data-uid="Wpf.Ui.Controls.INavigationView.TitleBar">
+  TitleBar
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TitleBar? TitleBar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TitleBar.html">TitleBar</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_Transition_" data-uid="Wpf.Ui.Controls.INavigationView.Transition*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_Transition" data-uid="Wpf.Ui.Controls.INavigationView.Transition">
+  Transition
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transition Transition { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Animations.Transition.html">Transition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_TransitionDuration_" data-uid="Wpf.Ui.Controls.INavigationView.TransitionDuration*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_TransitionDuration" data-uid="Wpf.Ui.Controls.INavigationView.TransitionDuration">
+  TransitionDuration
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int TransitionDuration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_ClearJournal_" data-uid="Wpf.Ui.Controls.INavigationView.ClearJournal*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_ClearJournal" data-uid="Wpf.Ui.Controls.INavigationView.ClearJournal">
+  ClearJournal()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearJournal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_GoBack_" data-uid="Wpf.Ui.Controls.INavigationView.GoBack*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_GoBack" data-uid="Wpf.Ui.Controls.INavigationView.GoBack">
+  GoBack()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool GoBack()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_GoForward_" data-uid="Wpf.Ui.Controls.INavigationView.GoForward*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_GoForward" data-uid="Wpf.Ui.Controls.INavigationView.GoForward">
+  GoForward()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool GoForward()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_Navigate_" data-uid="Wpf.Ui.Controls.INavigationView.Navigate*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_Navigate_System_String_System_Object_" data-uid="Wpf.Ui.Controls.INavigationView.Navigate(System.String,System.Object)">
+  Navigate(string, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Navigate(string pageIdOrTargetTag, object? dataContext = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pageIdOrTargetTag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>dataContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_Navigate_" data-uid="Wpf.Ui.Controls.INavigationView.Navigate*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_Navigate_System_Type_System_Object_" data-uid="Wpf.Ui.Controls.INavigationView.Navigate(System.Type,System.Object)">
+  Navigate(Type, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Navigate(Type pageType, object? dataContext = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pageType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>dataContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_NavigateWithHierarchy_" data-uid="Wpf.Ui.Controls.INavigationView.NavigateWithHierarchy*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_NavigateWithHierarchy_System_Type_System_Object_" data-uid="Wpf.Ui.Controls.INavigationView.NavigateWithHierarchy(System.Type,System.Object)">
+  NavigateWithHierarchy(Type, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool NavigateWithHierarchy(Type pageType, object? dataContext = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pageType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>dataContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_ReplaceContent_" data-uid="Wpf.Ui.Controls.INavigationView.ReplaceContent*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_ReplaceContent_System_Type_" data-uid="Wpf.Ui.Controls.INavigationView.ReplaceContent(System.Type)">
+  ReplaceContent(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ReplaceContent(Type pageTypeToEmbed)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pageTypeToEmbed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_ReplaceContent_" data-uid="Wpf.Ui.Controls.INavigationView.ReplaceContent*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_ReplaceContent_System_Windows_UIElement_System_Object_" data-uid="Wpf.Ui.Controls.INavigationView.ReplaceContent(System.Windows.UIElement,System.Object)">
+  ReplaceContent(UIElement, object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ReplaceContent(UIElement pageInstanceToEmbed, object? dataContext = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pageInstanceToEmbed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.uielement">UIElement</a></dt>
+    <dd></dd>
+    <dt><code>dataContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_SetPageProviderService_" data-uid="Wpf.Ui.Controls.INavigationView.SetPageProviderService*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_SetPageProviderService_Wpf_Ui_Abstractions_INavigationViewPageProvider_" data-uid="Wpf.Ui.Controls.INavigationView.SetPageProviderService(Wpf.Ui.Abstractions.INavigationViewPageProvider)">
+  SetPageProviderService(INavigationViewPageProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPageProviderService(INavigationViewPageProvider navigationViewPageProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>navigationViewPageProvider</code> <a class="xref" href="Wpf.Ui.Abstractions.INavigationViewPageProvider.html">INavigationViewPageProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Wpf_Ui_Controls_INavigationView_SetServiceProvider_" data-uid="Wpf.Ui.Controls.INavigationView.SetServiceProvider*"></a>
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_SetServiceProvider_System_IServiceProvider_" data-uid="Wpf.Ui.Controls.INavigationView.SetServiceProvider(System.IServiceProvider)">
+  SetServiceProvider(IServiceProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetServiceProvider(IServiceProvider serviceProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_BackRequested" data-uid="Wpf.Ui.Controls.INavigationView.BackRequested">
+  BackRequested
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, RoutedEventArgs&gt; BackRequested</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedeventargs">RoutedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_ItemInvoked" data-uid="Wpf.Ui.Controls.INavigationView.ItemInvoked">
+  ItemInvoked
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, RoutedEventArgs&gt; ItemInvoked</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedeventargs">RoutedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_Navigated" data-uid="Wpf.Ui.Controls.INavigationView.Navigated">
+  Navigated
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, NavigatedEventArgs&gt; Navigated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="Wpf.Ui.Controls.NavigatedEventArgs.html">NavigatedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_Navigating" data-uid="Wpf.Ui.Controls.INavigationView.Navigating">
+  Navigating
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, NavigatingCancelEventArgs&gt; Navigating</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="Wpf.Ui.Controls.NavigatingCancelEventArgs.html">NavigatingCancelEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_PaneClosed" data-uid="Wpf.Ui.Controls.INavigationView.PaneClosed">
+  PaneClosed
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, RoutedEventArgs&gt; PaneClosed</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedeventargs">RoutedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_PaneOpened" data-uid="Wpf.Ui.Controls.INavigationView.PaneOpened">
+  PaneOpened
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, RoutedEventArgs&gt; PaneOpened</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedeventargs">RoutedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Wpf_Ui_Controls_INavigationView_SelectionChanged" data-uid="Wpf.Ui.Controls.INavigationView.SelectionChanged">
+  SelectionChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event TypedEventHandler&lt;NavigationView, RoutedEventArgs&gt; SelectionChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Wpf.Ui.Controls.TypedEventHandler-2.html">TypedEventHandler</a>&lt;<a class="xref" href="Wpf.Ui.Controls.NavigationView.html">NavigationView</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.routedeventargs">RoutedEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

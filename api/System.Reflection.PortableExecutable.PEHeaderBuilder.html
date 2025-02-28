@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PEHeaderBuilder | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PEHeaderBuilder | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder">
+
+
+
+  <h1 id="System_Reflection_PortableExecutable_PEHeaderBuilder" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder" class="text-break">
+Class PEHeaderBuilder  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="System.html">System</a>.<a class="xref" href="System.Reflection.html">Reflection</a>.<a class="xref" href="System.Reflection.PortableExecutable.html">PortableExecutable</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>System.Reflection.Metadata.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PEHeaderBuilder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PEHeaderBuilder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder__ctor_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.#ctor*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder__ctor_System_Reflection_PortableExecutable_Machine_System_Int32_System_Int32_System_UInt64_System_Byte_System_Byte_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_UInt16_System_Reflection_PortableExecutable_Subsystem_System_Reflection_PortableExecutable_DllCharacteristics_System_Reflection_PortableExecutable_Characteristics_System_UInt64_System_UInt64_System_UInt64_System_UInt64_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.#ctor(System.Reflection.PortableExecutable.Machine,System.Int32,System.Int32,System.UInt64,System.Byte,System.Byte,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.UInt16,System.Reflection.PortableExecutable.Subsystem,System.Reflection.PortableExecutable.DllCharacteristics,System.Reflection.PortableExecutable.Characteristics,System.UInt64,System.UInt64,System.UInt64,System.UInt64)">
+  PEHeaderBuilder(Machine, int, int, ulong, byte, byte, ushort, ushort, ushort, ushort, ushort, ushort, Subsystem, DllCharacteristics, Characteristics, ulong, ulong, ulong, ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PEHeaderBuilder(Machine machine = Machine.Unknown, int sectionAlignment = 8192, int fileAlignment = 512, ulong imageBase = 4194304, byte majorLinkerVersion = 48, byte minorLinkerVersion = 0, ushort majorOperatingSystemVersion = 4, ushort minorOperatingSystemVersion = 0, ushort majorImageVersion = 0, ushort minorImageVersion = 0, ushort majorSubsystemVersion = 4, ushort minorSubsystemVersion = 0, Subsystem subsystem = Subsystem.WindowsCui, DllCharacteristics dllCharacteristics = DllCharacteristics.DynamicBase | DllCharacteristics.NxCompatible | DllCharacteristics.NoSeh | DllCharacteristics.TerminalServerAware, Characteristics imageCharacteristics = Characteristics.Dll, ulong sizeOfStackReserve = 1048576, ulong sizeOfStackCommit = 4096, ulong sizeOfHeapReserve = 1048576, ulong sizeOfHeapCommit = 4096)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>machine</code> <a class="xref" href="System.Reflection.PortableExecutable.Machine.html">Machine</a></dt>
+    <dd></dd>
+    <dt><code>sectionAlignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>fileAlignment</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>imageBase</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>majorLinkerVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>minorLinkerVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>majorOperatingSystemVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>minorOperatingSystemVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>majorImageVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>minorImageVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>majorSubsystemVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>minorSubsystemVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+    <dt><code>subsystem</code> <a class="xref" href="System.Reflection.PortableExecutable.Subsystem.html">Subsystem</a></dt>
+    <dd></dd>
+    <dt><code>dllCharacteristics</code> <a class="xref" href="System.Reflection.PortableExecutable.DllCharacteristics.html">DllCharacteristics</a></dt>
+    <dd></dd>
+    <dt><code>imageCharacteristics</code> <a class="xref" href="System.Reflection.PortableExecutable.Characteristics.html">Characteristics</a></dt>
+    <dd></dd>
+    <dt><code>sizeOfStackReserve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>sizeOfStackCommit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>sizeOfHeapReserve</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+    <dt><code>sizeOfHeapCommit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_DllCharacteristics_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.DllCharacteristics*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_DllCharacteristics" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.DllCharacteristics">
+  DllCharacteristics
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DllCharacteristics DllCharacteristics { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.DllCharacteristics.html">DllCharacteristics</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_FileAlignment_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.FileAlignment*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_FileAlignment" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.FileAlignment">
+  FileAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FileAlignment { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_ImageBase_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.ImageBase*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_ImageBase" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.ImageBase">
+  ImageBase
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ImageBase { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_ImageCharacteristics_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.ImageCharacteristics*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_ImageCharacteristics" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.ImageCharacteristics">
+  ImageCharacteristics
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Characteristics ImageCharacteristics { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.Characteristics.html">Characteristics</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_Machine_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.Machine*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_Machine" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.Machine">
+  Machine
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Machine Machine { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.Machine.html">Machine</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorImageVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorImageVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorImageVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorImageVersion">
+  MajorImageVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort MajorImageVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorLinkerVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorLinkerVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorLinkerVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorLinkerVersion">
+  MajorLinkerVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte MajorLinkerVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorOperatingSystemVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorOperatingSystemVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorOperatingSystemVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorOperatingSystemVersion">
+  MajorOperatingSystemVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort MajorOperatingSystemVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorSubsystemVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorSubsystemVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MajorSubsystemVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MajorSubsystemVersion">
+  MajorSubsystemVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort MajorSubsystemVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorImageVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorImageVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorImageVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorImageVersion">
+  MinorImageVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort MinorImageVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorLinkerVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorLinkerVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorLinkerVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorLinkerVersion">
+  MinorLinkerVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte MinorLinkerVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorOperatingSystemVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorOperatingSystemVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorOperatingSystemVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorOperatingSystemVersion">
+  MinorOperatingSystemVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort MinorOperatingSystemVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorSubsystemVersion_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorSubsystemVersion*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_MinorSubsystemVersion" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.MinorSubsystemVersion">
+  MinorSubsystemVersion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort MinorSubsystemVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_SectionAlignment_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SectionAlignment*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_SectionAlignment" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SectionAlignment">
+  SectionAlignment
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SectionAlignment { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfHeapCommit_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfHeapCommit*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfHeapCommit" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfHeapCommit">
+  SizeOfHeapCommit
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SizeOfHeapCommit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfHeapReserve_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfHeapReserve*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfHeapReserve" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfHeapReserve">
+  SizeOfHeapReserve
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SizeOfHeapReserve { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfStackCommit_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfStackCommit*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfStackCommit" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfStackCommit">
+  SizeOfStackCommit
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SizeOfStackCommit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfStackReserve_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfStackReserve*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_SizeOfStackReserve" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfStackReserve">
+  SizeOfStackReserve
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SizeOfStackReserve { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_Subsystem_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.Subsystem*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_Subsystem" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.Subsystem">
+  Subsystem
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Subsystem Subsystem { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.Subsystem.html">Subsystem</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_CreateExecutableHeader_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.CreateExecutableHeader*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_CreateExecutableHeader" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.CreateExecutableHeader">
+  CreateExecutableHeader()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PEHeaderBuilder CreateExecutableHeader()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEHeaderBuilder.html">PEHeaderBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="System_Reflection_PortableExecutable_PEHeaderBuilder_CreateLibraryHeader_" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.CreateLibraryHeader*"></a>
+
+  <h3 id="System_Reflection_PortableExecutable_PEHeaderBuilder_CreateLibraryHeader" data-uid="System.Reflection.PortableExecutable.PEHeaderBuilder.CreateLibraryHeader">
+  CreateLibraryHeader()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PEHeaderBuilder CreateLibraryHeader()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="System.Reflection.PortableExecutable.PEHeaderBuilder.html">PEHeaderBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

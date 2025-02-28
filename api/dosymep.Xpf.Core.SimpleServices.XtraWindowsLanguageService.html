@@ -102,7 +102,7 @@ Class XtraWindowsLanguageService  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class XtraWindowsLanguageService : ILanguageService</code></pre>
+    <pre><code class="lang-csharp hljs">public class XtraWindowsLanguageService : ILanguageService, IDisposable</code></pre>
   </div>
 
 
@@ -120,6 +120,7 @@ Class XtraWindowsLanguageService  <a class="header-action link-secondary" title=
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="dosymep.SimpleServices.ILanguageService.html">ILanguageService</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
@@ -166,7 +167,8 @@ Class XtraWindowsLanguageService  <a class="header-action link-secondary" title=
   <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.Xpf.Core/SimpleServices/XtraWindowsLanguageService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Конструирует объект.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -214,6 +216,104 @@ Class XtraWindowsLanguageService  <a class="header-action link-secondary" title=
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Xpf_Core_SimpleServices_XtraWindowsLanguageService_Dispose_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.Dispose*"></a>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraWindowsLanguageService_Dispose" data-uid="dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.Xpf.Core/SimpleServices/XtraWindowsLanguageService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Xpf_Core_SimpleServices_XtraWindowsLanguageService_Dispose_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.Dispose*"></a>
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraWindowsLanguageService_Dispose_System_Boolean_" data-uid="dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.Xpf.Core/SimpleServices/XtraWindowsLanguageService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Очищает подписку на событие.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Указывает на очистку ресурсов.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="dosymep_Xpf_Core_SimpleServices_XtraWindowsLanguageService_LanguageChanged" data-uid="dosymep.Xpf.Core.SimpleServices.XtraWindowsLanguageService.LanguageChanged">
+  LanguageChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/master/src/dosymep.Xpf.Core/SimpleServices/XtraWindowsLanguageService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Событие возникающее при изменении языка.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;CultureInfo&gt; LanguageChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 

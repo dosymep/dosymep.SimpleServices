@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IFileHelper | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IFileHelper | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper">
+
+
+
+  <h1 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper" class="text-break">
+Interface IFileHelper  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.VisualStudio.html">VisualStudio</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.html">TestPlatform</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.Utilities.html">Utilities</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.html">Helpers</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.html">Interfaces</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Microsoft.TestPlatform.CoreUtilities.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFileHelper</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_CopyFile_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.CopyFile*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_CopyFile_System_String_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.CopyFile(System.String,System.String)">
+  CopyFile(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CopyFile(string sourcePath, string destinationPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destinationPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_CreateDirectory_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.CreateDirectory*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_CreateDirectory_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.CreateDirectory(System.String)">
+  CreateDirectory(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DirectoryInfo CreateDirectory(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directoryinfo">DirectoryInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_Delete_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.Delete*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_Delete_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.Delete(System.String)">
+  Delete(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Delete(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_DeleteDirectory_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.DeleteDirectory*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_DeleteDirectory_System_String_System_Boolean_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.DeleteDirectory(System.String,System.Boolean)">
+  DeleteDirectory(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteDirectory(string directoryPath, bool recursive)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directoryPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>recursive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_DeleteEmptyDirectroy_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.DeleteEmptyDirectroy*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_DeleteEmptyDirectroy_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.DeleteEmptyDirectroy(System.String)">
+  DeleteEmptyDirectroy(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DeleteEmptyDirectroy(string directoryPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directoryPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_DirectoryExists_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.DirectoryExists*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_DirectoryExists_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.DirectoryExists(System.String)">
+  DirectoryExists(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DirectoryExists(string? path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_EnumerateFiles_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.EnumerateFiles*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_EnumerateFiles_System_String_System_IO_SearchOption_System_String___" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.EnumerateFiles(System.String,System.IO.SearchOption,System.String[])">
+  EnumerateFiles(string, SearchOption, params string[]?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; EnumerateFiles(string directory, SearchOption searchOption, params string[]? endsWithSearchPatterns)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>searchOption</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.searchoption">SearchOption</a></dt>
+    <dd></dd>
+    <dt><code>endsWithSearchPatterns</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_Exists_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.Exists*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_Exists_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.Exists(System.String)">
+  Exists(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Exists(string? path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetCurrentDirectory_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetCurrentDirectory*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetCurrentDirectory" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetCurrentDirectory">
+  GetCurrentDirectory()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetCurrentDirectory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFileAttributes_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFileAttributes*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFileAttributes_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFileAttributes(System.String)">
+  GetFileAttributes(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FileAttributes GetFileAttributes(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileattributes">FileAttributes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFileLength_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFileLength*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFileLength_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFileLength(System.String)">
+  GetFileLength(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long GetFileLength(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFileVersion_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFileVersion*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFileVersion_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFileVersion(System.String)">
+  GetFileVersion(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Version GetFileVersion(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.version">Version</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFiles_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFiles*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFiles_System_String_System_String_System_IO_SearchOption_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFiles(System.String,System.String,System.IO.SearchOption)">
+  GetFiles(string, string, SearchOption)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string[] GetFiles(string path, string searchPattern, SearchOption searchOption)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>searchPattern</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>searchOption</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.searchoption">SearchOption</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFullPath_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFullPath*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetFullPath_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetFullPath(System.String)">
+  GetFullPath(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetFullPath(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetStream_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetStream*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetStream_System_String_System_IO_FileMode_System_IO_FileAccess_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetStream(System.String,System.IO.FileMode,System.IO.FileAccess)">
+  GetStream(string, FileMode, FileAccess)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetStream(string filePath, FileMode mode, FileAccess access = FileAccess.ReadWrite)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>mode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filemode">FileMode</a></dt>
+    <dd></dd>
+    <dt><code>access</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileaccess">FileAccess</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetStream_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetStream*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetStream_System_String_System_IO_FileMode_System_IO_FileAccess_System_IO_FileShare_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetStream(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+  GetStream(string, FileMode, FileAccess, FileShare)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Stream GetStream(string filePath, FileMode mode, FileAccess access, FileShare share)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>mode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filemode">FileMode</a></dt>
+    <dd></dd>
+    <dt><code>access</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileaccess">FileAccess</a></dt>
+    <dd></dd>
+    <dt><code>share</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileshare">FileShare</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetTempPath_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetTempPath*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_GetTempPath" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.GetTempPath">
+  GetTempPath()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetTempPath()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_MoveFile_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.MoveFile*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_MoveFile_System_String_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.MoveFile(System.String,System.String)">
+  MoveFile(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MoveFile(string sourcePath, string destinationPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>destinationPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_WriteAllTextToFile_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.WriteAllTextToFile*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_Utilities_Helpers_Interfaces_IFileHelper_WriteAllTextToFile_System_String_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.Utilities.Helpers.Interfaces.IFileHelper.WriteAllTextToFile(System.String,System.String)">
+  WriteAllTextToFile(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void WriteAllTextToFile(string filePath, string content)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ResolutionExtensions | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ResolutionExtensions | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ninject.ResolutionExtensions">
+
+
+
+  <h1 id="Ninject_ResolutionExtensions" data-uid="Ninject.ResolutionExtensions" class="text-break">
+Class ResolutionExtensions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ninject.html">Ninject</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ninject.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ResolutionExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ResolutionExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ninject_ResolutionExtensions_CanResolve_" data-uid="Ninject.ResolutionExtensions.CanResolve*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_CanResolve_Ninject_Syntax_IResolutionRoot_System_Type_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.CanResolve(Ninject.Syntax.IResolutionRoot,System.Type,Ninject.Parameters.IParameter[])">
+  CanResolve(IResolutionRoot, Type, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanResolve(this IResolutionRoot root, Type service, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_CanResolve_" data-uid="Ninject.ResolutionExtensions.CanResolve*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_CanResolve_Ninject_Syntax_IResolutionRoot_System_Type_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.CanResolve(Ninject.Syntax.IResolutionRoot,System.Type,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  CanResolve(IResolutionRoot, Type, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanResolve(this IResolutionRoot root, Type service, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_CanResolve_" data-uid="Ninject.ResolutionExtensions.CanResolve*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_CanResolve_Ninject_Syntax_IResolutionRoot_System_Type_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.CanResolve(Ninject.Syntax.IResolutionRoot,System.Type,System.String,Ninject.Parameters.IParameter[])">
+  CanResolve(IResolutionRoot, Type, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanResolve(this IResolutionRoot root, Type service, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_CanResolve_" data-uid="Ninject.ResolutionExtensions.CanResolve*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_CanResolve__1_Ninject_Syntax_IResolutionRoot_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.CanResolve``1(Ninject.Syntax.IResolutionRoot,Ninject.Parameters.IParameter[])">
+  CanResolve&lt;T&gt;(IResolutionRoot, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanResolve&lt;T&gt;(this IResolutionRoot root, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_CanResolve_" data-uid="Ninject.ResolutionExtensions.CanResolve*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_CanResolve__1_Ninject_Syntax_IResolutionRoot_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.CanResolve``1(Ninject.Syntax.IResolutionRoot,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  CanResolve&lt;T&gt;(IResolutionRoot, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanResolve&lt;T&gt;(this IResolutionRoot root, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_CanResolve_" data-uid="Ninject.ResolutionExtensions.CanResolve*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_CanResolve__1_Ninject_Syntax_IResolutionRoot_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.CanResolve``1(Ninject.Syntax.IResolutionRoot,System.String,Ninject.Parameters.IParameter[])">
+  CanResolve&lt;T&gt;(IResolutionRoot, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanResolve&lt;T&gt;(this IResolutionRoot root, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_Get_" data-uid="Ninject.ResolutionExtensions.Get*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_Get_Ninject_Syntax_IResolutionRoot_System_Type_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.Get(Ninject.Syntax.IResolutionRoot,System.Type,Ninject.Parameters.IParameter[])">
+  Get(IResolutionRoot, Type, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Get(this IResolutionRoot root, Type service, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_Get_" data-uid="Ninject.ResolutionExtensions.Get*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_Get_Ninject_Syntax_IResolutionRoot_System_Type_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.Get(Ninject.Syntax.IResolutionRoot,System.Type,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  Get(IResolutionRoot, Type, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Get(this IResolutionRoot root, Type service, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_Get_" data-uid="Ninject.ResolutionExtensions.Get*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_Get_Ninject_Syntax_IResolutionRoot_System_Type_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.Get(Ninject.Syntax.IResolutionRoot,System.Type,System.String,Ninject.Parameters.IParameter[])">
+  Get(IResolutionRoot, Type, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object Get(this IResolutionRoot root, Type service, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_GetAll_" data-uid="Ninject.ResolutionExtensions.GetAll*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_GetAll_Ninject_Syntax_IResolutionRoot_System_Type_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.GetAll(Ninject.Syntax.IResolutionRoot,System.Type,Ninject.Parameters.IParameter[])">
+  GetAll(IResolutionRoot, Type, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;object&gt; GetAll(this IResolutionRoot root, Type service, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_GetAll_" data-uid="Ninject.ResolutionExtensions.GetAll*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_GetAll_Ninject_Syntax_IResolutionRoot_System_Type_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.GetAll(Ninject.Syntax.IResolutionRoot,System.Type,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  GetAll(IResolutionRoot, Type, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;object&gt; GetAll(this IResolutionRoot root, Type service, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_GetAll_" data-uid="Ninject.ResolutionExtensions.GetAll*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_GetAll_Ninject_Syntax_IResolutionRoot_System_Type_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.GetAll(Ninject.Syntax.IResolutionRoot,System.Type,System.String,Ninject.Parameters.IParameter[])">
+  GetAll(IResolutionRoot, Type, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;object&gt; GetAll(this IResolutionRoot root, Type service, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_GetAll_" data-uid="Ninject.ResolutionExtensions.GetAll*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_GetAll__1_Ninject_Syntax_IResolutionRoot_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.GetAll``1(Ninject.Syntax.IResolutionRoot,Ninject.Parameters.IParameter[])">
+  GetAll&lt;T&gt;(IResolutionRoot, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetAll&lt;T&gt;(this IResolutionRoot root, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_GetAll_" data-uid="Ninject.ResolutionExtensions.GetAll*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_GetAll__1_Ninject_Syntax_IResolutionRoot_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.GetAll``1(Ninject.Syntax.IResolutionRoot,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  GetAll&lt;T&gt;(IResolutionRoot, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetAll&lt;T&gt;(this IResolutionRoot root, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_GetAll_" data-uid="Ninject.ResolutionExtensions.GetAll*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_GetAll__1_Ninject_Syntax_IResolutionRoot_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.GetAll``1(Ninject.Syntax.IResolutionRoot,System.String,Ninject.Parameters.IParameter[])">
+  GetAll&lt;T&gt;(IResolutionRoot, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetAll&lt;T&gt;(this IResolutionRoot root, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_Get_" data-uid="Ninject.ResolutionExtensions.Get*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_Get__1_Ninject_Syntax_IResolutionRoot_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.Get``1(Ninject.Syntax.IResolutionRoot,Ninject.Parameters.IParameter[])">
+  Get&lt;T&gt;(IResolutionRoot, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Get&lt;T&gt;(this IResolutionRoot root, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_Get_" data-uid="Ninject.ResolutionExtensions.Get*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_Get__1_Ninject_Syntax_IResolutionRoot_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.Get``1(Ninject.Syntax.IResolutionRoot,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  Get&lt;T&gt;(IResolutionRoot, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Get&lt;T&gt;(this IResolutionRoot root, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_Get_" data-uid="Ninject.ResolutionExtensions.Get*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_Get__1_Ninject_Syntax_IResolutionRoot_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.Get``1(Ninject.Syntax.IResolutionRoot,System.String,Ninject.Parameters.IParameter[])">
+  Get&lt;T&gt;(IResolutionRoot, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Get&lt;T&gt;(this IResolutionRoot root, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGet_" data-uid="Ninject.ResolutionExtensions.TryGet*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGet_Ninject_Syntax_IResolutionRoot_System_Type_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGet(Ninject.Syntax.IResolutionRoot,System.Type,Ninject.Parameters.IParameter[])">
+  TryGet(IResolutionRoot, Type, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object TryGet(this IResolutionRoot root, Type service, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGet_" data-uid="Ninject.ResolutionExtensions.TryGet*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGet_Ninject_Syntax_IResolutionRoot_System_Type_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGet(Ninject.Syntax.IResolutionRoot,System.Type,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  TryGet(IResolutionRoot, Type, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object TryGet(this IResolutionRoot root, Type service, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGet_" data-uid="Ninject.ResolutionExtensions.TryGet*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGet_Ninject_Syntax_IResolutionRoot_System_Type_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGet(Ninject.Syntax.IResolutionRoot,System.Type,System.String,Ninject.Parameters.IParameter[])">
+  TryGet(IResolutionRoot, Type, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object TryGet(this IResolutionRoot root, Type service, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>service</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGetAndThrowOnInvalidBinding_" data-uid="Ninject.ResolutionExtensions.TryGetAndThrowOnInvalidBinding*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGetAndThrowOnInvalidBinding__1_Ninject_Syntax_IResolutionRoot_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGetAndThrowOnInvalidBinding``1(Ninject.Syntax.IResolutionRoot,Ninject.Parameters.IParameter[])">
+  TryGetAndThrowOnInvalidBinding&lt;T&gt;(IResolutionRoot, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T TryGetAndThrowOnInvalidBinding&lt;T&gt;(this IResolutionRoot root, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGetAndThrowOnInvalidBinding_" data-uid="Ninject.ResolutionExtensions.TryGetAndThrowOnInvalidBinding*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGetAndThrowOnInvalidBinding__1_Ninject_Syntax_IResolutionRoot_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGetAndThrowOnInvalidBinding``1(Ninject.Syntax.IResolutionRoot,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  TryGetAndThrowOnInvalidBinding&lt;T&gt;(IResolutionRoot, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T TryGetAndThrowOnInvalidBinding&lt;T&gt;(this IResolutionRoot root, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGetAndThrowOnInvalidBinding_" data-uid="Ninject.ResolutionExtensions.TryGetAndThrowOnInvalidBinding*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGetAndThrowOnInvalidBinding__1_Ninject_Syntax_IResolutionRoot_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGetAndThrowOnInvalidBinding``1(Ninject.Syntax.IResolutionRoot,System.String,Ninject.Parameters.IParameter[])">
+  TryGetAndThrowOnInvalidBinding&lt;T&gt;(IResolutionRoot, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T TryGetAndThrowOnInvalidBinding&lt;T&gt;(this IResolutionRoot root, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGet_" data-uid="Ninject.ResolutionExtensions.TryGet*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGet__1_Ninject_Syntax_IResolutionRoot_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGet``1(Ninject.Syntax.IResolutionRoot,Ninject.Parameters.IParameter[])">
+  TryGet&lt;T&gt;(IResolutionRoot, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T TryGet&lt;T&gt;(this IResolutionRoot root, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGet_" data-uid="Ninject.ResolutionExtensions.TryGet*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGet__1_Ninject_Syntax_IResolutionRoot_System_Func_Ninject_Planning_Bindings_IBindingMetadata_System_Boolean__Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGet``1(Ninject.Syntax.IResolutionRoot,System.Func{Ninject.Planning.Bindings.IBindingMetadata,System.Boolean},Ninject.Parameters.IParameter[])">
+  TryGet&lt;T&gt;(IResolutionRoot, Func&lt;IBindingMetadata, bool&gt;, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T TryGet&lt;T&gt;(this IResolutionRoot root, Func&lt;IBindingMetadata, bool&gt; constraint, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>constraint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Planning.Bindings.IBindingMetadata.html">IBindingMetadata</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_ResolutionExtensions_TryGet_" data-uid="Ninject.ResolutionExtensions.TryGet*"></a>
+
+  <h3 id="Ninject_ResolutionExtensions_TryGet__1_Ninject_Syntax_IResolutionRoot_System_String_Ninject_Parameters_IParameter___" data-uid="Ninject.ResolutionExtensions.TryGet``1(Ninject.Syntax.IResolutionRoot,System.String,Ninject.Parameters.IParameter[])">
+  TryGet&lt;T&gt;(IResolutionRoot, string, params IParameter[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T TryGet&lt;T&gt;(this IResolutionRoot root, string name, params IParameter[] parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>root</code> <a class="xref" href="Ninject.Syntax.IResolutionRoot.html">IResolutionRoot</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>parameters</code> <a class="xref" href="Ninject.Parameters.IParameter.html">IParameter</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

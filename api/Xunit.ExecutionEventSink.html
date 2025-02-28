@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ExecutionEventSink | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ExecutionEventSink | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.ExecutionEventSink">
+
+
+
+  <h1 id="Xunit_ExecutionEventSink" data-uid="Xunit.ExecutionEventSink" class="text-break">
+Class ExecutionEventSink  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.runner.utility.net452.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ExecutionEventSink : LongLivedMarshalByRefObject, IMessageSinkWithTypes, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="Xunit.Sdk.LongLivedMarshalByRefObject.html">LongLivedMarshalByRefObject</a></div>
+      <div><span class="xref">ExecutionEventSink</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.IMessageSinkWithTypes.html">IMessageSinkWithTypes</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.Sdk.LongLivedMarshalByRefObject.html#Xunit_Sdk_LongLivedMarshalByRefObject_DisconnectAll">LongLivedMarshalByRefObject.DisconnectAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Sdk.LongLivedMarshalByRefObject.html#Xunit_Sdk_LongLivedMarshalByRefObject_InitializeLifetimeService">LongLivedMarshalByRefObject.InitializeLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice">MarshalByRefObject.GetLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref">MarshalByRefObject.CreateObjRef(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="MessageSinkWithTypesExtensions.html#MessageSinkWithTypesExtensions_OnMessage_Xunit_IMessageSinkWithTypes_Xunit_Abstractions_IMessageSinkMessage_">MessageSinkWithTypesExtensions.OnMessage(IMessageSinkWithTypes, IMessageSinkMessage)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_ExecutionEventSink__ctor_" data-uid="Xunit.ExecutionEventSink.#ctor*"></a>
+
+  <h3 id="Xunit_ExecutionEventSink__ctor" data-uid="Xunit.ExecutionEventSink.#ctor">
+  ExecutionEventSink()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionEventSink()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_ExecutionEventSink_Dispose_" data-uid="Xunit.ExecutionEventSink.Dispose*"></a>
+
+  <h3 id="Xunit_ExecutionEventSink_Dispose" data-uid="Xunit.ExecutionEventSink.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_ExecutionEventSink_OnMessageWithTypes_" data-uid="Xunit.ExecutionEventSink.OnMessageWithTypes*"></a>
+
+  <h3 id="Xunit_ExecutionEventSink_OnMessageWithTypes_Xunit_Abstractions_IMessageSinkMessage_System_Collections_Generic_HashSet_System_String__" data-uid="Xunit.ExecutionEventSink.OnMessageWithTypes(Xunit.Abstractions.IMessageSinkMessage,System.Collections.Generic.HashSet{System.String})">
+  OnMessageWithTypes(IMessageSinkMessage, HashSet&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OnMessageWithTypes(IMessageSinkMessage message, HashSet&lt;string&gt; messageTypes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="Xunit.Abstractions.IMessageSinkMessage.html">IMessageSinkMessage</a></dt>
+    <dd></dd>
+    <dt><code>messageTypes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_AfterTestFinishedEvent" data-uid="Xunit.ExecutionEventSink.AfterTestFinishedEvent">
+  AfterTestFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IAfterTestFinished&gt; AfterTestFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.IAfterTestFinished.html">IAfterTestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_AfterTestStartingEvent" data-uid="Xunit.ExecutionEventSink.AfterTestStartingEvent">
+  AfterTestStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IAfterTestStarting&gt; AfterTestStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.IAfterTestStarting.html">IAfterTestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_BeforeTestFinishedEvent" data-uid="Xunit.ExecutionEventSink.BeforeTestFinishedEvent">
+  BeforeTestFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IBeforeTestFinished&gt; BeforeTestFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.IBeforeTestFinished.html">IBeforeTestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_BeforeTestStartingEvent" data-uid="Xunit.ExecutionEventSink.BeforeTestStartingEvent">
+  BeforeTestStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IBeforeTestStarting&gt; BeforeTestStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.IBeforeTestStarting.html">IBeforeTestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestAssemblyCleanupFailureEvent" data-uid="Xunit.ExecutionEventSink.TestAssemblyCleanupFailureEvent">
+  TestAssemblyCleanupFailureEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestAssemblyCleanupFailure&gt; TestAssemblyCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestAssemblyFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestAssemblyFinishedEvent">
+  TestAssemblyFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestAssemblyFinished&gt; TestAssemblyFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestAssemblyFinished.html">ITestAssemblyFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestAssemblyStartingEvent" data-uid="Xunit.ExecutionEventSink.TestAssemblyStartingEvent">
+  TestAssemblyStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestAssemblyStarting&gt; TestAssemblyStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestAssemblyStarting.html">ITestAssemblyStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCaseCleanupFailureEvent" data-uid="Xunit.ExecutionEventSink.TestCaseCleanupFailureEvent">
+  TestCaseCleanupFailureEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCaseCleanupFailure&gt; TestCaseCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCaseFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestCaseFinishedEvent">
+  TestCaseFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCaseFinished&gt; TestCaseFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCaseFinished.html">ITestCaseFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCaseStartingEvent" data-uid="Xunit.ExecutionEventSink.TestCaseStartingEvent">
+  TestCaseStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCaseStarting&gt; TestCaseStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCaseStarting.html">ITestCaseStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassCleanupFailureEvent" data-uid="Xunit.ExecutionEventSink.TestClassCleanupFailureEvent">
+  TestClassCleanupFailureEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassCleanupFailure&gt; TestClassCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassConstructionFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestClassConstructionFinishedEvent">
+  TestClassConstructionFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassConstructionFinished&gt; TestClassConstructionFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassConstructionFinished.html">ITestClassConstructionFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassConstructionStartingEvent" data-uid="Xunit.ExecutionEventSink.TestClassConstructionStartingEvent">
+  TestClassConstructionStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassConstructionStarting&gt; TestClassConstructionStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassConstructionStarting.html">ITestClassConstructionStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassDisposeFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestClassDisposeFinishedEvent">
+  TestClassDisposeFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassDisposeFinished&gt; TestClassDisposeFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassDisposeFinished.html">ITestClassDisposeFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassDisposeStartingEvent" data-uid="Xunit.ExecutionEventSink.TestClassDisposeStartingEvent">
+  TestClassDisposeStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassDisposeStarting&gt; TestClassDisposeStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassDisposeStarting.html">ITestClassDisposeStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestClassFinishedEvent">
+  TestClassFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassFinished&gt; TestClassFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassFinished.html">ITestClassFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestClassStartingEvent" data-uid="Xunit.ExecutionEventSink.TestClassStartingEvent">
+  TestClassStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassStarting&gt; TestClassStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestClassStarting.html">ITestClassStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCleanupFailureEvent" data-uid="Xunit.ExecutionEventSink.TestCleanupFailureEvent">
+  TestCleanupFailureEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCleanupFailure&gt; TestCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCleanupFailure.html">ITestCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCollectionCleanupFailureEvent" data-uid="Xunit.ExecutionEventSink.TestCollectionCleanupFailureEvent">
+  TestCollectionCleanupFailureEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCollectionCleanupFailure&gt; TestCollectionCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCollectionFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestCollectionFinishedEvent">
+  TestCollectionFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCollectionFinished&gt; TestCollectionFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCollectionFinished.html">ITestCollectionFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestCollectionStartingEvent" data-uid="Xunit.ExecutionEventSink.TestCollectionStartingEvent">
+  TestCollectionStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCollectionStarting&gt; TestCollectionStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestCollectionStarting.html">ITestCollectionStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestFailedEvent" data-uid="Xunit.ExecutionEventSink.TestFailedEvent">
+  TestFailedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestFailed&gt; TestFailedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestFailed.html">ITestFailed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestFinishedEvent">
+  TestFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestFinished&gt; TestFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestFinished.html">ITestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestMethodCleanupFailureEvent" data-uid="Xunit.ExecutionEventSink.TestMethodCleanupFailureEvent">
+  TestMethodCleanupFailureEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestMethodCleanupFailure&gt; TestMethodCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestMethodFinishedEvent" data-uid="Xunit.ExecutionEventSink.TestMethodFinishedEvent">
+  TestMethodFinishedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestMethodFinished&gt; TestMethodFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestMethodFinished.html">ITestMethodFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestMethodStartingEvent" data-uid="Xunit.ExecutionEventSink.TestMethodStartingEvent">
+  TestMethodStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestMethodStarting&gt; TestMethodStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestMethodStarting.html">ITestMethodStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestOutputEvent" data-uid="Xunit.ExecutionEventSink.TestOutputEvent">
+  TestOutputEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestOutput&gt; TestOutputEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestOutput.html">ITestOutput</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestPassedEvent" data-uid="Xunit.ExecutionEventSink.TestPassedEvent">
+  TestPassedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestPassed&gt; TestPassedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestPassed.html">ITestPassed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestSkippedEvent" data-uid="Xunit.ExecutionEventSink.TestSkippedEvent">
+  TestSkippedEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestSkipped&gt; TestSkippedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestSkipped.html">ITestSkipped</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_ExecutionEventSink_TestStartingEvent" data-uid="Xunit.ExecutionEventSink.TestStartingEvent">
+  TestStartingEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestStarting&gt; TestStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Abstractions.ITestStarting.html">ITestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

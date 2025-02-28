@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XmlRunSettingsUtilities | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XmlRunSettingsUtilities | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities">
+
+
+
+  <h1 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities" class="text-break">
+Class XmlRunSettingsUtilities  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.VisualStudio.html">VisualStudio</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.html">TestPlatform</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.html">ObjectModel</a>.<a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.html">Utilities</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Microsoft.VisualStudio.TestPlatform.ObjectModel.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class XmlRunSettingsUtilities</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">XmlRunSettingsUtilities</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_OSArchitecture_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.OSArchitecture*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_OSArchitecture" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.OSArchitecture">
+  OSArchitecture
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Architecture OSArchitecture { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.Architecture.html">Architecture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_ReaderSettings_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.ReaderSettings*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_ReaderSettings" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.ReaderSettings">
+  ReaderSettings
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XmlReaderSettings ReaderSettings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmlreadersettings">XmlReaderSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_ContainsDataCollector_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.ContainsDataCollector*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_ContainsDataCollector_System_Xml_XPath_IXPathNavigable_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.ContainsDataCollector(System.Xml.XPath.IXPathNavigable,System.String)">
+  ContainsDataCollector(IXPathNavigable, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ContainsDataCollector(IXPathNavigable runSettingDocument, string dataCollectorUri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettingDocument</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xpath.ixpathnavigable">IXPathNavigable</a></dt>
+    <dd></dd>
+    <dt><code>dataCollectorUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_CreateDefaultRunSettings_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.CreateDefaultRunSettings*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_CreateDefaultRunSettings" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.CreateDefaultRunSettings">
+  CreateDefaultRunSettings()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static XmlDocument CreateDefaultRunSettings()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xmldocument">XmlDocument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetDataCollectionRunSettings_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetDataCollectionRunSettings*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetDataCollectionRunSettings_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetDataCollectionRunSettings(System.String)">
+  GetDataCollectionRunSettings(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataCollectionRunSettings? GetDataCollectionRunSettings(string? runSettingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollectionRunSettings.html">DataCollectionRunSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetDataCollectorsFriendlyName_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetDataCollectorsFriendlyName*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetDataCollectorsFriendlyName_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetDataCollectorsFriendlyName(System.String)">
+  GetDataCollectorsFriendlyName(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;string&gt; GetDataCollectorsFriendlyName(string? runsettingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runsettingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetInProcDataCollectionRunSettings_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetInProcDataCollectionRunSettings*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetInProcDataCollectionRunSettings_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetInProcDataCollectionRunSettings(System.String)">
+  GetInProcDataCollectionRunSettings(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DataCollectionRunSettings? GetInProcDataCollectionRunSettings(string? runSettingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollectionRunSettings.html">DataCollectionRunSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetLoggerRunSettings_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetLoggerRunSettings*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetLoggerRunSettings_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetLoggerRunSettings(System.String)">
+  GetLoggerRunSettings(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LoggerRunSettings? GetLoggerRunSettings(string? runSettings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.LoggerRunSettings.html">LoggerRunSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetRunConfigurationNode_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetRunConfigurationNode*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetRunConfigurationNode_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetRunConfigurationNode(System.String)">
+  GetRunConfigurationNode(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RunConfiguration GetRunConfigurationNode(string? settingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.RunConfiguration.html">RunConfiguration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetTestRunParameters_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetTestRunParameters*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_GetTestRunParameters_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.GetTestRunParameters(System.String)">
+  GetTestRunParameters(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, object&gt; GetTestRunParameters(string? settingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_InsertDataCollectorsNode_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.InsertDataCollectorsNode*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_InsertDataCollectorsNode_System_Xml_XPath_IXPathNavigable_Microsoft_VisualStudio_TestPlatform_ObjectModel_DataCollectorSettings_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.InsertDataCollectorsNode(System.Xml.XPath.IXPathNavigable,Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollectorSettings)">
+  InsertDataCollectorsNode(IXPathNavigable, DataCollectorSettings)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void InsertDataCollectorsNode(IXPathNavigable runSettingDocument, DataCollectorSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettingDocument</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.xml.xpath.ixpathnavigable">IXPathNavigable</a></dt>
+    <dd></dd>
+    <dt><code>settings</code> <a class="xref" href="Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollectorSettings.html">DataCollectorSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_IsDataCollectionEnabled_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.IsDataCollectionEnabled*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_IsDataCollectionEnabled_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.IsDataCollectionEnabled(System.String)">
+  IsDataCollectionEnabled(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsDataCollectionEnabled(string? runSettingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_IsInProcDataCollectionEnabled_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.IsInProcDataCollectionEnabled*"></a>
+
+  <h3 id="Microsoft_VisualStudio_TestPlatform_ObjectModel_Utilities_XmlRunSettingsUtilities_IsInProcDataCollectionEnabled_System_String_" data-uid="Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities.XmlRunSettingsUtilities.IsInProcDataCollectionEnabled(System.String)">
+  IsInProcDataCollectionEnabled(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInProcDataCollectionEnabled(string? runSettingsXml)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runSettingsXml</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

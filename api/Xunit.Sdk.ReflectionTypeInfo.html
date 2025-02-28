@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ReflectionTypeInfo | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ReflectionTypeInfo | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Sdk.ReflectionTypeInfo">
+
+
+
+  <h1 id="Xunit_Sdk_ReflectionTypeInfo" data-uid="Xunit.Sdk.ReflectionTypeInfo" class="text-break">
+Class ReflectionTypeInfo  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Sdk.html">Sdk</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.execution.desktop.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReflectionTypeInfo : LongLivedMarshalByRefObject, IReflectionTypeInfo, ITypeInfo</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="Xunit.LongLivedMarshalByRefObject.html">LongLivedMarshalByRefObject</a></div>
+      <div><span class="xref">ReflectionTypeInfo</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.Abstractions.IReflectionTypeInfo.html">IReflectionTypeInfo</a></div>
+      <div><a class="xref" href="Xunit.Abstractions.ITypeInfo.html">ITypeInfo</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.LongLivedMarshalByRefObject.html#Xunit_LongLivedMarshalByRefObject_DisconnectAll">LongLivedMarshalByRefObject.DisconnectAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.LongLivedMarshalByRefObject.html#Xunit_LongLivedMarshalByRefObject_InitializeLifetimeService">LongLivedMarshalByRefObject.InitializeLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.memberwiseclone">MarshalByRefObject.MemberwiseClone(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.getlifetimeservice">MarshalByRefObject.GetLifetimeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject.createobjref">MarshalByRefObject.CreateObjRef(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ReflectionAbstractionExtensions.html#ReflectionAbstractionExtensions_GetCustomAttributes_Xunit_Abstractions_ITypeInfo_System_Type_">ReflectionAbstractionExtensions.GetCustomAttributes(ITypeInfo, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="ReflectionAbstractionExtensions.html#ReflectionAbstractionExtensions_ToRuntimeType_Xunit_Abstractions_ITypeInfo_">ReflectionAbstractionExtensions.ToRuntimeType(ITypeInfo)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TypeUtility.html#Xunit_Sdk_TypeUtility_ResolveGenericType_Xunit_Abstractions_ITypeInfo_System_Object___Xunit_Abstractions_IParameterInfo___">TypeUtility.ResolveGenericType(ITypeInfo, object[], IParameterInfo[])</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo__ctor_" data-uid="Xunit.Sdk.ReflectionTypeInfo.#ctor*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo__ctor_System_Type_" data-uid="Xunit.Sdk.ReflectionTypeInfo.#ctor(System.Type)">
+  ReflectionTypeInfo(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReflectionTypeInfo(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_Assembly_" data-uid="Xunit.Sdk.ReflectionTypeInfo.Assembly*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_Assembly" data-uid="Xunit.Sdk.ReflectionTypeInfo.Assembly">
+  Assembly
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAssemblyInfo Assembly { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Abstractions.IAssemblyInfo.html">IAssemblyInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_BaseType_" data-uid="Xunit.Sdk.ReflectionTypeInfo.BaseType*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_BaseType" data-uid="Xunit.Sdk.ReflectionTypeInfo.BaseType">
+  BaseType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITypeInfo BaseType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Abstractions.ITypeInfo.html">ITypeInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_Interfaces_" data-uid="Xunit.Sdk.ReflectionTypeInfo.Interfaces*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_Interfaces" data-uid="Xunit.Sdk.ReflectionTypeInfo.Interfaces">
+  Interfaces
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ITypeInfo&gt; Interfaces { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Xunit.Abstractions.ITypeInfo.html">ITypeInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_IsAbstract_" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsAbstract*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_IsAbstract" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsAbstract">
+  IsAbstract
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_IsGenericParameter_" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsGenericParameter*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_IsGenericParameter" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsGenericParameter">
+  IsGenericParameter
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGenericParameter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_IsGenericType_" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsGenericType*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_IsGenericType" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsGenericType">
+  IsGenericType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGenericType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_IsSealed_" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsSealed*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_IsSealed" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsSealed">
+  IsSealed
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSealed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_IsValueType_" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsValueType*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_IsValueType" data-uid="Xunit.Sdk.ReflectionTypeInfo.IsValueType">
+  IsValueType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValueType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_Name_" data-uid="Xunit.Sdk.ReflectionTypeInfo.Name*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_Name" data-uid="Xunit.Sdk.ReflectionTypeInfo.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_Type_" data-uid="Xunit.Sdk.ReflectionTypeInfo.Type*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_Type" data-uid="Xunit.Sdk.ReflectionTypeInfo.Type">
+  Type
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_GetCustomAttributes_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetCustomAttributes*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_GetCustomAttributes_System_String_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetCustomAttributes(System.String)">
+  GetCustomAttributes(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IAttributeInfo&gt; GetCustomAttributes(string assemblyQualifiedAttributeTypeName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assemblyQualifiedAttributeTypeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Xunit.Abstractions.IAttributeInfo.html">IAttributeInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_GetGenericArguments_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetGenericArguments*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_GetGenericArguments" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetGenericArguments">
+  GetGenericArguments()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ITypeInfo&gt; GetGenericArguments()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Xunit.Abstractions.ITypeInfo.html">ITypeInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_GetMethod_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetMethod*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_GetMethod_System_String_System_Boolean_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetMethod(System.String,System.Boolean)">
+  GetMethod(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMethodInfo GetMethod(string methodName, bool includePrivateMethod)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>methodName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>includePrivateMethod</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Abstractions.IMethodInfo.html">IMethodInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_GetMethods_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetMethods*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_GetMethods_System_Boolean_" data-uid="Xunit.Sdk.ReflectionTypeInfo.GetMethods(System.Boolean)">
+  GetMethods(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IMethodInfo&gt; GetMethods(bool includePrivateMethods)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>includePrivateMethods</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Xunit.Abstractions.IMethodInfo.html">IMethodInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_ReflectionTypeInfo_ToString_" data-uid="Xunit.Sdk.ReflectionTypeInfo.ToString*"></a>
+
+  <h3 id="Xunit_Sdk_ReflectionTypeInfo_ToString" data-uid="Xunit.Sdk.ReflectionTypeInfo.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

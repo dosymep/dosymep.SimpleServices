@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CommonFileDialog | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommonFileDialog | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog">
+
+
+
+  <h1 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog" class="text-break">
+Class CommonFileDialog  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.WindowsAPICodePack.html">WindowsAPICodePack</a>.<a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.html">Dialogs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Microsoft.WindowsAPICodePack.Shell.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CommonFileDialog : IDialogControlHost, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CommonFileDialog</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.IDialogControlHost.html">IDialogControlHost</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonOpenFileDialog.html">CommonOpenFileDialog</a></div>
+      <div><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonSaveFileDialog.html">CommonSaveFileDialog</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog__ctor_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.#ctor*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog__ctor" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.#ctor">
+  CommonFileDialog()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CommonFileDialog()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog__ctor_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.#ctor*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog__ctor_System_String_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.#ctor(System.String)">
+  CommonFileDialog(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CommonFileDialog(string title)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AddToMostRecentlyUsedList_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AddToMostRecentlyUsedList*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AddToMostRecentlyUsedList" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AddToMostRecentlyUsedList">
+  AddToMostRecentlyUsedList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddToMostRecentlyUsedList { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AllowPropertyEditing_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AllowPropertyEditing*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AllowPropertyEditing" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AllowPropertyEditing">
+  AllowPropertyEditing
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowPropertyEditing { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Controls_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Controls*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Controls" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Controls">
+  Controls
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommonFileDialogControlCollection&lt;CommonFileDialogControl&gt; Controls { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.Controls.CommonFileDialogControlCollection-1.html">CommonFileDialogControlCollection</a>&lt;<a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.Controls.CommonFileDialogControl.html">CommonFileDialogControl</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_CookieIdentifier_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.CookieIdentifier*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_CookieIdentifier" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.CookieIdentifier">
+  CookieIdentifier
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid CookieIdentifier { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultDirectory_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultDirectory*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultDirectory" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultDirectory">
+  DefaultDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DefaultDirectory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultDirectoryShellContainer_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultDirectoryShellContainer*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultDirectoryShellContainer" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultDirectoryShellContainer">
+  DefaultDirectoryShellContainer
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellContainer DefaultDirectoryShellContainer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Shell.ShellContainer.html">ShellContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultExtension_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultExtension*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultExtension" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultExtension">
+  DefaultExtension
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DefaultExtension { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultFileName_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultFileName*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DefaultFileName" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DefaultFileName">
+  DefaultFileName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DefaultFileName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsureFileExists_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsureFileExists*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsureFileExists" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsureFileExists">
+  EnsureFileExists
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnsureFileExists { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsurePathExists_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsurePathExists*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsurePathExists" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsurePathExists">
+  EnsurePathExists
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnsurePathExists { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsureReadOnly_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsureReadOnly*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsureReadOnly" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsureReadOnly">
+  EnsureReadOnly
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnsureReadOnly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsureValidNames_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsureValidNames*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_EnsureValidNames" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.EnsureValidNames">
+  EnsureValidNames
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnsureValidNames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileAsShellObject_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileAsShellObject*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileAsShellObject" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileAsShellObject">
+  FileAsShellObject
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellObject FileAsShellObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Shell.ShellObject.html">ShellObject</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileName_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileName*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileName" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileName">
+  FileName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FileName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileNameCollection_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileNameCollection*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileNameCollection" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileNameCollection">
+  FileNameCollection
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;string&gt; FileNameCollection { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Filters_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Filters*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Filters" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Filters">
+  Filters
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommonFileDialogFilterCollection Filters { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogFilterCollection.html">CommonFileDialogFilterCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_InitialDirectory_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.InitialDirectory*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_InitialDirectory" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.InitialDirectory">
+  InitialDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string InitialDirectory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_InitialDirectoryShellContainer_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.InitialDirectoryShellContainer*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_InitialDirectoryShellContainer" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.InitialDirectoryShellContainer">
+  InitialDirectoryShellContainer
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellContainer InitialDirectoryShellContainer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Shell.ShellContainer.html">ShellContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_IsPlatformSupported_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.IsPlatformSupported*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_IsPlatformSupported" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.IsPlatformSupported">
+  IsPlatformSupported
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPlatformSupported { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_NavigateToShortcut_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.NavigateToShortcut*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_NavigateToShortcut" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.NavigateToShortcut">
+  NavigateToShortcut
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NavigateToShortcut { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_RestoreDirectory_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.RestoreDirectory*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_RestoreDirectory" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.RestoreDirectory">
+  RestoreDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RestoreDirectory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_SelectedFileTypeIndex_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.SelectedFileTypeIndex*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_SelectedFileTypeIndex" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.SelectedFileTypeIndex">
+  SelectedFileTypeIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SelectedFileTypeIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowHiddenItems_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowHiddenItems*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowHiddenItems" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowHiddenItems">
+  ShowHiddenItems
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowHiddenItems { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowPlacesList_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowPlacesList*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowPlacesList" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowPlacesList">
+  ShowPlacesList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowPlacesList { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Title_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Title*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Title" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Title">
+  Title
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AddPlace_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AddPlace*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AddPlace_Microsoft_WindowsAPICodePack_Shell_ShellContainer_Microsoft_WindowsAPICodePack_Shell_FileDialogAddPlaceLocation_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AddPlace(Microsoft.WindowsAPICodePack.Shell.ShellContainer,Microsoft.WindowsAPICodePack.Shell.FileDialogAddPlaceLocation)">
+  AddPlace(ShellContainer, FileDialogAddPlaceLocation)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPlace(ShellContainer place, FileDialogAddPlaceLocation location)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>place</code> <a class="xref" href="Microsoft.WindowsAPICodePack.Shell.ShellContainer.html">ShellContainer</a></dt>
+    <dd></dd>
+    <dt><code>location</code> <a class="xref" href="Microsoft.WindowsAPICodePack.Shell.FileDialogAddPlaceLocation.html">FileDialogAddPlaceLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AddPlace_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AddPlace*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_AddPlace_System_String_Microsoft_WindowsAPICodePack_Shell_FileDialogAddPlaceLocation_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.AddPlace(System.String,Microsoft.WindowsAPICodePack.Shell.FileDialogAddPlaceLocation)">
+  AddPlace(string, FileDialogAddPlaceLocation)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPlace(string path, FileDialogAddPlaceLocation location)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>location</code> <a class="xref" href="Microsoft.WindowsAPICodePack.Shell.FileDialogAddPlaceLocation.html">FileDialogAddPlaceLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ApplyCollectionChanged_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ApplyCollectionChanged*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ApplyCollectionChanged" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ApplyCollectionChanged">
+  ApplyCollectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ApplyCollectionChanged()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ApplyControlPropertyChange_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ApplyControlPropertyChange*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ApplyControlPropertyChange_System_String_Microsoft_WindowsAPICodePack_Dialogs_DialogControl_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ApplyControlPropertyChange(System.String,Microsoft.WindowsAPICodePack.Dialogs.DialogControl)">
+  ApplyControlPropertyChange(string, DialogControl)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ApplyControlPropertyChange(string propertyName, DialogControl control)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>control</code> <a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.DialogControl.html">DialogControl</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_CheckFileItemsAvailable_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.CheckFileItemsAvailable*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_CheckFileItemsAvailable" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.CheckFileItemsAvailable">
+  CheckFileItemsAvailable()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckFileItemsAvailable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_CheckFileNamesAvailable_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.CheckFileNamesAvailable*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_CheckFileNamesAvailable" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.CheckFileNamesAvailable">
+  CheckFileNamesAvailable()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckFileNamesAvailable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Dispose_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Dispose*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Dispose" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Dispose_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Dispose*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_Dispose_System_Boolean_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.Dispose(System.Boolean)">
+  Dispose(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_IsCollectionChangeAllowed_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.IsCollectionChangeAllowed*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_IsCollectionChangeAllowed" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.IsCollectionChangeAllowed">
+  IsCollectionChangeAllowed()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsCollectionChangeAllowed()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_IsControlPropertyChangeAllowed_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.IsControlPropertyChangeAllowed*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_IsControlPropertyChangeAllowed_System_String_Microsoft_WindowsAPICodePack_Dialogs_DialogControl_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.IsControlPropertyChangeAllowed(System.String,Microsoft.WindowsAPICodePack.Dialogs.DialogControl)">
+  IsControlPropertyChangeAllowed(string, DialogControl)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsControlPropertyChangeAllowed(string propertyName, DialogControl control)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>control</code> <a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.DialogControl.html">DialogControl</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFileOk_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFileOk*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFileOk_System_ComponentModel_CancelEventArgs_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFileOk(System.ComponentModel.CancelEventArgs)">
+  OnFileOk(CancelEventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnFileOk(CancelEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs">CancelEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFileTypeChanged_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFileTypeChanged*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFileTypeChanged_System_EventArgs_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFileTypeChanged(System.EventArgs)">
+  OnFileTypeChanged(EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnFileTypeChanged(EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFolderChanged_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFolderChanged*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFolderChanged_System_EventArgs_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFolderChanged(System.EventArgs)">
+  OnFolderChanged(EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnFolderChanged(EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFolderChanging_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFolderChanging*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnFolderChanging_Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialogFolderChangeEventArgs_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnFolderChanging(Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogFolderChangeEventArgs)">
+  OnFolderChanging(CommonFileDialogFolderChangeEventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnFolderChanging(CommonFileDialogFolderChangeEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogFolderChangeEventArgs.html">CommonFileDialogFolderChangeEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnOpening_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnOpening*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnOpening_System_EventArgs_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnOpening(System.EventArgs)">
+  OnOpening(EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnOpening(EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnSelectionChanged_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnSelectionChanged*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_OnSelectionChanged_System_EventArgs_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.OnSelectionChanged(System.EventArgs)">
+  OnSelectionChanged(EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSelectionChanged(EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ResetUserSelections_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ResetUserSelections*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ResetUserSelections" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ResetUserSelections">
+  ResetUserSelections()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetUserSelections()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowDialog_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowDialog*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowDialog" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowDialog">
+  ShowDialog()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommonFileDialogResult ShowDialog()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogResult.html">CommonFileDialogResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowDialog_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowDialog*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowDialog_System_IntPtr_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowDialog(System.IntPtr)">
+  ShowDialog(IntPtr)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommonFileDialogResult ShowDialog(IntPtr ownerWindowHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ownerWindowHandle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogResult.html">CommonFileDialogResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowDialog_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowDialog*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ShowDialog_System_Windows_Window_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ShowDialog(System.Windows.Window)">
+  ShowDialog(Window)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommonFileDialogResult ShowDialog(Window window)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>window</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogResult.html">CommonFileDialogResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ThrowIfDialogShowing_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ThrowIfDialogShowing*"></a>
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_ThrowIfDialogShowing_System_String_" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.ThrowIfDialogShowing(System.String)">
+  ThrowIfDialogShowing(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ThrowIfDialogShowing(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_DialogOpening" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.DialogOpening">
+  DialogOpening
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler DialogOpening</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileOk" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileOk">
+  FileOk
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event CancelEventHandler FileOk</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventhandler">CancelEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FileTypeChanged" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FileTypeChanged">
+  FileTypeChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler FileTypeChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FolderChanged" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FolderChanged">
+  FolderChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler FolderChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_FolderChanging" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.FolderChanging">
+  FolderChanging
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;CommonFileDialogFolderChangeEventArgs&gt; FolderChanging</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialogFolderChangeEventArgs.html">CommonFileDialogFolderChangeEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_WindowsAPICodePack_Dialogs_CommonFileDialog_SelectionChanged" data-uid="Microsoft.WindowsAPICodePack.Dialogs.CommonFileDialog.SelectionChanged">
+  SelectionChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler SelectionChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

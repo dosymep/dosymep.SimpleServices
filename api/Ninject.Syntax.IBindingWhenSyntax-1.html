@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IBindingWhenSyntax&lt;T&gt; | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IBindingWhenSyntax&lt;T&gt; | dosymep.SimpleServices ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ninject.Syntax.IBindingWhenSyntax`1">
+
+
+
+  <h1 id="Ninject_Syntax_IBindingWhenSyntax_1" data-uid="Ninject.Syntax.IBindingWhenSyntax`1" class="text-break">
+Interface IBindingWhenSyntax&lt;T&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ninject.html">Ninject</a>.<a class="xref" href="Ninject.Syntax.html">Syntax</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Ninject.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBindingWhenSyntax&lt;T&gt; : IBindingSyntax, IHaveBindingConfiguration, IHaveKernel</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Ninject.Infrastructure.IHaveBindingConfiguration.html#Ninject_Infrastructure_IHaveBindingConfiguration_BindingConfiguration">IHaveBindingConfiguration.BindingConfiguration</a>
+    </div>
+    <div>
+      <a class="xref" href="Ninject.Infrastructure.IHaveKernel.html#Ninject_Infrastructure_IHaveKernel_Kernel">IHaveKernel.Kernel</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_When_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.When*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_When_System_Func_Ninject_Activation_IRequest_System_Boolean__" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.When(System.Func{Ninject.Activation.IRequest,System.Boolean})">
+  When(Func&lt;IRequest, bool&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; When(Func&lt;IRequest, bool&gt; condition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="Ninject.Activation.IRequest.html">IRequest</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenAnyAncestorMatches_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenAnyAncestorMatches*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenAnyAncestorMatches_System_Predicate_Ninject_Activation_IContext__" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenAnyAncestorMatches(System.Predicate{Ninject.Activation.IContext})">
+  WhenAnyAncestorMatches(Predicate&lt;IContext&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenAnyAncestorMatches(Predicate&lt;IContext&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="Ninject.Activation.IContext.html">IContext</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenAnyAncestorNamed_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenAnyAncestorNamed*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenAnyAncestorNamed_System_String_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenAnyAncestorNamed(System.String)">
+  WhenAnyAncestorNamed(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenAnyAncestorNamed(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenAnyAnchestorNamed_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenAnyAnchestorNamed*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenAnyAnchestorNamed_System_String_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenAnyAnchestorNamed(System.String)">
+  WhenAnyAnchestorNamed(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use WhenAnyAncestorNamed(string name)&quot;)]
+IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenAnyAnchestorNamed(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenClassHas_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenClassHas*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenClassHas_System_Type_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenClassHas(System.Type)">
+  WhenClassHas(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenClassHas(Type attributeType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attributeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenClassHas_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenClassHas*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenClassHas__1" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenClassHas``1">
+  WhenClassHas&lt;TAttribute&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenClassHas&lt;TAttribute&gt;() where TAttribute : Attribute</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAttribute</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedExactlyInto_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedExactlyInto*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedExactlyInto_System_Type_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedExactlyInto(System.Type)">
+  WhenInjectedExactlyInto(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenInjectedExactlyInto(Type parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedExactlyInto_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedExactlyInto*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedExactlyInto_System_Type___" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedExactlyInto(System.Type[])">
+  WhenInjectedExactlyInto(params Type[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenInjectedExactlyInto(params Type[] parents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedExactlyInto_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedExactlyInto*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedExactlyInto__1" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedExactlyInto``1">
+  WhenInjectedExactlyInto&lt;TParent&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenInjectedExactlyInto&lt;TParent&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TParent</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedInto_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedInto*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedInto_System_Type_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedInto(System.Type)">
+  WhenInjectedInto(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenInjectedInto(Type parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedInto_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedInto*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedInto_System_Type___" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedInto(System.Type[])">
+  WhenInjectedInto(params Type[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenInjectedInto(params Type[] parents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedInto_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedInto*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenInjectedInto__1" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenInjectedInto``1">
+  WhenInjectedInto&lt;TParent&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenInjectedInto&lt;TParent&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TParent</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenMemberHas_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenMemberHas*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenMemberHas_System_Type_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenMemberHas(System.Type)">
+  WhenMemberHas(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenMemberHas(Type attributeType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attributeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenMemberHas_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenMemberHas*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenMemberHas__1" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenMemberHas``1">
+  WhenMemberHas&lt;TAttribute&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenMemberHas&lt;TAttribute&gt;() where TAttribute : Attribute</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAttribute</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenNoAncestorMatches_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenNoAncestorMatches*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenNoAncestorMatches_System_Predicate_Ninject_Activation_IContext__" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenNoAncestorMatches(System.Predicate{Ninject.Activation.IContext})">
+  WhenNoAncestorMatches(Predicate&lt;IContext&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenNoAncestorMatches(Predicate&lt;IContext&gt; predicate)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>predicate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;<a class="xref" href="Ninject.Activation.IContext.html">IContext</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenNoAncestorNamed_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenNoAncestorNamed*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenNoAncestorNamed_System_String_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenNoAncestorNamed(System.String)">
+  WhenNoAncestorNamed(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenNoAncestorNamed(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenParentNamed_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenParentNamed*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenParentNamed_System_String_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenParentNamed(System.String)">
+  WhenParentNamed(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenParentNamed(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenTargetHas_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenTargetHas*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenTargetHas_System_Type_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenTargetHas(System.Type)">
+  WhenTargetHas(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenTargetHas(Type attributeType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>attributeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ninject_Syntax_IBindingWhenSyntax_1_WhenTargetHas_" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenTargetHas*"></a>
+
+  <h3 id="Ninject_Syntax_IBindingWhenSyntax_1_WhenTargetHas__1" data-uid="Ninject.Syntax.IBindingWhenSyntax`1.WhenTargetHas``1">
+  WhenTargetHas&lt;TAttribute&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindingInNamedWithOrOnSyntax&lt;T&gt; WhenTargetHas&lt;TAttribute&gt;() where TAttribute : Attribute</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ninject.Syntax.IBindingInNamedWithOrOnSyntax-1.html">IBindingInNamedWithOrOnSyntax</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TAttribute</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
