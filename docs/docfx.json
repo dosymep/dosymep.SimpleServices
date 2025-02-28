@@ -3,7 +3,7 @@
   "metadata": [
     {
       "dest": "api",
-      "src": [ { "src": "../bin", "files": "**.dll" } ]
+      "src": [ { "src": "../bin", "files": "dosymep.**.dll" } ]
     }
   ],
   "build": {

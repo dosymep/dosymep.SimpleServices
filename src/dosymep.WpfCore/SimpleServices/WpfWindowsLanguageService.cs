@@ -1,32 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 
 using dosymep.SimpleServices;
 
 using Microsoft.Win32;
 
-namespace dosymep.Xpf.Core.SimpleServices {
+namespace dosymep.WpfCore.SimpleServices {
     /// <summary>
     /// Класс сервиса доступа к языку Windows.
     /// </summary>
-    public class XtraWindowsLanguageService : ILanguageService, IDisposable {
-        /// <inheritdoc />
-        public event Action<CultureInfo> LanguageChanged;
-
+    public class WpfWindowsLanguageService : ILanguageService, IDisposable {
         /// <inheritdoc/>
-        public CultureInfo HostLanguage => CultureInfo.InstalledUICulture;
-
+        public event Action<CultureInfo>? LanguageChanged;
+        
         /// <summary>
         /// Конструирует объект.
         /// </summary>
-        public XtraWindowsLanguageService() {
+        public WpfWindowsLanguageService() {
             SystemEvents.UserPreferenceChanged += OnSystemEventsOnUserPreferenceChanged;
         }
 
+        /// <inheritdoc/>
+        public CultureInfo HostLanguage => CultureInfo.InstalledUICulture;
+        
         private void OnSystemEventsOnUserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e) {
             if(e.Category == UserPreferenceCategory.General) {
                 LanguageChanged?.Invoke(HostLanguage);

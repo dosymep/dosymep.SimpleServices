@@ -1,0 +1,35 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="MainWindow.Title">Главное окно</system:String>
+
+    <system:String x:Key="MainWindow.RandomText">
+        В частности, новая модель организационной деятельности, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для своевременного выполнения сверхзадачи. С другой стороны, высокотехнологичная концепция общественного уклада играет важную роль в формировании приоретизации разума над эмоциями.
+
+        Предварительные выводы неутешительны: понимание сути ресурсосберегающих технологий не даёт нам иного выбора, кроме определения поэтапного и последовательного развития общества. Для современного мира постоянное информационно-пропагандистское обеспечение нашей деятельности требует от нас анализа первоочередных требований. Вот вам яркий пример современных тенденций — понимание сути ресурсосберегающих технологий предполагает независимые способы реализации прогресса профессионального сообщества.
+
+        Наше дело не так однозначно, как может показаться: новая модель организационной деятельности позволяет оценить значение благоприятных перспектив. Ясность нашей позиции очевидна: современная методология разработки, в своём классическом представлении, допускает внедрение приоретизации разума над эмоциями! Господа, сложившаяся структура организации создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поэтапного и последовательного развития общества. С другой стороны, реализация намеченных плановых заданий требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Но укрепление и развитие внутренней структуры обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность анализа существующих паттернов поведения.
+    </system:String>
+
+    <system:String x:Key="MainWindow.ButtonOk">OK</system:String>
+    <system:String x:Key="MainWindow.ButtonCancel">Отмена</system:String>
+    
+    <system:String x:Key="MainWindow.LoadedTitle">Загрузка</system:String>
+    <system:String x:Key="MainWindow.LoadedContent">Окно было загружено!</system:String>
+    <system:String x:Key="MainWindow.NotLoadedContent">Окно не было загружено!</system:String>
+    
+    <system:String x:Key="MainWindow.AcceptTitle">Закрыть</system:String>
+    <system:String x:Key="MainWindow.AcceptContent">Окно было закрыто!</system:String>
+    
+    <system:String x:Key="MainWindow.ButtonSecondWindowShow">Показать</system:String>
+    <system:String x:Key="MainWindow.ButtonSecondWindowShowDialog">Открыть</system:String>
+    
+    <system:String x:Key="SecondWindow.Title">Введите значение</system:String>
+    
+    <system:String x:Key="MessageBox.Title">Название</system:String>
+    <system:String x:Key="MessageBox.Content">Привет мир!</system:String>
+    <system:String x:Key="ProgressDialog.Content">Пожалуйста подождите [{0}/{1}]...</system:String>
+    
+    <system:String x:Key="UIThemes.Dark">Темная</system:String>
+    <system:String x:Key="UIThemes.Light">Светлая</system:String>
+</ResourceDictionary>

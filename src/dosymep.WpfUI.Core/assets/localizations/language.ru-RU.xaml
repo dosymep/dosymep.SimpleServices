@@ -1,0 +1,14 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="MessageBox.Ok">ОК</system:String>
+    <system:String x:Key="MessageBox.Cancel">Отмена</system:String>
+    <system:String x:Key="MessageBox.Yes">Да</system:String>
+    <system:String x:Key="MessageBox.No">Нет</system:String>
+    
+    <system:String x:Key="ProgressDialog.Title">Пожалуйста подождите...</system:String>
+    <system:String x:Key="ProgressDialog.CancelButton">Отмена</system:String>
+    <system:String x:Key="ProgressDialog.Canceling">Отмена операции...</system:String>
+    <system:String x:Key="ProgressDialog.PleaseWait">Пожалуйста подождите...</system:String>
+    <system:String x:Key="ProgressDialog.PleaseWaitFormat">Пожалуйста подождите [{0}/{1}]...</system:String>
+</ResourceDictionary>

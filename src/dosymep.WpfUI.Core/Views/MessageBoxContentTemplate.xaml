@@ -1,0 +1,23 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
+    <DataTemplate x:Key="MessageBoxContentTemplate">
+        <StackPanel
+            Margin="10"
+            Orientation="Horizontal">
+            
+            <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
+            <ui:Image
+                Margin="10 0"
+                Height="26"
+                VerticalAlignment="Center"
+                Source="{Binding ImageSource}" />
+            
+            <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
+            <ui:TextBlock 
+                Margin="0 0 10 0"
+                VerticalAlignment="Center"
+                Text="{Binding MessageBoxText}" />
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,81 @@
+<ui:FluentWindow
+    x:Class="WpfUIDemoApp.Views.SecondWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfUIDemoApp.Views"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:viewModels="clr-namespace:WpfDemoLib.ViewModels;assembly=WpfDemoLib"
+    xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
+
+    Width="600"
+    Height="155"
+    
+    MinWidth="600"
+    MinHeight="155"
+    
+    MaxWidth="600"
+    MaxHeight="155"
+
+    x:Name="_this"
+    mc:Ignorable="d"
+
+    Icon="{me:QualifiedImage assets/images/icons8-google-photos-144.png}"
+
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    Title="{me:LocalizationSource MainWindow.Title}"
+
+    d:DataContext="{d:DesignInstance viewModels:SecondViewModel, IsDesignTimeCreatable=False}">
+
+    <b:Interaction.Behaviors>
+        <behaviors:WpfThemeBehavior />
+        <behaviors:WpfLocalizationBehavior />
+    </b:Interaction.Behaviors>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            Grid.Row="0"
+            ShowClose="False"
+            ShowMinimize="False"
+            ShowMaximize="False"
+            Title="{me:LocalizationSource SecondWindow.Title}"
+            Icon="{me:QualifiedImage assets/images/icons8-google-photos-144.png}" />
+
+        <ui:TextBox
+            Grid.Row="1"
+            Margin="10"
+            VerticalAlignment="Center"
+            Text="{Binding Result}" />
+
+        <StackPanel
+            Grid.Row="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
+
+            <ui:Button
+                Margin="10"
+                Width="80"
+                Appearance="Info"
+                IsDefault="True"
+                Click="ButtonOk_OnClick"
+                Content="{me:LocalizationSource MainWindow.ButtonOk}" />
+
+            <ui:Button
+                Margin="10"
+                Width="80"
+                IsCancel="True"
+                Click="ButtonCancel_OnClick"
+                Content="{me:LocalizationSource MainWindow.ButtonCancel}" />
+        </StackPanel>
+    </Grid>
+</ui:FluentWindow>

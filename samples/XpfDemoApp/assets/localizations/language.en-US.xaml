@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="MainWindow.Title">Main Window</system:String>
+
+    <system:String x:Key="MainWindow.RandomText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</system:String>
+
+
+    <system:String x:Key="MainWindow.ButtonOk">OK</system:String>
+    <system:String x:Key="MainWindow.ButtonCancel">Cancel</system:String>
+    
+    <system:String x:Key="MainWindow.CloseTitle">DemoApp</system:String>
+    <system:String x:Key="MainWindow.CloseContent">Application will be closed!</system:String>
+    
+    <system:String x:Key="MainWindow.LoadedTitle">Load</system:String>
+    <system:String x:Key="MainWindow.LoadedContent">Window has loaded!</system:String>
+    <system:String x:Key="MainWindow.NotLoadedContent">Window has no loaded!</system:String>
+    
+    <system:String x:Key="MainWindow.AcceptTitle">Close</system:String>
+    <system:String x:Key="MainWindow.AcceptContent">Window has closed!</system:String>
+    
+    <system:String x:Key="MainWindow.ButtonSecondWindowShow">Show</system:String>
+    <system:String x:Key="MainWindow.ButtonSecondWindowShowDialog">Show dialog</system:String>
+    
+    <system:String x:Key="SecondWindow.Title">Enter value</system:String>
+    
+    <system:String x:Key="MessageBox.Title">Title</system:String>
+    <system:String x:Key="MessageBox.Content">Hello world!</system:String>
+    <system:String x:Key="ProgressDialog.Content">Please wait [{0}/{1}]...</system:String>
+    
+    <system:String x:Key="UIThemes.Dark">Dark</system:String>
+    <system:String x:Key="UIThemes.Light">Light</system:String>
+</ResourceDictionary>

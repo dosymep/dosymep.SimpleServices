@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <UseWPF>true</UseWPF>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>net48</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Title>dosymep.WpfUI.Core</Title>
+        <PackageId>dosymep.WpfUI.Core</PackageId>
+        <Description>Данный пакет содержит базовую реализацию сервисов на lepoco WinUI.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.Xaml.Behaviors">
+            <HintPath>C:\Users\biseuv_o\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Web"/>
+        <Reference Include="WindowsBase"/>
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
+
+        <PackageReference Include="WPF-UI" Version="4.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
+        <ProjectReference Include="..\dosymep.WpfCore.Ninject\dosymep.WpfCore.Ninject.csproj" />
+        <ProjectReference Include="..\dosymep.WpfCore\dosymep.WpfCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="assets\images\icons8-cross-26.png"/>
+        <Resource Include="assets\images\icons8-empty-26.png"/>
+        <Resource Include="assets\images\icons8-error-26.png"/>
+        <Resource Include="assets\images\icons8-exclamation-26.png"/>
+        <Resource Include="assets\images\icons8-question-26.png"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Page Update="assets\localizations\language.ru-RU.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="assets\localizations\language.en-US.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
+</Project>

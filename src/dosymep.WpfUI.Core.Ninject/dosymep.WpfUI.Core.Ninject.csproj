@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <UseWpf>true</UseWpf>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>net48</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Title>dosymep.WpfUI.Core.Ninject</Title>
+        <PackageId>dosymep.WpfUI.Core.Ninject</PackageId>
+        <Description>Данный пакет содержит расширение для настройки контейнера зависимостей Ninject.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Net"/>
+        <Reference Include="System.Net.Http"/>
+
+        <PackageReference Include="Ninject" Version="3.3.4">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+
+        <PackageReference Include="WPF-UI" Version="4.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\dosymep.WpfUI.Core\dosymep.WpfUI.Core.csproj"/>
+        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
+    </ItemGroup>
+
+</Project>
