@@ -13,6 +13,8 @@ namespace dosymep.WpfCore.MarkupExtensions;
 /// <summary>
 /// Класс для получения локализации.
 /// </summary>
+[MarkupExtensionReturnType(typeof(object))]
+[TypeConverter(typeof(DynamicResourceExtensionConverter))]
 public sealed class LocalizationSourceExtension : MarkupExtension {
     /// <summary>
     /// Конструирует объект.
