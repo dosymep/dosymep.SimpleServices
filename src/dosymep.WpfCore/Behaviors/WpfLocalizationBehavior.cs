@@ -10,7 +10,7 @@ namespace dosymep.WpfCore.Behaviors;
 /// <summary>
 /// Поведение применения языка.
 /// </summary>
-public sealed class WpfLocalizationBehavior : Behavior<Window> {
+public sealed class WpfLocalizationBehavior : Behavior<FrameworkElement> {
     private ILocalizationService? _localizationService;
 
     /// <inheritdoc />
