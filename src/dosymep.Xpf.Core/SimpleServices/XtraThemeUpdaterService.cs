@@ -11,10 +11,15 @@ namespace dosymep.Xpf.Core.SimpleServices {
     public class XtraThemeUpdaterService : IUIThemeUpdaterService {
         /// <inheritdoc />
         public void SetTheme(Window window, UIThemes theme) {
+            SetTheme((FrameworkElement) window, theme);
+        }
+
+        /// <inheritdoc />
+        public void SetTheme(FrameworkElement frameworkElement, UIThemes theme) {
             if(theme == UIThemes.Dark) {
-                ThemeManager.SetThemeName(window, Theme.Win10DarkName);
+                ThemeManager.SetThemeName(frameworkElement, Theme.Win10DarkName);
             } else if(theme == UIThemes.Light) {
-                ThemeManager.SetThemeName(window, Theme.Win10LightName);
+                ThemeManager.SetThemeName(frameworkElement, Theme.Win10LightName);
             }
         }
     }

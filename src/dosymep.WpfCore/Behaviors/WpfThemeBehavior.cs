@@ -9,7 +9,7 @@ namespace dosymep.WpfCore.Behaviors;
 /// <summary>
 /// Поведение применения темы.
 /// </summary>
-public sealed class WpfThemeBehavior : Behavior<Window> {
+public sealed class WpfThemeBehavior : Behavior<FrameworkElement> {
     private IUIThemeUpdaterService? _themeUpdaterService;
 
     /// <inheritdoc />

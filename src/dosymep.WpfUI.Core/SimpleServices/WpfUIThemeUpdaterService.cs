@@ -17,19 +17,27 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
 
     /// <inheritdoc />
     public void SetTheme(Window window, UIThemes theme) {
-        ApplicationTheme appTheme = ApplicationTheme.Unknown;
-        if(theme == UIThemes.Dark) {
-            appTheme = ApplicationTheme.Dark;
-        } else if(theme == UIThemes.Light) {
-            appTheme = ApplicationTheme.Light;
+        SetTheme((FrameworkElement) window, theme);
+    }
+
+    /// <inheritdoc />
+    public void SetTheme(FrameworkElement frameworkElement, UIThemes theme) {
+        _theme.Theme = GetAppTheme(theme);
+        if(!frameworkElement.Resources.MergedDictionaries.Contains(_theme)) {
+            frameworkElement.Resources.MergedDictionaries.Add(_theme);
+            frameworkElement.Resources.MergedDictionaries.Add(_controlsDictionary);
         }
 
-        _theme.Theme = appTheme;
-        if(!window.Resources.MergedDictionaries.Contains(_theme)) {
-            window.Resources.MergedDictionaries.Add(_theme);
-            window.Resources.MergedDictionaries.Add(_controlsDictionary);
+        if(frameworkElement is Window window) {
+            WindowBackgroundManager.UpdateBackground(window, GetAppTheme(theme), WindowBackdropType.Mica);
         }
+    }
 
-        WindowBackgroundManager.UpdateBackground(window, appTheme, WindowBackdropType.Mica);
+    private static ApplicationTheme GetAppTheme(UIThemes theme) {
+        return theme switch {
+            UIThemes.Dark => ApplicationTheme.Dark,
+            UIThemes.Light => ApplicationTheme.Light,
+            _ => ApplicationTheme.Unknown
+        };
     }
 }
