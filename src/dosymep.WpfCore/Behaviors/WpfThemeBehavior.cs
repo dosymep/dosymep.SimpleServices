@@ -25,7 +25,7 @@ public sealed class WpfThemeBehavior : Behavior<FrameworkElement> {
     private void Subscribe(IHasTheme? theme) {
         if(theme is not null) {
             _themeUpdaterService = theme.ThemeUpdaterService;
-            _themeUpdaterService?.SetTheme(AssociatedObject, theme.HostTheme);
+            _themeUpdaterService?.SetTheme(theme.HostTheme, AssociatedObject);
 
             theme.ThemeChanged += ThemeOnThemeChanged;
         }
@@ -38,6 +38,6 @@ public sealed class WpfThemeBehavior : Behavior<FrameworkElement> {
     }
 
     private void ThemeOnThemeChanged(UIThemes theme) {
-        _themeUpdaterService?.SetTheme(AssociatedObject, theme);
+        _themeUpdaterService?.SetTheme(theme, AssociatedObject);
     }
 }

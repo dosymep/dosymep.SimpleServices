@@ -17,11 +17,11 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
 
     /// <inheritdoc />
     public void SetTheme(Window window, UIThemes theme) {
-        SetTheme((FrameworkElement) window, theme);
+        SetTheme(theme, window);
     }
 
     /// <inheritdoc />
-    public void SetTheme(FrameworkElement frameworkElement, UIThemes theme) {
+    public void SetTheme(UIThemes theme, FrameworkElement frameworkElement) {
         _theme.Theme = GetAppTheme(theme);
         if(!frameworkElement.Resources.MergedDictionaries.Contains(_theme)) {
             frameworkElement.Resources.MergedDictionaries.Add(_theme);
