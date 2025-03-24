@@ -1,6 +1,8 @@
 using System.Collections;
 using System.ComponentModel;
 using System.Reflection;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Markup;
 using System.Xaml;
@@ -44,6 +46,13 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
             throw new InvalidOperationException("EnumType must be an enum.");
         }
 
+        SetPropertyPaths(serviceProvider);
+        SetLocalizationStrings(serviceProvider);
+
+        return _binding.ProvideValue(serviceProvider);
+    }
+
+    private void SetLocalizationStrings(IServiceProvider serviceProvider) {
         IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
         ILocalizationService? localizationService = localization?.LocalizationService;
 
@@ -53,15 +62,24 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
 
         _binding.Source = _markupValueObject;
         _markupValueObject.Value = GetEnumValues(localizationService);
+    }
 
-        return _binding.ProvideValue(serviceProvider);
+    private static void SetPropertyPaths(IServiceProvider serviceProvider) {
+        IProvideValueTarget? provideValueTarget = serviceProvider.GetRootObject<IProvideValueTarget>();
+        if(provideValueTarget?.TargetObject is Selector selector) {
+            selector.SelectedValuePath = nameof(MarkupDisplayObject.Value);
+        }
+
+        if(provideValueTarget?.TargetObject is ItemsControl itemsControl) {
+            itemsControl.DisplayMemberPath = nameof(MarkupDisplayObject.DisplayName);
+        }
     }
 
     private void UpdateDisplayName(object? value) {
         if(value == null) {
             return;
         }
-        
+
         IEnumerable<MarkupDisplayObject> list = ((IEnumerable) value)
             .OfType<MarkupDisplayObject>();
 
@@ -77,7 +95,8 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
             .ToArray() ?? Array.Empty<object>();
     }
 
-    internal static MarkupDisplayObject CreateMarkupDisplayObject(FieldInfo item, ILocalizationService? localizationService) {
+    internal static MarkupDisplayObject CreateMarkupDisplayObject(FieldInfo item,
+        ILocalizationService? localizationService) {
         return new MarkupDisplayObject(() => GetEnumName(item, localizationService)) {
             Value = item.GetValue(null), DisplayName = GetEnumName(item, localizationService)
         };
