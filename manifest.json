@@ -561,6 +561,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.Behaviors.WpSavePositionBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.Behaviors.WpSavePositionBehavior.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.Behaviors.WpSavePositionBehavior",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.Behaviors.WpSavePositionBehavior.yml\" sourcestartlinenumber=\"1\">Поведение сохранения позиции окна.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/dosymep.WpfCore.Behaviors.WpfAttachServiceBehavior.yml",
       "output": {
         ".html": {
