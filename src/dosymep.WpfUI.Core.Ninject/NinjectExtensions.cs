@@ -25,7 +25,8 @@ public static class NinjectExtensions {
         }
 
         kernel.Bind<IUIThemeUpdaterService>()
-            .To<WpfUIThemeUpdaterService>();
+            .To<WpfUIThemeUpdaterService>()
+            .InSingletonScope();
 
         return kernel;
     }
@@ -43,6 +44,7 @@ public static class NinjectExtensions {
 
         kernel.Bind<IMessageBoxService>()
             .To<WpfUIMessageBoxService>()
+            .InSingletonScope()
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false);
 
         return kernel;
@@ -90,6 +92,7 @@ public static class NinjectExtensions {
 
         kernel.Bind<IProgressDialogService>()
             .To<WpfUIProgressDialogService>()
+            .InSingletonScope()
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
             .WithPropertyValue(nameof(WpfUIProgressDialogService.DisplayTitleFormat), displayTitleFormat)
             .WithPropertyValue(nameof(WpfUIProgressDialogService.StepValue), stepValue)

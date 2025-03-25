@@ -58,12 +58,12 @@ public sealed class WpfUIMessageBoxService : WpfBaseService, IMessageBoxService 
         messageBox.ContentTemplate = messageBox.FindResource("MessageBoxContentTemplate") as DataTemplate;
         
         void UpdateTheme(UIThemes uiTheme) {
-            _theme.ThemeUpdaterService.SetTheme(messageBox, uiTheme);
+            _theme.ThemeUpdaterService.SetTheme(uiTheme, messageBox);
         }
 
         try {
             _theme.ThemeChanged += UpdateTheme;
-            _theme.ThemeUpdaterService.SetTheme(messageBox, _theme.HostTheme);
+            _theme.ThemeUpdaterService.SetTheme(_theme.HostTheme, messageBox);
 
             (MessageBoxResult closeResult,
                 MessageBoxResult primaryResult,
