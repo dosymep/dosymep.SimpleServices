@@ -77,9 +77,4 @@ internal struct WINDOWPLACEMENT {
     /// Координаты окна, когда окно находится в восстановленном положении.
     /// </summary>
     public RECT rcNormalPosition;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public RECT rcDevice;
 }

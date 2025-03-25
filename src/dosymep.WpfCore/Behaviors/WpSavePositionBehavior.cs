@@ -53,7 +53,14 @@ public sealed class WpSavePositionBehavior : Behavior<Window> {
             throw new InvalidOperationException("AssociatedObject cannot be null.");
         }
 
-        ReadPosition();
+        // Если окно было уже загружено
+        // такое может быть, когда не используется behaviour в конструкторе
+        if(AssociatedObject.IsLoaded) {
+            ReadPosition();
+        }
+
+        AssociatedObject.Loaded += AssociatedObjectOnLoaded;
+        AssociatedObject.Closing += AssociatedObjectOnClosing;
     }
 
     /// <inheritdoc />
@@ -66,7 +73,12 @@ public sealed class WpSavePositionBehavior : Behavior<Window> {
             throw new InvalidOperationException("AssociatedObject cannot be null.");
         }
 
-        SavePosition();
+        AssociatedObject.Loaded -= AssociatedObjectOnLoaded;
+        AssociatedObject.Closing -= AssociatedObjectOnClosing;
+    }
+
+    private void AssociatedObjectOnLoaded(object sender, RoutedEventArgs e) {
+        ReadPosition();
     }
 
     private void AssociatedObjectOnClosing(object sender, CancelEventArgs e) {
@@ -74,18 +86,19 @@ public sealed class WpSavePositionBehavior : Behavior<Window> {
     }
 
     private void ReadPosition() {
-        AssociatedObject.Closing += AssociatedObjectOnClosing;
-        WindowPosition windowPosition = SerializationService.Deserialize<WindowPosition>(File.ReadAllText(ConfigPath));
-        if(windowPosition.WindowPlacement.HasValue) {
-            AssociatedObject.SetPlacement(windowPosition.WindowPlacement.Value);
+        if(File.Exists(ConfigPath)) {
+            WindowPosition windowPosition =
+                SerializationService.Deserialize<WindowPosition>(File.ReadAllText(ConfigPath));
+            if(windowPosition.WindowPlacement.HasValue) {
+                AssociatedObject.SetPlacement(windowPosition.WindowPlacement.Value);
+            }
         }
     }
 
     private void SavePosition() {
-        AssociatedObject.Closing -= AssociatedObjectOnClosing;
         WindowPosition windowPosition = new() {WindowPlacement = AssociatedObject.GetPlacement()};
         string? content = SerializationService.Serialize(windowPosition);
-     
+
         Directory.CreateDirectory(Path.GetDirectoryName(ConfigPath)!);
         File.WriteAllText(ConfigPath, content);
     }
