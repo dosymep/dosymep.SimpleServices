@@ -65,7 +65,7 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
     }
 
     private static void SetPropertyPaths(IServiceProvider serviceProvider) {
-        IProvideValueTarget? provideValueTarget = serviceProvider.GetRootObject<IProvideValueTarget>();
+        IProvideValueTarget? provideValueTarget = serviceProvider.GetService<IProvideValueTarget>();
         if(provideValueTarget?.TargetObject is Selector selector) {
             selector.SelectedValuePath = nameof(MarkupDisplayObject.Value);
         }

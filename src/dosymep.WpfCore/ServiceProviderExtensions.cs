@@ -9,6 +9,16 @@ namespace dosymep.WpfCore;
 /// </summary>
 public static class ServiceProviderExtensions {
     /// <summary>
+    /// Возвращает сервис и приводит его к заданому типу.
+    /// </summary>
+    /// <param name="serviceProvider">Интерфейс провайдера сервисов.</param>
+    /// <typeparam name="T">Тип в который нужно привести root объект.</typeparam>
+    /// <returns>Возвращает сервис и приводит его к заданому типу.</returns>
+    public static T? GetService<T>(this IServiceProvider serviceProvider) where T : class {
+        return serviceProvider.GetService(typeof(T)) as T;
+    }
+
+    /// <summary>
     /// Возвращает root объект и приводит к заданому типу.
     /// </summary>
     /// <param name="serviceProvider">Интерфейс провайдера сервисов.</param>
