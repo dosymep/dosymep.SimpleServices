@@ -102,7 +102,8 @@ Class LocalizationSourceExtension  <a class="header-action link-secondary" title
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class LocalizationSourceExtension : MarkupExtension</code></pre>
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(DynamicResourceExtensionConverter))]
+public sealed class LocalizationSourceExtension : MarkupExtension</code></pre>
   </div>
 
 

@@ -1640,6 +1640,12 @@ references:
   commentId: M:dosymep.SimpleServices.IUIThemeUpdaterService.SetTheme(System.Windows.Window,dosymep.SimpleServices.UIThemes)
   fullName: dosymep.SimpleServices.IUIThemeUpdaterService.SetTheme(System.Windows.Window, dosymep.SimpleServices.UIThemes)
   nameWithType: IUIThemeUpdaterService.SetTheme(Window, UIThemes)
+- uid: dosymep.SimpleServices.IUIThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes,System.Windows.FrameworkElement)
+  name: SetTheme(UIThemes, FrameworkElement)
+  href: api/dosymep.SimpleServices.IUIThemeUpdaterService.html#dosymep_SimpleServices_IUIThemeUpdaterService_SetTheme_dosymep_SimpleServices_UIThemes_System_Windows_FrameworkElement_
+  commentId: M:dosymep.SimpleServices.IUIThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes,System.Windows.FrameworkElement)
+  fullName: dosymep.SimpleServices.IUIThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes, System.Windows.FrameworkElement)
+  nameWithType: IUIThemeUpdaterService.SetTheme(UIThemes, FrameworkElement)
 - uid: dosymep.SimpleServices.IUIThemeUpdaterService.SetTheme*
   name: SetTheme
   href: api/dosymep.SimpleServices.IUIThemeUpdaterService.html#dosymep_SimpleServices_IUIThemeUpdaterService_SetTheme_
@@ -3866,6 +3872,21 @@ references:
   fullName.vb: dosymep.WpfCore.ServiceProviderExtensions.GetRootObject(Of T)(System.IServiceProvider)
   nameWithType: ServiceProviderExtensions.GetRootObject<T>(IServiceProvider)
   nameWithType.vb: ServiceProviderExtensions.GetRootObject(Of T)(IServiceProvider)
+- uid: dosymep.WpfCore.ServiceProviderExtensions.GetService*
+  name: GetService
+  href: api/dosymep.WpfCore.ServiceProviderExtensions.html#dosymep_WpfCore_ServiceProviderExtensions_GetService_
+  commentId: Overload:dosymep.WpfCore.ServiceProviderExtensions.GetService
+  fullName: dosymep.WpfCore.ServiceProviderExtensions.GetService
+  nameWithType: ServiceProviderExtensions.GetService
+- uid: dosymep.WpfCore.ServiceProviderExtensions.GetService``1(System.IServiceProvider)
+  name: GetService<T>(IServiceProvider)
+  href: api/dosymep.WpfCore.ServiceProviderExtensions.html#dosymep_WpfCore_ServiceProviderExtensions_GetService__1_System_IServiceProvider_
+  commentId: M:dosymep.WpfCore.ServiceProviderExtensions.GetService``1(System.IServiceProvider)
+  name.vb: GetService(Of T)(IServiceProvider)
+  fullName: dosymep.WpfCore.ServiceProviderExtensions.GetService<T>(System.IServiceProvider)
+  fullName.vb: dosymep.WpfCore.ServiceProviderExtensions.GetService(Of T)(System.IServiceProvider)
+  nameWithType: ServiceProviderExtensions.GetService<T>(IServiceProvider)
+  nameWithType.vb: ServiceProviderExtensions.GetService(Of T)(IServiceProvider)
 - uid: dosymep.WpfCore.SimpleServices
   name: dosymep.WpfCore.SimpleServices
   href: api/dosymep.WpfCore.SimpleServices.html
@@ -5822,6 +5843,12 @@ references:
   commentId: M:dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme(System.Windows.Window,dosymep.SimpleServices.UIThemes)
   fullName: dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme(System.Windows.Window, dosymep.SimpleServices.UIThemes)
   nameWithType: WpfUIThemeUpdaterService.SetTheme(Window, UIThemes)
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes,System.Windows.FrameworkElement)
+  name: SetTheme(UIThemes, FrameworkElement)
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.html#dosymep_WpfUI_Core_SimpleServices_WpfUIThemeUpdaterService_SetTheme_dosymep_SimpleServices_UIThemes_System_Windows_FrameworkElement_
+  commentId: M:dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes,System.Windows.FrameworkElement)
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes, System.Windows.FrameworkElement)
+  nameWithType: WpfUIThemeUpdaterService.SetTheme(UIThemes, FrameworkElement)
 - uid: dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme*
   name: SetTheme
   href: api/dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.html#dosymep_WpfUI_Core_SimpleServices_WpfUIThemeUpdaterService_SetTheme_
@@ -8156,6 +8183,12 @@ references:
   commentId: M:dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.SetTheme(System.Windows.Window,dosymep.SimpleServices.UIThemes)
   fullName: dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.SetTheme(System.Windows.Window, dosymep.SimpleServices.UIThemes)
   nameWithType: XtraThemeUpdaterService.SetTheme(Window, UIThemes)
+- uid: dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes,System.Windows.FrameworkElement)
+  name: SetTheme(UIThemes, FrameworkElement)
+  href: api/dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.html#dosymep_Xpf_Core_SimpleServices_XtraThemeUpdaterService_SetTheme_dosymep_SimpleServices_UIThemes_System_Windows_FrameworkElement_
+  commentId: M:dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes,System.Windows.FrameworkElement)
+  fullName: dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.SetTheme(dosymep.SimpleServices.UIThemes, System.Windows.FrameworkElement)
+  nameWithType: XtraThemeUpdaterService.SetTheme(UIThemes, FrameworkElement)
 - uid: dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.SetTheme*
   name: SetTheme
   href: api/dosymep.Xpf.Core.SimpleServices.XtraThemeUpdaterService.html#dosymep_Xpf_Core_SimpleServices_XtraThemeUpdaterService_SetTheme_
