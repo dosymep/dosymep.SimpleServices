@@ -9,35 +9,55 @@ namespace dosymep.WpfCore.Behaviors;
 /// <summary>
 /// Поведение применения темы.
 /// </summary>
-public sealed class WpfThemeBehavior : Behavior<Window> {
+public sealed class WpfThemeBehavior : Behavior<FrameworkElement> {
+    private IHasTheme? _theme;
     private IUIThemeUpdaterService? _themeUpdaterService;
 
     /// <inheritdoc />
     protected override void OnAttached() {
-        Subscribe(AssociatedObject as IHasTheme);
+        _theme = AssociatedObject as IHasTheme;
+
+        // Если окно было уже загружено
+        // такое может быть, когда не используется behaviour в конструкторе
+        if(AssociatedObject.IsLoaded) {
+            Subscribe();
+        }
+
+        AssociatedObject.Loaded += AssociatedObjectOnLoaded;
+        AssociatedObject.Unloaded += AssociatedObjectOnUnloaded;
     }
 
     /// <inheritdoc />
     protected override void OnDetaching() {
-        Unsubscribe(AssociatedObject as IHasTheme);
+        Unsubscribe();
+        AssociatedObject.Loaded -= AssociatedObjectOnLoaded;
+        AssociatedObject.Unloaded -= AssociatedObjectOnUnloaded;
     }
 
-    private void Subscribe(IHasTheme? theme) {
-        if(theme is not null) {
-            _themeUpdaterService = theme.ThemeUpdaterService;
-            _themeUpdaterService?.SetTheme(AssociatedObject, theme.HostTheme);
+    private void AssociatedObjectOnLoaded(object sender, RoutedEventArgs e) {
+        Subscribe();
+    }
 
-            theme.ThemeChanged += ThemeOnThemeChanged;
+    private void AssociatedObjectOnUnloaded(object sender, RoutedEventArgs e) {
+        Unsubscribe();
+    }
+
+    private void Subscribe() {
+        if(_theme != null) {
+            _themeUpdaterService = _theme.ThemeUpdaterService;
+            _themeUpdaterService?.SetTheme(_theme.HostTheme, AssociatedObject);
+
+            _theme.ThemeChanged += ThemeOnThemeChanged;
         }
     }
 
-    private void Unsubscribe(IHasTheme? theme) {
-        if(theme is not null) {
-            theme.ThemeChanged -= ThemeOnThemeChanged;
+    private void Unsubscribe() {
+        if(_theme != null) {
+            _theme.ThemeChanged -= ThemeOnThemeChanged;
         }
     }
 
     private void ThemeOnThemeChanged(UIThemes theme) {
-        _themeUpdaterService?.SetTheme(AssociatedObject, theme);
+        _themeUpdaterService?.SetTheme(theme, AssociatedObject);
     }
 }

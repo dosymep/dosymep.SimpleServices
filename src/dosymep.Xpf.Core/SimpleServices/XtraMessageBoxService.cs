@@ -92,7 +92,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
                 Background = Brushes.Transparent
             };
 
-            UIThemeUpdaterService.SetTheme(window, UIThemeService.HostTheme);
+            UIThemeUpdaterService.SetTheme(UIThemeService.HostTheme, window);
             return window;
         }
     }

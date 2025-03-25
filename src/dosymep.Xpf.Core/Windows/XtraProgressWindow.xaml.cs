@@ -93,7 +93,7 @@ namespace dosymep.Xpf.Core.Windows {
         }
 
         protected void SetTheme(UIThemes uiThemes) {
-            UIThemeUpdaterService?.SetTheme(this, uiThemes);
+            UIThemeUpdaterService?.SetTheme(uiThemes, this);
         }
 
         /// <summary>
