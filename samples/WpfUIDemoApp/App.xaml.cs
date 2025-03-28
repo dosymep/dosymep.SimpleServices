@@ -11,6 +11,8 @@ using dosymep.WpfUI.Core.Ninject;
 using Ninject;
 using Ninject.Syntax;
 
+using Wpf.Ui.Abstractions;
+
 using WpfDemoLib.Factories;
 using WpfDemoLib.Input;
 using WpfDemoLib.Input.Interfaces;
@@ -18,6 +20,7 @@ using WpfDemoLib.Services;
 using WpfDemoLib.ViewModels;
 
 using WpfUIDemoApp.Views;
+using WpfUIDemoApp.Views.Pages;
 
 namespace WpfUIDemoApp;
 
@@ -61,7 +64,10 @@ public partial class App {
         _kernel.Bind<ISecondViewService>().To<SecondViewService>();
         _kernel.Bind<ISecondViewFactory>()
             .ToMethod(c => new SecondViewFactory<SecondWindow>(() => c.Kernel.Get<SecondWindow>()));
-        
+
+        _kernel.Bind<INavigationViewPageProvider>()
+            .To<NavigationViewPageProvider>();
+
         _kernel.Bind<SecondWindow>().ToSelf();
         _kernel.Bind<SecondViewModel>().ToSelf();
 
