@@ -39,6 +39,8 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
         LocalizationService = localizationService;
         ThemeUpdaterService = themeUpdaterService;
 
+        ThemeUpdaterService.SetTheme(HostTheme, this);
+
         InitializeComponent();
     }
     
