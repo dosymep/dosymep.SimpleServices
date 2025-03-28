@@ -1,14 +1,18 @@
 using dosymep.SimpleServices;
 
+using WpfUIDemoApp.ViewModels;
+
 namespace WpfUIDemoApp.Views.Pages;
 
-public partial class AboutPage {
-    public AboutPage() { }
+public partial class GridViewPage {
+    public GridViewPage() { }
 
-    public AboutPage(
+    public GridViewPage(
         IHasTheme hasTheme,
         IHasLocalization hasLocalization)
         : base(hasTheme, hasLocalization) {
         InitializeComponent();
+
+        DataContext = new ExtensionsViewModel();
     }
 }

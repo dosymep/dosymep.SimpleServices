@@ -113,10 +113,16 @@
             x:Name="_navigationView"
             Margin="10">
             <ui:NavigationView.MenuItemsSource>
-                <ui:NavigationViewItem
-                    Content="Three"
-                    Icon="{ui:SymbolIcon Settings16}"
-                    TargetPageType="{x:Type pages:ThreeViewPage}" />
+                <x:Array Type="{x:Type ui:NavigationViewItem}">
+                    <ui:NavigationViewItem
+                        Content="Three"
+                        Icon="{ui:SymbolIcon Settings16}"
+                        TargetPageType="{x:Type pages:ThreeViewPage}" />
+                    <ui:NavigationViewItem
+                        Content="Grid"
+                        Icon="{ui:SymbolIcon Settings16}"
+                        TargetPageType="{x:Type pages:GridViewPage}" />
+                </x:Array>
             </ui:NavigationView.MenuItemsSource>
             
             <ui:NavigationView.FooterMenuItems>

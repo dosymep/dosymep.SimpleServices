@@ -1,16 +1,15 @@
-<local:WpfUIPlatformPage
+<pages:WpfUIPlatformPage
     x:Class="WpfUIDemoApp.Views.Pages.AboutPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:WpfUIDemoApp.Views.Pages"
+    xmlns:pages="clr-namespace:WpfUIDemoApp.Views.Pages"
     mc:Ignorable="d"
-    Title="AboutPage" Height="450" Width="800">
-    <Grid>
-        <TextBlock
-            Text="HEY!"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center" />
-    </Grid>
-</local:WpfUIPlatformPage>
+    Title="AboutPage" Height="100" Width="100">
+
+    <TextBlock
+        Text="HEY!"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center" />
+</pages:WpfUIPlatformPage>

@@ -1,6 +1,3 @@
-using System.Globalization;
-using System.Windows.Controls;
-
 using dosymep.SimpleServices;
 
 namespace WpfUIDemoApp.Views.Pages;

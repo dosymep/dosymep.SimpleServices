@@ -1,10 +1,10 @@
-<local:WpfUIPlatformPage
+<pages:WpfUIPlatformPage
     x:Class="WpfUIDemoApp.Views.Pages.ThreeViewPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:WpfUIDemoApp.Views.Pages"
+    xmlns:pages="clr-namespace:WpfUIDemoApp.Views.Pages"
     mc:Ignorable="d"
     Title="ThreeViewPage" Height="450" Width="800">
     <Grid>
@@ -29,4 +29,4 @@
             </TreeViewItem>
         </TreeView>
     </Grid>
-</local:WpfUIPlatformPage>
+</pages:WpfUIPlatformPage>
