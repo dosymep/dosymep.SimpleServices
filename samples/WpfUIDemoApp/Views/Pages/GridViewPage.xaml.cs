@@ -1,6 +1,10 @@
+using System.Windows;
+
 using dosymep.SimpleServices;
 
-using WpfUIDemoApp.ViewModels;
+using Wpf.Ui.Markup;
+
+using WpfDemoLib.ViewModels;
 
 namespace WpfUIDemoApp.Views.Pages;
 
@@ -13,6 +17,6 @@ public partial class GridViewPage {
         : base(hasTheme, hasLocalization) {
         InitializeComponent();
 
-        DataContext = new ExtensionsViewModel();
+        DataContext = new GroupsViewModel();
     }
 }

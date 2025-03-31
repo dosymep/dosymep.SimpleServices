@@ -25,6 +25,8 @@ using Wpf.Ui.Abstractions;
 using WpfDemoLib.Input;
 using WpfDemoLib.ViewModels;
 
+using WpfUIDemoApp.Views.Pages;
+
 namespace WpfUIDemoApp;
 
 /// <summary>
@@ -44,7 +46,9 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
         ThemeUpdaterService.SetTheme(HostTheme, this);
         
         InitializeComponent();
+        
         _navigationView.SetPageProviderService(pageProvider);
+        Loaded += (_, _) => _navigationView.Navigate(typeof(GridViewPage));
     }
 
     public ILocalizationService LocalizationService { get; set; }

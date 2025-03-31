@@ -5,10 +5,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:pages="clr-namespace:WpfUIDemoApp.Views.Pages"
+    xmlns:viewModels="clr-namespace:WpfDemoLib.ViewModels;assembly=WpfDemoLib"
+    xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
+
     mc:Ignorable="d"
-    Title="GridViewPage" Height="450" Width="800">
+    ScrollViewer.CanContentScroll="False"
+
+    Title="me:LocalizationSource MainWindow.GridPageTitle"
+    d:DataContext="{d:DesignInstance viewModels:GroupsViewModel, IsDesignTimeCreatable=False}">
 
     <Page.Resources>
+        <TextBlock
+            x:Key="NameColumnHeader"
+            TextWrapping="Wrap"
+            Text="{me:LocalizationSource MainWindow.NameGridColumn}" />
+
+        <TextBlock
+            x:Key="DescriptionColumnHeader"
+            TextWrapping="Wrap"
+            Text="{me:LocalizationSource MainWindow.DescriptionGridColumn}" />
+
+        <DataTemplate x:Key="CheckColumnTemplate">
+            <CheckBox
+                Name="PART_Editor"
+                IsChecked="{Binding Selected, UpdateSourceTrigger=PropertyChanged}" />
+        </DataTemplate>
+
         <CollectionViewSource
             x:Key="GroupExtensions"
             Source="{Binding Extensions}">
@@ -18,55 +40,59 @@
         </CollectionViewSource>
     </Page.Resources>
 
-    <DataGrid
-        SelectionMode="Single"
-        AutoGenerateColumns="False"
-        CanUserResizeRows="False"
-        CanUserSortColumns="False"
-        CanUserReorderColumns="False"
-        ItemsSource="{Binding Source={StaticResource GroupExtensions}}">
+    <ScrollViewer
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled">
+            <DataGrid
+                SelectionMode="Single"
+                AutoGenerateColumns="False"
+                CanUserAddRows="False"
+                CanUserResizeRows="False"
+                CanUserSortColumns="False"
+                CanUserReorderColumns="False"
+                ItemsSource="{Binding Source={StaticResource GroupExtensions}}">
 
-        <DataGrid.GroupStyle>
-            <GroupStyle>
-                <GroupStyle.ContainerStyle>
-                    <Style TargetType="{x:Type GroupItem}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type GroupItem}">
-                                    <Grid>
-                                        <Expander IsExpanded="True">
-                                            <Expander.Header>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock
-                                                        Margin="10"
-                                                        FontWeight="Bold"
-                                                        Text="{Binding Name, 
-                                                            StringFormat=Category {0}}" />
-                                                </StackPanel>
-                                            </Expander.Header>
-                                            <ItemsPresenter />
-                                        </Expander>
-                                    </Grid>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </GroupStyle.ContainerStyle>
-            </GroupStyle>
-        </DataGrid.GroupStyle>
+                <DataGrid.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            <Style TargetType="{x:Type GroupItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type GroupItem}">
+                                            <Grid>
+                                                <Expander IsExpanded="True">
+                                                    <Expander.Header>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock
+                                                                Margin="10"
+                                                                FontWeight="Bold"
+                                                                Text="{Binding Name, 
+                                                            StringFormat={StaticResource MainWindow.GroupGridColumn}}" />
+                                                        </StackPanel>
+                                                    </Expander.Header>
+                                                    <ItemsPresenter />
+                                                </Expander>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                    </GroupStyle>
+                </DataGrid.GroupStyle>
 
-        <DataGrid.Columns>
-            <DataGridTemplateColumn
-                Width="70"
-                MinWidth="70"
-                MaxWidth="70"
-                Header="1" />
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn
+                        Width="70"
+                        MinWidth="70"
+                        MaxWidth="70"
+                        Header="#"
+                        CellTemplate="{StaticResource CheckColumnTemplate}" />
 
-            <DataGridTextColumn
-                Binding="{Binding Name}" Header="2" />
-
-            <DataGridTextColumn
-                Binding="{Binding Description}" Header="2" />
-        </DataGrid.Columns>
-    </DataGrid>
+                    <DataGridTextColumn
+                        Binding="{Binding Name}"
+                        Header="{StaticResource NameColumnHeader}" />
+                </DataGrid.Columns>
+            </DataGrid>
+    </ScrollViewer>
 </pages:WpfUIPlatformPage>

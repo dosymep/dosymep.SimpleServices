@@ -63,10 +63,7 @@
 
                     <ComboBox
                         x:Name="_themesComboBox"
-                        FontSize="1"
                         SelectedIndex="0"
-                        SelectedValuePath="Value"
-                        DisplayMemberPath="DisplayName"
                         ItemsSource="{me:EnumToItemsSource ss:UIThemes}"
                         SelectionChanged="Theme_Changed">
                     </ComboBox>
@@ -111,23 +108,19 @@
         <ui:NavigationView
             Grid.Row="2"
             x:Name="_navigationView"
-            Margin="10">
-            <ui:NavigationView.MenuItemsSource>
-                <x:Array Type="{x:Type ui:NavigationViewItem}">
-                    <ui:NavigationViewItem
-                        Content="Three"
-                        Icon="{ui:SymbolIcon Settings16}"
-                        TargetPageType="{x:Type pages:ThreeViewPage}" />
-                    <ui:NavigationViewItem
-                        Content="Grid"
-                        Icon="{ui:SymbolIcon Settings16}"
-                        TargetPageType="{x:Type pages:GridViewPage}" />
-                </x:Array>
-            </ui:NavigationView.MenuItemsSource>
+            Margin="10"
+            PaneTitle="{me:LocalizationSource MainWindow.Title}">
+            
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem
+                    Content="{me:LocalizationSource MainWindow.GridPageTitle}"
+                    Icon="{ui:SymbolIcon Settings16}"
+                    TargetPageType="{x:Type pages:GridViewPage}" />
+            </ui:NavigationView.MenuItems>
             
             <ui:NavigationView.FooterMenuItems>
                 <ui:NavigationViewItem
-                    Content="About"
+                    Content="{me:LocalizationSource MainWindow.AboutPageTitle}"
                     Icon="{ui:SymbolIcon Info16}"
                     TargetPageType="{x:Type pages:AboutPage}" />
             </ui:NavigationView.FooterMenuItems>
