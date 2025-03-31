@@ -47,10 +47,12 @@ internal partial class WpfUIProgressWindow : IHasTheme, IHasLocalization, IDispo
 
         _theme.ThemeChanged += _ => ThemeChanged?.Invoke(_);
         _localization.LanguageChanged += _ => LanguageChanged?.Invoke(_);
+        
+        theme.ThemeUpdaterService.SetTheme(theme.HostTheme, this);
 
         _internalLocalization = new WpfLocalizationService(_progressWindowLanguage, _localization.HostLanguage);
         _internalLocalization.SetLocalization(_localization.HostLanguage, this);
-
+        
         InitializeComponent();
     }
 

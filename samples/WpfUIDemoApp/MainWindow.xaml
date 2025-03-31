@@ -14,9 +14,10 @@
     xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
     xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
     xmlns:viewModels="clr-namespace:WpfDemoLib.ViewModels;assembly=WpfDemoLib"
+    xmlns:pages="clr-namespace:WpfUIDemoApp.Views.Pages"
 
-    Width="800"
-    Height="450"
+    Height="600"
+    Width="1000"
 
     x:Name="_this"
     mc:Ignorable="d"
@@ -62,10 +63,7 @@
 
                     <ComboBox
                         x:Name="_themesComboBox"
-                        FontSize="1"
                         SelectedIndex="0"
-                        SelectedValuePath="Value"
-                        DisplayMemberPath="DisplayName"
                         ItemsSource="{me:EnumToItemsSource ss:UIThemes}"
                         SelectionChanged="Theme_Changed">
                     </ComboBox>
@@ -107,11 +105,27 @@
                 Text="{Binding SecondWindowResult}" />
         </StackPanel>
 
-        <ui:TextBlock
+        <ui:NavigationView
             Grid.Row="2"
+            x:Name="_navigationView"
             Margin="10"
-            TextWrapping="WrapWithOverflow"
-            Text="{me:LocalizationSource MainWindow.RandomText}" />
+            PaneTitle="{me:LocalizationSource MainWindow.Title}">
+            
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem
+                    Content="{me:LocalizationSource MainWindow.GridPageTitle}"
+                    Icon="{ui:SymbolIcon Settings16}"
+                    TargetPageType="{x:Type pages:GridViewPage}" />
+            </ui:NavigationView.MenuItems>
+            
+            <ui:NavigationView.FooterMenuItems>
+                <ui:NavigationViewItem
+                    Content="{me:LocalizationSource MainWindow.AboutPageTitle}"
+                    Icon="{ui:SymbolIcon Info16}"
+                    TargetPageType="{x:Type pages:AboutPage}" />
+            </ui:NavigationView.FooterMenuItems>
+            
+        </ui:NavigationView>
 
         <StackPanel
             Grid.Row="3"

@@ -9,8 +9,7 @@
 
     xmlns:local="clr-namespace:dosymep.WpfUI.Core.Windows"
     xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
-
-    WindowStyle="None"
+    
     ResizeMode="NoResize"
     ShowInTaskbar="False"
     WindowStartupLocation="CenterOwner"

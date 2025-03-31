@@ -1,7 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
-    <system:String x:Key="MainWindow.Title">Главное окно</system:String>
+    <system:String x:Key="MainWindow.Title">Пример</system:String>
 
     <system:String x:Key="MainWindow.RandomText">
         В частности, новая модель организационной деятельности, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для своевременного выполнения сверхзадачи. С другой стороны, высокотехнологичная концепция общественного уклада играет важную роль в формировании приоретизации разума над эмоциями.
@@ -23,6 +23,14 @@
     
     <system:String x:Key="MainWindow.ButtonSecondWindowShow">Показать</system:String>
     <system:String x:Key="MainWindow.ButtonSecondWindowShowDialog">Открыть</system:String>
+    
+    <system:String x:Key="MainWindow.GridPageTitle">Грид</system:String>
+    <system:String x:Key="MainWindow.GroupGridColumn">Группа: {0}</system:String>
+    <system:String x:Key="MainWindow.NameGridColumn">Имя</system:String>
+    <system:String x:Key="MainWindow.DescriptionGridColumn">Описание</system:String>
+    
+    <system:String x:Key="MainWindow.AboutPageTitle">О программе</system:String>
+    <system:String x:Key="MainWindow.AboutPageContent">Привет!</system:String>
     
     <system:String x:Key="SecondWindow.Title">Введите значение</system:String>
     

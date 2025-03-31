@@ -1,0 +1,21 @@
+<pages:WpfUIPlatformPage
+    x:Class="WpfUIDemoApp.Views.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:pages="clr-namespace:WpfUIDemoApp.Views.Pages"
+    xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
+
+    mc:Ignorable="d"
+    ScrollViewer.CanContentScroll="False"
+    
+    Title="{me:LocalizationSource MainWindow.AboutPageTitle}"
+    Height="100" Width="100">
+
+    <TextBlock
+        Text="{me:LocalizationSource MainWindow.AboutPageContent}"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center" />
+
+</pages:WpfUIPlatformPage>

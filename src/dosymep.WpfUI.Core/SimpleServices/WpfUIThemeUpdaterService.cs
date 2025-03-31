@@ -15,6 +15,14 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
     private ThemesDictionary _theme = new();
     private ControlsDictionary _controlsDictionary = new();
 
+    /// <summary>
+    /// Конструирует объект.
+    /// </summary>
+    public WpfUIThemeUpdaterService() {
+        SetResource("/Expander.xaml", GetResource("/Expander.xaml"));
+        SetResource("/CardExpander.xaml", GetResource("/CardExpander.xaml"));
+    }
+
     /// <inheritdoc />
     public void SetTheme(Window window, UIThemes theme) {
         SetTheme(theme, window);
@@ -30,6 +38,18 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
 
         if(frameworkElement is Window window) {
             WindowBackgroundManager.UpdateBackground(window, GetAppTheme(theme), WindowBackdropType.Mica);
+        }
+    }
+
+    private ResourceDictionary? GetResource(string resourceName) {
+        return _controlsDictionary.MergedDictionaries
+            .FirstOrDefault(item => item.Source.AbsolutePath.EndsWith(resourceName));
+    }
+
+    private void SetResource(string resourceName, ResourceDictionary? resourceDictionary) {
+        if(resourceDictionary is not null) {
+            resourceDictionary.Source =
+                new Uri("pack://application:,,,/dosymep.WpfUI.Core;component/Controls" + resourceName);
         }
     }
 

@@ -20,8 +20,12 @@ using dosymep.WpfCore.MarkupExtensions;
 using dosymep.WpfUI.Core.SimpleServices;
 using dosymep.WpfUI.Core.Windows;
 
+using Wpf.Ui.Abstractions;
+
 using WpfDemoLib.Input;
 using WpfDemoLib.ViewModels;
+
+using WpfUIDemoApp.Views.Pages;
 
 namespace WpfUIDemoApp;
 
@@ -33,15 +37,20 @@ public partial class MainWindow : IHasTheme, IHasLocalization {
     public event Action<CultureInfo>? LanguageChanged;
 
     public MainWindow(
+        INavigationViewPageProvider pageProvider,
         ILocalizationService localizationService,
         IUIThemeUpdaterService themeUpdaterService) {
-        
         LocalizationService = localizationService;
         ThemeUpdaterService = themeUpdaterService;
 
+        ThemeUpdaterService.SetTheme(HostTheme, this);
+        
         InitializeComponent();
+        
+        _navigationView.SetPageProviderService(pageProvider);
+        Loaded += (_, _) => _navigationView.Navigate(typeof(GridViewPage));
     }
-    
+
     public ILocalizationService LocalizationService { get; set; }
     public IUIThemeUpdaterService ThemeUpdaterService { get; set; }
 
