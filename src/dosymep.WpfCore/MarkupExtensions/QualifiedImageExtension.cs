@@ -88,9 +88,10 @@ public sealed class QualifiedImageExtension : MarkupExtension {
 
     private List<string> GetResources(string libName) {
         List<string> resources = new();
+        
         try {
-            Assembly assembly = Assembly.Load(libName);
-            using Stream? stream = assembly.GetManifestResourceStream(libName + ".g.resources");
+            Assembly? assembly = GetAssembly(libName);
+            using Stream? stream = assembly?.GetManifestResourceStream(libName + ".g.resources");
 
             using ResourceReader resourceReader = new(stream!);
             foreach(DictionaryEntry resource in resourceReader) {
@@ -101,6 +102,16 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         }
 
         return resources;
+    }
+
+    private Assembly? GetAssembly(string libName) {
+        try {
+            return Assembly.Load(libName);
+        } catch {
+            return AppDomain.CurrentDomain.GetAssemblies()
+                .Where(item => item.GetName().Name.Equals(_cacheLibName))
+                .LastOrDefault();
+        }
     }
 
     private string GetLibName(IServiceProvider serviceProvider) {
