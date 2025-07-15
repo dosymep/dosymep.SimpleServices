@@ -17,44 +17,23 @@ public sealed class WpfLocalizationBehavior : Behavior<FrameworkElement> {
     /// <inheritdoc />
     protected override void OnAttached() {
         _localization = AssociatedObject as IHasLocalization;
-
-        // Если окно было уже загружено
-        // такое может быть, когда не используется behaviour в конструкторе
-        if(AssociatedObject.IsLoaded) {
-            Subscribe();
-        }
-
-        AssociatedObject.Loaded += AssociatedObjectOnLoaded;
-        AssociatedObject.Unloaded += AssociatedObjectOnUnloaded;
+        _localizationService = _localization?.LocalizationService;
+        AssociatedObject.Initialized += AssociatedObjectOnInitialized;
     }
 
     /// <inheritdoc />
     protected override void OnDetaching() {
-        Unsubscribe();
-        AssociatedObject.Loaded -= AssociatedObjectOnLoaded;
-        AssociatedObject.Unloaded -= AssociatedObjectOnUnloaded;
-    }
-
-    private void AssociatedObjectOnLoaded(object sender, RoutedEventArgs e) {
-        Subscribe();
-    }
-
-    private void AssociatedObjectOnUnloaded(object sender, RoutedEventArgs e) {
-        Unsubscribe();
-    }
-
-    private void Subscribe() {
         if(_localization is not null) {
-            _localizationService = _localization.LocalizationService;
-            _localizationService?.SetLocalization(_localization.HostLanguage, AssociatedObject);
-
-            _localization.LanguageChanged += LanguageOnThemeChanged;
+            _localization.LanguageChanged -= LanguageOnThemeChanged;
         }
     }
 
-    private void Unsubscribe() {
+    private void AssociatedObjectOnInitialized(object sender, EventArgs e) {
+        AssociatedObject.Initialized -= AssociatedObjectOnInitialized;
+        
         if(_localization is not null) {
-            _localization.LanguageChanged -= LanguageOnThemeChanged;
+            LanguageOnThemeChanged(_localization.HostLanguage);
+            _localization.LanguageChanged += LanguageOnThemeChanged;
         }
     }
 
