@@ -18,7 +18,7 @@ namespace dosymep.WpfCore.MarkupExtensions;
 /// <summary>
 /// Конвертирует enum в список значений.
 /// </summary>
-[MarkupExtensionReturnType(typeof(string[]))]
+[MarkupExtensionReturnType(typeof(MarkupValueObject))]
 public sealed class EnumToItemsSourceExtension : MarkupExtension {
     private readonly MarkupValueObject _markupValueObject = new();
     private readonly Binding _binding = new(nameof(MarkupValueObject.Value));
@@ -62,19 +62,25 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
             if(rootObject != null) {
                 // либо ждем его загрузку,
                 // чтобы можно было получить корневой элемент Window
-                rootObject.Loaded += (s, e) => {
-                    if(s is not DependencyObject dependencyObject) {
-                        return;
-                    }
-
-                    Window? rootWindow = Window.GetWindow(dependencyObject);
-                    SetLocalizationStrings(rootWindow as IHasLocalization);
-                };
+                rootObject.Loaded += RootObjectOnLoaded;
             }
         }
 
         _binding.Source = _markupValueObject;
         return _binding.ProvideValue(serviceProvider);
+    }
+
+    private void RootObjectOnLoaded(object sender, RoutedEventArgs e) {
+        if(sender is not FrameworkElement frameworkElement) {
+            return;
+        }
+        
+        // Отписываемся от события,
+        // потому что при смене темы может повторно вызваться
+        frameworkElement.Loaded -= RootObjectOnLoaded;
+        
+        Window? rootWindow = Window.GetWindow(frameworkElement);
+        SetLocalizationStrings(rootWindow as IHasLocalization);
     }
 
     private void SetLocalizationStrings(IHasLocalization? localization) {

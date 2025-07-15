@@ -68,20 +68,25 @@ public sealed class QualifiedImageExtension : MarkupExtension {
             if(rootObject != null) {
                 // либо ждем его загрузку,
                 // чтобы можно было получить корневой элемент Window
-                rootObject.Loaded += (s, e) => {
-                    if(s is not DependencyObject dependencyObject) {
-                        return;
-                    }
-
-                    Window? rootWindow = Window.GetWindow(dependencyObject);
-                    UpdateImage(rootWindow as IHasTheme, rootWindow as IHasLocalization);
-                };
+                rootObject.Loaded += RootObjectOnLoaded;
             }
         }
 
         _binding.Source = _markupValueObject;
-
         return _binding.ProvideValue(serviceProvider);
+    }
+
+    private void RootObjectOnLoaded(object sender, RoutedEventArgs e) {
+        if(sender is not FrameworkElement frameworkElement) {
+            return;
+        }
+
+        // Отписываемся от события,
+        // потому что при смене темы может повторно вызваться
+        frameworkElement.Loaded -= RootObjectOnLoaded;
+
+        Window? rootWindow = Window.GetWindow(frameworkElement);
+        UpdateImage(rootWindow as IHasTheme, rootWindow as IHasLocalization);
     }
 
     private void UpdateImage(IHasTheme? theme, IHasLocalization? localization) {
