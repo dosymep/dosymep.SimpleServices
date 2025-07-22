@@ -16,44 +16,22 @@ public sealed class WpfThemeBehavior : Behavior<FrameworkElement> {
     /// <inheritdoc />
     protected override void OnAttached() {
         _theme = AssociatedObject as IHasTheme;
-
-        // Если окно было уже загружено
-        // такое может быть, когда не используется behaviour в конструкторе
-        if(AssociatedObject.IsLoaded) {
-            Subscribe();
-        }
-
-        AssociatedObject.Loaded += AssociatedObjectOnLoaded;
-        AssociatedObject.Unloaded += AssociatedObjectOnUnloaded;
+        _themeUpdaterService = _theme?.ThemeUpdaterService;
+        AssociatedObject.Initialized += AssociatedObjectOnInitialized;
     }
 
     /// <inheritdoc />
     protected override void OnDetaching() {
-        Unsubscribe();
-        AssociatedObject.Loaded -= AssociatedObjectOnLoaded;
-        AssociatedObject.Unloaded -= AssociatedObjectOnUnloaded;
-    }
-
-    private void AssociatedObjectOnLoaded(object sender, RoutedEventArgs e) {
-        Subscribe();
-    }
-
-    private void AssociatedObjectOnUnloaded(object sender, RoutedEventArgs e) {
-        Unsubscribe();
-    }
-
-    private void Subscribe() {
-        if(_theme != null) {
-            _themeUpdaterService = _theme.ThemeUpdaterService;
-            _themeUpdaterService?.SetTheme(_theme.HostTheme, AssociatedObject);
-
-            _theme.ThemeChanged += ThemeOnThemeChanged;
+        if(_theme is not null) {
+            _theme.ThemeChanged -= ThemeOnThemeChanged;
         }
     }
 
-    private void Unsubscribe() {
-        if(_theme != null) {
-            _theme.ThemeChanged -= ThemeOnThemeChanged;
+    private void AssociatedObjectOnInitialized(object sender, EventArgs e) {
+        AssociatedObject.Initialized -= AssociatedObjectOnInitialized;
+        if(_theme is not null) {
+            ThemeOnThemeChanged(_theme.HostTheme);
+            _theme.ThemeChanged += ThemeOnThemeChanged;
         }
     }
 

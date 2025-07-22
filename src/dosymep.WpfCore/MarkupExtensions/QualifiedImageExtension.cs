@@ -2,6 +2,7 @@ using System.Collections;
 using System.IO;
 using System.Reflection;
 using System.Resources;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
 using System.Windows.Media;
@@ -48,33 +49,62 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         if(Uri == null) {
             throw new InvalidOperationException("Uri is not set.");
         }
-        
-        IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
-        if(theme is not null) {
-            theme.ThemeChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
-        }
-        
-        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
-        if(localization is not null) {
-            localization.LanguageChanged += _ => _markupValueObject.Value = GetImageUri(serviceProvider);
-        }
-        
+
+        // получаем название библиотеки
         _cacheLibName = GetLibName(serviceProvider);
         _cacheBaseUri = new Uri($"pack://application:,,,/{_cacheLibName};component/");
         _cacheResources ??= GetResources(_cacheLibName).ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-        Uri item = GetImageUri(serviceProvider);
+        // получаем корневой элемент,
+        // может быть Window, Page, UserControl
+        FrameworkElement? rootObject = serviceProvider.GetRootObject<FrameworkElement>();
+        if(rootObject?.IsLoaded == true) {
+            // если элемент был загружен, устанавливаем значения
+            IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
+            IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
+
+            UpdateImage(theme, localization);
+        } else {
+            if(rootObject != null) {
+                // либо ждем его загрузку,
+                // чтобы можно было получить корневой элемент Window
+                rootObject.Loaded += RootObjectOnLoaded;
+            }
+        }
 
         _binding.Source = _markupValueObject;
-        _markupValueObject.Value = item;
-
         return _binding.ProvideValue(serviceProvider);
     }
 
-    private Uri GetImageUri(IServiceProvider serviceProvider) {
-        HashSet<string> variations = GetVariations(serviceProvider)
+    private void RootObjectOnLoaded(object sender, RoutedEventArgs e) {
+        if(sender is not FrameworkElement frameworkElement) {
+            return;
+        }
+
+        // Отписываемся от события,
+        // потому что при смене темы может повторно вызваться
+        frameworkElement.Loaded -= RootObjectOnLoaded;
+
+        Window? rootWindow = Window.GetWindow(frameworkElement);
+        UpdateImage(rootWindow as IHasTheme, rootWindow as IHasLocalization);
+    }
+
+    private void UpdateImage(IHasTheme? theme, IHasLocalization? localization) {
+        if(theme is not null) {
+            theme.ThemeChanged += _ => _markupValueObject.Value = GetImageUri(theme, localization);
+        }
+
+        if(localization is not null) {
+            localization.LanguageChanged += _ => _markupValueObject.Value = GetImageUri(theme, localization);
+        }
+
+        _markupValueObject.Value = GetImageUri(theme, localization);
+    }
+
+    private Uri GetImageUri(IHasTheme? theme, IHasLocalization? localization) {
+        HashSet<string> variations = GetVariations(theme, localization)
             .ToHashSet(StringComparer.OrdinalIgnoreCase);
-        
+
         foreach(string resourceName in _cacheResources!) {
             if(variations!.Contains(resourceName)) {
                 return new Uri(_cacheBaseUri!, resourceName);
@@ -84,34 +114,6 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         // return no image
         return new Uri(
             "pack://application:,,,/dosymep.Wpf.Core;component/assets/images/icons8-no-image-96.png", UriKind.Absolute);
-    }
-
-    private List<string> GetResources(string libName) {
-        List<string> resources = new();
-        
-        try {
-            Assembly? assembly = GetAssembly(libName);
-            using Stream? stream = assembly?.GetManifestResourceStream(libName + ".g.resources");
-
-            using ResourceReader resourceReader = new(stream!);
-            foreach(DictionaryEntry resource in resourceReader) {
-                resources.Add((string) resource.Key);
-            }
-        } catch {
-            // pass
-        }
-
-        return resources;
-    }
-
-    private Assembly? GetAssembly(string libName) {
-        try {
-            return Assembly.Load(libName);
-        } catch {
-            return AppDomain.CurrentDomain.GetAssemblies()
-                .Where(item => item.GetName().Name.Equals(_cacheLibName))
-                .LastOrDefault();
-        }
     }
 
     private string GetLibName(IServiceProvider serviceProvider) {
@@ -124,10 +126,7 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         return libName.Replace(";component", string.Empty);
     }
 
-    private IEnumerable<string> GetVariations(IServiceProvider serviceProvider) {
-        IHasTheme? theme = serviceProvider.GetRootObject<IHasTheme>();
-        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
-        
+    private IEnumerable<string> GetVariations(IHasTheme? theme, IHasLocalization? localization) {
         string? themeName = theme?.HostTheme.ToString();
         string? cultureName = localization?.HostLanguage.Name;
 
@@ -167,6 +166,32 @@ public sealed class QualifiedImageExtension : MarkupExtension {
         }
 
         yield return string.Join("/", directoryName, fileName);
+    }
+
+    private List<string> GetResources(string libName) {
+        List<string> resources = [];
+
+        try {
+            Assembly? assembly = GetAssembly(libName);
+            using Stream? stream = assembly?.GetManifestResourceStream(libName + ".g.resources");
+
+            using ResourceReader resourceReader = new(stream!);
+            resources.AddRange(from DictionaryEntry resource in resourceReader select (string) resource.Key);
+        } catch {
+            // pass
+        }
+
+        return resources;
+    }
+
+    private Assembly? GetAssembly(string libName) {
+        try {
+            return Assembly.Load(libName);
+        } catch {
+            return AppDomain.CurrentDomain
+                .GetAssemblies()
+                .LastOrDefault(item => item.GetName().Name.Equals(_cacheLibName));
+        }
     }
 
     private static IEnumerable<T[]> Combinations<T>(IEnumerable<T> source) {

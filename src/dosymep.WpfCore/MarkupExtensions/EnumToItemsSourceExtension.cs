@@ -1,6 +1,7 @@
 using System.Collections;
 using System.ComponentModel;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
@@ -15,10 +16,12 @@ namespace dosymep.WpfCore.MarkupExtensions;
 /// <summary>
 /// Конвертирует enum в список значений.
 /// </summary>
-[MarkupExtensionReturnType(typeof(string[]))]
+[MarkupExtensionReturnType(typeof(MarkupValueObject))]
 public sealed class EnumToItemsSourceExtension : MarkupExtension {
     private readonly MarkupValueObject _markupValueObject = new();
     private readonly Binding _binding = new(nameof(MarkupValueObject.Value));
+
+    private IHasLocalization? _localization;
 
     /// <summary>
     /// Конструирует объект.
@@ -36,6 +39,8 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
     /// </summary>
     public Type? EnumType { get; set; }
 
+    internal IReadOnlyCollection<EnumInfo>? ItemsSource => _markupValueObject.Value as IReadOnlyCollection<EnumInfo>;
+
     /// <inheritdoc />
     public override object? ProvideValue(IServiceProvider serviceProvider) {
         if(EnumType is null) {
@@ -46,77 +51,80 @@ public sealed class EnumToItemsSourceExtension : MarkupExtension {
             throw new InvalidOperationException("EnumType must be an enum.");
         }
 
-        SetPropertyPaths(serviceProvider);
-        SetLocalizationStrings(serviceProvider);
+        // получаем корневой элемент,
+        // может быть Window, Page, UserControl
+        FrameworkElement? rootObject = serviceProvider.GetRootObject<FrameworkElement>();
+
+        // для случая, если окно уже получено
+        _localization = rootObject as IHasLocalization;
+
+        if(_localization is null && rootObject is not null) {
+            // либо ждем его загрузку,
+            // чтобы можно было получить корневой элемент Window
+            rootObject.Loaded += RootObjectOnLoaded;
+        }
+
+        _binding.Source = _markupValueObject;
+        _markupValueObject.Value = GetEnumValues();
+
+        // попытка установить значения
+        // отображаемого имени, контрол может быть уже загружен
+        TryUpdateDisplayName();
+
+        // устанавливаем имена свойств обновляемого объекта
+        UpdateTargetControlProperties(serviceProvider);
+        
+        _binding.Mode = BindingMode.OneWay;
+        _binding.FallbackValue = Array.Empty<EnumInfo>();
+        _binding.TargetNullValue = Array.Empty<EnumInfo>();
 
         return _binding.ProvideValue(serviceProvider);
     }
 
-    private void SetLocalizationStrings(IServiceProvider serviceProvider) {
-        IHasLocalization? localization = serviceProvider.GetRootObject<IHasLocalization>();
-        ILocalizationService? localizationService = localization?.LocalizationService;
-
-        if(localization is not null) {
-            localization.LanguageChanged += _ => UpdateDisplayName(_markupValueObject.Value);
-        }
-
-        _binding.Source = _markupValueObject;
-        _markupValueObject.Value = GetEnumValues(localizationService);
-    }
-
-    private static void SetPropertyPaths(IServiceProvider serviceProvider) {
-        IProvideValueTarget? provideValueTarget = serviceProvider.GetService<IProvideValueTarget>();
-        if(provideValueTarget?.TargetObject is Selector selector) {
-            selector.SelectedValuePath = nameof(MarkupDisplayObject.Value);
-        }
-
-        if(provideValueTarget?.TargetObject is ItemsControl itemsControl) {
-            itemsControl.DisplayMemberPath = nameof(MarkupDisplayObject.DisplayName);
-        }
-    }
-
-    private void UpdateDisplayName(object? value) {
-        if(value == null) {
+    private void RootObjectOnLoaded(object sender, RoutedEventArgs e) {
+        if(sender is not FrameworkElement frameworkElement) {
             return;
         }
 
-        IEnumerable<MarkupDisplayObject> list = ((IEnumerable) value)
-            .OfType<MarkupDisplayObject>();
+        // отписываемся от события,
+        // потому что при смене темы может повторно вызваться
+        frameworkElement.Loaded -= RootObjectOnLoaded;
 
-        foreach(MarkupDisplayObject magicObject in list) {
-            magicObject.UpdateDisplayName();
+        _localization = Window.GetWindow(frameworkElement) as IHasLocalization;
+        if(_localization is not null) {
+            TryUpdateDisplayName();
+            _localization.LanguageChanged += _ => TryUpdateDisplayName();
         }
     }
 
-    private object[] GetEnumValues(ILocalizationService? localizationService) {
+    private void TryUpdateDisplayName() {
+        if(ItemsSource is null) {
+            return;
+        }
+
+        foreach(EnumInfo enumInfo in ItemsSource) {
+            enumInfo.UpdateDisplayName(_localization?.LocalizationService);
+        }
+    }
+
+    private static void UpdateTargetControlProperties(IServiceProvider serviceProvider) {
+        IProvideValueTarget? provideValueTarget = serviceProvider.GetService<IProvideValueTarget>();
+        if(provideValueTarget?.TargetObject is Selector selector) {
+            selector.SelectedValuePath = nameof(EnumInfo.Id);
+        }
+
+        if(provideValueTarget?.TargetObject is ItemsControl itemsControl) {
+            itemsControl.DisplayMemberPath = nameof(EnumInfo.DisplayName);
+        }
+    }
+
+    private EnumInfo[] GetEnumValues() {
         return EnumType?.GetFields(BindingFlags.Static | BindingFlags.Public)
-            .Select(item => CreateMarkupDisplayObject(item, localizationService))
-            .Cast<object>()
-            .ToArray() ?? Array.Empty<object>();
+            .Select(CreateEnumInfo)
+            .ToArray() ?? [];
     }
 
-    internal static MarkupDisplayObject CreateMarkupDisplayObject(FieldInfo item,
-        ILocalizationService? localizationService) {
-        return new MarkupDisplayObject(() => GetEnumName(item, localizationService)) {
-            Value = item.GetValue(null), DisplayName = GetEnumName(item, localizationService)
-        };
-    }
-
-    internal static string GetEnumName(FieldInfo item, ILocalizationService? localizationService) {
-        string? desciption = GetDescription(item);
-
-        if(string.IsNullOrEmpty(desciption)) {
-            return localizationService?.GetLocalizedString($"{item.FieldType.Name}.{item.Name}")
-                   ?? item.Name;
-        }
-
-        return localizationService?.GetLocalizedString(desciption)
-               ?? localizationService?.GetLocalizedString($"{item.FieldType.Name}.{item.Name}")
-               ?? desciption
-               ?? item.Name;
-    }
-
-    internal static string? GetDescription(FieldInfo fieldInfo) {
-        return fieldInfo.GetCustomAttribute<DescriptionAttribute>()?.Description;
+    private static EnumInfo CreateEnumInfo(FieldInfo fieldInfo) {
+        return new EnumInfo(fieldInfo.GetValue(null), fieldInfo);
     }
 }

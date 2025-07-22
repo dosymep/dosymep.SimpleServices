@@ -1,12 +1,8 @@
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Windows;
-using System.Windows.Data;
 using System.Windows.Markup;
-using System.Xaml;
 
-using dosymep.SimpleServices;
-using dosymep.WpfCore.MarkupExtensions.Internal;
+using dosymep.WpfCore.Converters;
 
 namespace dosymep.WpfCore.MarkupExtensions;
 
@@ -14,7 +10,7 @@ namespace dosymep.WpfCore.MarkupExtensions;
 /// Класс для получения локализации.
 /// </summary>
 [MarkupExtensionReturnType(typeof(object))]
-[TypeConverter(typeof(DynamicResourceExtensionConverter))]
+[TypeConverter(typeof(LocalizationSourceExtensionConverter))]
 public sealed class LocalizationSourceExtension : MarkupExtension {
     /// <summary>
     /// Конструирует объект.
@@ -38,8 +34,8 @@ public sealed class LocalizationSourceExtension : MarkupExtension {
             throw new InvalidOperationException("ResourceKey is not set.");
         }
 
-        if(DesignerProperties.GetIsInDesignMode(
-               serviceProvider.GetRootObject<DependencyObject>()!)) {
+        DependencyObject? rootObject = serviceProvider.GetRootObject<DependencyObject>();
+        if(rootObject == null || DesignerProperties.GetIsInDesignMode(rootObject)) {
             return ResourceKey;
         }
 
