@@ -2,22 +2,23 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
     <DataTemplate x:Key="MessageBoxContentTemplate">
-        <StackPanel
-            Margin="10"
-            Orientation="Horizontal">
+        <DockPanel Margin="8" LastChildFill="True">
             
             <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
             <ui:Image
-                Margin="10 0"
+                DockPanel.Dock="Left"
+                Margin="14 0"
                 Height="26"
                 VerticalAlignment="Center"
                 Source="{Binding ImageSource}" />
             
             <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
             <ui:TextBlock 
-                Margin="0 0 10 0"
+                Margin="0 0 14 0"
+                TextWrapping="Wrap"
+                TextAlignment="Justify"
                 VerticalAlignment="Center"
                 Text="{Binding MessageBoxText}" />
-        </StackPanel>
+        </DockPanel>
     </DataTemplate>
 </ResourceDictionary>
