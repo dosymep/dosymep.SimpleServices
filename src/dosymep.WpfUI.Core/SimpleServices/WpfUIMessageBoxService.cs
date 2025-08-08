@@ -60,11 +60,11 @@ public sealed class WpfUIMessageBoxService : WpfBaseService, IMessageBoxService 
         void UpdateTheme(UIThemes uiTheme) {
             _theme.ThemeUpdaterService.SetTheme(uiTheme, messageBox);
         }
+        
+        _theme.ThemeChanged += UpdateTheme;
+        _theme.ThemeUpdaterService.SetTheme(_theme.HostTheme, messageBox);
 
         try {
-            _theme.ThemeChanged += UpdateTheme;
-            _theme.ThemeUpdaterService.SetTheme(_theme.HostTheme, messageBox);
-
             (MessageBoxResult closeResult,
                 MessageBoxResult primaryResult,
                 MessageBoxResult secondaryResult) = ShowMessageBox(button, messageBox);
