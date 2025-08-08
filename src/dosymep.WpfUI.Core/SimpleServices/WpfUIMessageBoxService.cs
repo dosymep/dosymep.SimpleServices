@@ -61,10 +61,8 @@ public sealed class WpfUIMessageBoxService : WpfBaseService, IMessageBoxService 
             _theme.ThemeUpdaterService.SetTheme(uiTheme, messageBox);
         }
         
-        messageBox.Initialized += (s, e) => {
-            _theme.ThemeChanged += UpdateTheme;
-            _theme.ThemeUpdaterService.SetTheme(_theme.HostTheme, messageBox);
-        };
+        _theme.ThemeChanged += UpdateTheme;
+        _theme.ThemeUpdaterService.SetTheme(_theme.HostTheme, messageBox);
 
         try {
             (MessageBoxResult closeResult,

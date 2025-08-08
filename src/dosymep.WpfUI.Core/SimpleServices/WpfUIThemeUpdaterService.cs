@@ -37,7 +37,7 @@ public sealed class WpfUIThemeUpdaterService : IUIThemeUpdaterService {
         }
 
         if(frameworkElement is Window window) {
-            WindowBackgroundManager.UpdateBackground(window, GetAppTheme(theme), WindowBackdropType.Mica);
+            WindowBackgroundManager.UpdateBackground(window, GetAppTheme(theme), WindowBackdropType.None);
         }
     }
 
