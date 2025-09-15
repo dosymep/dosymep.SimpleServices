@@ -111,7 +111,7 @@ public static class NinjectExtensions {
     /// <param name="kernel">Ninject контейнер.</param>
     /// <typeparam name="T">Тип ViewModel к которой будет прикрепление сервиса.</typeparam>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
-    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfAttachServiceBehavior"/>.</remarks>
+    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfWpfAttachServiceBehavior"/>.</remarks>
     /// <exception cref="ArgumentNullException">kernel is null.</exception>
     public static IKernel UseWpfDispatcher<T>(this IKernel kernel) {
         if(kernel is null) {
@@ -150,6 +150,349 @@ public static class NinjectExtensions {
                     context.Kernel.TryGet<ILanguageService>()?.HostLanguage
                     ?? defaultCulture
                     ?? CultureInfo.CurrentUICulture));
+
+        return kernel;
+    }
+    
+    /// <summary>
+    /// Добавляет в контейнер <see cref="IOpenFileDialogService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="title">Заголовок окна. По умолчанию "Выбрать файл".</param>
+    /// <param name="filter">Применяемый фильтр для файлов. По умолчанию "Все файлы (*.*)|*.*".</param>
+    /// <param name="filterIndex">Применяемый индекс фильтра для файлов. По умолчанию "0".</param>
+    /// <param name="initialDirectory">Директория открываемая по умолчанию.</param>
+    /// <param name="multiSelect">True - включает мультивыбор файлов. По умолчанию выключено.</param>
+    /// <param name="addExtension">True включает автоматическое добавление расширения файла. По умолчанию включено.</param>
+    /// <param name="autoUpgradeEnabled">True - включает автоматическую смену внешнего вида. По умолчанию включено.</param>
+    /// <param name="checkFileExists">True - включает проверку расширения файла. По умолчанию включено.</param>
+    /// <param name="checkPathExists">True - включает проверку существования пути до файла. По умолчанию включено.</param>
+    /// <param name="validateNames">True - включает проверку правильности набранного имени файла. По умолчанию включено.</param>
+    /// <param name="dereferenceLinks">True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</param>
+    /// <param name="restoreDirectory">True - запоминает выбранное расположение. По умолчанию выключено.</param>
+    /// <param name="showHelp">True - включает отображение справки. По умолчанию выключено.</param>
+    /// <param name="supportMultiDottedExtensions">True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</param>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    public static IKernel UseWpfOpenFileDialog(this IKernel kernel,
+        string? title = "Выбрать файл",
+        string? filter = "Все файлы (*.*)|*.*",
+        int filterIndex = 0,
+        string? initialDirectory = default,
+        bool multiSelect = false,
+        bool addExtension = true,
+        bool autoUpgradeEnabled = true,
+        bool checkFileExists = true,
+        bool checkPathExists = true,
+        bool validateNames = true,
+        bool dereferenceLinks = true,
+        bool restoreDirectory = false,
+        bool showHelp = false,
+        bool supportMultiDottedExtensions = false) {
+        if(kernel == null) {
+            throw new ArgumentNullException(nameof(kernel));
+        }
+
+        kernel.Bind<IOpenFileDialogService>()
+            .To<WpfOpenFileDialogService>()
+            .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
+            .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckFileExists), checkFileExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckPathExists), checkPathExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ValidateNames), validateNames)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.DereferenceLinks), dereferenceLinks)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.RestoreDirectory), restoreDirectory)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ShowHelp), showHelp)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.SupportMultiDottedExtensions),
+                supportMultiDottedExtensions)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.FilterIndex), filterIndex)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Title), title!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Filter), filter!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.InitialDirectory), initialDirectory!);
+
+        return kernel;
+    }
+
+    /// <summary>
+    /// Добавляет в контейнер <see cref="IOpenFileDialogService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="title">Заголовок окна. По умолчанию "Выбрать файл".</param>
+    /// <param name="filter">Применяемый фильтр для файлов. По умолчанию "Все файлы (*.*)|*.*".</param>
+    /// <param name="filterIndex">Применяемый индекс фильтра для файлов. По умолчанию "0".</param>
+    /// <param name="initialDirectory">Директория открываемая по умолчанию.</param>
+    /// <param name="multiSelect">True - включает мультивыбор файлов. По умолчанию выключено.</param>
+    /// <param name="addExtension">True включает автоматическое добавление расширения файла. По умолчанию включено.</param>
+    /// <param name="autoUpgradeEnabled">True - включает автоматическую смену внешнего вида. По умолчанию включено.</param>
+    /// <param name="checkFileExists">True - включает проверку расширения файла. По умолчанию включено.</param>
+    /// <param name="checkPathExists">True - включает проверку существования пути до файла. По умолчанию включено.</param>
+    /// <param name="validateNames">True - включает проверку правильности набранного имени файла. По умолчанию включено.</param>
+    /// <param name="dereferenceLinks">True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</param>
+    /// <param name="restoreDirectory">True - запоминает выбранное расположение. По умолчанию выключено.</param>
+    /// <param name="showHelp">True - включает отображение справки. По умолчанию выключено.</param>
+    /// <param name="supportMultiDottedExtensions">True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</param>
+    /// <typeparam name="T">Тип ViewModel к которой будет прикрепление сервиса.</typeparam>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfAttachServiceBehavior"/>.</remarks>
+    /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    public static IKernel UseWpfOpenFileDialog<T>(this IKernel kernel,
+        string? title = "Выбрать файл",
+        string? filter = "Все файлы (*.*)|*.*",
+        int filterIndex = 0,
+        string? initialDirectory = default,
+        bool multiSelect = false,
+        bool addExtension = true,
+        bool autoUpgradeEnabled = true,
+        bool checkFileExists = true,
+        bool checkPathExists = true,
+        bool validateNames = true,
+        bool dereferenceLinks = true,
+        bool restoreDirectory = false,
+        bool showHelp = false,
+        bool supportMultiDottedExtensions = false) {
+        if(kernel == null) {
+            throw new ArgumentNullException(nameof(kernel));
+        }
+
+        kernel.Bind<IOpenFileDialogService>()
+            .To<WpfOpenFileDialogService>()
+            .WhenInjectedInto<T>()
+            .WithPropertyValue(nameof(IAttachableService.AllowAttach), true)
+            .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckFileExists), checkFileExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckPathExists), checkPathExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ValidateNames), validateNames)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.DereferenceLinks), dereferenceLinks)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.RestoreDirectory), restoreDirectory)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ShowHelp), showHelp)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.SupportMultiDottedExtensions),
+                supportMultiDottedExtensions)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.FilterIndex), filterIndex)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Title), title!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Filter), filter!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.InitialDirectory), initialDirectory!);
+
+        return kernel;
+    }
+
+    /// <summary>
+    /// Добавляет в контейнер <see cref="ISaveFileDialogService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="title">Заголовок окна. По умолчанию "Сохранить файл".</param>
+    /// <param name="filter">Применяемый фильтр для файлов. По умолчанию "Все файлы (*.*)|*.*".</param>
+    /// <param name="filterIndex">Применяемый индекс фильтра для файлов. По умолчанию "0".</param>
+    /// <param name="defaultExt">Расширение файла по умолчанию.</param>
+    /// <param name="defaultFileName">Имя файла по умолчанию.</param>
+    /// <param name="initialDirectory">Директория открываемая по умолчанию.</param>
+    /// <param name="addExtension">True включает автоматическое добавление расширения файла. По умолчанию включено.</param>
+    /// <param name="autoUpgradeEnabled">True - включает автоматическую смену внешнего вида. По умолчанию включено.</param>
+    /// <param name="checkFileExists">True - включает проверку расширения файла. По умолчанию включено.</param>
+    /// <param name="checkPathExists">True - включает проверку существования пути до файла. По умолчанию включено.</param>
+    /// <param name="validateNames">True - включает проверку правильности набранного имени файла. По умолчанию включено.</param>
+    /// <param name="dereferenceLinks">True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</param>
+    /// <param name="restoreDirectory">True - запоминает выбранное расположение. По умолчанию выключено.</param>
+    /// <param name="showHelp">True - включает отображение справки. По умолчанию выключено.</param>
+    /// <param name="supportMultiDottedExtensions">True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</param>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    public static IKernel UseWpfSaveFileDialog(this IKernel kernel,
+        string? title = "Сохранить файл",
+        string? filter = "Все файлы (*.*)|*.*",
+        int filterIndex = 0,
+        string? defaultExt = default,
+        string? defaultFileName = default,
+        string? initialDirectory = default,
+        bool addExtension = true,
+        bool autoUpgradeEnabled = true,
+        bool checkFileExists = false,
+        bool checkPathExists = true,
+        bool validateNames = true,
+        bool dereferenceLinks = true,
+        bool restoreDirectory = false,
+        bool showHelp = false,
+        bool supportMultiDottedExtensions = false) {
+        if(kernel == null) {
+            throw new ArgumentNullException(nameof(kernel));
+        }
+
+        kernel.Bind<ISaveFileDialogService>()
+            .To<WpfSaveFileDialogService>()
+            .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckFileExists), checkFileExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckPathExists), checkPathExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ValidateNames), validateNames)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.DereferenceLinks), dereferenceLinks)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.RestoreDirectory), restoreDirectory)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ShowHelp), showHelp)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.SupportMultiDottedExtensions),
+                supportMultiDottedExtensions)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.FilterIndex), filterIndex)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Title), title!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Filter), filter!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.InitialDirectory), initialDirectory!)
+            .WithPropertyValue(nameof(ISaveFileDialogService.DefaultExt), defaultExt!)
+            .WithPropertyValue(nameof(ISaveFileDialogService.DefaultFileName), defaultFileName!);
+
+        return kernel;
+    }
+    
+    /// <summary>
+    /// Добавляет в контейнер <see cref="ISaveFileDialogService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="title">Заголовок окна. По умолчанию "Сохранить файл".</param>
+    /// <param name="filter">Применяемый фильтр для файлов. По умолчанию "Все файлы (*.*)|*.*".</param>
+    /// <param name="filterIndex">Применяемый индекс фильтра для файлов. По умолчанию "0".</param>
+    /// <param name="defaultExt">Расширение файла по умолчанию.</param>
+    /// <param name="defaultFileName">Имя файла по умолчанию.</param>
+    /// <param name="initialDirectory">Директория открываемая по умолчанию.</param>
+    /// <param name="addExtension">True включает автоматическое добавление расширения файла. По умолчанию включено.</param>
+    /// <param name="autoUpgradeEnabled">True - включает автоматическую смену внешнего вида. По умолчанию включено.</param>
+    /// <param name="checkFileExists">True - включает проверку расширения файла. По умолчанию включено.</param>
+    /// <param name="checkPathExists">True - включает проверку существования пути до файла. По умолчанию включено.</param>
+    /// <param name="validateNames">True - включает проверку правильности набранного имени файла. По умолчанию включено.</param>
+    /// <param name="dereferenceLinks">True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</param>
+    /// <param name="restoreDirectory">True - запоминает выбранное расположение. По умолчанию выключено.</param>
+    /// <param name="showHelp">True - включает отображение справки. По умолчанию выключено.</param>
+    /// <param name="supportMultiDottedExtensions">True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</param>
+    /// <typeparam name="T">Тип ViewModel к которой будет прикрепление сервиса.</typeparam>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfAttachServiceBehavior"/>.</remarks>
+    /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    public static IKernel UseWpfSaveFileDialog<T>(this IKernel kernel,
+        string? title = "Сохранить файл",
+        string? filter = "Все файлы (*.*)|*.*",
+        int filterIndex = 0,
+        string? defaultExt = default,
+        string? defaultFileName = default,
+        string? initialDirectory = default,
+        bool addExtension = true,
+        bool autoUpgradeEnabled = true,
+        bool checkFileExists = false,
+        bool checkPathExists = true,
+        bool validateNames = true,
+        bool dereferenceLinks = true,
+        bool restoreDirectory = false,
+        bool showHelp = false,
+        bool supportMultiDottedExtensions = false) {
+        if(kernel == null) {
+            throw new ArgumentNullException(nameof(kernel));
+        }
+
+        kernel.Bind<ISaveFileDialogService>()
+            .To<WpfSaveFileDialogService>()
+            .WhenInjectedInto<T>()
+            .WithPropertyValue(nameof(IAttachableService.AllowAttach), true)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckFileExists), checkFileExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckPathExists), checkPathExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ValidateNames), validateNames)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.DereferenceLinks), dereferenceLinks)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.RestoreDirectory), restoreDirectory)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ShowHelp), showHelp)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.SupportMultiDottedExtensions),
+                supportMultiDottedExtensions)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.FilterIndex), filterIndex)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Title), title!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Filter), filter!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.InitialDirectory), initialDirectory!)
+            .WithPropertyValue(nameof(ISaveFileDialogService.DefaultExt), defaultExt!)
+            .WithPropertyValue(nameof(ISaveFileDialogService.DefaultFileName), defaultFileName!);
+
+        return kernel;
+    }
+
+    /// <summary>
+    /// Добавляет в контейнер <see cref="IOpenFolderDialogService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="title">Заголовок окна. По умолчанию "Выбрать папку".</param>
+    /// <param name="initialDirectory">Директория открываемая по умолчанию.</param>
+    /// <param name="multiSelect">True - разрешает мультивыбор. По умолчанию отключено.</param>
+    /// <param name="autoUpgradeEnabled">True - включает автоматическую смену внешнего вида. По умолчанию включено.</param>
+    /// <param name="checkPathExists">True - включает проверку существования пути до файла. По умолчанию включено.</param>
+    /// <param name="validateNames">True - включает проверку правильности набранного имени файла. По умолчанию включено.</param>
+    /// <param name="restoreDirectory">True - запоминает выбранное расположение. По умолчанию выключено.</param>
+    /// <param name="showHelp">True - включает отображение справки. По умолчанию выключено.</param>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    public static IKernel UseWpfOpenFolderDialog(this IKernel kernel,
+        string? title = "Выбрать папку",
+        string? initialDirectory = default,
+        bool multiSelect = false,
+        bool autoUpgradeEnabled = true,
+        bool checkPathExists = true,
+        bool validateNames = true,
+        bool restoreDirectory = false,
+        bool showHelp = false) {
+        if(kernel == null) {
+            throw new ArgumentNullException(nameof(kernel));
+        }
+
+        kernel.Bind<IOpenFolderDialogService>()
+            .To<WpfOpenFolderDialogService>()
+            .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
+            .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckPathExists), checkPathExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ValidateNames), validateNames)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.RestoreDirectory), restoreDirectory)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ShowHelp), showHelp)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Title), title!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.InitialDirectory), initialDirectory!);
+
+        return kernel;
+    }
+
+    /// <summary>
+    /// Добавляет в контейнер <see cref="IOpenFolderDialogService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="title">Заголовок окна. По умолчанию "Выбрать папку".</param>
+    /// <param name="initialDirectory">Директория открываемая по умолчанию.</param>
+    /// <param name="multiSelect">True - разрешает мультивыбор. По умолчанию отключено.</param>
+    /// <param name="autoUpgradeEnabled">True - включает автоматическую смену внешнего вида. По умолчанию включено.</param>
+    /// <param name="checkPathExists">True - включает проверку существования пути до файла. По умолчанию включено.</param>
+    /// <param name="validateNames">True - включает проверку правильности набранного имени файла. По умолчанию включено.</param>
+    /// <param name="restoreDirectory">True - запоминает выбранное расположение. По умолчанию выключено.</param>
+    /// <param name="showHelp">True - включает отображение справки. По умолчанию выключено.</param>
+    /// <typeparam name="T">Тип ViewModel к которой будет прикрепление сервиса.</typeparam>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfAttachServiceBehavior"/>.</remarks>
+    /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    public static IKernel UseWpfOpenFolderDialog<T>(this IKernel kernel,
+        string? title = "Выбрать папку",
+        string? initialDirectory = default,
+        bool multiSelect = false,
+        bool autoUpgradeEnabled = true,
+        bool checkPathExists = true,
+        bool validateNames = true,
+        bool restoreDirectory = false,
+        bool showHelp = false) {
+        if(kernel == null) {
+            throw new ArgumentNullException(nameof(kernel));
+        }
+
+        kernel.Bind<IOpenFolderDialogService>()
+            .To<WpfOpenFolderDialogService>()
+            .WhenInjectedInto<T>()
+            .WithPropertyValue(nameof(IAttachableService.AllowAttach), true)
+            .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.CheckPathExists), checkPathExists)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ValidateNames), validateNames)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.RestoreDirectory), restoreDirectory)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.ShowHelp), showHelp)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.Title), title!)
+            .WithPropertyValue(nameof(IFileDialogServiceBase.InitialDirectory), initialDirectory!);
 
         return kernel;
     }
