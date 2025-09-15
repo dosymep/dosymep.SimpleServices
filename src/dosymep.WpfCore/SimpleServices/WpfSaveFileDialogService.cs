@@ -59,7 +59,7 @@ public sealed class WpfSaveFileDialogService : WpfBaseService, ISaveFileDialogSe
     public FileInfo? File { get; private set; }
 
     /// <inheritdoc />
-    public bool ShowDialog(string directoryName, string fileName) {
+    public bool ShowDialog(string? directoryName, string? fileName) {
         SaveFileDialog dialog = new() {
             AddExtension = AddExtension,
             CheckFileExists = CheckFileExists,
@@ -70,9 +70,10 @@ public sealed class WpfSaveFileDialogService : WpfBaseService, ISaveFileDialogSe
             FilterIndex = FilterIndex,
             Title = Title ?? string.Empty,
             Filter = Filter ?? string.Empty,
-            InitialDirectory = InitialDirectory ?? Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+            InitialDirectory =
+                directoryName ?? InitialDirectory ?? Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
             DefaultExt = DefaultExt ?? string.Empty,
-            FileName = DefaultFileName ?? string.Empty
+            FileName = fileName ?? DefaultFileName ?? string.Empty
         };
 
         bool? result = dialog.ShowDialog();
@@ -81,7 +82,7 @@ public sealed class WpfSaveFileDialogService : WpfBaseService, ISaveFileDialogSe
         } else {
             File = null;
         }
-        
+
         return result == true;
     }
 
