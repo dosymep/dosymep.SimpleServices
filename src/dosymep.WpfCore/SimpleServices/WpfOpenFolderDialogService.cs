@@ -78,8 +78,13 @@ public sealed class WpfOpenFolderDialogService : WpfBaseService, IOpenFolderDial
 
         CommonFileDialogResult? result = dialog.ShowDialog();
 
-        Folder = new DirectoryInfo(dialog.FileName);
-        Folders = dialog.FileNames.Select(item => new DirectoryInfo(item)).ToArray();
+        if(result == CommonFileDialogResult.Ok) {
+            Folder = new DirectoryInfo(dialog.FileName);
+            Folders = dialog.FileNames.Select(item => new DirectoryInfo(item)).ToArray();
+        } else {
+            Folder = null;
+            Folders = null;
+        }
 
         return result == CommonFileDialogResult.Ok;
     }

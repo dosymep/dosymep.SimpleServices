@@ -81,10 +81,14 @@ public sealed class WpfOpenFileDialogService : WpfBaseService, IOpenFileDialogSe
         };
 
         bool? result = dialog.ShowDialog();
-
-        File = new FileInfo(dialog.SafeFileName);
-        Files = dialog.SafeFileNames.Select(item => new FileInfo(item)).ToArray();
-
+        if(result==true) {
+            File = new FileInfo(dialog.SafeFileName);
+            Files = dialog.SafeFileNames.Select(item => new FileInfo(item)).ToArray();
+        } else {
+            File = null;
+            Files = null;
+        }
+        
         return result == true;
     }
 
