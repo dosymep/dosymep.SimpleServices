@@ -111,7 +111,7 @@ public static class NinjectExtensions {
     /// <param name="kernel">Ninject контейнер.</param>
     /// <typeparam name="T">Тип ViewModel к которой будет прикрепление сервиса.</typeparam>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
-    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfWpfAttachServiceBehavior"/>.</remarks>
+    /// <remarks>Обязательно требуется прикрепить к элементу управления через <see cref="WpfAttachServiceBehavior"/>.</remarks>
     /// <exception cref="ArgumentNullException">kernel is null.</exception>
     public static IKernel UseWpfDispatcher<T>(this IKernel kernel) {
         if(kernel is null) {
