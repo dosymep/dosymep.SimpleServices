@@ -94,6 +94,7 @@ public sealed class WpfOpenFileDialogService : WpfBaseService, IOpenFileDialogSe
 
     /// <inheritdoc />
     public void Reset() {
-        // nothing to do
+        File = null;
+        Files = [];
     }
 }

@@ -83,7 +83,7 @@ public sealed class WpfOpenFolderDialogService : WpfBaseService, IOpenFolderDial
             Folders = dialog.FileNames.Select(item => new DirectoryInfo(item)).ToArray();
         } else {
             Folder = null;
-            Folders = null;
+            Folders = [];
         }
 
         return result == CommonFileDialogResult.Ok;
@@ -91,6 +91,7 @@ public sealed class WpfOpenFolderDialogService : WpfBaseService, IOpenFolderDial
 
     /// <inheritdoc />
     public void Reset() {
-        throw new NotImplementedException();
+        Folder = null;
+        Folders = [];
     }
 }

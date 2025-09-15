@@ -88,6 +88,6 @@ public sealed class WpfSaveFileDialogService : WpfBaseService, ISaveFileDialogSe
 
     /// <inheritdoc />
     public void Reset() {
-        // nothing to do
+        File = null;
     }
 }
