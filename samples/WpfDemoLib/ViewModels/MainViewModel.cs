@@ -14,6 +14,7 @@ public sealed class MainViewModel : ObservableObject {
     public const string NotificationWarningIconResourceName =
         "pack://application:,,,/WpfDemoLib;component/assets/images/icons8-notification-warning-32.png";
     
+    private string? _fileDialogResults;
     private string? _secondWindowResult;
 
     public MainViewModel(
@@ -21,30 +22,53 @@ public sealed class MainViewModel : ObservableObject {
         ISecondViewService secondViewService,
         IMessageBoxService messageBoxService,
         ILocalizationService localizationService,
-        IProgressDialogFactory progressDialogFactory) {
+        IProgressDialogFactory progressDialogFactory,
+        IOpenFileDialogService openFileDialogService,
+        ISaveFileDialogService saveFileDialogService,
+        IOpenFolderDialogService openFolderDialogService) {
         SecondViewService = secondViewService;
         
         MessageBoxService = messageBoxService;
         LocalizationService = localizationService;
         ProgressDialogFactory = progressDialogFactory;
+        
+        OpenFileDialogService = openFileDialogService;
+        SaveFileDialogService = saveFileDialogService;
+        OpenFolderDialogService = openFolderDialogService;
 
         LoadViewCommand = commandFactory.CreateAsync(LoadAsync);
         AcceptViewCommand = commandFactory.CreateAsync(AcceptAsync);
 
         ShowSecondWindowCommand = commandFactory.CreateAsync(ShowSecondWindowAsync);
         ShowDialogSecondWindowCommand = commandFactory.CreateAsync(ShowDialogSecondWindowAsync);
+        
+        ShowDialogOpenFileCommand = commandFactory.Create(ShowDialogOpenFile);
+        ShowDialogSaveFileCommand = commandFactory.Create(ShowDialogSaveFile);
+        ShowDialogOpenFolderCommand = commandFactory.Create(ShowDialogOpenFolder);
     }
-    
+
     public ISecondViewService SecondViewService { get; }
 
     public IMessageBoxService MessageBoxService { get; }
     public ILocalizationService LocalizationService { get; }
     public IProgressDialogFactory ProgressDialogFactory { get; }
+    public IOpenFileDialogService OpenFileDialogService { get; }
+    public ISaveFileDialogService SaveFileDialogService { get; }
+    public IOpenFolderDialogService OpenFolderDialogService { get; }
 
     public IAsyncRelayCommand LoadViewCommand { get; set; }
     public IAsyncRelayCommand AcceptViewCommand { get; set; }
     public IAsyncRelayCommand ShowSecondWindowCommand { get; set; }
     public IAsyncRelayCommand ShowDialogSecondWindowCommand { get; set; }
+    
+    public IRelayCommand ShowDialogOpenFileCommand { get; set; }
+    public IRelayCommand ShowDialogSaveFileCommand { get; set; }
+    public IRelayCommand ShowDialogOpenFolderCommand { get; set; }
+    
+    public string? FileDialogResults {
+        get => _fileDialogResults;
+        set => this.RaiseAndSetIfChanged(ref _fileDialogResults, value);
+    }
     
     public string? SecondWindowResult {
         get => _secondWindowResult;
@@ -90,6 +114,23 @@ public sealed class MainViewModel : ObservableObject {
         if(await SecondViewService.ShowDialogAsync() == true) {
             SecondWindowResult = SecondViewService.Result;
         }
+    }
+    
+    private void ShowDialogOpenFile() {
+        FileDialogResults = OpenFileDialogService.ShowDialog() 
+            ? OpenFileDialogService.File.Name
+            : null;
+    }
+
+    private void ShowDialogSaveFile() {
+        FileDialogResults =
+            SaveFileDialogService.ShowDialog(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "test.txt")
+                ? SaveFileDialogService.File.Name
+                : null;
+    }
+
+    private void ShowDialogOpenFolder() {
+        FileDialogResults = OpenFolderDialogService.ShowDialog() ? OpenFolderDialogService.Folder.Name : null;
     }
 
     private async Task AsyncOperation(int maxValue, IProgress<int>? progress, CancellationToken cancellationToken) {

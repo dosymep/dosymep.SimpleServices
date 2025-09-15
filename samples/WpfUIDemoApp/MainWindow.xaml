@@ -34,6 +34,9 @@
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding SecondViewService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding MessageBoxService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding ProgressDialogFactory}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding OpenFileDialogService}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding SaveFileDialogService}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding OpenFolderDialogService}" />
     </b:Interaction.Behaviors>
 
     <b:Interaction.Triggers>
@@ -46,6 +49,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -82,31 +86,53 @@
             </ui:TitleBar.TrailingContent>
         </ui:TitleBar>
 
-        <StackPanel
+        <DockPanel
             Grid.Row="1"
-            Orientation="Horizontal">
+            LastChildFill="True">
 
             <ui:Button
                 Margin="10"
-                Width="80"
                 Command="{Binding ShowSecondWindowCommand}"
                 Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShow}" />
 
             <ui:Button
                 Margin="10"
-                Width="80"
                 Command="{Binding ShowDialogSecondWindowCommand}"
                 Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShowDialog}" />
 
             <ui:TextBox
                 Margin="10"
-                Width="180"
                 IsReadOnly="True"
                 Text="{Binding SecondWindowResult}" />
-        </StackPanel>
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Row="2"
+            LastChildFill="True">
+
+            <ui:Button
+                Margin="10"
+                Command="{Binding ShowDialogOpenFileCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonDialogOpenFileCommand}" />
+
+            <ui:Button
+                Margin="10"
+                Command="{Binding ShowDialogSaveFileCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonDialogSaveFileCommand}" />
+            
+            <ui:Button
+                Margin="10"
+                Command="{Binding ShowDialogOpenFolderCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonDialogOpenFolderCommand}" />
+
+            <ui:TextBox
+                Margin="10"
+                IsReadOnly="True"
+                Text="{Binding FileDialogResults}" />
+        </DockPanel>
 
         <ui:NavigationView
-            Grid.Row="2"
+            Grid.Row="3"
             x:Name="_navigationView"
             Margin="10"
             PaneTitle="{me:LocalizationSource MainWindow.Title}">
@@ -128,7 +154,7 @@
         </ui:NavigationView>
 
         <StackPanel
-            Grid.Row="3"
+            Grid.Row="4"
             Orientation="Horizontal"
             HorizontalAlignment="Right">
 

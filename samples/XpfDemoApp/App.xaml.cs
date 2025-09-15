@@ -65,6 +65,15 @@ namespace XpfDemoApp {
 
             _kernel.UseXtraProgressDialog<MainViewModel>(
                 displayTitleFormat: localizationService.GetLocalizedString("ProgressDialog.Content"));
+
+            _kernel.UseXtraOpenFileDialog<MainViewModel>(
+                title: localizationService.GetLocalizedString("OpenFileDialog.Title"));
+            
+            _kernel.UseXtraSaveFileDialog<MainViewModel>(
+                title: localizationService.GetLocalizedString("SaveFileDialog.Title"));
+            
+            _kernel.UseXtraOpenFolderDialog<MainViewModel>(
+                title: localizationService.GetLocalizedString("OpenFolderDialog.Title"));
             
             _kernel.Bind<ISecondViewService>().To<SecondViewService>();
             _kernel.Bind<ISecondViewFactory>()

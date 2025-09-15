@@ -33,6 +33,14 @@
     <system:String x:Key="MessageBox.Content">Hello world!</system:String>
     <system:String x:Key="ProgressDialog.Content">Please wait [{0}/{1}]...</system:String>
     
+    <system:String x:Key="OpenFileDialog.Title">Choose file</system:String>
+    <system:String x:Key="SaveFileDialog.Title">Save file</system:String>
+    <system:String x:Key="OpenFolderDialog.Title">Choose folder</system:String>
+    
+    <system:String x:Key="MainWindow.ButtonDialogOpenFileCommand">Choose file</system:String>
+    <system:String x:Key="MainWindow.ButtonDialogSaveFileCommand">Save file</system:String>
+    <system:String x:Key="MainWindow.ButtonDialogOpenFolderCommand">Choose folder</system:String>
+    
     <system:String x:Key="UIThemes.Dark">Dark</system:String>
     <system:String x:Key="UIThemes.Light">Light</system:String>
 </ResourceDictionary>

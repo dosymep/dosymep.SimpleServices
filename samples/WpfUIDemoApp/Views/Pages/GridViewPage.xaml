@@ -66,8 +66,8 @@
                                                             <TextBlock
                                                                 Margin="10"
                                                                 FontWeight="Bold"
-                                                                Text="{Binding Name, 
-                                                            StringFormat={StaticResource MainWindow.GroupGridColumn}}" />
+                                                                Text="{Binding Name}">
+                                                            </TextBlock>
                                                         </StackPanel>
                                                     </Expander.Header>
                                                     <ItemsPresenter />
