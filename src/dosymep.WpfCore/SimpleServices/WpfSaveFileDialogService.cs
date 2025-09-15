@@ -6,25 +6,59 @@ using Microsoft.Win32;
 
 namespace dosymep.WpfCore.SimpleServices;
 
-internal sealed class WpfSaveFileDialogService :WpfBaseService, ISaveFileDialogService{
+/// <summary>
+/// Предоставляет методы для открытия диалога сохранения файлов.
+/// </summary>
+public sealed class WpfSaveFileDialogService : WpfBaseService, ISaveFileDialogService {
+    /// <inheritdoc />
     public bool AddExtension { get; set; }
+
+    /// <inheritdoc />
     public bool AutoUpgradeEnabled { get; set; }
+
+    /// <inheritdoc />
     public bool CheckFileExists { get; set; }
+
+    /// <inheritdoc />
     public bool CheckPathExists { get; set; }
+
+    /// <inheritdoc />
     public bool ValidateNames { get; set; }
+
+    /// <inheritdoc />
     public bool DereferenceLinks { get; set; }
+
+    /// <inheritdoc />
     public bool RestoreDirectory { get; set; }
+
+    /// <inheritdoc />
     public bool ShowHelp { get; set; }
+
+    /// <inheritdoc />
     public bool SupportMultiDottedExtensions { get; set; }
+
+    /// <inheritdoc />
     public int FilterIndex { get; set; }
+
+    /// <inheritdoc />
     public string? Title { get; set; }
+
+    /// <inheritdoc />
     public string? Filter { get; set; }
+
+    /// <inheritdoc />
     public string? InitialDirectory { get; set; }
+
+    /// <inheritdoc />
     public string? DefaultExt { get; set; }
+
+    /// <inheritdoc />
     public string? DefaultFileName { get; set; }
-    
+
+    /// <inheritdoc />
     public FileInfo? File { get; private set; }
-    
+
+    /// <inheritdoc />
     public bool ShowDialog(string directoryName, string fileName) {
         SaveFileDialog dialog = new() {
             AddExtension = AddExtension,
@@ -47,7 +81,8 @@ internal sealed class WpfSaveFileDialogService :WpfBaseService, ISaveFileDialogS
 
         return result == true;
     }
-    
+
+    /// <inheritdoc />
     public void Reset() {
         // nothing to do
     }
