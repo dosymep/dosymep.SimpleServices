@@ -60,6 +60,15 @@ public partial class App {
     
         _kernel.UseWpfUIProgressDialog<MainViewModel>(
             displayTitleFormat: localizationService.GetLocalizedString("ProgressDialog.Content"));
+        
+        _kernel.UseWpfOpenFileDialog<MainViewModel>(
+            title: localizationService.GetLocalizedString("OpenFileDialog.Title"));
+            
+        _kernel.UseWpfSaveFileDialog<MainViewModel>(
+            title: localizationService.GetLocalizedString("SaveFileDialog.Title"));
+            
+        _kernel.UseWpfOpenFolderDialog<MainViewModel>(
+            title: localizationService.GetLocalizedString("OpenFolderDialog.Title"));
     
         _kernel.Bind<ISecondViewService>().To<SecondViewService>();
         _kernel.Bind<ISecondViewFactory>()

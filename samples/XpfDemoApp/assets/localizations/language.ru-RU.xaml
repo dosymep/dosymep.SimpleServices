@@ -33,6 +33,14 @@
     <system:String x:Key="MessageBox.Content">Привет мир!</system:String>
     <system:String x:Key="ProgressDialog.Content">Пожалуйста подождите [{0}/{1}]...</system:String>
     
+    <system:String x:Key="OpenFileDialog.Title">Выбрать файл</system:String>
+    <system:String x:Key="SaveFileDialog.Title">Сохранить файл</system:String>
+    <system:String x:Key="OpenFolderDialog.Title">Выбрать папку</system:String>
+    
+    <system:String x:Key="MainWindow.ButtonDialogOpenFileCommand">Выбрать файл</system:String>
+    <system:String x:Key="MainWindow.ButtonDialogSaveFileCommand">Сохранить файл</system:String>
+    <system:String x:Key="MainWindow.ButtonDialogOpenFolderCommand">Выбрать папку</system:String>
+    
     <system:String x:Key="UIThemes.Dark">Темная</system:String>
     <system:String x:Key="UIThemes.Light">Светлая</system:String>
 </ResourceDictionary>

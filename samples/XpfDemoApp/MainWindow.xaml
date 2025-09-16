@@ -22,7 +22,7 @@
 
     x:Name="_this"
     mc:Ignorable="d"
-    
+
     Icon="{me:QualifiedImage assets/images/icons8-google-photos-144.png}"
 
     WindowStartupLocation="CenterScreen"
@@ -35,6 +35,9 @@
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding MessageBoxService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding ProgressDialogFactory}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding NotificationService}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding OpenFileDialogService}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding SaveFileDialogService}" />
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding OpenFolderDialogService}" />
     </b:Interaction.Behaviors>
 
     <b:Interaction.Triggers>
@@ -49,40 +52,63 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        <StackPanel
+
+        <DockPanel
             Grid.Row="0"
-            Orientation="Horizontal">
+            LastChildFill="True">
 
             <dx:SimpleButton
                 Margin="10"
-                Width="80"
                 Command="{Binding ShowSecondWindowCommand}"
                 Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShow}" />
 
             <dx:SimpleButton
                 Margin="10"
-                Width="80"
                 Command="{Binding ShowDialogSecondWindowCommand}"
                 Content="{me:LocalizationSource MainWindow.ButtonSecondWindowShowDialog}" />
 
             <dxe:TextEdit
                 Margin="10"
-                Width="180"
                 IsReadOnly="True"
                 Text="{Binding SecondWindowResult}" />
-        </StackPanel>
+        </DockPanel>
+
+        <DockPanel
+            Grid.Row="1"
+            LastChildFill="True">
+
+            <dx:SimpleButton
+                Margin="10"
+                Command="{Binding ShowDialogOpenFileCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonDialogOpenFileCommand}" />
+
+            <dx:SimpleButton
+                Margin="10"
+                Command="{Binding ShowDialogSaveFileCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonDialogSaveFileCommand}" />
+
+            <dx:SimpleButton
+                Margin="10"
+                Command="{Binding ShowDialogOpenFolderCommand}"
+                Content="{me:LocalizationSource MainWindow.ButtonDialogOpenFolderCommand}" />
+
+            <dxe:TextEdit
+                Margin="10"
+                IsReadOnly="True"
+                Text="{Binding FileDialogResults}" />
+        </DockPanel>
 
         <StackPanel
-            Grid.Row="1"
+            Grid.Row="2"
             Margin="0 10"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
             Orientation="Horizontal">
-            
+
             <dxe:ComboBoxEdit
                 x:Name="_themesComboBox"
                 SelectedIndex="0"
@@ -107,7 +133,7 @@
         </StackPanel>
 
         <dxe:TextEdit
-            Grid.Row="2"
+            Grid.Row="3"
             Margin="10"
             IsReadOnly="True"
             EditMode="InplaceInactive"
@@ -115,7 +141,7 @@
             Text="{me:LocalizationSource MainWindow.RandomText}" />
 
         <StackPanel
-            Grid.Row="3"
+            Grid.Row="4"
             Orientation="Horizontal"
             HorizontalAlignment="Right">
 
@@ -123,7 +149,7 @@
                 Height="18"
                 Margin="10 0"
                 Source="{me:QualifiedImage /dosymep.WpfCore;component/assets/images/icons8-no-image-96.png}" />
-            
+
             <Image
                 Height="18"
                 Source="{me:QualifiedImage assets/images/icons8-google-photos-144.png}" />
