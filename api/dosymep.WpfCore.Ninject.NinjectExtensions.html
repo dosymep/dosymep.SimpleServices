@@ -399,6 +399,525 @@ Class NinjectExtensions  <a class="header-action link-secondary" title="View sou
 
 
 
+  <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFileDialog_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFileDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFileDialog_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFileDialog(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseWpfOpenFileDialog(IKernel, string?, string?, int, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfOpenFileDialog(this IKernel kernel, string? title = &quot;Выбрать файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? initialDirectory = null, bool multiSelect = false, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = true, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает мультивыбор файлов. По умолчанию выключено.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFileDialog_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFileDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFileDialog``1(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseWpfOpenFileDialog&lt;T&gt;(IKernel, string?, string?, int, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfOpenFileDialog&lt;T&gt;(this IKernel kernel, string? title = &quot;Выбрать файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? initialDirectory = null, bool multiSelect = false, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = true, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает мультивыбор файлов. По умолчанию выключено.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.WpfCore.Behaviors.WpfAttachServiceBehavior.html">WpfAttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFolderDialog_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFolderDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFolderDialog_Ninject_IKernel_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFolderDialog(Ninject.IKernel,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseWpfOpenFolderDialog(IKernel, string?, string?, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFolderDialogService.html">IOpenFolderDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfOpenFolderDialog(this IKernel kernel, string? title = &quot;Выбрать папку&quot;, string? initialDirectory = null, bool multiSelect = false, bool autoUpgradeEnabled = true, bool checkPathExists = true, bool validateNames = true, bool restoreDirectory = false, bool showHelp = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать папку&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - разрешает мультивыбор. По умолчанию отключено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFolderDialog_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFolderDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFolderDialog__1_Ninject_IKernel_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfOpenFolderDialog``1(Ninject.IKernel,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseWpfOpenFolderDialog&lt;T&gt;(IKernel, string?, string?, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.IOpenFolderDialogService.html">IOpenFolderDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfOpenFolderDialog&lt;T&gt;(this IKernel kernel, string? title = &quot;Выбрать папку&quot;, string? initialDirectory = null, bool multiSelect = false, bool autoUpgradeEnabled = true, bool checkPathExists = true, bool validateNames = true, bool restoreDirectory = false, bool showHelp = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Выбрать папку&quot;.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>multiSelect</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - разрешает мультивыбор. По умолчанию отключено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfOpenFolderDialog__1_Ninject_IKernel_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.WpfCore.Behaviors.WpfAttachServiceBehavior.html">WpfAttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfSaveFileDialog_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfSaveFileDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfSaveFileDialog_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfSaveFileDialog(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseWpfSaveFileDialog(IKernel, string?, string?, int, string?, string?, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.ISaveFileDialogService.html">ISaveFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfSaveFileDialog(this IKernel kernel, string? title = &quot;Сохранить файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? defaultExt = null, string? defaultFileName = null, string? initialDirectory = null, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = false, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Сохранить файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>defaultExt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Расширение файла по умолчанию.</p>
+</dd>
+    <dt><code>defaultFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя файла по умолчанию.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfSaveFileDialog_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfSaveFileDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfSaveFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfSaveFileDialog``1(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  UseWpfSaveFileDialog&lt;T&gt;(IKernel, string?, string?, int, string?, string?, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.ISaveFileDialogService.html">ISaveFileDialogService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfSaveFileDialog&lt;T&gt;(this IKernel kernel, string? title = &quot;Сохранить файл&quot;, string? filter = &quot;Все файлы (*.*)|*.*&quot;, int filterIndex = 0, string? defaultExt = null, string? defaultFileName = null, string? initialDirectory = null, bool addExtension = true, bool autoUpgradeEnabled = true, bool checkFileExists = false, bool checkPathExists = true, bool validateNames = true, bool dereferenceLinks = true, bool restoreDirectory = false, bool showHelp = false, bool supportMultiDottedExtensions = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Заголовок окна. По умолчанию &quot;Сохранить файл&quot;.</p>
+</dd>
+    <dt><code>filter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Применяемый фильтр для файлов. По умолчанию &quot;Все файлы (<em>.</em>)|<em>.</em>&quot;.</p>
+</dd>
+    <dt><code>filterIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Применяемый индекс фильтра для файлов. По умолчанию &quot;0&quot;.</p>
+</dd>
+    <dt><code>defaultExt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Расширение файла по умолчанию.</p>
+</dd>
+    <dt><code>defaultFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя файла по умолчанию.</p>
+</dd>
+    <dt><code>initialDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Директория открываемая по умолчанию.</p>
+</dd>
+    <dt><code>addExtension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True включает автоматическое добавление расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>autoUpgradeEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает автоматическую смену внешнего вида. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkFileExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку расширения файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>checkPathExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку существования пути до файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>validateNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает проверку правильности набранного имени файла. По умолчанию включено.</p>
+</dd>
+    <dt><code>dereferenceLinks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает возвращение расположения файла, на который ссылается ярлык. По умолчанию включено.</p>
+</dd>
+    <dt><code>restoreDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - запоминает выбранное расположение. По умолчанию выключено.</p>
+</dd>
+    <dt><code>showHelp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение справки. По умолчанию выключено.</p>
+</dd>
+    <dt><code>supportMultiDottedExtensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True - включает отображение и сохранение файлов с несколькими расширениями. По умолчанию выключено.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfSaveFileDialog__1_Ninject_IKernel_System_String_System_String_System_Int32_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.WpfCore.Behaviors.WpfAttachServiceBehavior.html">WpfAttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
   <a id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfWindowsLanguage_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfWindowsLanguage*"></a>
 
   <h3 id="dosymep_WpfCore_Ninject_NinjectExtensions_UseWpfWindowsLanguage_Ninject_IKernel_" data-uid="dosymep.WpfCore.Ninject.NinjectExtensions.UseWpfWindowsLanguage(Ninject.IKernel)">

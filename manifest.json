@@ -981,6 +981,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.yml\" sourcestartlinenumber=\"1\">Предоставляет методы для открытия  диалога просмотра и открытия файлов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.SimpleServices.WpfOpenFolderDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.SimpleServices.WpfOpenFolderDialogService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.SimpleServices.WpfOpenFolderDialogService",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.SimpleServices.WpfOpenFolderDialogService.yml\" sourcestartlinenumber=\"1\">Предоставляет методы для открытия диалога выбора папок.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.SimpleServices.WpfSaveFileDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.SimpleServices.WpfSaveFileDialogService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.SimpleServices.WpfSaveFileDialogService",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.SimpleServices.WpfSaveFileDialogService.yml\" sourcestartlinenumber=\"1\">Предоставляет методы для открытия диалога сохранения файлов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/dosymep.WpfCore.SimpleServices.WpfWindowsLanguageService.yml",
       "output": {
         ".html": {

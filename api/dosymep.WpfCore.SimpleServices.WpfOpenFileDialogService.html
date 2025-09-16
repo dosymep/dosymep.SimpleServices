@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WpfOpenFileDialogService | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WpfOpenFileDialogService | dosymep.SimpleServices ">
+      
+      <meta name="description" content="Предоставляет методы для открытия  диалога просмотра и открытия файлов.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService">
+
+
+
+  <h1 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService" class="text-break">
+Class WpfOpenFileDialogService  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.WpfCore.html">WpfCore</a>.<a class="xref" href="dosymep.WpfCore.SimpleServices.html">SimpleServices</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.WpfCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Предоставляет методы для открытия  диалога просмотра и открытия файлов.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WpfOpenFileDialogService : WpfBaseService, IAttachableService, IOpenFileDialogService, IOpenDialogServiceBase, IFileDialogServiceBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="dosymep.WpfCore.SimpleServices.WpfBaseService.html">WpfBaseService</a></div>
+      <div><span class="xref">WpfOpenFileDialogService</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="dosymep.SimpleServices.IAttachableService.html">IAttachableService</a></div>
+      <div><a class="xref" href="dosymep.SimpleServices.IOpenFileDialogService.html">IOpenFileDialogService</a></div>
+      <div><a class="xref" href="dosymep.SimpleServices.IOpenDialogServiceBase.html">IOpenDialogServiceBase</a></div>
+      <div><a class="xref" href="dosymep.SimpleServices.IFileDialogServiceBase.html">IFileDialogServiceBase</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="dosymep.WpfCore.SimpleServices.WpfBaseService.html#dosymep_WpfCore_SimpleServices_WpfBaseService_Detach">WpfBaseService.Detach()</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.WpfCore.SimpleServices.WpfBaseService.html#dosymep_WpfCore_SimpleServices_WpfBaseService_Attach_System_Windows_DependencyObject_">WpfBaseService.Attach(DependencyObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.WpfCore.SimpleServices.WpfBaseService.html#dosymep_WpfCore_SimpleServices_WpfBaseService_IsAttached">WpfBaseService.IsAttached</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.WpfCore.SimpleServices.WpfBaseService.html#dosymep_WpfCore_SimpleServices_WpfBaseService_AllowAttach">WpfBaseService.AllowAttach</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.WpfCore.SimpleServices.WpfBaseService.html#dosymep_WpfCore_SimpleServices_WpfBaseService_AssociatedObject">WpfBaseService.AssociatedObject</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService__ctor_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.#ctor*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService__ctor" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.#ctor">
+  WpfOpenFileDialogService()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WpfOpenFileDialogService()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_AddExtension_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.AddExtension*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_AddExtension" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.AddExtension">
+  AddExtension
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает значение признака автоматической установки расширения к имени файла.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AddExtension { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_AutoUpgradeEnabled_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.AutoUpgradeEnabled*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_AutoUpgradeEnabled" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.AutoUpgradeEnabled">
+  AutoUpgradeEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает значение признака автоматической смены внешнего вида и поведения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoUpgradeEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_CheckFileExists_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.CheckFileExists*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_CheckFileExists" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.CheckFileExists">
+  CheckFileExists
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения предупреждения, когда пользователь указывает не существующее имя файла.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckFileExists { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_CheckPathExists_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.CheckPathExists*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_CheckPathExists" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.CheckPathExists">
+  CheckPathExists
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения предупреждения, когда пользователь указывает не существующий путь.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckPathExists { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_DereferenceLinks_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.DereferenceLinks*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_DereferenceLinks" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.DereferenceLinks">
+  DereferenceLinks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак возвращения расположения файла, на который ссылается ярлык или возвращает расположения ярлыка.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DereferenceLinks { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_File_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.File*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_File" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.File">
+  File
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает объект определяющий файл выбранный в диалоговом окне.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileInfo? File { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Files_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Files*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Files" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Files">
+  Files
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает коллекцию указывающую на все файлы выбранные в диалоговом окне.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileInfo&gt;? Files { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">FileInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Filter_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Filter*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Filter" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Filter">
+  Filter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает строку фильтра, указывающую на параметры доступные в поле &quot;Тип файлов&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Filter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_FilterIndex_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.FilterIndex*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_FilterIndex" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.FilterIndex">
+  FilterIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает индекс параметра фильтрации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FilterIndex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_InitialDirectory_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.InitialDirectory*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_InitialDirectory" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.InitialDirectory">
+  InitialDirectory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает исходную папку.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? InitialDirectory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Multiselect_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Multiselect*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Multiselect" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Multiselect">
+  Multiselect
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак выбора нескольких файлов.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Multiselect { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_RestoreDirectory_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.RestoreDirectory*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_RestoreDirectory" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.RestoreDirectory">
+  RestoreDirectory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак запоминания предыдущего каталога при повторном отображении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RestoreDirectory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ShowHelp_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ShowHelp*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ShowHelp" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ShowHelp">
+  ShowHelp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения кнопки &quot;Справка&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowHelp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_SupportMultiDottedExtensions_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.SupportMultiDottedExtensions*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_SupportMultiDottedExtensions" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.SupportMultiDottedExtensions">
+  SupportMultiDottedExtensions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак отображения и сохранения файлов с несколькими расширениями.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportMultiDottedExtensions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Title_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Title*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Title" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает отображаемый заголовок.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ValidateNames_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ValidateNames*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ValidateNames" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ValidateNames">
+  ValidateNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает или устанавливает признак принятия только допустимых имен файлов Win32.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ValidateNames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Reset_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Reset*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_Reset" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сбрасывает все свойства до значений по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ShowDialog_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ShowDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ShowDialog" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ShowDialog">
+  ShowDialog()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Показывает диалог выбора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowDialog()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ShowDialog_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ShowDialog*"></a>
+
+  <h3 id="dosymep_WpfCore_SimpleServices_WpfOpenFileDialogService_ShowDialog_System_String_" data-uid="dosymep.WpfCore.SimpleServices.WpfOpenFileDialogService.ShowDialog(System.String)">
+  ShowDialog(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/SimpleServices/WpfOpenFileDialogService.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Показывает диалог выбора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowDialog(string directoryName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directoryName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Устанавливает исходную папку.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает результат true - если пользователь кликнул OK, иначе возвращает false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
