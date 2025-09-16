@@ -1,22 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Windows;
 
 using DevExpress.Mvvm.UI;
-using DevExpress.Xpf.Dialogs;
 
 using dosymep.SimpleServices;
+using dosymep.Xpf.Core.SimpleServices.DxCustomServices;
 
 namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Класс сервиса открытия диалога сохранения файла.
     /// </summary>
-    public class XtraSaveFileDialogService : XtraBaseWindowService<DXSaveFileDialogService>, ISaveFileDialogService {
+    public class XtraSaveFileDialogService : XtraBaseWindowService<CustomDXSaveFileDialogService>, ISaveFileDialogService {
+        /// <summary>
+        /// Сервис по получению тем.
+        /// </summary>
+        public IUIThemeService UIThemeService {
+            get => _serviceBase.UIThemeService;
+            set => _serviceBase.UIThemeService = value;
+        }
+
+        /// <summary>
+        /// Сервис по установке тем.
+        /// </summary>
+        public IUIThemeUpdaterService UIThemeUpdaterService {
+            get => _serviceBase.UIThemeUpdaterService;
+            set => _serviceBase.UIThemeUpdaterService = value;
+        }
+        
         /// <summary>
         /// Создает экземпляр сервиса открытия диалога сохранения файла.
         /// </summary>
         public XtraSaveFileDialogService()
-            : base(new DXSaveFileDialogService()) {
+            : base(new CustomDXSaveFileDialogService()) {
         }
 
         /// <inheritdoc />
@@ -123,3 +138,4 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public FileInfo File => ((FileInfoWrapper) ((DevExpress.Mvvm.ISaveFileDialogService)_serviceBase).File).FileInfo;
     }
 }
+

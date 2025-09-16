@@ -111,8 +111,8 @@
 
             <dxe:ComboBoxEdit
                 x:Name="_themesComboBox"
-                SelectedIndex="0"
-                ValueMember="Value"
+                SelectedIndex="1"
+                ValueMember="Id"
                 DisplayMember="DisplayName"
                 IsTextEditable="False"
                 ItemsSource="{me:EnumToItemsSource ss:UIThemes}"

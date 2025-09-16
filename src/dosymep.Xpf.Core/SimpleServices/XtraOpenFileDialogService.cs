@@ -1,23 +1,41 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
 
 using DevExpress.Mvvm.UI;
-using DevExpress.Xpf.Dialogs;
+using DevExpress.Xpf.Core;
 
 using dosymep.SimpleServices;
+using dosymep.Xpf.Core.SimpleServices.DxCustomServices;
 
 namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Класс сервиса открытия диалога выбора файла.
     /// </summary>
-    public class XtraOpenFileDialogService :  XtraBaseWindowService<DXOpenFileDialogService>, IOpenFileDialogService {
+    public class XtraOpenFileDialogService :  XtraBaseWindowService<CustomDXOpenFileDialogService>, IOpenFileDialogService {
+        /// <summary>
+        /// Сервис по получению тем.
+        /// </summary>
+        public IUIThemeService UIThemeService {
+            get => _serviceBase.UIThemeService;
+            set => _serviceBase.UIThemeService = value;
+        }
+
+        /// <summary>
+        /// Сервис по установке тем.
+        /// </summary>
+        public IUIThemeUpdaterService UIThemeUpdaterService {
+            get => _serviceBase.UIThemeUpdaterService;
+            set => _serviceBase.UIThemeUpdaterService = value;
+        }
+        
         /// <summary>
         /// Создает экземпляр сервиса открытия диалога выбора файла.
         /// </summary>
         public XtraOpenFileDialogService()
-            : base(new DXOpenFileDialogService()) {
+            : base(new CustomDXOpenFileDialogService()) {
         }
 
         /// <inheritdoc />

@@ -61,6 +61,7 @@ public static class NinjectExtensions {
     /// <param name="kernel">Ninject контейнер.</param>
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
     /// <exception cref="ArgumentNullException">kernel is null.</exception>
+    [Obsolete("Сервис применения темы теперь применяется автоматически")]
     public static IKernel UseXtraThemeUpdater(this IKernel kernel) {
         if(kernel == null) {
             throw new ArgumentNullException(nameof(kernel));
@@ -89,7 +90,7 @@ public static class NinjectExtensions {
 
         return kernel;
     }
-    
+
     /// <summary>
     /// Добавляет в контейнер <see cref="IDispatcherService"/>.
     /// </summary>
@@ -127,7 +128,7 @@ public static class NinjectExtensions {
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                 c => c.Kernel.Get<IUIThemeService>())
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
-                c => c.Kernel.Get<IUIThemeUpdaterService>())
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false);
 
         return kernel;
@@ -152,7 +153,7 @@ public static class NinjectExtensions {
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                 c => c.Kernel.Get<IUIThemeService>())
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
-                c => c.Kernel.Get<IUIThemeUpdaterService>())
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), true);
 
         return kernel;
@@ -182,7 +183,7 @@ public static class NinjectExtensions {
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                 c => c.Kernel.Get<IUIThemeService>())
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
-                c => c.Kernel.Get<IUIThemeUpdaterService>())
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
             .WithPropertyValue(nameof(XtraProgressDialogService.DisplayTitleFormat), displayTitleFormat)
             .WithPropertyValue(nameof(XtraProgressDialogService.StepValue), stepValue)
@@ -218,7 +219,7 @@ public static class NinjectExtensions {
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                 c => c.Kernel.Get<IUIThemeService>())
             .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
-                c => c.Kernel.Get<IUIThemeUpdaterService>())
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(XtraProgressDialogService.DisplayTitleFormat), displayTitleFormat)
             .WithPropertyValue(nameof(XtraProgressDialogService.StepValue), stepValue)
             .WithPropertyValue(nameof(XtraProgressDialogService.Indeterminate), indeterminate);
@@ -324,6 +325,28 @@ public static class NinjectExtensions {
 
         return kernel;
     }
+    
+    /// <summary>
+    /// Добавляет в контейнер <see cref="ILocalizationService"/>.
+    /// </summary>
+    /// <param name="kernel">Ninject контейнер.</param>
+    /// <param name="resourceName">Наименование ресурсов.</param>
+    /// <param name="defaultCulture">Языковые настройки по умолчанию. Значение по умолчанию <see cref="CultureInfo.CurrentUICulture"/>.</param>
+    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
+    public static IKernel UseXtraLocalization(this IKernel kernel, string resourceName,
+        CultureInfo? defaultCulture = default) {
+        kernel.Bind<ILocalizationService>().To<XtraLocalizationService>()
+            .InSingletonScope()
+            .WithConstructorArgument(nameof(resourceName), resourceName)
+            .WithConstructorArgument(nameof(defaultCulture), defaultCulture ?? CultureInfo.CurrentUICulture)
+            .OnActivation((context, service) =>
+                service.SetLocalization(
+                    context.Kernel.TryGet<ILanguageService>()?.HostLanguage
+                    ?? defaultCulture
+                    ?? CultureInfo.CurrentUICulture));
+
+        return kernel;
+    }
 
     /// <summary>
     /// Добавляет в контейнер <see cref="IOpenFileDialogService"/>.
@@ -366,6 +389,10 @@ public static class NinjectExtensions {
 
         kernel.Bind<IOpenFileDialogService>()
             .To<XtraOpenFileDialogService>()
+            .WithPropertyValue(nameof(XtraOpenFileDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraOpenFileDialogService.UIThemeUpdaterService),
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
             .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
@@ -430,6 +457,10 @@ public static class NinjectExtensions {
         kernel.Bind<IOpenFileDialogService>()
             .To<XtraOpenFileDialogService>()
             .WhenInjectedInto<T>()
+            .WithPropertyValue(nameof(XtraOpenFileDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraOpenFileDialogService.UIThemeUpdaterService),
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), true)
             .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
@@ -493,6 +524,10 @@ public static class NinjectExtensions {
 
         kernel.Bind<ISaveFileDialogService>()
             .To<XtraSaveFileDialogService>()
+            .WithPropertyValue(nameof(XtraSaveFileDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraSaveFileDialogService.UIThemeUpdaterService),
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
@@ -511,27 +546,6 @@ public static class NinjectExtensions {
             .WithPropertyValue(nameof(ISaveFileDialogService.DefaultExt), defaultExt!)
             .WithPropertyValue(nameof(ISaveFileDialogService.DefaultFileName), defaultFileName!);
 
-        return kernel;
-    }
-
-    /// <summary>
-    /// Добавляет в контейнер <see cref="ILocalizationService"/>.
-    /// </summary>
-    /// <param name="kernel">Ninject контейнер.</param>
-    /// <param name="resourceName">Наименование ресурсов.</param>
-    /// <param name="defaultCulture">Языковые настройки по умолчанию. Значение по умолчанию <see cref="CultureInfo.CurrentUICulture"/>.</param>
-    /// <returns>Возвращает настроенный контейнер Ninject.</returns>
-    public static IKernel UseXtraLocalization(this IKernel kernel, string resourceName, CultureInfo? defaultCulture = default) {
-        kernel.Bind<ILocalizationService>().To<XtraLocalizationService>()
-            .InSingletonScope()
-            .WithConstructorArgument(nameof(resourceName), resourceName)
-            .WithConstructorArgument(nameof(defaultCulture), defaultCulture ?? CultureInfo.CurrentUICulture)
-            .OnActivation((context, service) =>
-                service.SetLocalization(
-                    context.Kernel.TryGet<ILanguageService>()?.HostLanguage
-                    ?? defaultCulture
-                    ?? CultureInfo.CurrentUICulture));
-        
         return kernel;
     }
 
@@ -581,6 +595,10 @@ public static class NinjectExtensions {
         kernel.Bind<ISaveFileDialogService>()
             .To<XtraSaveFileDialogService>()
             .WhenInjectedInto<T>()
+            .WithPropertyValue(nameof(XtraSaveFileDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraSaveFileDialogService.UIThemeUpdaterService),
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), true)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AddExtension), addExtension)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
@@ -631,6 +649,10 @@ public static class NinjectExtensions {
 
         kernel.Bind<IOpenFolderDialogService>()
             .To<XtraOpenFolderDialogService>()
+            .WithPropertyValue(nameof(XtraOpenFolderDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraOpenFolderDialogService.UIThemeUpdaterService),
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
             .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
@@ -676,6 +698,10 @@ public static class NinjectExtensions {
         kernel.Bind<IOpenFolderDialogService>()
             .To<XtraOpenFolderDialogService>()
             .WhenInjectedInto<T>()
+            .WithPropertyValue(nameof(XtraOpenFolderDialogService.UIThemeService),
+                c => c.Kernel.Get<IUIThemeService>())
+            .WithPropertyValue(nameof(XtraOpenFolderDialogService.UIThemeUpdaterService),
+                c => new XtraThemeUpdaterService())
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), true)
             .WithPropertyValue(nameof(IOpenDialogServiceBase.Multiselect), multiSelect)
             .WithPropertyValue(nameof(IFileDialogServiceBase.AutoUpgradeEnabled), autoUpgradeEnabled)
