@@ -1,25 +1,40 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Windows;
 
 using DevExpress.Xpf.Dialogs;
 
 using dosymep.SimpleServices;
+using dosymep.Xpf.Core.SimpleServices.DxCustomServices;
 
 namespace dosymep.Xpf.Core.SimpleServices {
     /// <summary>
     /// Класс сервиса открытия диалога выбора папки.
     /// </summary>
-    public class XtraOpenFolderDialogService : 
-        XtraBaseWindowService<DXOpenFolderDialogService>,
+    public class XtraOpenFolderDialogService :
+        XtraBaseWindowService<CustomDXOpenFolderDialogService>,
         IOpenFolderDialogService {
-        
+        /// <summary>
+        /// Сервис по получению тем.
+        /// </summary>
+        public IUIThemeService UIThemeService {
+            get => _serviceBase.UIThemeService;
+            set => _serviceBase.UIThemeService = value;
+        }
+
+        /// <summary>
+        /// Сервис по установке тем.
+        /// </summary>
+        public IUIThemeUpdaterService UIThemeUpdaterService {
+            get => _serviceBase.UIThemeUpdaterService;
+            set => _serviceBase.UIThemeUpdaterService = value;
+        }
+
         /// <summary>
         /// Создает экземпляр сервиса открытия диалога выбора папки.
         /// </summary>
         public XtraOpenFolderDialogService()
-            : base(new DXOpenFolderDialogService()) {
+            : base(new CustomDXOpenFolderDialogService()) {
         }
 
         /// <inheritdoc />
@@ -110,7 +125,7 @@ namespace dosymep.Xpf.Core.SimpleServices {
         public void Reset() {
             ((DevExpress.Mvvm.IOpenFolderDialogService) _serviceBase).Reset();
         }
-        
+
         /// <inheritdoc />
         public bool ShowDialog() {
             return ShowDialog(null);
@@ -126,6 +141,8 @@ namespace dosymep.Xpf.Core.SimpleServices {
             => ((DirectoryInfoWrapper) ((DevExpress.Mvvm.IOpenFolderDialogService) _serviceBase).Folder).DirectoryInfo;
 
         /// <inheritdoc />
-        public IEnumerable<DirectoryInfo> Folders => ((DevExpress.Mvvm.IOpenFolderDialogService) _serviceBase).Folders.Select(item => ((DirectoryInfoWrapper) item).DirectoryInfo);
+        public IEnumerable<DirectoryInfo> Folders =>
+            ((DevExpress.Mvvm.IOpenFolderDialogService) _serviceBase).Folders.Select(item =>
+                ((DirectoryInfoWrapper) item).DirectoryInfo);
     }
 }
