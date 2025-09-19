@@ -1541,6 +1541,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFileDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFileDialogService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFileDialogService",
+      "Summary": "<p sourcefile=\"api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFileDialogService.yml\" sourcestartlinenumber=\"1\">Internal use only.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFolderDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFolderDialogService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFolderDialogService",
+      "Summary": "<p sourcefile=\"api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXOpenFolderDialogService.yml\" sourcestartlinenumber=\"1\">Internal use only.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXSaveFileDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXSaveFileDialogService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXSaveFileDialogService",
+      "Summary": "<p sourcefile=\"api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.CustomDXSaveFileDialogService.yml\" sourcestartlinenumber=\"1\">Internal use only.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.Xpf.Core.SimpleServices.DxCustomServices.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Xpf.Core.SimpleServices.DxCustomServices",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/dosymep.Xpf.Core.SimpleServices.ProgressDialogFactory.yml",
       "output": {
         ".html": {
