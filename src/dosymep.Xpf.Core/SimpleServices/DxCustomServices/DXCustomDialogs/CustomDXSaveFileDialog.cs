@@ -23,9 +23,16 @@ namespace dosymep.Xpf.Core.SimpleServices.DxCustomServices.DXCustomDialogs {
                 WindowStyle = WindowStyle.ToolWindow,
                 ShowInTaskbar = false
             };
+           
+            IUIThemeService themeService = _theme();
+            IUIThemeUpdaterService themeUpdaterService = _themeUpdaterService();
 
-            _themeUpdaterService().SetTheme(_theme().HostTheme, fileDialogWindow);
-
+            if(themeService is null || themeUpdaterService is null) {
+                ThemeManager.SetTheme(fileDialogWindow, Theme.Win10Light);
+            } else {
+                themeUpdaterService.SetTheme(themeService.HostTheme, fileDialogWindow);
+            }
+            
             return fileDialogWindow;
         }
     }
