@@ -1,12 +1,22 @@
+using System.ComponentModel;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Threading;
+
+using dosymep.SimpleServices;
+using dosymep.WpfCore.Behaviors;
+
+using Wpf.Ui.Controls;
 
 namespace dosymep.WpfUI.Core.Windows;
 
 /// <summary>
 /// Предоставляет окно уведомления.
 /// </summary>
-public partial class WpfUINotificationWindow {
+public partial class WpfUINotificationWindow : INotification {
+    private TaskCompletionSource<bool?>? _tcs;
+
     /// <summary>
     /// Идентифицирует свойство зависимости Body,
     /// которое представляет основное содержимое или сообщение уведомления, отображаемого в уведомлении.
@@ -48,9 +58,35 @@ public partial class WpfUINotificationWindow {
         new PropertyMetadata(default(ImageSource)));
 
     /// <summary>
+    /// Идентифицирует свойство зависимости StackWindows,
+    /// где содержит в себе DependencyProperty, в котором хранится стек всех открыты уведомлений.
+    /// </summary>
+    public static readonly DependencyProperty StackWindowsCacheProperty = DependencyProperty.Register(
+        nameof(StackWindowsCache),
+        typeof(DependencyObject),
+        typeof(WpfUINotificationWindow),
+        new PropertyMetadata(default(DependencyObject)));
+
+    private readonly IHasTheme _theme;
+    private readonly IHasLocalization _localization;
+
+    public event Action<UIThemes>? ThemeChanged;
+    public event Action<CultureInfo>? LanguageChanged;
+
+    /// <summary>
     /// Предоставляет конструктор окна уведомления.
     /// </summary>
-    public WpfUINotificationWindow() {
+    public WpfUINotificationWindow(
+        IHasTheme theme,
+        IHasLocalization localization) {
+        _theme = theme;
+        _localization = localization;
+
+        _theme.ThemeChanged += _ => ThemeChanged?.Invoke(_);
+        _localization.LanguageChanged += _ => LanguageChanged?.Invoke(_);
+
+        theme.ThemeUpdaterService.SetTheme(theme.HostTheme, this);
+
         InitializeComponent();
     }
 
@@ -87,5 +123,59 @@ public partial class WpfUINotificationWindow {
     public ImageSource? ImageSource {
         get => (ImageSource?) GetValue(ImageSourceProperty);
         set => SetValue(ImageSourceProperty, value);
+    }
+
+    /// <summary>
+    /// Содержит в себе DependencyProperty, в котором хранится стек всех открыты уведомлений.
+    /// </summary>
+    public DependencyObject StackWindowsCache {
+        get => (DependencyObject) GetValue(StackWindowsCacheProperty);
+        set => SetValue(StackWindowsCacheProperty, value);
+    }
+
+    #region INotification
+
+    Task<bool?> INotification.ShowAsync() {
+        return ((INotification) this).ShowAsync(5000);
+    }
+
+    Task<bool?> INotification.ShowAsync(int millisecond) {
+        return ((INotification) this).ShowAsync(TimeSpan.FromMilliseconds(millisecond));
+    }
+
+    async Task<bool?> INotification.ShowAsync(TimeSpan interval) {
+        _tcs = new TaskCompletionSource<bool?>();
+
+        DispatcherTimer timer = new() {Interval = interval};
+        timer.Start();
+        
+        timer.Tick += (s, e) => {
+            Close();
+            _tcs.TrySetResult(false);
+        };
+
+        try {
+            Show();
+            return await _tcs.Task;
+        } finally {
+            timer.Stop();
+        }
+    }
+
+    /// <inheritdoc />
+    protected override void OnClosing(CancelEventArgs e) {
+        base.OnClosing(e);
+
+        if(e.Cancel) {
+            return;
+        }
+
+        _ = _tcs?.TrySetResult(null);
+    }
+
+    #endregion
+
+    private void TitleBar_OnCloseClicked(TitleBar sender, RoutedEventArgs args) {
+        _notificationWindowBehavior.CloseClicked();
     }
 }
