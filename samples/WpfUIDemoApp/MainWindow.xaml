@@ -15,7 +15,7 @@
     xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
     xmlns:viewModels="clr-namespace:WpfDemoLib.ViewModels;assembly=WpfDemoLib"
     xmlns:pages="clr-namespace:WpfUIDemoApp.Views.Pages"
-
+    
     Height="600"
     Width="1000"
 
@@ -37,7 +37,7 @@
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding OpenFileDialogService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding SaveFileDialogService}" />
         <behaviors:WpfAttachServiceBehavior AttachableService="{Binding OpenFolderDialogService}" />
-    </b:Interaction.Behaviors>
+        </b:Interaction.Behaviors>
 
     <b:Interaction.Triggers>
         <b:EventTrigger
@@ -142,6 +142,11 @@
                     Content="{me:LocalizationSource MainWindow.GridPageTitle}"
                     Icon="{ui:SymbolIcon Settings16}"
                     TargetPageType="{x:Type pages:GridViewPage}" />
+                
+                <ui:NavigationViewItem
+                    Content="{me:LocalizationSource MainWindow.NotificationPage.Title}"
+                    Icon="{ui:SymbolIcon Alert24}"
+                    TargetPageType="{x:Type pages:NotificationPage}" />
             </ui:NavigationView.MenuItems>
             
             <ui:NavigationView.FooterMenuItems>

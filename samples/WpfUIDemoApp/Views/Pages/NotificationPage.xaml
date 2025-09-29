@@ -1,0 +1,43 @@
+<local:WpfUIPlatformPage
+    x:Class="WpfUIDemoApp.Views.Pages.NotificationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfUIDemoApp.Views.Pages"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:behaviors="clr-namespace:dosymep.WpfCore.Behaviors;assembly=dosymep.WpfCore"
+    xmlns:me="clr-namespace:dosymep.WpfCore.MarkupExtensions;assembly=dosymep.WpfCore"
+    xmlns:viewModels="clr-namespace:WpfDemoLib.ViewModels;assembly=WpfDemoLib"
+    xmlns:pages="clr-namespace:WpfDemoLib.ViewModels.Pages;assembly=WpfDemoLib"
+
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="300"
+
+    ui:NavigationView.HeaderContent="{me:LocalizationSource NotificationPage.Title}"
+
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+
+    d:DataContext="{d:DesignInstance pages:NotificationViewModel, IsDesignTimeCreatable=False}">
+
+    <b:Interaction.Behaviors>
+        <behaviors:WpfAttachServiceBehavior AttachableService="{Binding NotificationService}" />
+    </b:Interaction.Behaviors>
+
+    <StackPanel>
+        <ui:Button
+            Content="{me:LocalizationSource NotificationPage.ShowNotification}"
+            Command="{Binding ShowNotificationCommand}" />
+        
+        <ui:Button
+            Content="{me:LocalizationSource NotificationPage.ShowFatalNotification}"
+            Command="{Binding ShowFatalNotificationCommand}" />
+        
+        <ui:Button
+            Content="{me:LocalizationSource NotificationPage.ShowWarningNotification}"
+            Command="{Binding ShowWarningNotificationCommand}" />
+    </StackPanel>
+</local:WpfUIPlatformPage>
