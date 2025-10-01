@@ -11,11 +11,11 @@ namespace dosymep.WpfCore.Behaviors;
 /// <summary>
 /// Поведение, которое применяет анимацию скольжения появления окна.
 /// </summary>
-public class NotificationWindowBehavior : Behavior<Window> {
+public class WpfNotificationWindowBehavior : Behavior<Window> {
     public static readonly DependencyProperty WindowsProperty = DependencyProperty.Register(
         "Windows",
         typeof(ObservableCollection<Window>),
-        typeof(NotificationWindowBehavior),
+        typeof(WpfNotificationWindowBehavior),
         new PropertyMetadata(default(ObservableCollection<Window>)));
 
     public static ObservableCollection<Window> GetWindows(DependencyObject d) {
@@ -34,7 +34,7 @@ public class NotificationWindowBehavior : Behavior<Window> {
     public static readonly DependencyProperty DurationProperty = DependencyProperty.Register(
         nameof(Duration),
         typeof(TimeSpan),
-        typeof(NotificationWindowBehavior),
+        typeof(WpfNotificationWindowBehavior),
         new PropertyMetadata(TimeSpan.FromSeconds(0.2)));
 
     /// <summary>
@@ -43,7 +43,7 @@ public class NotificationWindowBehavior : Behavior<Window> {
     public static readonly DependencyProperty OffsetProperty = DependencyProperty.Register(
         nameof(Offset),
         typeof(double),
-        typeof(NotificationWindowBehavior),
+        typeof(WpfNotificationWindowBehavior),
         new PropertyMetadata(10.0));
 
     /// <summary>
@@ -53,7 +53,7 @@ public class NotificationWindowBehavior : Behavior<Window> {
     public static readonly DependencyProperty StackWindowsCacheProperty = DependencyProperty.Register(
         nameof(StackWindowsCache),
         typeof(DependencyObject),
-        typeof(NotificationWindowBehavior),
+        typeof(WpfNotificationWindowBehavior),
         new PropertyMetadata(default(DependencyObject)));
 
     private Screen? _screen;
