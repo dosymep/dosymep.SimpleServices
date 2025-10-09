@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
 using dosymep.SimpleServices;
@@ -57,20 +58,13 @@ public partial class WpfUINotificationWindow : INotification {
         typeof(WpfUINotificationWindow),
         new PropertyMetadata(default(ImageSource)));
 
-    /// <summary>
-    /// Идентифицирует свойство зависимости StackWindows,
-    /// где содержит в себе DependencyProperty, в котором хранится стек всех открыты уведомлений.
-    /// </summary>
-    public static readonly DependencyProperty StackWindowsCacheProperty = DependencyProperty.Register(
-        nameof(StackWindowsCache),
-        typeof(DependencyObject),
-        typeof(WpfUINotificationWindow),
-        new PropertyMetadata(default(DependencyObject)));
-
     private readonly IHasTheme _theme;
     private readonly IHasLocalization _localization;
 
+    /// <inheritdoc cref="IHasTheme.ThemeChanged"/>
     public event Action<UIThemes>? ThemeChanged;
+    
+    /// <inheritdoc cref="IHasLocalization.LanguageChanged"/>
     public event Action<CultureInfo>? LanguageChanged;
 
     /// <summary>
@@ -125,14 +119,6 @@ public partial class WpfUINotificationWindow : INotification {
         set => SetValue(ImageSourceProperty, value);
     }
 
-    /// <summary>
-    /// Содержит в себе DependencyProperty, в котором хранится стек всех открыты уведомлений.
-    /// </summary>
-    public DependencyObject StackWindowsCache {
-        get => (DependencyObject) GetValue(StackWindowsCacheProperty);
-        set => SetValue(StackWindowsCacheProperty, value);
-    }
-
     #region INotification
 
     Task<bool?> INotification.ShowAsync() {
@@ -148,10 +134,9 @@ public partial class WpfUINotificationWindow : INotification {
 
         DispatcherTimer timer = new() {Interval = interval};
         timer.Start();
-        
-        timer.Tick += (s, e) => {
-            Close();
-            _tcs.TrySetResult(false);
+
+        timer.Tick += (_, _) => {
+            _notificationWindowBehavior.OnAutoClosing();
         };
 
         try {
@@ -162,20 +147,24 @@ public partial class WpfUINotificationWindow : INotification {
         }
     }
 
-    /// <inheritdoc />
-    protected override void OnClosing(CancelEventArgs e) {
-        base.OnClosing(e);
-
-        if(e.Cancel) {
-            return;
-        }
-
-        _ = _tcs?.TrySetResult(null);
-    }
-
     #endregion
 
-    private void TitleBar_OnCloseClicked(TitleBar sender, RoutedEventArgs args) {
-        _notificationWindowBehavior.CloseClicked();
+    /// <inheritdoc />
+    protected override void OnExtendsContentIntoTitleBarChanged(bool oldValue, bool newValue) {
+        // do nothing
+    }
+
+    /// <inheritdoc />
+    protected override void OnBackdropTypeChanged(WindowBackdropType oldValue, WindowBackdropType newValue) {
+        // do nothing
+    }
+
+    /// <inheritdoc />
+    protected override void OnCornerPreferenceChanged(WindowCornerPreference oldValue, WindowCornerPreference newValue) {
+        // do nothing
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
+        _notificationWindowBehavior.OnClosing();
     }
 }

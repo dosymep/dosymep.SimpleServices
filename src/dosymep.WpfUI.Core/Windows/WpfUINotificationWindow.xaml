@@ -18,18 +18,71 @@
 
     Height="90"
     MinHeight="90"
-
-    Topmost="True"
-    ShowInTaskbar="False"
+    MaxHeight="90"
 
     ResizeMode="NoResize"
-    SizeToContent="Height"
+    SizeToContent="WidthAndHeight"
+
+    WindowStyle="None"
+    AllowsTransparency="True"
+
+    Topmost="True"
+    ShowActivated="False"
+    ShowInTaskbar="False"
 
     DataContext="{Binding ElementName=_this}">
 
     <b:Interaction.Behaviors>
-        <behaviors:WpfNotificationWindowBehavior x:Name="_notificationWindowBehavior" StackWindowsCache="{Binding StackWindowsCache}" />
+        <behaviors:WpfNotificationWindowBehavior x:Name="_notificationWindowBehavior" />
     </b:Interaction.Behaviors>
+
+    <Window.Resources>
+        <Style x:Key="CloseButtonStyle" TargetType="{x:Type ui:Button}">
+            <Setter Property="Width" Value="44" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}"/>
+            <Setter Property="FocusVisualStyle" Value="{DynamicResource DefaultControlFocusVisualStyle}" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="KeyboardNavigation.IsTabStop" Value="True" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Canvas.ZIndex" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ui:Button}">
+                        <Grid
+                            Background="{TemplateBinding Background}">
+                            <Viewbox
+                                Width="11"
+                                Height="11"
+                                Focusable="False"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                RenderOptions.BitmapScalingMode="HighQuality">
+                                <Canvas
+                                    Width="72"
+                                    Height="72"
+                                    Focusable="False">
+                                    <Path
+                                        Fill="{DynamicResource ButtonForeground}"
+                                        Data="M36,41.1,6.15,71a3.44,3.44,0,0,1-2.53,1A3.55,3.55,0,0,1,0,68.38a3.44,3.44,0,0,1,1.05-2.53L30.9,36,1.05,6.15A3.49,3.49,0,0,1,0,3.59,3.51,3.51,0,0,1,.28,2.18,3.42,3.42,0,0,1,1.05,1,3.82,3.82,0,0,1,2.21.28,3.58,3.58,0,0,1,3.62,0,3.44,3.44,0,0,1,6.15,1.05L36,30.9,65.85,1.05a3.49,3.49,0,0,1,2.56-1A3.39,3.39,0,0,1,69.8.28,3.8,3.8,0,0,1,71,1.05a3.8,3.8,0,0,1,.77,1.15A3.39,3.39,0,0,1,72,3.59a3.49,3.49,0,0,1-1,2.56L41.1,36,71,65.85a3.44,3.44,0,0,1,1,2.53,3.58,3.58,0,0,1-.28,1.41A3.82,3.82,0,0,1,71,71a3.42,3.42,0,0,1-1.14.77,3.66,3.66,0,0,1-4-.77Z" />
+                                </Canvas>
+                            </Viewbox>
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Background" Value="{DynamicResource PaletteRedBrush}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -44,28 +97,28 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ui:TitleBar
+        <ui:TextBlock
             Grid.Row="0"
             Grid.Column="1"
-            Height="35"
-            ShowClose="True"
-            ShowMinimize="False"
-            ShowMaximize="False"
-            CloseClicked="TitleBar_OnCloseClicked">
+            Margin="0 3 0 0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            FontWeight="Bold"
+            Appearance="Primary"
+            Text="{Binding Title}" />
 
-            <ui:TitleBar.Header>
-                <ui:TextBlock
-                    Margin="14 8"
-                    FontWeight="Bold"
-                    Appearance="Primary"
-                    Text="{Binding Title}" />
-            </ui:TitleBar.Header>
-        </ui:TitleBar>
+        <ui:Button
+            Grid.Row="0"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Style="{StaticResource CloseButtonStyle}"
+            Click="ButtonBase_OnClick" />
 
         <ui:TextBlock
             Grid.Row="1"
             Grid.Column="1"
-            Margin="14 0"
+            Margin="3 0 0 0"
             FontSize="13"
             TextWrapping="Wrap"
             Appearance="Secondary"
@@ -76,18 +129,20 @@
         <ui:TextBlock
             Grid.Row="3"
             Grid.Column="1"
-            Margin="14 4"
+            Margin="0 0 3 3"
             FontSize="10"
             FontStyle="Italic"
+            VerticalAlignment="Top"
             HorizontalAlignment="Right"
             Text="{Binding Author}" />
 
         <ui:TextBlock
             Grid.Row="3"
             Grid.Column="1"
-            Margin="14 4"
+            Margin="3 0 0 3"
             FontSize="10"
             FontStyle="Italic"
+            VerticalAlignment="Top"
             HorizontalAlignment="Left"
             Text="{Binding Footer}" />
 
@@ -95,8 +150,8 @@
             Grid.Row="0"
             Grid.Column="0"
             Grid.RowSpan="4"
+            Margin="3"
             Width="96"
-            Margin="14 4 0 4"
             Source="{Binding ImageSource}">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">

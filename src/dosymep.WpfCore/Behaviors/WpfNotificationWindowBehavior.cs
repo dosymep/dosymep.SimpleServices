@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
@@ -11,34 +12,10 @@ namespace dosymep.WpfCore.Behaviors;
 /// <summary>
 /// Поведение, которое применяет анимацию скольжения появления окна.
 /// </summary>
-public class WpfNotificationWindowBehavior : Behavior<Window> {
-    public static readonly DependencyProperty WindowsProperty = DependencyProperty.Register(
-        "Windows",
-        typeof(ObservableCollection<Window>),
-        typeof(WpfNotificationWindowBehavior),
-        new PropertyMetadata(default(ObservableCollection<Window>)));
-
-    public static ObservableCollection<Window> GetWindows(DependencyObject d) {
-        ObservableCollection<Window> windows = (ObservableCollection<Window>) d.GetValue(WindowsProperty);
-        if(windows is null) {
-            windows = [];
-            d.SetValue(WindowsProperty, windows);
-        }
-
-        return windows;
-    }
-
+public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     /// <summary>
-    /// Идентифицирует свойство зависимости Duration, которое определяет продолжительность анимации скольжения.
-    /// </summary>
-    public static readonly DependencyProperty DurationProperty = DependencyProperty.Register(
-        nameof(Duration),
-        typeof(TimeSpan),
-        typeof(WpfNotificationWindowBehavior),
-        new PropertyMetadata(TimeSpan.FromSeconds(0.2)));
-
-    /// <summary>
-    /// Идентифицирует свойство зависимости BottomOffset, которое определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
+    /// Идентифицирует свойство зависимости BottomOffset,
+    /// которое определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
     /// </summary>
     public static readonly DependencyProperty OffsetProperty = DependencyProperty.Register(
         nameof(Offset),
@@ -46,26 +23,7 @@ public class WpfNotificationWindowBehavior : Behavior<Window> {
         typeof(WpfNotificationWindowBehavior),
         new PropertyMetadata(10.0));
 
-    /// <summary>
-    /// Идентифицирует свойство зависимости StackWindows,
-    /// где содержит в себе DependencyProperty, в котором хранится стек всех открыты уведомлений.
-    /// </summary>
-    public static readonly DependencyProperty StackWindowsCacheProperty = DependencyProperty.Register(
-        nameof(StackWindowsCache),
-        typeof(DependencyObject),
-        typeof(WpfNotificationWindowBehavior),
-        new PropertyMetadata(default(DependencyObject)));
-
     private Screen? _screen;
-    private Storyboard? _slideIn;
-
-    /// <summary>
-    /// Определяет продолжительность анимации в поведении скольжения.
-    /// </summary>
-    public TimeSpan Duration {
-        get => (TimeSpan) GetValue(DurationProperty);
-        set => SetValue(DurationProperty, value);
-    }
 
     /// <summary>
     /// Определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
@@ -75,119 +33,83 @@ public class WpfNotificationWindowBehavior : Behavior<Window> {
         set => SetValue(OffsetProperty, value);
     }
 
-    /// <summary>
-    /// Содержит в себе DependencyProperty, в котором хранится стек всех открыты уведомлений.
-    /// </summary>
-    public DependencyObject StackWindowsCache {
-        get => (DependencyObject) GetValue(StackWindowsCacheProperty);
-        set => SetValue(StackWindowsCacheProperty, value);
-    }
+    private bool _isClosed;
+
+    private Storyboard? _showing;
+    private Storyboard? _closing;
+    private Storyboard? _autoClosing;
+    private Storyboard? _positioning;
 
     /// <inheritdoc />
     protected override void OnAttached() {
         AssociatedObject.Loaded += OnWindowLoaded;
-        AssociatedObject.Closing += OnWindowClosing;
+
+        _screen = Screen.GetPrimaryScreen();
+
+        AssociatedObject.RenderTransform = new TranslateTransform();
+
+        ResourceDictionary resources = new() {
+            Source = new Uri("pack://application:,,,/dosymep.WpfCore;component/Animations/NotificationAnimations.xaml")
+        };
+
+        _showing = (Storyboard) resources["Showing"];
+        Storyboard.SetTarget(_showing, AssociatedObject);
+
+        _closing = (Storyboard) resources["Closing"];
+        Storyboard.SetTarget(_closing, AssociatedObject);
+
+        _autoClosing = (Storyboard) resources["AutoClosing"];
+        Storyboard.SetTarget(_autoClosing, AssociatedObject);
+
+        _positioning = (Storyboard) resources["Positioning"];
+        Storyboard.SetTarget(_positioning, AssociatedObject);
+
+        _closing.Completed += ClosingOnCompleted;
+        _autoClosing.Completed += ClosingOnCompleted;
     }
 
     /// <inheritdoc />
     protected override void OnDetaching() {
         AssociatedObject.Loaded -= OnWindowLoaded;
-        AssociatedObject.Closing -= OnWindowClosing;
     }
 
     private void OnWindowLoaded(object sender, RoutedEventArgs e) {
-        Window window = AssociatedObject;
-
-        double height = GetWindows(StackWindowsCache)
-            .Sum(item => item.ActualHeight + Offset);
-
-        GetWindows(StackWindowsCache).Add(window);
-
-        _screen = Screen.GetPrimaryScreen();
-
-        window.Top = _screen.Top + _screen.Height - window.ActualHeight - height;
-
-        double to = _screen.Left + _screen.Width - window.ActualWidth;
-        double from = _screen.Left + _screen.Width + window.ActualWidth;
-
-        DoubleAnimation animation =
-            new() {To = to, From = from, Duration = Duration};
-
-        _slideIn = new Storyboard {Children = [animation]};
-
-        Storyboard.SetTarget(animation, window);
-        Storyboard.SetTargetProperty(animation, new PropertyPath("(Window.Left)"));
-
-        _slideIn.Begin(window);
+        OnShowing();
     }
 
-    private void OnWindowClosing(object sender, CancelEventArgs e) {
-        AssociatedObject.Closing -= OnWindowClosing;
+    private void ClosingOnCompleted(object sender, EventArgs e) {
+        AssociatedObject.Close();
 
-        e.Cancel = true;
-        RemoveWindow(AssociatedObject);
+        if(_closing is not null) {
+            _closing.Completed -= ClosingOnCompleted;
+        }
 
-        DispatcherTimer timer = new() {Interval = Duration};
-        timer.Start();
-        timer.Tick += delegate {
-            timer.Stop();
-            AssociatedObject.Close();
-        };
+        if(_autoClosing is not null) {
+            _autoClosing.Completed -= ClosingOnCompleted;
+        }
     }
 
-    private void RemoveWindow(Window removedWindow) {
-        ObservableCollection<Window> stackWindows = GetWindows(StackWindowsCache);
+    public void OnShowing() {
+        AssociatedObject.Top = _screen.Top + _screen.Height - AssociatedObject.ActualHeight;
+        AssociatedObject.Left = _screen.Left + _screen.Width - AssociatedObject.ActualWidth;
 
-        int index = stackWindows.IndexOf(removedWindow);
-        if(index == -1) {
-            return;
-        }
-
-        index++;
-        if(index >= stackWindows.Count) {
-            return;
-        }
-
-        for(int i = index; i < stackWindows.Count; i++) {
-            Window stackWindow = stackWindows[i];
-
-            double to = stackWindow.Top + removedWindow.Height + Offset;
-
-            DoubleAnimation animation =
-                new() {To = to, From = stackWindow.Top, Duration = Duration};
-
-            Storyboard storyboard = new() {Children = [animation]};
-
-            Storyboard.SetTarget(animation, stackWindow);
-            Storyboard.SetTargetProperty(animation, new PropertyPath("(Window.Top)"));
-
-            storyboard.Begin(stackWindow);
-        }
-
-        stackWindows.RemoveAt(index);
+        _showing?.Begin(AssociatedObject);
     }
 
-    /// <summary>
-    /// Запускает анимацию закрытия для связанного окна и закрывает его после завершения.
-    /// </summary>
-    public void CloseClicked() {
-        Window window = AssociatedObject;
+    public void OnClosing() {
+        if(_closing is not null && !_isClosed) {
+            _closing.Begin(AssociatedObject);
+        }
 
-        double to = window.Left + window.ActualWidth + Offset;
+        _isClosed = true;
+    }
 
-        DoubleAnimation animation =
-            new() {To = to, From = window.Left, Duration = Duration};
+    public void OnAutoClosing() {
+        if(_autoClosing is not null && !_isClosed) {
+            _autoClosing.Begin(AssociatedObject);
+        }
 
-        Storyboard storyboard = new() {Children = [animation]};
-
-        Storyboard.SetTarget(animation, window);
-        Storyboard.SetTargetProperty(animation, new PropertyPath("(Window.Left)"));
-
-        storyboard.Begin(window);
-        storyboard.Completed += (s, e) => {
-            window.Close();
-            RemoveWindow(window);
-        };
+        _isClosed = true;
     }
 }
 
