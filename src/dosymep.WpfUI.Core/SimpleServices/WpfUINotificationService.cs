@@ -62,13 +62,16 @@ public sealed class WpfUINotificationService : WpfBaseService, INotificationServ
     /// <inheritdoc />
     public INotification CreateNotification(
         string title, string body, string? footer = null, string? author = null, ImageSource? imageSource = null) {
-        return new WpfUINotificationWindow(_theme, _localization) {
+        WpfUINotificationWindow window = new(_theme, _localization) {
             Title = title,
             Body = body,
             Footer = footer ?? DefaultFooter,
             Author = author ?? DefaultAuthor,
-            ImageSource = imageSource ?? DefaultImage
+            ImageSource = imageSource ?? DefaultImage,
         };
+        
+        SetAssociatedOwner(window);
+        return window;
     }
 
     /// <inheritdoc />

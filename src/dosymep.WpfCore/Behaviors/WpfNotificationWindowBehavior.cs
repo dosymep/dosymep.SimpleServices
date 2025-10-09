@@ -89,6 +89,9 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         }
     }
 
+    /// <summary>
+    /// Запускает анимацию показа окна.
+    /// </summary>
     public void OnShowing() {
         AssociatedObject.Top = _screen.Top + _screen.Height - AssociatedObject.ActualHeight;
         AssociatedObject.Left = _screen.Left + _screen.Width - AssociatedObject.ActualWidth;
@@ -96,6 +99,9 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         _showing?.Begin(AssociatedObject);
     }
 
+    /// <summary>
+    /// Запускает анимацию закрытия окна.
+    /// </summary>
     public void OnClosing() {
         if(_closing is not null && !_isClosed) {
             _closing.Begin(AssociatedObject);
@@ -104,6 +110,9 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         _isClosed = true;
     }
 
+    /// <summary>
+    /// Запускает анимацию закрытия окна по времени.
+    /// </summary>
     public void OnAutoClosing() {
         if(_autoClosing is not null && !_isClosed) {
             _autoClosing.Begin(AssociatedObject);

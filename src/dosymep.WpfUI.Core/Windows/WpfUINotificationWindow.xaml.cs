@@ -1,6 +1,8 @@
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Windows;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
@@ -136,6 +138,7 @@ public partial class WpfUINotificationWindow : INotification {
         timer.Start();
 
         timer.Tick += (_, _) => {
+            _tcs?.SetResult(null);
             _notificationWindowBehavior.OnAutoClosing();
         };
 
@@ -165,6 +168,7 @@ public partial class WpfUINotificationWindow : INotification {
     }
 
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
+        _tcs?.SetResult(false);
         _notificationWindowBehavior.OnClosing();
     }
 }
