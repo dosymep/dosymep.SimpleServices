@@ -1,4 +1,6 @@
+using System.Diagnostics;
 using System.IO;
+using System.Windows;
 
 using dosymep.SimpleServices;
 
@@ -76,7 +78,10 @@ public sealed class WpfOpenFolderDialogService : WpfBaseService, IOpenFolderDial
         dialog.Title = Title ?? string.Empty;
         dialog.InitialDirectory = directoryName;
 
-        CommonFileDialogResult? result = dialog.ShowDialog();
+        Window? associatedWindow = GetAssociatedWindow();
+        CommonFileDialogResult? result = associatedWindow is not null
+            ? dialog.ShowDialog(associatedWindow)
+            : dialog.ShowDialog(Process.GetCurrentProcess().MainWindowHandle);
 
         if(result == CommonFileDialogResult.Ok) {
             Folder = new DirectoryInfo(dialog.FileName);

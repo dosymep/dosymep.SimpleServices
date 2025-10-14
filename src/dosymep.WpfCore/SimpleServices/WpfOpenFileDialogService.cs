@@ -77,18 +77,18 @@ public sealed class WpfOpenFileDialogService : WpfBaseService, IOpenFileDialogSe
             FilterIndex = FilterIndex,
             Title = Title ?? string.Empty,
             Filter = Filter ?? string.Empty,
-            InitialDirectory = directoryName
+            InitialDirectory = directoryName,
         };
 
-        bool? result = dialog.ShowDialog();
-        if(result==true) {
+        bool? result = dialog.ShowDialog(GetAssociatedWindow());
+        if(result == true) {
             File = new FileInfo(dialog.SafeFileName);
             Files = dialog.SafeFileNames.Select(item => new FileInfo(item)).ToArray();
         } else {
             File = null;
             Files = null;
         }
-        
+
         return result == true;
     }
 
