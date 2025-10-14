@@ -79,7 +79,7 @@ public sealed class WpfOpenFolderDialogService : WpfBaseService, IOpenFolderDial
         dialog.InitialDirectory = directoryName;
 
         Window? associatedWindow = GetAssociatedWindow();
-        CommonFileDialogResult? result = associatedWindow is null
+        CommonFileDialogResult? result = associatedWindow is not null
             ? dialog.ShowDialog(associatedWindow)
             : dialog.ShowDialog(Process.GetCurrentProcess().MainWindowHandle);
 
