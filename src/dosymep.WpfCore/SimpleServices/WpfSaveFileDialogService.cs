@@ -78,7 +78,7 @@ public sealed class WpfSaveFileDialogService : WpfBaseService, ISaveFileDialogSe
 
         bool? result = dialog.ShowDialog(GetAssociatedWindow());
         if(result == true) {
-            File = new FileInfo(dialog.SafeFileName);
+            File = new FileInfo(dialog.FileName);
         } else {
             File = null;
         }

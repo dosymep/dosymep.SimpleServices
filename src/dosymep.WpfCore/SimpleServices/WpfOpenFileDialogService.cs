@@ -1,5 +1,4 @@
 using System.IO;
-using System.Windows;
 
 using dosymep.SimpleServices;
 
@@ -82,8 +81,8 @@ public sealed class WpfOpenFileDialogService : WpfBaseService, IOpenFileDialogSe
 
         bool? result = dialog.ShowDialog(GetAssociatedWindow());
         if(result == true) {
-            File = new FileInfo(dialog.SafeFileName);
-            Files = dialog.SafeFileNames.Select(item => new FileInfo(item)).ToArray();
+            File = new FileInfo(dialog.FileName);
+            Files = dialog.FileNames.Select(item => new FileInfo(item)).ToArray();
         } else {
             File = null;
             Files = null;
