@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
@@ -44,7 +45,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     protected override void OnAttached() {
         AssociatedObject.Loaded += OnWindowLoaded;
 
-        _screen = Screen.GetPrimaryScreen();
+        _screen = Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
 
         AssociatedObject.RenderTransform = new TranslateTransform();
 
@@ -93,8 +94,15 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     /// Запускает анимацию показа окна.
     /// </summary>
     public void OnShowing() {
-        AssociatedObject.Top = _screen.Top + _screen.Height - AssociatedObject.ActualHeight;
-        AssociatedObject.Left = _screen.Left + _screen.Width - AssociatedObject.ActualWidth;
+        _screen ??= Screen.PrimaryScreen;
+
+        var dpiScale = VisualTreeHelper.GetDpi(AssociatedObject);
+
+        AssociatedObject.Top = _screen.WorkingArea.Top / dpiScale.DpiScaleY +
+            _screen.WorkingArea.Height / dpiScale.DpiScaleY - AssociatedObject.ActualHeight;
+        
+        AssociatedObject.Left = _screen.WorkingArea.Left / dpiScale.DpiScaleX +
+            _screen.WorkingArea.Width / dpiScale.DpiScaleX - AssociatedObject.ActualWidth;
 
         _showing?.Begin(AssociatedObject);
     }
@@ -119,28 +127,5 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         }
 
         _isClosed = true;
-    }
-}
-
-internal class Screen {
-    public double Dpi { get; set; }
-
-    public double Top { get; set; }
-    public double Left { get; set; }
-
-    public double Width { get; set; }
-    public double Height { get; set; }
-
-    public static Screen GetPrimaryScreen() {
-        return new Screen() {
-            Top = 0,
-            Left = 0,
-            Width = SystemParameters.FullPrimaryScreenWidth,
-            Height = SystemParameters.FullPrimaryScreenHeight
-        };
-    }
-
-    public static Screen GetScreen(Window window) {
-        return new Screen();
     }
 }
