@@ -15,6 +15,15 @@ namespace dosymep.WpfCore.Behaviors;
 /// </summary>
 public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     /// <summary>
+    /// 
+    /// </summary>
+    public static readonly DependencyProperty WindowStackProperty = DependencyProperty.Register(
+        nameof(WindowStack),
+        typeof(ObservableCollection<Window>),
+        typeof(WpfNotificationWindowBehavior),
+        new PropertyMetadata(default(ObservableCollection<Window>)));
+
+    /// <summary>
     /// Идентифицирует свойство зависимости BottomOffset,
     /// которое определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
     /// </summary>
@@ -23,16 +32,6 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         typeof(double),
         typeof(WpfNotificationWindowBehavior),
         new PropertyMetadata(10.0));
-
-    private Screen? _screen;
-
-    /// <summary>
-    /// Определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
-    /// </summary>
-    public double Offset {
-        get => (double) GetValue(OffsetProperty);
-        set => SetValue(OffsetProperty, value);
-    }
 
     private bool _isClosed;
 
@@ -44,9 +43,6 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     /// <inheritdoc />
     protected override void OnAttached() {
         AssociatedObject.Loaded += OnWindowLoaded;
-
-        _screen = Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
-
         AssociatedObject.RenderTransform = new TranslateTransform();
 
         ResourceDictionary resources = new() {
@@ -69,6 +65,22 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         _autoClosing.Completed += ClosingOnCompleted;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    public ObservableCollection<Window> WindowStack {
+        get => (ObservableCollection<Window>) GetValue(WindowStackProperty);
+        set => SetValue(WindowStackProperty, value);
+    }
+
+    /// <summary>
+    /// Определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
+    /// </summary>
+    public double Offset {
+        get => (double) GetValue(OffsetProperty);
+        set => SetValue(OffsetProperty, value);
+    }
+
     /// <inheritdoc />
     protected override void OnDetaching() {
         AssociatedObject.Loaded -= OnWindowLoaded;
@@ -80,6 +92,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
 
     private void ClosingOnCompleted(object sender, EventArgs e) {
         AssociatedObject.Close();
+        WindowStack.Remove(AssociatedObject);
 
         if(_closing is not null) {
             _closing.Completed -= ClosingOnCompleted;
@@ -88,23 +101,44 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         if(_autoClosing is not null) {
             _autoClosing.Completed -= ClosingOnCompleted;
         }
+
+        foreach(Window window in WindowStack) {
+            window.Top-= AssociatedObject.ActualHeight;
+        }
     }
 
     /// <summary>
     /// Запускает анимацию показа окна.
     /// </summary>
     public void OnShowing() {
-        _screen ??= Screen.PrimaryScreen;
+        WindowStack.Add(AssociatedObject);
 
-        var dpiScale = VisualTreeHelper.GetDpi(AssociatedObject);
-
-        AssociatedObject.Top = _screen.WorkingArea.Top / dpiScale.DpiScaleY +
-            _screen.WorkingArea.Height / dpiScale.DpiScaleY - AssociatedObject.ActualHeight;
-        
-        AssociatedObject.Left = _screen.WorkingArea.Left / dpiScale.DpiScaleX +
-            _screen.WorkingArea.Width / dpiScale.DpiScaleX - AssociatedObject.ActualWidth;
+        SetTopPosition(AssociatedObject);
+        // SetBottomPosition(AssociatedObject);
 
         _showing?.Begin(AssociatedObject);
+    }
+
+    private void SetTopPosition(Window window) {
+        var dpiScale = VisualTreeHelper.GetDpi(window);
+        var mainScreen = Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
+
+        window.Top = WindowStack.Count * window.ActualHeight + WindowStack.Count * Offset;
+
+        window.Left = mainScreen.WorkingArea.Left / dpiScale.DpiScaleX +
+            mainScreen.WorkingArea.Width / dpiScale.DpiScaleX - window.ActualWidth;
+    }
+
+    private void SetBottomPosition(Window window) {
+        var dpiScale = VisualTreeHelper.GetDpi(window);
+        var screen = Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
+
+        window.Top = screen.WorkingArea.Top / dpiScale.DpiScaleY +
+                     screen.WorkingArea.Height / dpiScale.DpiScaleY -
+                     WindowStack.Count * window.ActualHeight - WindowStack.Count * Offset;
+
+        window.Left = screen.WorkingArea.Left / dpiScale.DpiScaleX +
+            screen.WorkingArea.Width / dpiScale.DpiScaleX - window.ActualWidth;
     }
 
     /// <summary>

@@ -33,7 +33,9 @@
     DataContext="{Binding ElementName=_this}">
 
     <b:Interaction.Behaviors>
-        <behaviors:WpfNotificationWindowBehavior x:Name="_notificationWindowBehavior" />
+        <behaviors:WpfNotificationWindowBehavior
+            x:Name="_notificationWindowBehavior"
+            WindowStack="{Binding WindowStack}" />
     </b:Interaction.Behaviors>
 
     <Window.Resources>
@@ -41,7 +43,7 @@
             <Setter Property="Width" Value="44" />
             <Setter Property="Height" Value="30" />
             <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}"/>
+            <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}" />
             <Setter Property="FocusVisualStyle" Value="{DynamicResource DefaultControlFocusVisualStyle}" />
             <Setter Property="SnapsToDevicePixels" Value="True" />
             <Setter Property="OverridesDefaultStyle" Value="True" />
@@ -73,7 +75,7 @@
 
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Foreground" Value="White" />
                                 <Setter Property="Background" Value="{DynamicResource PaletteRedBrush}" />
                             </Trigger>
                         </ControlTemplate.Triggers>

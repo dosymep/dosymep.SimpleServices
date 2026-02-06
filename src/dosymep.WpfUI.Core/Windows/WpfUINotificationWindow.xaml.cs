@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
@@ -19,6 +20,15 @@ namespace dosymep.WpfUI.Core.Windows;
 /// </summary>
 public partial class WpfUINotificationWindow : INotification {
     private TaskCompletionSource<bool?>? _tcs;
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public static readonly DependencyProperty WindowStackProperty = DependencyProperty.Register(
+        nameof(WindowStack),
+        typeof(ObservableCollection<Window>),
+        typeof(WpfUINotificationWindow),
+        new PropertyMetadata(default(ObservableCollection<Window>)));
 
     /// <summary>
     /// Идентифицирует свойство зависимости Body,
@@ -84,6 +94,14 @@ public partial class WpfUINotificationWindow : INotification {
         theme.ThemeUpdaterService.SetTheme(theme.HostTheme, this);
 
         InitializeComponent();
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public ObservableCollection<Window> WindowStack {
+        get => (ObservableCollection<Window>) GetValue(WindowStackProperty);
+        set => SetValue(WindowStackProperty, value);
     }
 
     /// <summary>

@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media;
 
@@ -59,6 +60,8 @@ public sealed class WpfUINotificationService : WpfBaseService, INotificationServ
     /// </summary>
     public int NotificationVisibleMaxCount { get; set; } = 1;
 
+    private ObservableCollection<Window> _windowStack = [];
+
     /// <inheritdoc />
     public INotification CreateNotification(
         string title, string body, string? footer = null, string? author = null, ImageSource? imageSource = null) {
@@ -68,6 +71,7 @@ public sealed class WpfUINotificationService : WpfBaseService, INotificationServ
             Footer = footer ?? DefaultFooter,
             Author = author ?? DefaultAuthor,
             ImageSource = imageSource ?? DefaultImage,
+            WindowStack = _windowStack
         };
         
         SetAssociatedOwner(window);
