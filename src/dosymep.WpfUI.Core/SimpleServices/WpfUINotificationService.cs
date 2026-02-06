@@ -14,7 +14,8 @@ namespace dosymep.WpfUI.Core.SimpleServices;
 public sealed class WpfUINotificationService : WpfBaseService, INotificationService {
     private readonly IHasTheme _theme;
     private readonly IHasLocalization _localization;
-
+    private readonly ObservableCollection<Window> _windowStack = [];
+    
     /// <summary>
     /// Создает экземпляр сервиса уведомлений.
     /// </summary>
@@ -60,8 +61,6 @@ public sealed class WpfUINotificationService : WpfBaseService, INotificationServ
     /// </summary>
     public int NotificationVisibleMaxCount { get; set; } = 1;
 
-    private ObservableCollection<Window> _windowStack = [];
-
     /// <inheritdoc />
     public INotification CreateNotification(
         string title, string body, string? footer = null, string? author = null, ImageSource? imageSource = null) {
@@ -71,7 +70,9 @@ public sealed class WpfUINotificationService : WpfBaseService, INotificationServ
             Footer = footer ?? DefaultFooter,
             Author = author ?? DefaultAuthor,
             ImageSource = imageSource ?? DefaultImage,
-            WindowStack = _windowStack
+            WindowStack = _windowStack,
+            NotificationScreen = NotificationScreen,
+            NotificationPosition = NotificationPosition,
         };
         
         SetAssociatedOwner(window);
@@ -89,34 +90,4 @@ public sealed class WpfUINotificationService : WpfBaseService, INotificationServ
         string title, string body, string? author = null, ImageSource? imageSource = null) {
         return CreateNotification("Предупреждение", body, title, author, imageSource);
     }
-}
-
-/// <summary>
-/// Перечисление, представляющее различные экраны для отображения уведомлений.
-/// </summary>
-public enum NotificationScreen {
-    /// <summary>
-    /// Основной экран.
-    /// </summary>
-    Primary,
-
-    /// <summary>
-    /// Экран, где расположено окно.
-    /// </summary>
-    ApplicationWindow,
-}
-
-/// <summary>
-/// Определяет возможные позиции отображения уведомлений.
-/// </summary>
-public enum NotificationPosition {
-    /// <summary>
-    /// Сверху справа.
-    /// </summary>
-    TopRight,
-    
-    /// <summary>
-    /// Снизу справа.
-    /// </summary>
-    BottomRight,
 }

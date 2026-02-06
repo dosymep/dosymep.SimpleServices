@@ -6,6 +6,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
+using dosymep.WpfCore.SimpleServices;
+
 using Microsoft.Xaml.Behaviors;
 
 namespace dosymep.WpfCore.Behaviors;
@@ -14,6 +16,24 @@ namespace dosymep.WpfCore.Behaviors;
 /// Поведение, которое применяет анимацию скольжения появления окна.
 /// </summary>
 public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
+    /// <summary>
+    /// 
+    /// </summary>
+    public static readonly DependencyProperty NotificationScreenProperty = DependencyProperty.Register(
+        nameof(NotificationScreen),
+        typeof(NotificationScreen),
+        typeof(WpfNotificationWindowBehavior),
+        new PropertyMetadata(default(NotificationScreen)));
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static readonly DependencyProperty NotificationPositionProperty = DependencyProperty.Register(
+        nameof(NotificationPosition),
+        typeof(NotificationPosition),
+        typeof(WpfNotificationWindowBehavior),
+        new PropertyMetadata(default(NotificationPosition)));
+
     /// <summary>
     /// 
     /// </summary>
@@ -74,6 +94,22 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     }
 
     /// <summary>
+    /// 
+    /// </summary>
+    public NotificationScreen NotificationScreen {
+        get => (NotificationScreen) GetValue(NotificationScreenProperty);
+        set => SetValue(NotificationScreenProperty, value);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public NotificationPosition NotificationPosition {
+        get => (NotificationPosition) GetValue(NotificationPositionProperty);
+        set => SetValue(NotificationPositionProperty, value);
+    }
+
+    /// <summary>
     /// Определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.
     /// </summary>
     public double Offset {
@@ -102,8 +138,10 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
             _autoClosing.Completed -= ClosingOnCompleted;
         }
 
+
+        int sign = GetSign();
         foreach(Window window in WindowStack) {
-            window.Top-= AssociatedObject.ActualHeight;
+            window.Top += sign * AssociatedObject.ActualHeight;
         }
     }
 
@@ -113,25 +151,20 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     public void OnShowing() {
         WindowStack.Add(AssociatedObject);
 
-        SetTopPosition(AssociatedObject);
-        // SetBottomPosition(AssociatedObject);
+        if(NotificationPosition == NotificationPosition.TopRight) {
+            SetTopPosition(AssociatedObject);
+        } else if(NotificationPosition == NotificationPosition.BottomRight) {
+            SetBottomPosition(AssociatedObject);
+        } else {
+            throw new NotSupportedException($"Position {NotificationPosition} is not supported.");
+        }
 
         _showing?.Begin(AssociatedObject);
     }
 
-    private void SetTopPosition(Window window) {
-        var dpiScale = VisualTreeHelper.GetDpi(window);
-        var mainScreen = Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
-
-        window.Top = WindowStack.Count * window.ActualHeight + WindowStack.Count * Offset;
-
-        window.Left = mainScreen.WorkingArea.Left / dpiScale.DpiScaleX +
-            mainScreen.WorkingArea.Width / dpiScale.DpiScaleX - window.ActualWidth;
-    }
-
     private void SetBottomPosition(Window window) {
+        var screen = GetMainScreen();
         var dpiScale = VisualTreeHelper.GetDpi(window);
-        var screen = Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
 
         window.Top = screen.WorkingArea.Top / dpiScale.DpiScaleY +
                      screen.WorkingArea.Height / dpiScale.DpiScaleY -
@@ -161,5 +194,41 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         }
 
         _isClosed = true;
+    }
+
+    private int GetSign() {
+        if(NotificationPosition == NotificationPosition.TopRight) {
+            return -1;
+        }
+
+        if(NotificationPosition == NotificationPosition.BottomRight) {
+            return 1;
+        }
+
+        throw new NotSupportedException($"Position {NotificationPosition} is not supported.");
+    }
+
+    private Screen GetMainScreen() {
+        if(NotificationScreen == NotificationScreen.Primary) {
+            return Screen.PrimaryScreen;
+        }
+
+        if(NotificationScreen == NotificationScreen.ApplicationWindow) {
+            return Screen.FromHandle(new WindowInteropHelper(AssociatedObject).Handle);
+        }
+       
+        throw new NotSupportedException($"Screen {NotificationScreen} is not supported.");
+    }
+
+    private void SetTopPosition(Window window) {
+        var screen = GetMainScreen();
+        var dpiScale = VisualTreeHelper.GetDpi(window);
+
+        int startBarHeight = screen.Bounds.Height - screen.WorkingArea.Height;
+
+        window.Top = -startBarHeight + WindowStack.Count * window.ActualHeight + WindowStack.Count * Offset;
+
+        window.Left = screen.WorkingArea.Left / dpiScale.DpiScaleX +
+            screen.WorkingArea.Width / dpiScale.DpiScaleX - window.ActualWidth;
     }
 }

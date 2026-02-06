@@ -6,6 +6,7 @@ using System.Windows.Media.Imaging;
 
 using dosymep.SimpleServices;
 using dosymep.WpfCore.Ninject;
+using dosymep.WpfCore.SimpleServices;
 using dosymep.WpfUI.Core.Ninject;
 
 using Ninject;

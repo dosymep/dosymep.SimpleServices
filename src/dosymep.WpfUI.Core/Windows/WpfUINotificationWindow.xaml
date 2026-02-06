@@ -35,7 +35,9 @@
     <b:Interaction.Behaviors>
         <behaviors:WpfNotificationWindowBehavior
             x:Name="_notificationWindowBehavior"
-            WindowStack="{Binding WindowStack}" />
+            WindowStack="{Binding WindowStack}"
+            NotificationScreen="{Binding NotificationScreen}"
+            NotificationPosition="{Binding NotificationPosition}"/>
     </b:Interaction.Behaviors>
 
     <Window.Resources>

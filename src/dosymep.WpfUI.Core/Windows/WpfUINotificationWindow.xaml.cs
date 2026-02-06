@@ -10,6 +10,8 @@ using System.Windows.Threading;
 
 using dosymep.SimpleServices;
 using dosymep.WpfCore.Behaviors;
+using dosymep.WpfCore.SimpleServices;
+using dosymep.WpfUI.Core.SimpleServices;
 
 using Wpf.Ui.Controls;
 
@@ -20,6 +22,24 @@ namespace dosymep.WpfUI.Core.Windows;
 /// </summary>
 public partial class WpfUINotificationWindow : INotification {
     private TaskCompletionSource<bool?>? _tcs;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static readonly DependencyProperty NotificationScreenProperty = DependencyProperty.Register(
+        nameof(NotificationScreen), 
+        typeof(NotificationScreen), 
+        typeof(WpfUINotificationWindow),
+        new PropertyMetadata(default(NotificationScreen)));
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static readonly DependencyProperty NotificationPositionProperty = DependencyProperty.Register(
+        nameof(NotificationPosition),
+        typeof(NotificationPosition), 
+        typeof(WpfUINotificationWindow), 
+        new PropertyMetadata(default(NotificationPosition)));
     
     /// <summary>
     /// 
@@ -94,6 +114,22 @@ public partial class WpfUINotificationWindow : INotification {
         theme.ThemeUpdaterService.SetTheme(theme.HostTheme, this);
 
         InitializeComponent();
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public NotificationScreen NotificationScreen {
+        get => (NotificationScreen) GetValue(NotificationScreenProperty);
+        set => SetValue(NotificationScreenProperty, value);
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public NotificationPosition NotificationPosition {
+        get => (NotificationPosition) GetValue(NotificationPositionProperty);
+        set => SetValue(NotificationPositionProperty, value);
     }
     
     /// <summary>

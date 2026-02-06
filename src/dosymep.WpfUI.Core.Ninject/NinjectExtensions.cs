@@ -2,6 +2,7 @@ using System.Windows.Media;
 
 using dosymep.SimpleServices;
 using dosymep.WpfCore.Behaviors;
+using dosymep.WpfCore.SimpleServices;
 using dosymep.WpfUI.Core.SimpleServices;
 
 using Ninject;

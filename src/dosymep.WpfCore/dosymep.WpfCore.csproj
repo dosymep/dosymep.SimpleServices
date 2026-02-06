@@ -23,6 +23,7 @@
     </ItemGroup>
     
     <ItemGroup>
+        <PackageReference Include="DevExpress.Wpf.Core" Version="21.2.3" />
         <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39"/>
         <PackageReference Include="Microsoft.WindowsAPICodePack-Shell" Version="1.1.0"/>
     </ItemGroup>
