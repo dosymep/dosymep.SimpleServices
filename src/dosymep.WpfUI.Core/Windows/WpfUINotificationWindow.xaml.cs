@@ -24,7 +24,7 @@ public partial class WpfUINotificationWindow : INotification {
     private TaskCompletionSource<bool?>? _tcs;
 
     /// <summary>
-    /// 
+    /// Определяет, на каком мониторе будет отображаться уведомление.
     /// </summary>
     public static readonly DependencyProperty NotificationScreenProperty = DependencyProperty.Register(
         nameof(NotificationScreen), 
@@ -33,7 +33,7 @@ public partial class WpfUINotificationWindow : INotification {
         new PropertyMetadata(default(NotificationScreen)));
 
     /// <summary>
-    /// 
+    ///  Позиция уведомления на экране.
     /// </summary>
     public static readonly DependencyProperty NotificationPositionProperty = DependencyProperty.Register(
         nameof(NotificationPosition),
@@ -42,7 +42,7 @@ public partial class WpfUINotificationWindow : INotification {
         new PropertyMetadata(default(NotificationPosition)));
     
     /// <summary>
-    /// 
+    /// Список открытых окон уведомлений.
     /// </summary>
     public static readonly DependencyProperty WindowStackProperty = DependencyProperty.Register(
         nameof(WindowStack),
@@ -117,7 +117,7 @@ public partial class WpfUINotificationWindow : INotification {
     }
     
     /// <summary>
-    /// 
+    /// Определяет, на каком мониторе будет отображаться уведомление.
     /// </summary>
     public NotificationScreen NotificationScreen {
         get => (NotificationScreen) GetValue(NotificationScreenProperty);
@@ -125,7 +125,7 @@ public partial class WpfUINotificationWindow : INotification {
     }
     
     /// <summary>
-    /// 
+    ///  Позиция уведомления на экране.
     /// </summary>
     public NotificationPosition NotificationPosition {
         get => (NotificationPosition) GetValue(NotificationPositionProperty);
@@ -133,7 +133,7 @@ public partial class WpfUINotificationWindow : INotification {
     }
     
     /// <summary>
-    /// 
+    /// Список открытых окон уведомлений.
     /// </summary>
     public ObservableCollection<Window> WindowStack {
         get => (ObservableCollection<Window>) GetValue(WindowStackProperty);

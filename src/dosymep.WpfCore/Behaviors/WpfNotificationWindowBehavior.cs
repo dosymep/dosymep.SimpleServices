@@ -17,7 +17,7 @@ namespace dosymep.WpfCore.Behaviors;
 /// </summary>
 public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     /// <summary>
-    /// 
+    /// Определяет, на каком мониторе будет отображаться уведомление.
     /// </summary>
     public static readonly DependencyProperty NotificationScreenProperty = DependencyProperty.Register(
         nameof(NotificationScreen),
@@ -26,7 +26,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         new PropertyMetadata(default(NotificationScreen)));
 
     /// <summary>
-    /// 
+    /// Позиция уведомления на экране.
     /// </summary>
     public static readonly DependencyProperty NotificationPositionProperty = DependencyProperty.Register(
         nameof(NotificationPosition),
@@ -35,7 +35,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
         new PropertyMetadata(default(NotificationPosition)));
 
     /// <summary>
-    /// 
+    /// Список открытых окон уведомлений.
     /// </summary>
     public static readonly DependencyProperty WindowStackProperty = DependencyProperty.Register(
         nameof(WindowStack),
@@ -86,7 +86,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     }
 
     /// <summary>
-    /// 
+    /// Список открытых окон уведомлений.
     /// </summary>
     public ObservableCollection<Window> WindowStack {
         get => (ObservableCollection<Window>) GetValue(WindowStackProperty);
@@ -94,7 +94,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     }
 
     /// <summary>
-    /// 
+    /// Определяет, на каком мониторе будет отображаться уведомление.
     /// </summary>
     public NotificationScreen NotificationScreen {
         get => (NotificationScreen) GetValue(NotificationScreenProperty);
@@ -102,7 +102,7 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
     }
 
     /// <summary>
-    /// 
+    /// Позиция уведомления на экране.
     /// </summary>
     public NotificationPosition NotificationPosition {
         get => (NotificationPosition) GetValue(NotificationPositionProperty);
@@ -128,7 +128,9 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
 
     private void ClosingOnCompleted(object sender, EventArgs e) {
         AssociatedObject.Close();
-        WindowStack.Remove(AssociatedObject);
+
+        int windowIndex = WindowStack.IndexOf(AssociatedObject);
+        WindowStack.RemoveAt(windowIndex);
 
         if(_closing is not null) {
             _closing.Completed -= ClosingOnCompleted;
@@ -140,8 +142,11 @@ public sealed class WpfNotificationWindowBehavior : Behavior<Window> {
 
 
         int sign = GetSign();
-        foreach(Window window in WindowStack) {
-            window.Top += sign * AssociatedObject.ActualHeight;
+        for(int index = 0; index < WindowStack.Count; index++) {
+            Window window = WindowStack[index];
+            if(index > (windowIndex - 1)) {
+                window.Top += sign * AssociatedObject.ActualHeight + sign * Offset;
+            }
         }
     }
 
