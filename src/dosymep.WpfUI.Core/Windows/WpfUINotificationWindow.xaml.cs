@@ -65,7 +65,7 @@ public partial class WpfUINotificationWindow : INotification {
 
     /// <inheritdoc cref="IHasTheme.ThemeChanged"/>
     public event Action<UIThemes>? ThemeChanged;
-    
+
     /// <inheritdoc cref="IHasLocalization.LanguageChanged"/>
     public event Action<CultureInfo>? LanguageChanged;
 
@@ -138,8 +138,10 @@ public partial class WpfUINotificationWindow : INotification {
         timer.Start();
 
         timer.Tick += (_, _) => {
-            _tcs?.SetResult(null);
-            _notificationWindowBehavior.OnAutoClosing();
+            if(!_tcs.Task.IsCompleted) {
+                _tcs?.SetResult(null);
+                _notificationWindowBehavior.OnAutoClosing();
+            }
         };
 
         try {
@@ -168,7 +170,9 @@ public partial class WpfUINotificationWindow : INotification {
     }
 
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
-        _tcs?.SetResult(false);
-        _notificationWindowBehavior.OnClosing();
+        if(_tcs?.Task.IsCompleted == false) {
+            _tcs?.SetResult(false);
+            _notificationWindowBehavior.OnClosing();
+        }
     }
 }
