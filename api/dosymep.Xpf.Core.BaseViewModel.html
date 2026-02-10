@@ -101,7 +101,7 @@ Class BaseViewModel  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseViewModel : ViewModelBase, INotifyPropertyChanged, ISupportParentViewModel, ISupportServices, ISupportParameter, ICustomTypeDescriptor</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseViewModel : ViewModelBase</code></pre>
   </div>
 
 
@@ -111,169 +111,12 @@ Class BaseViewModel  <a class="header-action link-secondary" title="View source"
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">BindableBase</span></div>
-      <div><span class="xref">ViewModelBase</span></div>
       <div><span class="xref">BaseViewModel</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
-      <div><span class="xref">ISupportParentViewModel</span></div>
-      <div><span class="xref">ISupportServices</span></div>
-      <div><span class="xref">ISupportParameter</span></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icustomtypedescriptor">ICustomTypeDescriptor</a></div>
-    </dd>
-  </dl>
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <span class="xref">ViewModelBase.OnInitializeInRuntime()</span>
-    </div>
-    <div>
-      <span class="xref">ViewModelBase.OnInitializeInDesignMode()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">ViewModelBase.OnParameterChanged(object)</a>
-    </div>
-    <div>
-      <span class="xref">ViewModelBase.CreateServiceContainer()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">ViewModelBase.OnParentViewModelChanged(object)</a>
-    </div>
-    <div>
-      <span class="xref">ViewModelBase.GetService&lt;T&gt;()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ViewModelBase.GetService&lt;T&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">ViewModelBase.GetCommand(Expression&lt;Action&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">ViewModelBase.GetAsyncCommand(Expression&lt;Func&lt;Task&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">ViewModelBase.RaiseCanExecuteChanged(Expression&lt;Action&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">ViewModelBase.RaiseCanExecuteChanged(Expression&lt;Func&lt;Task&gt;&gt;)</a>
-    </div>
-    <div>
-      <span class="xref">ViewModelBase.IsInDesignMode</span>
-    </div>
-    <div>
-      <span class="xref">ViewModelBase.ServiceContainer</span>
-    </div>
-    <div>
-      <span class="xref">ViewModelBase.Parameter</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.GetPropertyName&lt;T&gt;(Expression&lt;Func&lt;T&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.GetProperty&lt;T&gt;(Expression&lt;Func&lt;T&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.SetProperty&lt;T&gt;(ref T, T, Expression&lt;Func&lt;T&gt;&gt;, Action)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.SetProperty&lt;T&gt;(ref T, T, Expression&lt;Func&lt;T&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.SetProperty&lt;T&gt;(Expression&lt;Func&lt;T&gt;&gt;, T)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.SetProperty&lt;T&gt;(Expression&lt;Func&lt;T&gt;&gt;, T, Action)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.SetProperty&lt;T&gt;(Expression&lt;Func&lt;T&gt;&gt;, T, Action&lt;T&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.RaisePropertyChanged&lt;T&gt;(Expression&lt;Func&lt;T&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.RaisePropertiesChanged&lt;T1, T2&gt;(Expression&lt;Func&lt;T1&gt;&gt;, Expression&lt;Func&lt;T2&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.RaisePropertiesChanged&lt;T1, T2, T3&gt;(Expression&lt;Func&lt;T1&gt;&gt;, Expression&lt;Func&lt;T2&gt;&gt;, Expression&lt;Func&lt;T3&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.RaisePropertiesChanged&lt;T1, T2, T3, T4&gt;(Expression&lt;Func&lt;T1&gt;&gt;, Expression&lt;Func&lt;T2&gt;&gt;, Expression&lt;Func&lt;T3&gt;&gt;, Expression&lt;Func&lt;T4&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">BindableBase.RaisePropertiesChanged&lt;T1, T2, T3, T4, T5&gt;(Expression&lt;Func&lt;T1&gt;&gt;, Expression&lt;Func&lt;T2&gt;&gt;, Expression&lt;Func&lt;T3&gt;&gt;, Expression&lt;Func&lt;T4&gt;&gt;, Expression&lt;Func&lt;T5&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.SetProperty&lt;T&gt;(ref T, T, string, Action)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.SetProperty&lt;T&gt;(ref T, T, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.GetValue&lt;T&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.SetValue&lt;T&gt;(T, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">BindableBase.SetValue&lt;T&gt;(T, Action, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">BindableBase.SetValue&lt;T&gt;(T, Action&lt;T&gt;, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.SetValue&lt;T&gt;(ref T, T, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">BindableBase.SetValue&lt;T&gt;(ref T, T, Action, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.RaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <span class="xref">BindableBase.RaisePropertyChanged()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.RaisePropertiesChanged(params string[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BindableBase.SetPropertyCore&lt;T&gt;(string, T, out T)</a>
-    </div>
-    <div>
-      <span class="xref">BindableBase.VerifyAccess()</span>
-    </div>
-    <div>
-      <span class="xref">BindableBase.PropertyChanged</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-  </dd></dl>
 
 
 
@@ -327,7 +170,7 @@ Class BaseViewModel  <a class="header-action link-secondary" title="View source"
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Copyright &copy; 2023 dosymep
+          Copyright &copy; 2026 dosymep
         </div>
       </div>
     </footer>
