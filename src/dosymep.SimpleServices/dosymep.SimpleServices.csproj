@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+   
     <PropertyGroup>
-        <UseWpf>true</UseWpf>
-        <TargetFramework>net48</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -13,18 +11,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="WindowsBase"/>
-        <Reference Include="PresentationCore"/>
-        <Reference Include="PresentationFramework"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="LibGit2Sharp" Version="0.26.2">
+        <PackageReference Include="LibGit2Sharp">
             <IncludeAssets>compile</IncludeAssets>
         </PackageReference>
 
-        <PackageReference Include="LibGit2Sharp.NativeBinaries" Version="2.0.306">
+        <PackageReference Include="LibGit2Sharp.NativeBinaries">
             <IncludeAssets>compile</IncludeAssets>
         </PackageReference>
     </ItemGroup>
+    
 </Project>

@@ -102,6 +102,9 @@
   "allOf": [
     {
       "properties": {
+        "ArtifactPath": {
+          "type": "string"
+        },
         "Configuration": {
           "type": "string",
           "description": "Configuration to build - Default is 'Debug' (local) or 'Release' (server)",
@@ -117,9 +120,6 @@
           "type": "string"
         },
         "DocsOutput": {
-          "type": "string"
-        },
-        "Output": {
           "type": "string"
         },
         "PublishOutput": {

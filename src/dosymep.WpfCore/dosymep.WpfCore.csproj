@@ -1,11 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    
     <PropertyGroup>
-        <UseWPF>true</UseWPF>
         <UseWindowsForms>true</UseWindowsForms>
-        <Nullable>enable</Nullable>
-        <LangVersion>12</LangVersion>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <TargetFramework>net48</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
@@ -16,28 +12,23 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="System.Web"/>
-        <Reference Include="WindowsBase"/>
-        <Reference Include="PresentationCore"/>
-        <Reference Include="PresentationFramework"/>
+        <Resource Include="assets\images\icons8-no-image-96.png"/>
     </ItemGroup>
-    
+
     <ItemGroup>
-        <PackageReference Include="DevExpress.Wpf.Core" Version="21.2.3" />
-        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39"/>
-        <PackageReference Include="Microsoft.WindowsAPICodePack-Shell" Version="1.1.0"/>
+        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+        
+        <PackageReference Include="Microsoft.WindowsAPICodePack-Shell">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="assets\images\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="assets\images\icons8-no-image-96.png" />
-      <Resource Include="assets\images\icons8-no-image-96.png" />
-    </ItemGroup>
+    
 </Project>
