@@ -15,8 +15,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf"/>
-        <PackageReference Include="Microsoft.WindowsAPICodePack-Shell"/>
+        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+        
+        <PackageReference Include="Microsoft.WindowsAPICodePack-Shell">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>

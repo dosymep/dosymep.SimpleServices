@@ -18,6 +18,11 @@
     <ItemGroup>
         <PackageReference Include="Ninject"/>
         <PackageReference Include="DevExpress.Wpf"/>
+
+        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
