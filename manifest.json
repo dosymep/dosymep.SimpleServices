@@ -589,6 +589,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.yml\" sourcestartlinenumber=\"1\">Поведение, которое применяет анимацию скольжения появления окна.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/dosymep.WpfCore.Behaviors.WpfSavePositionBehavior.yml",
       "output": {
         ".html": {
@@ -936,6 +950,34 @@
       "IsMRef": true,
       "Title": "dosymep.WpfCore.ServiceProviderExtensions",
       "Summary": "<p sourcefile=\"api/dosymep.WpfCore.ServiceProviderExtensions.yml\" sourcestartlinenumber=\"1\">Расширения интерфейса <xref href=\"System.IServiceProvider\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.SimpleServices.NotificationPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.SimpleServices.NotificationPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.SimpleServices.NotificationPosition",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.SimpleServices.NotificationPosition.yml\" sourcestartlinenumber=\"1\">Определяет возможные позиции отображения уведомлений.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfCore.SimpleServices.NotificationScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfCore.SimpleServices.NotificationScreen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfCore.SimpleServices.NotificationScreen",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfCore.SimpleServices.NotificationScreen.yml\" sourcestartlinenumber=\"1\">Перечисление, представляющее различные экраны для отображения уведомлений.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1317,6 +1359,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.yml\" sourcestartlinenumber=\"1\">Класс сервиса уведомлений</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/dosymep.WpfUI.Core.SimpleServices.WpfUIProgressDialogFactory.yml",
       "output": {
         ".html": {
@@ -1369,6 +1425,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "dosymep.WpfUI.Core.SimpleServices",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfUI.Core.Windows.WpfUINotificationWindow",
+      "Summary": "<p sourcefile=\"api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.yml\" sourcestartlinenumber=\"1\">Предоставляет окно уведомления.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/dosymep.WpfUI.Core.Windows.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/dosymep.WpfUI.Core.Windows.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.WpfUI.Core.Windows",
       "Summary": null
     },
     {

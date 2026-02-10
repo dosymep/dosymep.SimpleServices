@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WpfNotificationWindowBehavior | dosymep.SimpleServices </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WpfNotificationWindowBehavior | dosymep.SimpleServices ">
+      
+      <meta name="description" content="Поведение, которое применяет анимацию скольжения появления окна.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="dosymep.SimpleServices">
+            dosymep.SimpleServices
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior">
+
+
+
+  <h1 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior" class="text-break">
+Class WpfNotificationWindowBehavior  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.WpfCore.html">WpfCore</a>.<a class="xref" href="dosymep.WpfCore.Behaviors.html">Behaviors</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.WpfCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Поведение, которое применяет анимацию скольжения появления окна.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class WpfNotificationWindowBehavior : Behavior&lt;Window&gt;, IAnimatable, IAttachedObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherobject">DispatcherObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject">DependencyObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable">Freezable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable">Animatable</a></div>
+      <div><span class="xref">Behavior</span></div>
+      <div><span class="xref">Behavior</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a>&gt;</div>
+      <div><span class="xref">WpfNotificationWindowBehavior</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.ianimatable">IAnimatable</a></div>
+      <div><span class="xref">IAttachedObject</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject">Behavior.Attach(DependencyObject)</a>
+    </div>
+    <div>
+      <span class="xref">Behavior.Detach()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.clone">Animatable.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.applyanimationclock#system-windows-media-animation-animatable-applyanimationclock(system-windows-dependencyproperty-system-windows-media-animation-animationclock)">Animatable.ApplyAnimationClock(DependencyProperty, AnimationClock)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.applyanimationclock#system-windows-media-animation-animatable-applyanimationclock(system-windows-dependencyproperty-system-windows-media-animation-animationclock-system-windows-media-animation-handoffbehavior)">Animatable.ApplyAnimationClock(DependencyProperty, AnimationClock, HandoffBehavior)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.beginanimation#system-windows-media-animation-animatable-beginanimation(system-windows-dependencyproperty-system-windows-media-animation-animationtimeline)">Animatable.BeginAnimation(DependencyProperty, AnimationTimeline)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.beginanimation#system-windows-media-animation-animatable-beginanimation(system-windows-dependencyproperty-system-windows-media-animation-animationtimeline-system-windows-media-animation-handoffbehavior)">Animatable.BeginAnimation(DependencyProperty, AnimationTimeline, HandoffBehavior)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.getanimationbasevalue">Animatable.GetAnimationBaseValue(DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.animation.animatable.hasanimatedproperties">Animatable.HasAnimatedProperties</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.clonecurrentvalue">Freezable.CloneCurrentValue()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.getasfrozen">Freezable.GetAsFrozen()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.getcurrentvalueasfrozen">Freezable.GetCurrentValueAsFrozen()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.freeze#system-windows-freezable-freeze">Freezable.Freeze()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.canfreeze">Freezable.CanFreeze</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.isfrozen">Freezable.IsFrozen</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.freezable.changed">Freezable.Changed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.equals">DependencyObject.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.gethashcode">DependencyObject.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.getvalue">DependencyObject.GetValue(DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.setvalue#system-windows-dependencyobject-setvalue(system-windows-dependencyproperty-system-object)">DependencyObject.SetValue(DependencyProperty, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.setcurrentvalue">DependencyObject.SetCurrentValue(DependencyProperty, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.setvalue#system-windows-dependencyobject-setvalue(system-windows-dependencypropertykey-system-object)">DependencyObject.SetValue(DependencyPropertyKey, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.clearvalue#system-windows-dependencyobject-clearvalue(system-windows-dependencyproperty)">DependencyObject.ClearValue(DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.clearvalue#system-windows-dependencyobject-clearvalue(system-windows-dependencypropertykey)">DependencyObject.ClearValue(DependencyPropertyKey)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.coercevalue">DependencyObject.CoerceValue(DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.invalidateproperty">DependencyObject.InvalidateProperty(DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.readlocalvalue">DependencyObject.ReadLocalValue(DependencyProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.getlocalvalueenumerator">DependencyObject.GetLocalValueEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.dependencyobjecttype">DependencyObject.DependencyObjectType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyobject.issealed">DependencyObject.IsSealed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatcherobject.dispatcher">DispatcherObject.Dispatcher</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior__ctor_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.#ctor*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior__ctor" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.#ctor">
+  WpfNotificationWindowBehavior()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WpfNotificationWindowBehavior()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationPositionProperty" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPositionProperty">
+  NotificationPositionProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Позиция уведомления на экране.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty NotificationPositionProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationScreenProperty" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreenProperty">
+  NotificationScreenProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Определяет, на каком мониторе будет отображаться уведомление.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty NotificationScreenProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OffsetProperty" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OffsetProperty">
+  OffsetProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости BottomOffset,
+которое определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty OffsetProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_WindowStackProperty" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStackProperty">
+  WindowStackProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Список открытых окон уведомлений.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty WindowStackProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationPosition_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationPosition" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition">
+  NotificationPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Позиция уведомления на экране.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationPosition NotificationPosition { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationPosition.html">NotificationPosition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationScreen_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationScreen" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen">
+  NotificationScreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Определяет, на каком мониторе будет отображаться уведомление.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationScreen NotificationScreen { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationScreen.html">NotificationScreen</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_Offset_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_Offset" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset">
+  Offset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Определяет расстояние от нижнего края экрана до нижнего края окна при анимации скольжения.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Offset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_WindowStack_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_WindowStack" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack">
+  WindowStack
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Список открытых окон уведомлений.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Window&gt; WindowStack { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAttached_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAttached" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached">
+  OnAttached()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnAttached()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAutoClosing_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAutoClosing" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing">
+  OnAutoClosing()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Запускает анимацию закрытия окна по времени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAutoClosing()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnClosing_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnClosing" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing">
+  OnClosing()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Запускает анимацию закрытия окна.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnClosing()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnDetaching_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnDetaching" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching">
+  OnDetaching()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDetaching()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnShowing_" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing*"></a>
+
+  <h3 id="dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnShowing" data-uid="dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing">
+  OnShowing()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfCore/Behaviors/WpfNotificationWindowBehavior.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Запускает анимацию показа окна.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnShowing()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

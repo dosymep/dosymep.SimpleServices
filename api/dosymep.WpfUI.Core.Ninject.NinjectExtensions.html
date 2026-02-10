@@ -252,6 +252,151 @@ Class NinjectExtensions  <a class="header-action link-secondary" title="View sou
 
 
 
+  <a id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications_" data-uid="dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_dosymep_WpfCore_SimpleServices_NotificationScreen_dosymep_WpfCore_SimpleServices_NotificationPosition_System_Int32_" data-uid="dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,dosymep.WpfCore.SimpleServices.NotificationScreen,dosymep.WpfCore.SimpleServices.NotificationPosition,System.Int32)">
+  UseWpfUINotifications(IKernel, string?, string?, string?, ImageSource?, NotificationScreen, NotificationPosition, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.INotificationService.html">INotificationService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfUINotifications(this IKernel kernel, string? applicationId = null, string? defaultAuthor = null, string? defaultFooter = null, ImageSource? defaultImage = null, NotificationScreen notificationScreen = NotificationScreen.Primary, NotificationPosition notificationPosition = NotificationPosition.BottomRight, int notificationVisibleMaxCount = 5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>applicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Идентификатор приложения.</p>
+</dd>
+    <dt><code>defaultAuthor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя автора по умолчанию. Расположение снизу справа на уведомлении.</p>
+</dd>
+    <dt><code>defaultFooter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение футера по умолчанию. Расположение снизу слева на уведомлении.</p>
+</dd>
+    <dt><code>defaultImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource">ImageSource</a></dt>
+    <dd><p>Значение изображения по умолчанию. Расположение слева на уведомлении.</p>
+</dd>
+    <dt><code>notificationScreen</code> <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationScreen.html">NotificationScreen</a></dt>
+    <dd><p>Значение выбора окна.
+По умолчанию <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationScreen.html#dosymep_WpfCore_SimpleServices_NotificationScreen_Primary">Primary</a>.</p>
+</dd>
+    <dt><code>notificationPosition</code> <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationPosition.html">NotificationPosition</a></dt>
+    <dd><p>Значение места отображения уведомления.
+По умолчанию <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationPosition.html#dosymep_WpfCore_SimpleServices_NotificationPosition_BottomRight">BottomRight</a>.</p>
+</dd>
+    <dt><code>notificationVisibleMaxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальное количество уведомлений на экране. По умолчанию &quot;5&quot;.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications_" data-uid="dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications__1_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_dosymep_WpfCore_SimpleServices_NotificationScreen_dosymep_WpfCore_SimpleServices_NotificationPosition_System_Int32_" data-uid="dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications``1(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,dosymep.WpfCore.SimpleServices.NotificationScreen,dosymep.WpfCore.SimpleServices.NotificationPosition,System.Int32)">
+  UseWpfUINotifications&lt;T&gt;(IKernel, string?, string?, string?, ImageSource?, NotificationScreen, NotificationPosition, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core.Ninject/NinjectExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Добавляет в контейнер <a class="xref" href="dosymep.SimpleServices.INotificationService.html">INotificationService</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IKernel UseWpfUINotifications&lt;T&gt;(this IKernel kernel, string? applicationId = null, string? defaultAuthor = null, string? defaultFooter = null, ImageSource? defaultImage = null, NotificationScreen notificationScreen = NotificationScreen.ApplicationWindow, NotificationPosition notificationPosition = NotificationPosition.BottomRight, int notificationVisibleMaxCount = 5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>kernel</code> <span class="xref">IKernel</span></dt>
+    <dd><p>Ninject контейнер.</p>
+</dd>
+    <dt><code>applicationId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Идентификатор приложения.</p>
+</dd>
+    <dt><code>defaultAuthor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Имя автора по умолчанию. Расположение снизу справа на уведомлении.</p>
+</dd>
+    <dt><code>defaultFooter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение футера по умолчанию. Расположение снизу слева на уведомлении.</p>
+</dd>
+    <dt><code>defaultImage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource">ImageSource</a></dt>
+    <dd><p>Значение изображения по умолчанию. Расположение слева на уведомлении.</p>
+</dd>
+    <dt><code>notificationScreen</code> <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationScreen.html">NotificationScreen</a></dt>
+    <dd><p>Значение выбора окна.
+По умолчанию <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationScreen.html#dosymep_WpfCore_SimpleServices_NotificationScreen_Primary">Primary</a>.</p>
+</dd>
+    <dt><code>notificationPosition</code> <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationPosition.html">NotificationPosition</a></dt>
+    <dd><p>Значение места отображения уведомления.
+По умолчанию <a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationPosition.html#dosymep_WpfCore_SimpleServices_NotificationPosition_BottomRight">BottomRight</a>.</p>
+</dd>
+    <dt><code>notificationVisibleMaxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Максимальное количество уведомлений на экране. По умолчанию &quot;5&quot;.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IKernel</span></dt>
+    <dd><p>Возвращает настроенный контейнер Ninject.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Тип ViewModel к которой будет прикрепление сервиса.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications__1_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_dosymep_WpfCore_SimpleServices_NotificationScreen_dosymep_WpfCore_SimpleServices_NotificationPosition_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Обязательно требуется прикрепить к элементу управления через <a class="xref" href="dosymep.WpfCore.Behaviors.WpfAttachServiceBehavior.html">WpfAttachServiceBehavior</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>kernel is null.</p>
+</dd>
+  </dl>
+
+
+
   <a id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUIProgressDialog_" data-uid="dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUIProgressDialog*"></a>
 
   <h3 id="dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUIProgressDialog_Ninject_IKernel_System_Int32_System_Boolean_System_String_" data-uid="dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUIProgressDialog(Ninject.IKernel,System.Int32,System.Boolean,System.String)">

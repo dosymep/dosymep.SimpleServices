@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class BaseWindow | dosymep.SimpleServices </title>
+      <title>Class WpfUINotificationWindow | dosymep.SimpleServices </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class BaseWindow | dosymep.SimpleServices ">
+      <meta name="title" content="Class WpfUINotificationWindow | dosymep.SimpleServices ">
       
-      
+      <meta name="description" content="Предоставляет окно уведомления.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -84,24 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="dosymep.Xpf.Core.BaseWindow">
+        <article data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow">
 
 
 
-  <h1 id="dosymep_Xpf_Core_BaseWindow" data-uid="dosymep.Xpf.Core.BaseWindow" class="text-break">
-Class BaseWindow  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.Xpf.Core/BaseWindow.cs"><i class="bi bi-code-slash"></i></a>
+  <h1 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow" class="text-break">
+Class WpfUINotificationWindow  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Xpf.html">Xpf</a>.<a class="xref" href="dosymep.Xpf.Core.html">Core</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>dosymep.Xpf.Core.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.WpfUI.html">WpfUI</a>.<a class="xref" href="dosymep.WpfUI.Core.html">Core</a>.<a class="xref" href="dosymep.WpfUI.Core.Windows.html">Windows</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.WpfUI.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Предоставляет окно уведомления.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseWindow : ThemedWindow, IAnimatable, IFrameworkInputElement, IInputElement, ISupportInitialize, IQueryAmbient, IAddChild, IRibbonWindow, IHeaderItemsControlHost, IBackButtonSupport, IWindowSurrogate</code></pre>
+    <pre><code class="lang-csharp hljs">public class WpfUINotificationWindow : FluentWindow, IAnimatable, IFrameworkInputElement, IInputElement, ISupportInitialize, IQueryAmbient, IAddChild, INotification, IComponentConnector</code></pre>
   </div>
 
 
@@ -119,8 +120,8 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.control">Control</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.controls.contentcontrol">ContentControl</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a></div>
-      <div><span class="xref">ThemedWindow</span></div>
-      <div><span class="xref">BaseWindow</span></div>
+      <div><span class="xref">FluentWindow</span></div>
+      <div><span class="xref">WpfUINotificationWindow</span></div>
     </dd>
   </dl>
 
@@ -133,10 +134,8 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isupportinitialize">ISupportInitialize</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.iqueryambient">IQueryAmbient</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.iaddchild">IAddChild</a></div>
-      <div><span class="xref">IRibbonWindow</span></div>
-      <div><span class="xref">IHeaderItemsControlHost</span></div>
-      <div><span class="xref">IBackButtonSupport</span></div>
-      <div><span class="xref">IWindowSurrogate</span></div>
+      <div><a class="xref" href="dosymep.SimpleServices.INotification.html">INotification</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.markup.icomponentconnector">IComponentConnector</a></div>
     </dd>
   </dl>
 
@@ -145,307 +144,28 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <span class="xref">ThemedWindow.BackRequestedEvent</span>
+      <span class="xref">FluentWindow.WindowCornerPreferenceProperty</span>
     </div>
     <div>
-      <span class="xref">ThemedWindow.NavigateBackCommandProperty</span>
+      <span class="xref">FluentWindow.WindowBackdropTypeProperty</span>
     </div>
     <div>
-      <span class="xref">ThemedWindow.ShowBackButtonProperty</span>
+      <span class="xref">FluentWindow.ExtendsContentIntoTitleBarProperty</span>
     </div>
     <div>
-      <span class="xref">ThemedWindow.HeaderItemsSourceProperty</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">FluentWindow.OnSourceInitialized(EventArgs)</a>
     </div>
     <div>
-      <span class="xref">ThemedWindow.HeaderItemsProperty</span>
+      <span class="xref">FluentWindow.InteropHelper</span>
     </div>
     <div>
-      <span class="xref">ThemedWindow.HeaderItemContainerStyleProperty</span>
+      <span class="xref">FluentWindow.WindowCornerPreference</span>
     </div>
     <div>
-      <span class="xref">ThemedWindow.HeaderItemContainerStyleSelectorProperty</span>
+      <span class="xref">FluentWindow.WindowBackdropType</span>
     </div>
     <div>
-      <span class="xref">ThemedWindow.HeaderItemTemplateProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItemTemplateSelectorProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemsSourceProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemsProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemContainerStyleProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemContainerStyleSelectorProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemTemplateProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemTemplateSelectorProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowGlowProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ActiveGlowColorProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.InactiveGlowColorProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.UseGlowColorsProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowIconProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowTitleProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.TitleAlignmentProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ActualWindowKindProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.WindowKindProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ActualDialogButtonsProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.IsDialogProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.DialogButtonsProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.DialogButtonsSourceProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowDialogFooterProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.EnableAcrylicProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.AcrylicOpacityProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.AcrylicColorProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderBackgroundProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderForegroundProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ControlBoxButtonSetProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ResizeBorderThicknessProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowStatusPanelProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderContentProperty</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowDialog()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">ThemedWindow.ShowDialog(IEnumerable&lt;UICommand&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.messageboxbutton">ThemedWindow.ShowDialog(MessageBoxButton, MessageBoxResult?)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.canceleventargs">ThemedWindow.OnClosing(CancelEventArgs)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">ThemedWindow.OnClosed(EventArgs)</a>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.CloseDialog(UICommand)</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.OnApplyTemplate()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.size">ThemedWindow.ArrangeOverride(Size)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.size">ThemedWindow.MeasureOverride(Size)</a>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.RecalcWindowKind()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">ThemedWindow.OnSourceInitialized(EventArgs)</a>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.UpdateControlBoxContainer()</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.OnCreateAutomationPeer()</span>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">ThemedWindow.SaveLayoutToStream(Stream)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ThemedWindow.SaveLayoutToXml(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">ThemedWindow.RestoreLayoutFromStream(Stream)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">ThemedWindow.RestoreLayoutFromXml(string)</a>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.RoundCorners</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.NavigateBackCommand</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowStatusPanel</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowIcon</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.Icon</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowTitle</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.UseGlowColors</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowGlow</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.AcrylicOpacity</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.AcrylicColor</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.EnableAcrylic</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowBackButton</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.TitleAlignment</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.WindowKind</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ActualWindowKind</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.IsDialog</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ShowDialogFooter</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ControlBoxButtonSet</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ResizeBorderThickness</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItems</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItems</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.DialogButtons</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ActualDialogButtons</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.DialogButtonsSource</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItemsSource</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemsSource</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItemContainerStyle</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemContainerStyle</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItemContainerStyleSelector</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemContainerStyleSelector</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItemTemplate</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemTemplate</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderItemTemplateSelector</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ToolbarItemTemplateSelector</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ActiveGlowColor</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.InactiveGlowColor</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderBackground</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderForeground</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.HeaderContent</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.DialogButtonResult</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.DialogButtonCommandResult</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ContentPresenter</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.ContentBorder</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.WindowRoot</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.AcrylicBackground</span>
-    </div>
-    <div>
-      <span class="xref">ThemedWindow.BackRequested</span>
+      <span class="xref">FluentWindow.ExtendsContentIntoTitleBar</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.taskbariteminfoproperty">Window.TaskbarItemInfoProperty</a>
@@ -505,16 +225,28 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.dragmove">Window.DragMove()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.showdialog">Window.ShowDialog()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.activate">Window.Activate()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.getwindow">Window.GetWindow(DependencyObject)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.oncreateautomationpeer">Window.OnCreateAutomationPeer()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.ondpichanged">Window.OnDpiChanged(DpiScale, DpiScale)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.onvisualparentchanged">Window.OnVisualParentChanged(DependencyObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.measureoverride">Window.MeasureOverride(Size)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.arrangeoverride">Window.ArrangeOverride(Size)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.oncontentchanged">Window.OnContentChanged(object, object)</a>
@@ -530,6 +262,12 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.onlocationchanged">Window.OnLocationChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.onclosing">Window.OnClosing(CancelEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.onclosed">Window.OnClosed(EventArgs)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.oncontentrendered">Window.OnContentRendered(EventArgs)</a>
@@ -551,6 +289,9 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.title">Window.Title</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.icon">Window.Icon</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window.sizetocontent">Window.SizeToContent</a>
@@ -902,6 +643,9 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.frameworkelement.applytemplate">FrameworkElement.ApplyTemplate()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.frameworkelement.onapplytemplate">FrameworkElement.OnApplyTemplate()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.frameworkelement.beginstoryboard#system-windows-frameworkelement-beginstoryboard(system-windows-media-animation-storyboard)">FrameworkElement.BeginStoryboard(Storyboard)</a>
@@ -2465,18 +2209,513 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
 </h2>
 
 
-  <a id="dosymep_Xpf_Core_BaseWindow__ctor_" data-uid="dosymep.Xpf.Core.BaseWindow.#ctor*"></a>
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow__ctor_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.#ctor*"></a>
 
-  <h3 id="dosymep_Xpf_Core_BaseWindow__ctor" data-uid="dosymep.Xpf.Core.BaseWindow.#ctor">
-  BaseWindow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.Xpf.Core/BaseWindow.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow__ctor_dosymep_SimpleServices_IHasTheme_dosymep_SimpleServices_IHasLocalization_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.#ctor(dosymep.SimpleServices.IHasTheme,dosymep.SimpleServices.IHasLocalization)">
+  WpfUINotificationWindow(IHasTheme, IHasLocalization)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Предоставляет конструктор окна уведомления.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseWindow()</code></pre>
+    <pre><code class="lang-csharp hljs">public WpfUINotificationWindow(IHasTheme theme, IHasLocalization localization)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>theme</code> <a class="xref" href="dosymep.SimpleServices.IHasTheme.html">IHasTheme</a></dt>
+    <dd></dd>
+    <dt><code>localization</code> <a class="xref" href="dosymep.SimpleServices.IHasLocalization.html">IHasLocalization</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_AuthorProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.AuthorProperty">
+  AuthorProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости Author,
+которое представляет автора уведомления, отображаемого в уведомлении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty AuthorProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_BodyProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.BodyProperty">
+  BodyProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости Body,
+которое представляет основное содержимое или сообщение уведомления, отображаемого в уведомлении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty BodyProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_FooterProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.FooterProperty">
+  FooterProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости Footer,
+которое представляет нижний текст или дополнительную информацию, отображаемую в уведомлении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty FooterProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ImageSourceProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSourceProperty">
+  ImageSourceProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости ImageSource,
+которое определяет источник изображения, отображаемого в уведомлении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty ImageSourceProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationPositionProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPositionProperty">
+  NotificationPositionProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Позиция уведомления на экране.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty NotificationPositionProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationScreenProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreenProperty">
+  NotificationScreenProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Определяет, на каком мониторе будет отображаться уведомление.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty NotificationScreenProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_WindowStackProperty" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStackProperty">
+  WindowStackProperty
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Список открытых окон уведомлений.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DependencyProperty WindowStackProperty</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.dependencyproperty">DependencyProperty</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Author_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Author" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author">
+  Author
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости Author,
+которое представляет автора уведомления, отображаемого в окне уведомления.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Author { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Body_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Body" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body">
+  Body
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Представляет основное содержимое или сообщение, отображаемое в окне уведомления.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Body { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Footer_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Footer" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer">
+  Footer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости Footer,
+которое представляет текст нижнего колонтитула, отображаемого в уведомлении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Footer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ImageSource_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ImageSource" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource">
+  ImageSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентифицирует свойство зависимости ImageSource,
+которое определяет источник изображения, отображаемого в уведомлении.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImageSource? ImageSource { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.media.imagesource">ImageSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationPosition_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationPosition" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition">
+  NotificationPosition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Позиция уведомления на экране.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationPosition NotificationPosition { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationPosition.html">NotificationPosition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationScreen_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationScreen" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen">
+  NotificationScreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Определяет, на каком мониторе будет отображаться уведомление.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NotificationScreen NotificationScreen { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.WpfCore.SimpleServices.NotificationScreen.html">NotificationScreen</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_WindowStack_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_WindowStack" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack">
+  WindowStack
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Список открытых окон уведомлений.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Window&gt; WindowStack { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.window">Window</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_InitializeComponent_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_InitializeComponent" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>InitializeComponent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeComponent()</code></pre>
   </div>
 
 
@@ -2484,6 +2723,171 @@ Class BaseWindow  <a class="header-action link-secondary" title="View source" hr
 
 
 
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnBackdropTypeChanged_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnBackdropTypeChanged_Wpf_Ui_Controls_WindowBackdropType_Wpf_Ui_Controls_WindowBackdropType_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged(Wpf.Ui.Controls.WindowBackdropType,Wpf.Ui.Controls.WindowBackdropType)">
+  OnBackdropTypeChanged(WindowBackdropType, WindowBackdropType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnBackdropTypeChanged(WindowBackdropType oldValue, WindowBackdropType newValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>oldValue</code> <span class="xref">WindowBackdropType</span></dt>
+    <dd></dd>
+    <dt><code>newValue</code> <span class="xref">WindowBackdropType</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnCornerPreferenceChanged_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnCornerPreferenceChanged_Wpf_Ui_Controls_WindowCornerPreference_Wpf_Ui_Controls_WindowCornerPreference_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged(Wpf.Ui.Controls.WindowCornerPreference,Wpf.Ui.Controls.WindowCornerPreference)">
+  OnCornerPreferenceChanged(WindowCornerPreference, WindowCornerPreference)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnCornerPreferenceChanged(WindowCornerPreference oldValue, WindowCornerPreference newValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>oldValue</code> <span class="xref">WindowCornerPreference</span></dt>
+    <dd></dd>
+    <dt><code>newValue</code> <span class="xref">WindowCornerPreference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnExtendsContentIntoTitleBarChanged_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged*"></a>
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnExtendsContentIntoTitleBarChanged_System_Boolean_System_Boolean_" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(System.Boolean,System.Boolean)">
+  OnExtendsContentIntoTitleBarChanged(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnExtendsContentIntoTitleBarChanged(bool oldValue, bool newValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>oldValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>newValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_LanguageChanged" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.LanguageChanged">
+  LanguageChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Событие изменения языка.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;CultureInfo&gt;? LanguageChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo">CultureInfo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ThemeChanged" data-uid="dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ThemeChanged">
+  ThemeChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.SimpleServices/blob/main/src/dosymep.WpfUI.Core/Windows/WpfUINotificationWindow.xaml"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Событие изменения темы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;UIThemes&gt;? ThemeChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="dosymep.SimpleServices.UIThemes.html">UIThemes</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 

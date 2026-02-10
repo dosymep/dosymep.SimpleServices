@@ -2339,6 +2339,162 @@ references:
   commentId: Overload:dosymep.WpfCore.Behaviors.WpfLocalizationBehavior.OnDetaching
   fullName: dosymep.WpfCore.Behaviors.WpfLocalizationBehavior.OnDetaching
   nameWithType: WpfLocalizationBehavior.OnDetaching
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior
+  name: WpfNotificationWindowBehavior
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html
+  commentId: T:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior
+  nameWithType: WpfNotificationWindowBehavior
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.#ctor
+  name: WpfNotificationWindowBehavior()
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior__ctor
+  commentId: M:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.#ctor
+  name.vb: New()
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WpfNotificationWindowBehavior()
+  fullName.vb: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.New()
+  nameWithType: WpfNotificationWindowBehavior.WpfNotificationWindowBehavior()
+  nameWithType.vb: WpfNotificationWindowBehavior.New()
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.#ctor*
+  name: WpfNotificationWindowBehavior
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior__ctor_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.#ctor
+  name.vb: New
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WpfNotificationWindowBehavior
+  fullName.vb: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.New
+  nameWithType: WpfNotificationWindowBehavior.WpfNotificationWindowBehavior
+  nameWithType.vb: WpfNotificationWindowBehavior.New
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition
+  name: NotificationPosition
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationPosition
+  commentId: P:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition
+  nameWithType: WpfNotificationWindowBehavior.NotificationPosition
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition*
+  name: NotificationPosition
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationPosition_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPosition
+  nameWithType: WpfNotificationWindowBehavior.NotificationPosition
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPositionProperty
+  name: NotificationPositionProperty
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationPositionProperty
+  commentId: F:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPositionProperty
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationPositionProperty
+  nameWithType: WpfNotificationWindowBehavior.NotificationPositionProperty
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen
+  name: NotificationScreen
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationScreen
+  commentId: P:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen
+  nameWithType: WpfNotificationWindowBehavior.NotificationScreen
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen*
+  name: NotificationScreen
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationScreen_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreen
+  nameWithType: WpfNotificationWindowBehavior.NotificationScreen
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreenProperty
+  name: NotificationScreenProperty
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_NotificationScreenProperty
+  commentId: F:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreenProperty
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.NotificationScreenProperty
+  nameWithType: WpfNotificationWindowBehavior.NotificationScreenProperty
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset
+  name: Offset
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_Offset
+  commentId: P:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset
+  nameWithType: WpfNotificationWindowBehavior.Offset
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset*
+  name: Offset
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_Offset_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.Offset
+  nameWithType: WpfNotificationWindowBehavior.Offset
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OffsetProperty
+  name: OffsetProperty
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OffsetProperty
+  commentId: F:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OffsetProperty
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OffsetProperty
+  nameWithType: WpfNotificationWindowBehavior.OffsetProperty
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached
+  name: OnAttached()
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAttached
+  commentId: M:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached()
+  nameWithType: WpfNotificationWindowBehavior.OnAttached()
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached*
+  name: OnAttached
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAttached_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAttached
+  nameWithType: WpfNotificationWindowBehavior.OnAttached
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing
+  name: OnAutoClosing()
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAutoClosing
+  commentId: M:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing()
+  nameWithType: WpfNotificationWindowBehavior.OnAutoClosing()
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing*
+  name: OnAutoClosing
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnAutoClosing_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnAutoClosing
+  nameWithType: WpfNotificationWindowBehavior.OnAutoClosing
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing
+  name: OnClosing()
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnClosing
+  commentId: M:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing()
+  nameWithType: WpfNotificationWindowBehavior.OnClosing()
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing*
+  name: OnClosing
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnClosing_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnClosing
+  nameWithType: WpfNotificationWindowBehavior.OnClosing
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching
+  name: OnDetaching()
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnDetaching
+  commentId: M:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching()
+  nameWithType: WpfNotificationWindowBehavior.OnDetaching()
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching*
+  name: OnDetaching
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnDetaching_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnDetaching
+  nameWithType: WpfNotificationWindowBehavior.OnDetaching
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing
+  name: OnShowing()
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnShowing
+  commentId: M:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing()
+  nameWithType: WpfNotificationWindowBehavior.OnShowing()
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing*
+  name: OnShowing
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_OnShowing_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.OnShowing
+  nameWithType: WpfNotificationWindowBehavior.OnShowing
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack
+  name: WindowStack
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_WindowStack
+  commentId: P:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack
+  nameWithType: WpfNotificationWindowBehavior.WindowStack
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack*
+  name: WindowStack
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_WindowStack_
+  commentId: Overload:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStack
+  nameWithType: WpfNotificationWindowBehavior.WindowStack
+- uid: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStackProperty
+  name: WindowStackProperty
+  href: api/dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.html#dosymep_WpfCore_Behaviors_WpfNotificationWindowBehavior_WindowStackProperty
+  commentId: F:dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStackProperty
+  fullName: dosymep.WpfCore.Behaviors.WpfNotificationWindowBehavior.WindowStackProperty
+  nameWithType: WpfNotificationWindowBehavior.WindowStackProperty
 - uid: dosymep.WpfCore.Behaviors.WpfSavePositionBehavior
   name: WpfSavePositionBehavior
   href: api/dosymep.WpfCore.Behaviors.WpfSavePositionBehavior.html
@@ -4049,6 +4205,42 @@ references:
   commentId: N:dosymep.WpfCore.SimpleServices
   fullName: dosymep.WpfCore.SimpleServices
   nameWithType: dosymep.WpfCore.SimpleServices
+- uid: dosymep.WpfCore.SimpleServices.NotificationPosition
+  name: NotificationPosition
+  href: api/dosymep.WpfCore.SimpleServices.NotificationPosition.html
+  commentId: T:dosymep.WpfCore.SimpleServices.NotificationPosition
+  fullName: dosymep.WpfCore.SimpleServices.NotificationPosition
+  nameWithType: NotificationPosition
+- uid: dosymep.WpfCore.SimpleServices.NotificationPosition.BottomRight
+  name: BottomRight
+  href: api/dosymep.WpfCore.SimpleServices.NotificationPosition.html#dosymep_WpfCore_SimpleServices_NotificationPosition_BottomRight
+  commentId: F:dosymep.WpfCore.SimpleServices.NotificationPosition.BottomRight
+  fullName: dosymep.WpfCore.SimpleServices.NotificationPosition.BottomRight
+  nameWithType: NotificationPosition.BottomRight
+- uid: dosymep.WpfCore.SimpleServices.NotificationPosition.TopRight
+  name: TopRight
+  href: api/dosymep.WpfCore.SimpleServices.NotificationPosition.html#dosymep_WpfCore_SimpleServices_NotificationPosition_TopRight
+  commentId: F:dosymep.WpfCore.SimpleServices.NotificationPosition.TopRight
+  fullName: dosymep.WpfCore.SimpleServices.NotificationPosition.TopRight
+  nameWithType: NotificationPosition.TopRight
+- uid: dosymep.WpfCore.SimpleServices.NotificationScreen
+  name: NotificationScreen
+  href: api/dosymep.WpfCore.SimpleServices.NotificationScreen.html
+  commentId: T:dosymep.WpfCore.SimpleServices.NotificationScreen
+  fullName: dosymep.WpfCore.SimpleServices.NotificationScreen
+  nameWithType: NotificationScreen
+- uid: dosymep.WpfCore.SimpleServices.NotificationScreen.ApplicationWindow
+  name: ApplicationWindow
+  href: api/dosymep.WpfCore.SimpleServices.NotificationScreen.html#dosymep_WpfCore_SimpleServices_NotificationScreen_ApplicationWindow
+  commentId: F:dosymep.WpfCore.SimpleServices.NotificationScreen.ApplicationWindow
+  fullName: dosymep.WpfCore.SimpleServices.NotificationScreen.ApplicationWindow
+  nameWithType: NotificationScreen.ApplicationWindow
+- uid: dosymep.WpfCore.SimpleServices.NotificationScreen.Primary
+  name: Primary
+  href: api/dosymep.WpfCore.SimpleServices.NotificationScreen.html#dosymep_WpfCore_SimpleServices_NotificationScreen_Primary
+  commentId: F:dosymep.WpfCore.SimpleServices.NotificationScreen.Primary
+  fullName: dosymep.WpfCore.SimpleServices.NotificationScreen.Primary
+  nameWithType: NotificationScreen.Primary
 - uid: dosymep.WpfCore.SimpleServices.WpfBaseService
   name: WpfBaseService
   href: api/dosymep.WpfCore.SimpleServices.WpfBaseService.html
@@ -6377,6 +6569,30 @@ references:
   fullName.vb: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUIMessageBox(Of T)(Ninject.IKernel)
   nameWithType: NinjectExtensions.UseWpfUIMessageBox<T>(IKernel)
   nameWithType.vb: NinjectExtensions.UseWpfUIMessageBox(Of T)(IKernel)
+- uid: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,dosymep.WpfCore.SimpleServices.NotificationScreen,dosymep.WpfCore.SimpleServices.NotificationPosition,System.Int32)
+  name: UseWpfUINotifications(IKernel, string?, string?, string?, ImageSource?, NotificationScreen, NotificationPosition, int)
+  href: api/dosymep.WpfUI.Core.Ninject.NinjectExtensions.html#dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_dosymep_WpfCore_SimpleServices_NotificationScreen_dosymep_WpfCore_SimpleServices_NotificationPosition_System_Int32_
+  commentId: M:dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,dosymep.WpfCore.SimpleServices.NotificationScreen,dosymep.WpfCore.SimpleServices.NotificationPosition,System.Int32)
+  name.vb: UseWpfUINotifications(IKernel, String, String, String, ImageSource, NotificationScreen, NotificationPosition, Integer)
+  fullName: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications(Ninject.IKernel, string?, string?, string?, System.Windows.Media.ImageSource?, dosymep.WpfCore.SimpleServices.NotificationScreen, dosymep.WpfCore.SimpleServices.NotificationPosition, int)
+  fullName.vb: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications(Ninject.IKernel, String, String, String, System.Windows.Media.ImageSource, dosymep.WpfCore.SimpleServices.NotificationScreen, dosymep.WpfCore.SimpleServices.NotificationPosition, Integer)
+  nameWithType: NinjectExtensions.UseWpfUINotifications(IKernel, string?, string?, string?, ImageSource?, NotificationScreen, NotificationPosition, int)
+  nameWithType.vb: NinjectExtensions.UseWpfUINotifications(IKernel, String, String, String, ImageSource, NotificationScreen, NotificationPosition, Integer)
+- uid: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications*
+  name: UseWpfUINotifications
+  href: api/dosymep.WpfUI.Core.Ninject.NinjectExtensions.html#dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications_
+  commentId: Overload:dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications
+  fullName: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications
+  nameWithType: NinjectExtensions.UseWpfUINotifications
+- uid: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications``1(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,dosymep.WpfCore.SimpleServices.NotificationScreen,dosymep.WpfCore.SimpleServices.NotificationPosition,System.Int32)
+  name: UseWpfUINotifications<T>(IKernel, string?, string?, string?, ImageSource?, NotificationScreen, NotificationPosition, int)
+  href: api/dosymep.WpfUI.Core.Ninject.NinjectExtensions.html#dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUINotifications__1_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_dosymep_WpfCore_SimpleServices_NotificationScreen_dosymep_WpfCore_SimpleServices_NotificationPosition_System_Int32_
+  commentId: M:dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications``1(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,dosymep.WpfCore.SimpleServices.NotificationScreen,dosymep.WpfCore.SimpleServices.NotificationPosition,System.Int32)
+  name.vb: UseWpfUINotifications(Of T)(IKernel, String, String, String, ImageSource, NotificationScreen, NotificationPosition, Integer)
+  fullName: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications<T>(Ninject.IKernel, string?, string?, string?, System.Windows.Media.ImageSource?, dosymep.WpfCore.SimpleServices.NotificationScreen, dosymep.WpfCore.SimpleServices.NotificationPosition, int)
+  fullName.vb: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUINotifications(Of T)(Ninject.IKernel, String, String, String, System.Windows.Media.ImageSource, dosymep.WpfCore.SimpleServices.NotificationScreen, dosymep.WpfCore.SimpleServices.NotificationPosition, Integer)
+  nameWithType: NinjectExtensions.UseWpfUINotifications<T>(IKernel, string?, string?, string?, ImageSource?, NotificationScreen, NotificationPosition, int)
+  nameWithType.vb: NinjectExtensions.UseWpfUINotifications(Of T)(IKernel, String, String, String, ImageSource, NotificationScreen, NotificationPosition, Integer)
 - uid: dosymep.WpfUI.Core.Ninject.NinjectExtensions.UseWpfUIProgressDialog(Ninject.IKernel,System.Int32,System.Boolean,System.String)
   name: UseWpfUIProgressDialog(IKernel, int, bool, string)
   href: api/dosymep.WpfUI.Core.Ninject.NinjectExtensions.html#dosymep_WpfUI_Core_Ninject_NinjectExtensions_UseWpfUIProgressDialog_Ninject_IKernel_System_Int32_System_Boolean_System_String_
@@ -6458,6 +6674,159 @@ references:
   commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUIMessageBoxService.Show
   fullName: dosymep.WpfUI.Core.SimpleServices.WpfUIMessageBoxService.Show
   nameWithType: WpfUIMessageBoxService.Show
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService
+  name: WpfUINotificationService
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html
+  commentId: T:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService
+  nameWithType: WpfUINotificationService
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.#ctor(dosymep.SimpleServices.IHasTheme,dosymep.SimpleServices.IHasLocalization)
+  name: WpfUINotificationService(IHasTheme, IHasLocalization)
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService__ctor_dosymep_SimpleServices_IHasTheme_dosymep_SimpleServices_IHasLocalization_
+  commentId: M:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.#ctor(dosymep.SimpleServices.IHasTheme,dosymep.SimpleServices.IHasLocalization)
+  name.vb: New(IHasTheme, IHasLocalization)
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.WpfUINotificationService(dosymep.SimpleServices.IHasTheme, dosymep.SimpleServices.IHasLocalization)
+  fullName.vb: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.New(dosymep.SimpleServices.IHasTheme, dosymep.SimpleServices.IHasLocalization)
+  nameWithType: WpfUINotificationService.WpfUINotificationService(IHasTheme, IHasLocalization)
+  nameWithType.vb: WpfUINotificationService.New(IHasTheme, IHasLocalization)
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.#ctor*
+  name: WpfUINotificationService
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService__ctor_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.#ctor
+  name.vb: New
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.WpfUINotificationService
+  fullName.vb: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.New
+  nameWithType: WpfUINotificationService.WpfUINotificationService
+  nameWithType.vb: WpfUINotificationService.New
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.ApplicationId
+  name: ApplicationId
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_ApplicationId
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.ApplicationId
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.ApplicationId
+  nameWithType: WpfUINotificationService.ApplicationId
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.ApplicationId*
+  name: ApplicationId
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_ApplicationId_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.ApplicationId
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.ApplicationId
+  nameWithType: WpfUINotificationService.ApplicationId
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification(System.String,System.String,System.String,System.Windows.Media.ImageSource)
+  name: CreateFatalNotification(string, string, string?, ImageSource?)
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_CreateFatalNotification_System_String_System_String_System_String_System_Windows_Media_ImageSource_
+  commentId: M:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification(System.String,System.String,System.String,System.Windows.Media.ImageSource)
+  name.vb: CreateFatalNotification(String, String, String, ImageSource)
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification(string, string, string?, System.Windows.Media.ImageSource?)
+  fullName.vb: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification(String, String, String, System.Windows.Media.ImageSource)
+  nameWithType: WpfUINotificationService.CreateFatalNotification(string, string, string?, ImageSource?)
+  nameWithType.vb: WpfUINotificationService.CreateFatalNotification(String, String, String, ImageSource)
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification*
+  name: CreateFatalNotification
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_CreateFatalNotification_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateFatalNotification
+  nameWithType: WpfUINotificationService.CreateFatalNotification
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification(System.String,System.String,System.String,System.String,System.Windows.Media.ImageSource)
+  name: CreateNotification(string, string, string?, string?, ImageSource?)
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_CreateNotification_System_String_System_String_System_String_System_String_System_Windows_Media_ImageSource_
+  commentId: M:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification(System.String,System.String,System.String,System.String,System.Windows.Media.ImageSource)
+  name.vb: CreateNotification(String, String, String, String, ImageSource)
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification(string, string, string?, string?, System.Windows.Media.ImageSource?)
+  fullName.vb: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification(String, String, String, String, System.Windows.Media.ImageSource)
+  nameWithType: WpfUINotificationService.CreateNotification(string, string, string?, string?, ImageSource?)
+  nameWithType.vb: WpfUINotificationService.CreateNotification(String, String, String, String, ImageSource)
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification*
+  name: CreateNotification
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_CreateNotification_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateNotification
+  nameWithType: WpfUINotificationService.CreateNotification
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification(System.String,System.String,System.String,System.Windows.Media.ImageSource)
+  name: CreateWarningNotification(string, string, string?, ImageSource?)
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_CreateWarningNotification_System_String_System_String_System_String_System_Windows_Media_ImageSource_
+  commentId: M:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification(System.String,System.String,System.String,System.Windows.Media.ImageSource)
+  name.vb: CreateWarningNotification(String, String, String, ImageSource)
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification(string, string, string?, System.Windows.Media.ImageSource?)
+  fullName.vb: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification(String, String, String, System.Windows.Media.ImageSource)
+  nameWithType: WpfUINotificationService.CreateWarningNotification(string, string, string?, ImageSource?)
+  nameWithType.vb: WpfUINotificationService.CreateWarningNotification(String, String, String, ImageSource)
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification*
+  name: CreateWarningNotification
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_CreateWarningNotification_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.CreateWarningNotification
+  nameWithType: WpfUINotificationService.CreateWarningNotification
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultAuthor
+  name: DefaultAuthor
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_DefaultAuthor
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultAuthor
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultAuthor
+  nameWithType: WpfUINotificationService.DefaultAuthor
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultAuthor*
+  name: DefaultAuthor
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_DefaultAuthor_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultAuthor
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultAuthor
+  nameWithType: WpfUINotificationService.DefaultAuthor
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultFooter
+  name: DefaultFooter
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_DefaultFooter
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultFooter
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultFooter
+  nameWithType: WpfUINotificationService.DefaultFooter
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultFooter*
+  name: DefaultFooter
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_DefaultFooter_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultFooter
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultFooter
+  nameWithType: WpfUINotificationService.DefaultFooter
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultImage
+  name: DefaultImage
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_DefaultImage
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultImage
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultImage
+  nameWithType: WpfUINotificationService.DefaultImage
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultImage*
+  name: DefaultImage
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_DefaultImage_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultImage
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.DefaultImage
+  nameWithType: WpfUINotificationService.DefaultImage
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationPosition
+  name: NotificationPosition
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_NotificationPosition
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationPosition
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationPosition
+  nameWithType: WpfUINotificationService.NotificationPosition
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationPosition*
+  name: NotificationPosition
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_NotificationPosition_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationPosition
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationPosition
+  nameWithType: WpfUINotificationService.NotificationPosition
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationScreen
+  name: NotificationScreen
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_NotificationScreen
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationScreen
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationScreen
+  nameWithType: WpfUINotificationService.NotificationScreen
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationScreen*
+  name: NotificationScreen
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_NotificationScreen_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationScreen
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationScreen
+  nameWithType: WpfUINotificationService.NotificationScreen
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationVisibleMaxCount
+  name: NotificationVisibleMaxCount
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_NotificationVisibleMaxCount
+  commentId: P:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationVisibleMaxCount
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationVisibleMaxCount
+  nameWithType: WpfUINotificationService.NotificationVisibleMaxCount
+- uid: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationVisibleMaxCount*
+  name: NotificationVisibleMaxCount
+  href: api/dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.html#dosymep_WpfUI_Core_SimpleServices_WpfUINotificationService_NotificationVisibleMaxCount_
+  commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationVisibleMaxCount
+  fullName: dosymep.WpfUI.Core.SimpleServices.WpfUINotificationService.NotificationVisibleMaxCount
+  nameWithType: WpfUINotificationService.NotificationVisibleMaxCount
 - uid: dosymep.WpfUI.Core.SimpleServices.WpfUIProgressDialogFactory
   name: WpfUIProgressDialogFactory
   href: api/dosymep.WpfUI.Core.SimpleServices.WpfUIProgressDialogFactory.html
@@ -6752,6 +7121,225 @@ references:
   commentId: Overload:dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme
   fullName: dosymep.WpfUI.Core.SimpleServices.WpfUIThemeUpdaterService.SetTheme
   nameWithType: WpfUIThemeUpdaterService.SetTheme
+- uid: dosymep.WpfUI.Core.Windows
+  name: dosymep.WpfUI.Core.Windows
+  href: api/dosymep.WpfUI.Core.Windows.html
+  commentId: N:dosymep.WpfUI.Core.Windows
+  fullName: dosymep.WpfUI.Core.Windows
+  nameWithType: dosymep.WpfUI.Core.Windows
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow
+  name: WpfUINotificationWindow
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html
+  commentId: T:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow
+  nameWithType: WpfUINotificationWindow
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.#ctor(dosymep.SimpleServices.IHasTheme,dosymep.SimpleServices.IHasLocalization)
+  name: WpfUINotificationWindow(IHasTheme, IHasLocalization)
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow__ctor_dosymep_SimpleServices_IHasTheme_dosymep_SimpleServices_IHasLocalization_
+  commentId: M:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.#ctor(dosymep.SimpleServices.IHasTheme,dosymep.SimpleServices.IHasLocalization)
+  name.vb: New(IHasTheme, IHasLocalization)
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WpfUINotificationWindow(dosymep.SimpleServices.IHasTheme, dosymep.SimpleServices.IHasLocalization)
+  fullName.vb: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.New(dosymep.SimpleServices.IHasTheme, dosymep.SimpleServices.IHasLocalization)
+  nameWithType: WpfUINotificationWindow.WpfUINotificationWindow(IHasTheme, IHasLocalization)
+  nameWithType.vb: WpfUINotificationWindow.New(IHasTheme, IHasLocalization)
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.#ctor*
+  name: WpfUINotificationWindow
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow__ctor_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.#ctor
+  name.vb: New
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WpfUINotificationWindow
+  fullName.vb: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.New
+  nameWithType: WpfUINotificationWindow.WpfUINotificationWindow
+  nameWithType.vb: WpfUINotificationWindow.New
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author
+  name: Author
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Author
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author
+  nameWithType: WpfUINotificationWindow.Author
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author*
+  name: Author
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Author_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Author
+  nameWithType: WpfUINotificationWindow.Author
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.AuthorProperty
+  name: AuthorProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_AuthorProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.AuthorProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.AuthorProperty
+  nameWithType: WpfUINotificationWindow.AuthorProperty
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body
+  name: Body
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Body
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body
+  nameWithType: WpfUINotificationWindow.Body
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body*
+  name: Body
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Body_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Body
+  nameWithType: WpfUINotificationWindow.Body
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.BodyProperty
+  name: BodyProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_BodyProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.BodyProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.BodyProperty
+  nameWithType: WpfUINotificationWindow.BodyProperty
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer
+  name: Footer
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Footer
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer
+  nameWithType: WpfUINotificationWindow.Footer
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer*
+  name: Footer
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_Footer_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.Footer
+  nameWithType: WpfUINotificationWindow.Footer
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.FooterProperty
+  name: FooterProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_FooterProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.FooterProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.FooterProperty
+  nameWithType: WpfUINotificationWindow.FooterProperty
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource
+  name: ImageSource
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ImageSource
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource
+  nameWithType: WpfUINotificationWindow.ImageSource
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource*
+  name: ImageSource
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ImageSource_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSource
+  nameWithType: WpfUINotificationWindow.ImageSource
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSourceProperty
+  name: ImageSourceProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ImageSourceProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSourceProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ImageSourceProperty
+  nameWithType: WpfUINotificationWindow.ImageSourceProperty
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent
+  name: InitializeComponent()
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_InitializeComponent
+  commentId: M:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent()
+  nameWithType: WpfUINotificationWindow.InitializeComponent()
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent*
+  name: InitializeComponent
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_InitializeComponent_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.InitializeComponent
+  nameWithType: WpfUINotificationWindow.InitializeComponent
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.LanguageChanged
+  name: LanguageChanged
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_LanguageChanged
+  commentId: E:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.LanguageChanged
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.LanguageChanged
+  nameWithType: WpfUINotificationWindow.LanguageChanged
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition
+  name: NotificationPosition
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationPosition
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition
+  nameWithType: WpfUINotificationWindow.NotificationPosition
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition*
+  name: NotificationPosition
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationPosition_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPosition
+  nameWithType: WpfUINotificationWindow.NotificationPosition
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPositionProperty
+  name: NotificationPositionProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationPositionProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPositionProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationPositionProperty
+  nameWithType: WpfUINotificationWindow.NotificationPositionProperty
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen
+  name: NotificationScreen
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationScreen
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen
+  nameWithType: WpfUINotificationWindow.NotificationScreen
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen*
+  name: NotificationScreen
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationScreen_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreen
+  nameWithType: WpfUINotificationWindow.NotificationScreen
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreenProperty
+  name: NotificationScreenProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_NotificationScreenProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreenProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.NotificationScreenProperty
+  nameWithType: WpfUINotificationWindow.NotificationScreenProperty
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged(Wpf.Ui.Controls.WindowBackdropType,Wpf.Ui.Controls.WindowBackdropType)
+  name: OnBackdropTypeChanged(WindowBackdropType, WindowBackdropType)
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnBackdropTypeChanged_Wpf_Ui_Controls_WindowBackdropType_Wpf_Ui_Controls_WindowBackdropType_
+  commentId: M:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged(Wpf.Ui.Controls.WindowBackdropType,Wpf.Ui.Controls.WindowBackdropType)
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged(Wpf.Ui.Controls.WindowBackdropType, Wpf.Ui.Controls.WindowBackdropType)
+  nameWithType: WpfUINotificationWindow.OnBackdropTypeChanged(WindowBackdropType, WindowBackdropType)
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged*
+  name: OnBackdropTypeChanged
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnBackdropTypeChanged_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnBackdropTypeChanged
+  nameWithType: WpfUINotificationWindow.OnBackdropTypeChanged
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged(Wpf.Ui.Controls.WindowCornerPreference,Wpf.Ui.Controls.WindowCornerPreference)
+  name: OnCornerPreferenceChanged(WindowCornerPreference, WindowCornerPreference)
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnCornerPreferenceChanged_Wpf_Ui_Controls_WindowCornerPreference_Wpf_Ui_Controls_WindowCornerPreference_
+  commentId: M:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged(Wpf.Ui.Controls.WindowCornerPreference,Wpf.Ui.Controls.WindowCornerPreference)
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged(Wpf.Ui.Controls.WindowCornerPreference, Wpf.Ui.Controls.WindowCornerPreference)
+  nameWithType: WpfUINotificationWindow.OnCornerPreferenceChanged(WindowCornerPreference, WindowCornerPreference)
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged*
+  name: OnCornerPreferenceChanged
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnCornerPreferenceChanged_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnCornerPreferenceChanged
+  nameWithType: WpfUINotificationWindow.OnCornerPreferenceChanged
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(System.Boolean,System.Boolean)
+  name: OnExtendsContentIntoTitleBarChanged(bool, bool)
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnExtendsContentIntoTitleBarChanged_System_Boolean_System_Boolean_
+  commentId: M:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(System.Boolean,System.Boolean)
+  name.vb: OnExtendsContentIntoTitleBarChanged(Boolean, Boolean)
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(bool, bool)
+  fullName.vb: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(Boolean, Boolean)
+  nameWithType: WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(bool, bool)
+  nameWithType.vb: WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged(Boolean, Boolean)
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged*
+  name: OnExtendsContentIntoTitleBarChanged
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_OnExtendsContentIntoTitleBarChanged_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged
+  nameWithType: WpfUINotificationWindow.OnExtendsContentIntoTitleBarChanged
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ThemeChanged
+  name: ThemeChanged
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_ThemeChanged
+  commentId: E:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ThemeChanged
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.ThemeChanged
+  nameWithType: WpfUINotificationWindow.ThemeChanged
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack
+  name: WindowStack
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_WindowStack
+  commentId: P:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack
+  nameWithType: WpfUINotificationWindow.WindowStack
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack*
+  name: WindowStack
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_WindowStack_
+  commentId: Overload:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStack
+  nameWithType: WpfUINotificationWindow.WindowStack
+- uid: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStackProperty
+  name: WindowStackProperty
+  href: api/dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.html#dosymep_WpfUI_Core_Windows_WpfUINotificationWindow_WindowStackProperty
+  commentId: F:dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStackProperty
+  fullName: dosymep.WpfUI.Core.Windows.WpfUINotificationWindow.WindowStackProperty
+  nameWithType: WpfUINotificationWindow.WindowStackProperty
 - uid: dosymep.Xpf.Core
   name: dosymep.Xpf.Core
   href: api/dosymep.Xpf.Core.html
@@ -7169,13 +7757,13 @@ references:
   nameWithType: NinjectExtensions.UseXtraMessageBox<T>(IKernel)
   nameWithType.vb: NinjectExtensions.UseXtraMessageBox(Of T)(IKernel)
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,DevExpress.Mvvm.UI.PredefinedSound,DevExpress.Mvvm.UI.NotificationScreen,DevExpress.Mvvm.UI.NotificationPosition,System.Int32)
-  name: UseXtraNotifications(IKernel, string?, string?, string?, ImageSource?, PredefinedSound?, NotificationScreen?, NotificationPosition?, int)
+  name: UseXtraNotifications(IKernel, string?, string?, string?, ImageSource?, PredefinedSound, NotificationScreen, NotificationPosition, int)
   href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_DevExpress_Mvvm_UI_PredefinedSound_DevExpress_Mvvm_UI_NotificationScreen_DevExpress_Mvvm_UI_NotificationPosition_System_Int32_
   commentId: M:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,DevExpress.Mvvm.UI.PredefinedSound,DevExpress.Mvvm.UI.NotificationScreen,DevExpress.Mvvm.UI.NotificationPosition,System.Int32)
   name.vb: UseXtraNotifications(IKernel, String, String, String, ImageSource, PredefinedSound, NotificationScreen, NotificationPosition, Integer)
-  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Ninject.IKernel, string?, string?, string?, System.Windows.Media.ImageSource?, DevExpress.Mvvm.UI.PredefinedSound?, DevExpress.Mvvm.UI.NotificationScreen?, DevExpress.Mvvm.UI.NotificationPosition?, int)
+  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Ninject.IKernel, string?, string?, string?, System.Windows.Media.ImageSource?, DevExpress.Mvvm.UI.PredefinedSound, DevExpress.Mvvm.UI.NotificationScreen, DevExpress.Mvvm.UI.NotificationPosition, int)
   fullName.vb: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Ninject.IKernel, String, String, String, System.Windows.Media.ImageSource, DevExpress.Mvvm.UI.PredefinedSound, DevExpress.Mvvm.UI.NotificationScreen, DevExpress.Mvvm.UI.NotificationPosition, Integer)
-  nameWithType: NinjectExtensions.UseXtraNotifications(IKernel, string?, string?, string?, ImageSource?, PredefinedSound?, NotificationScreen?, NotificationPosition?, int)
+  nameWithType: NinjectExtensions.UseXtraNotifications(IKernel, string?, string?, string?, ImageSource?, PredefinedSound, NotificationScreen, NotificationPosition, int)
   nameWithType.vb: NinjectExtensions.UseXtraNotifications(IKernel, String, String, String, ImageSource, PredefinedSound, NotificationScreen, NotificationPosition, Integer)
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications*
   name: UseXtraNotifications
@@ -7184,13 +7772,13 @@ references:
   fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications
   nameWithType: NinjectExtensions.UseXtraNotifications
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications``1(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,DevExpress.Mvvm.UI.PredefinedSound,DevExpress.Mvvm.UI.NotificationScreen,DevExpress.Mvvm.UI.NotificationPosition,System.Int32)
-  name: UseXtraNotifications<T>(IKernel, string?, string?, string?, ImageSource?, PredefinedSound?, NotificationScreen?, NotificationPosition?, int)
+  name: UseXtraNotifications<T>(IKernel, string?, string?, string?, ImageSource?, PredefinedSound, NotificationScreen, NotificationPosition, int)
   href: api/dosymep.Xpf.Core.Ninject.NinjectExtensions.html#dosymep_Xpf_Core_Ninject_NinjectExtensions_UseXtraNotifications__1_Ninject_IKernel_System_String_System_String_System_String_System_Windows_Media_ImageSource_DevExpress_Mvvm_UI_PredefinedSound_DevExpress_Mvvm_UI_NotificationScreen_DevExpress_Mvvm_UI_NotificationPosition_System_Int32_
   commentId: M:dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications``1(Ninject.IKernel,System.String,System.String,System.String,System.Windows.Media.ImageSource,DevExpress.Mvvm.UI.PredefinedSound,DevExpress.Mvvm.UI.NotificationScreen,DevExpress.Mvvm.UI.NotificationPosition,System.Int32)
   name.vb: UseXtraNotifications(Of T)(IKernel, String, String, String, ImageSource, PredefinedSound, NotificationScreen, NotificationPosition, Integer)
-  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications<T>(Ninject.IKernel, string?, string?, string?, System.Windows.Media.ImageSource?, DevExpress.Mvvm.UI.PredefinedSound?, DevExpress.Mvvm.UI.NotificationScreen?, DevExpress.Mvvm.UI.NotificationPosition?, int)
+  fullName: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications<T>(Ninject.IKernel, string?, string?, string?, System.Windows.Media.ImageSource?, DevExpress.Mvvm.UI.PredefinedSound, DevExpress.Mvvm.UI.NotificationScreen, DevExpress.Mvvm.UI.NotificationPosition, int)
   fullName.vb: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraNotifications(Of T)(Ninject.IKernel, String, String, String, System.Windows.Media.ImageSource, DevExpress.Mvvm.UI.PredefinedSound, DevExpress.Mvvm.UI.NotificationScreen, DevExpress.Mvvm.UI.NotificationPosition, Integer)
-  nameWithType: NinjectExtensions.UseXtraNotifications<T>(IKernel, string?, string?, string?, ImageSource?, PredefinedSound?, NotificationScreen?, NotificationPosition?, int)
+  nameWithType: NinjectExtensions.UseXtraNotifications<T>(IKernel, string?, string?, string?, ImageSource?, PredefinedSound, NotificationScreen, NotificationPosition, int)
   nameWithType.vb: NinjectExtensions.UseXtraNotifications(Of T)(IKernel, String, String, String, ImageSource, PredefinedSound, NotificationScreen, NotificationPosition, Integer)
 - uid: dosymep.Xpf.Core.Ninject.NinjectExtensions.UseXtraOpenFileDialog(Ninject.IKernel,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   name: UseXtraOpenFileDialog(IKernel, string?, string?, int, string?, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool)
