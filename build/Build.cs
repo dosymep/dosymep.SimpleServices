@@ -16,25 +16,29 @@ class Build : NukeBuild {
     ///   - JetBrains Rider            https://nuke.build/rider
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
-    public static int Main() => Execute<Build>(x => x.Compile);
+    public static int Main() => Execute<Build>(x => x.DocsCompile);
 
     [Solution] public readonly Solution Solution;
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-    [Parameter] readonly AbsolutePath Output;
+    [Parameter] readonly AbsolutePath ArtifactPath;
+    [Parameter] readonly AbsolutePath PublishOutput;
     [Parameter] readonly string DocsOutput = Path.Combine("docs", "_site");
     [Parameter] readonly string DocsConfig = Path.Combine("docs", "docfx.json");
     [Parameter] readonly AbsolutePath DocsCaches = RootDirectory / Path.Combine("docs", "api");
 
     public Build() {
+        ArtifactPath = RootDirectory / "bin";
+
         AbsolutePath appdataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        Output = appdataFolder / "pyRevit" / "Extensions" / "BIM4Everyone.lib" / "dosymep_libs" / "libs";
+        PublishOutput = appdataFolder / "pyRevit" / "Extensions" / "BIM4Everyone.lib" / "dosymep_libs" / "libs";
     }
 
     Target Clean => _ => _
         .Executes(() => {
+            ArtifactPath.CreateOrCleanDirectory();
             (RootDirectory / DocsOutput).CreateOrCleanDirectory();
             DocsCaches.GlobFiles("**/*.yml").DeleteFiles();
             RootDirectory.GlobDirectories("**/bin", "**/obj")
@@ -52,30 +56,32 @@ class Build : NukeBuild {
     Target Compile => _ => _
         .DependsOn(Restore)
         .Executes(() => {
+            Project[] frameworkLibs = GetFrameworkLibs();
+
             DotNetBuild(s => s
                 .EnableForce()
                 .DisableNoRestore()
-                .SetProjectFile(Solution)
-                .SetConfiguration(Configuration));
+                .SetConfiguration(Configuration)
+                .CombineWith(frameworkLibs,
+                    (s, frameworkLib) => s
+                        .SetProjectFile(frameworkLib)
+                        .SetProperty("OutputPath", ArtifactPath)));
+
         });
 
     Target Publish => _ => _
         .DependsOn(Compile)
-        .OnlyWhenStatic(() => IsLocalBuild)
         .Executes(() => {
-            Project[] frameworkLibs = Solution.AllProjects
-                .Where(item => !item.Name.EndsWith("Tests"))
-                .Where(item => item.Name.StartsWith("dosymep"))
-                .ToArray();
+            Project[] frameworkLibs = GetFrameworkLibs();
 
             DotNetPublish(s => s
                 .EnableForce()
                 .DisableNoRestore()
                 .SetConfiguration(Configuration)
                 .CombineWith(frameworkLibs,
-                    (s, plugin) => s
-                        .SetProject(plugin)
-                        .SetProperty("PublishDir", Output)));
+                    (s, frameworkLib) => s
+                        .SetProject(frameworkLib)
+                        .SetProperty("PublishDir", PublishOutput)));
         });
 
     Target DocsCompile => _ => _
@@ -96,4 +102,11 @@ class Build : NukeBuild {
             //     .SetProcessWorkingDirectory(RootDirectory)
             // );
         });
+
+    Project[] GetFrameworkLibs() {
+        Project[] frameworkLibs = Solution.AllProjects
+            .Where(item => item.Parent?.ToString()?.Equals("src") == true)
+            .ToArray();
+        return frameworkLibs;
+    }
 }
