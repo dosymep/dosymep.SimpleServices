@@ -1,11 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <UseWPF>true</UseWPF>
-        <TargetFramework>net48</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    </PropertyGroup>
     
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
     <PropertyGroup>
         <Title>dosymep.Xpf.Core</Title>
         <PackageId>dosymep.Xpf.Core</PackageId>
@@ -13,18 +11,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="System.Web" />
-        <Reference Include="WindowsBase" />
-        <Reference Include="PresentationCore" />
-        <Reference Include="PresentationFramework" />
-        
-        <PackageReference Include="DevExpress.Wpf" Version="21.2.3">
+        <Reference Include="System.Web"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DevExpress.Wpf">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj" />
+        <ProjectReference Include="..\dosymep.SimpleServices\dosymep.SimpleServices.csproj"/>
     </ItemGroup>
+    
 </Project>

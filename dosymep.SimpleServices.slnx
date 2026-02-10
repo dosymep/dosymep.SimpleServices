@@ -4,6 +4,7 @@
         <Project Path="samples/WpfUIDemoApp/WpfUIDemoApp.csproj"/>
         <Project Path="samples/XpfDemoApp/XpfDemoApp.csproj"/>
     </Folder>
+    
     <Folder Name="/Solution Items/">
         <File Path=".editorconfig"/>
         <File Path="CONTRIBUTING.md"/>
@@ -11,6 +12,7 @@
         <File Path="LICENSE.md"/>
         <File Path="README.md"/>
     </Folder>
+    
     <Folder Name="/src/">
         <Project Path="src/dosymep.SimpleServices/dosymep.SimpleServices.csproj"/>
         <Project Path="src/dosymep.WpfCore.Ninject/dosymep.WpfCore.Ninject.csproj"/>
@@ -20,9 +22,11 @@
         <Project Path="src/dosymep.Xpf.Core.Ninject/dosymep.Xpf.Core.Ninject.csproj"/>
         <Project Path="src/dosymep.Xpf.Core/dosymep.Xpf.Core.csproj"/>
     </Folder>
+    
     <Folder Name="/tests/">
         <Project Path="tests/dosymep.WpfCore.Tests/dosymep.WpfCore.Tests.csproj"/>
     </Folder>
+    
     <Project Path="build/_build.csproj">
         <Build Project="false"/>
     </Project>

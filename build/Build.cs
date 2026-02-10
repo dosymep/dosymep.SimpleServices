@@ -16,18 +16,19 @@ using Nuke.Common.Utilities.Collections;
 using Nuke.Components;
 
 using static Nuke.Common.EnvironmentInfo;
-using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.DocFX.DocFXTasks;
 
-class Build : NukeBuild, IHazSolution {
+class Build : NukeBuild {
     /// Support plugins are available for:
     ///   - JetBrains ReSharper        https://nuke.build/resharper
     ///   - JetBrains Rider            https://nuke.build/rider
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
     public static int Main() => Execute<Build>(x => x.Compile);
+    
+    [Solution] public readonly Solution Solution;
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -58,7 +59,7 @@ class Build : NukeBuild, IHazSolution {
         .DependsOn(Clean)
         .Executes(() => {
             DotNetRestore(s => s
-                .SetProjectFile(((IHazSolution) this).Solution));
+                .SetProjectFile(Solution));
         });
 
     Target Compile => _ => _
@@ -68,7 +69,7 @@ class Build : NukeBuild, IHazSolution {
                 .EnableForce()
                 .DisableNoRestore()
                 .SetConfiguration(Configuration)
-                .SetProjectFile(((IHazSolution) this).Solution)
+                .SetProjectFile(Solution)
                 .When(settings => IsServerBuild,
                     _ => _
                         .EnableContinuousIntegrationBuild())
