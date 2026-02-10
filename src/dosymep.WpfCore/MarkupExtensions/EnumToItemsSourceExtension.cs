@@ -11,6 +11,8 @@ using System.Xaml;
 using dosymep.SimpleServices;
 using dosymep.WpfCore.MarkupExtensions.Internal;
 
+using Binding = System.Windows.Data.Binding;
+
 namespace dosymep.WpfCore.MarkupExtensions;
 
 /// <summary>

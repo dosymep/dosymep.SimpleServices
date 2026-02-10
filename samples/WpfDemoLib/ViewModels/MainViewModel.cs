@@ -11,9 +11,6 @@ using WpfDemoLib.Services;
 namespace WpfDemoLib.ViewModels;
 
 public sealed class MainViewModel : ObservableObject {
-    public const string NotificationWarningIconResourceName =
-        "pack://application:,,,/WpfDemoLib;component/assets/images/icons8-notification-warning-32.png";
-    
     private string? _fileDialogResults;
     private string? _secondWindowResult;
 
@@ -64,6 +61,7 @@ public sealed class MainViewModel : ObservableObject {
     public IRelayCommand ShowDialogOpenFileCommand { get; set; }
     public IRelayCommand ShowDialogSaveFileCommand { get; set; }
     public IRelayCommand ShowDialogOpenFolderCommand { get; set; }
+    public IRelayCommand ShowNotificationCommand { get; set; }
     
     public string? FileDialogResults {
         get => _fileDialogResults;
