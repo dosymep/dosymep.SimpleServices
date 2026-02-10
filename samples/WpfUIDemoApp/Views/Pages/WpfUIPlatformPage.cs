@@ -8,11 +8,11 @@ using Microsoft.Xaml.Behaviors;
 
 namespace WpfUIDemoApp.Views.Pages {
     public class WpfUIPlatformPage : Page, IHasTheme, IHasLocalization {
-        public event Action<UIThemes>? ThemeChanged;
-        public event Action<CultureInfo>? LanguageChanged;
-        
-        private readonly IHasTheme? _hasTheme;
-        private readonly IHasLocalization? _hasLocalization;
+        public event Action<UIThemes> ThemeChanged = null!;
+        public event Action<CultureInfo> LanguageChanged = null!;
+
+        private readonly IHasTheme _hasTheme = null!;
+        private readonly IHasLocalization _hasLocalization = null!;
 
         public WpfUIPlatformPage() { }
 
@@ -24,7 +24,7 @@ namespace WpfUIDemoApp.Views.Pages {
 
             _hasTheme.ThemeChanged += _ => ThemeChanged?.Invoke(_);
             _hasLocalization.LanguageChanged += _ => LanguageChanged?.Invoke(_);
-            
+
             Interaction.GetBehaviors(this).Add(new WpfThemeBehavior());
             Interaction.GetBehaviors(this).Add(new WpfLocalizationBehavior());
         }

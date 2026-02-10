@@ -4,6 +4,8 @@ using dosymep.SimpleServices;
 
 using Microsoft.Win32;
 
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+
 namespace dosymep.WpfCore.SimpleServices;
 
 /// <summary>

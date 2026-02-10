@@ -4,6 +4,8 @@ using dosymep.SimpleServices;
 
 using Microsoft.Win32;
 
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
+
 namespace dosymep.WpfCore.SimpleServices;
 
 /// <summary>

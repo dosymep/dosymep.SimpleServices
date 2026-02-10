@@ -1,0 +1,41 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ExponentialEase x:Key="ExponentialEase" Exponent="5" />
+
+    <Storyboard x:Key="Showing">
+        <DoubleAnimation
+            From="0" To="1"
+            Duration="0:0:0.3"
+            Storyboard.TargetProperty="Opacity" />
+        
+        <DoubleAnimation
+            From="385" To="0"
+            Duration="0:0:0.3"
+            Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+            EasingFunction="{StaticResource ExponentialEase}" />
+    </Storyboard>
+    
+    <Storyboard x:Key="Closing">
+        <DoubleAnimation
+            To="385"
+            Duration="0:0:0.3"
+            EasingFunction="{StaticResource ExponentialEase}"
+            Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" />
+    </Storyboard>
+    
+    <Storyboard x:Key="AutoClosing">
+        <DoubleAnimation
+            From="1" To="0"
+            Duration="0:0:0.3"
+            Storyboard.TargetProperty="Opacity" />
+    </Storyboard>
+
+    <Storyboard x:Key="Positioning">
+        <DoubleAnimation
+            To="90"
+            Duration="0:0:0.3"
+            EasingFunction="{StaticResource ExponentialEase}"
+            Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)" />
+    </Storyboard>
+</ResourceDictionary>

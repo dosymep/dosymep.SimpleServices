@@ -41,6 +41,11 @@
     <system:String x:Key="MainWindow.ButtonDialogSaveFileCommand">Save file</system:String>
     <system:String x:Key="MainWindow.ButtonDialogOpenFolderCommand">Choose folder</system:String>
     
+    <system:String x:Key="NotificationPage.Title">Notifications</system:String>
+    <system:String x:Key="NotificationPage.ShowNotification">Show notification</system:String>
+    <system:String x:Key="NotificationPage.ShowFatalNotification">Show fatal notification</system:String>
+    <system:String x:Key="NotificationPage.ShowWarningNotification">Show warning notification</system:String>
+    
     <system:String x:Key="UIThemes.Dark">Dark</system:String>
     <system:String x:Key="UIThemes.Light">Light</system:String>
 </ResourceDictionary>

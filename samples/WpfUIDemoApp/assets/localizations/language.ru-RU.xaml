@@ -46,6 +46,11 @@
     <system:String x:Key="MainWindow.ButtonDialogSaveFileCommand">Сохранить файл</system:String>
     <system:String x:Key="MainWindow.ButtonDialogOpenFolderCommand">Выбрать папку</system:String>
     
+    <system:String x:Key="NotificationPage.Title">Уведомления</system:String>
+    <system:String x:Key="NotificationPage.ShowNotification">Показать уведомление</system:String>
+    <system:String x:Key="NotificationPage.ShowFatalNotification">Показать ошибку</system:String>
+    <system:String x:Key="NotificationPage.ShowWarningNotification">Показать предупреждение</system:String>
+    
     <system:String x:Key="UIThemes.Dark">Темная</system:String>
     <system:String x:Key="UIThemes.Light">Светлая</system:String>
 </ResourceDictionary>
