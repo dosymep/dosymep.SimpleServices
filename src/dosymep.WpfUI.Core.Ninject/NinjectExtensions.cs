@@ -95,7 +95,6 @@ public static class NinjectExtensions {
 
         kernel.Bind<IProgressDialogService>()
             .To<WpfUIProgressDialogService>()
-            .InSingletonScope()
             .WithPropertyValue(nameof(IAttachableService.AllowAttach), false)
             .WithPropertyValue(nameof(WpfUIProgressDialogService.DisplayTitleFormat), displayTitleFormat)
             .WithPropertyValue(nameof(WpfUIProgressDialogService.StepValue), stepValue)
